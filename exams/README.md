@@ -1,4 +1,4 @@
-# ESPE2210-OOPSW7490
-## ESPE 202210-OOP SW 7490
+# ESPE2210-OOPSW7996
 ## Instructor: Edison Lascano
+## Student: Francisco Quiroga
 ### EXAMS
