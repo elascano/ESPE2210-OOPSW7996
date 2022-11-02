@@ -1,3 +1,4 @@
-# ESPE2210-OOPSW7996
+# ESPE 2022 10 OOPSW 7996
 ## Instructor: Edison Lascano
+### Student: Jonathan Jaguaco
 ### EXAMS
