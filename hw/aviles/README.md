@@ -1,3 +1,3 @@
 # ESPE2210-OOPSW7996
-## Instructor: Edison Lascano
+## Student: Daniel Aviles
 ### ASSIGMENTS
