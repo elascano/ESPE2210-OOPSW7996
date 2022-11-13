@@ -21,3 +21,6 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/ws/andrade/unit1/ws11FromUMLToCode/ChickenFarm/nbproject/private/
+/ws/andrade/unit1/ws11FromUMLToCode/ChickenFarm/build/
+/ws/andrade/unit1/ws11FromUMLToCode/ChickenFarm/dist/
