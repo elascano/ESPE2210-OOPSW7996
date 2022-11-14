@@ -21,3 +21,6 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/ws/rivadeneira/u1/ws11FromUmlToCode/ChickenFarmS/nbproject/private/
+/ws/rivadeneira/u1/ws11FromUmlToCode/ChickenFarmS/build/
+/ws/rivadeneira/u1/ws11FromUmlToCode/ChickenFarmS/dist/
