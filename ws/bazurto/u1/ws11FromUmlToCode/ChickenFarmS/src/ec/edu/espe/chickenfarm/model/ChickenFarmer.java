@@ -8,6 +8,6 @@ package ec.edu.espe.chickenfarm.model;
  *
  * @author Christopher Bazurto, DeltaTeam, DCCO-ESPE
  */
-public class ChikenCoop {
+public class ChickenFarmer {
     
 }
