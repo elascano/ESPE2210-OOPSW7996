@@ -2,6 +2,7 @@ package ec.edu.espe.chickenfarm.view;
 
 import ec.edu.espe.chickenfarm.model.Chicken;
 import ec.edu.espe.chickenfarm.model.Egg;
+import java.util.Scanner;
 
 
 /**
@@ -49,6 +50,35 @@ public class ChickenFarmSimulator {
         //create a new chicken
         //set the values for the chicken with the data that was entered
         //print the information
+        
+        Scanner read = new Scanner(System.in);
+        
+        Chicken chicken2;
+        
+        chicken2 = new Chicken();
+        
+        System.out.println("chicken2 --> " + chicken2);
+        
+        System.out.print("type chicken's id 2: ");
+        chicken2.setId(read.nextInt());
+        read.nextLine();
+        System.out.print("type chicken's name 2: ");
+        chicken2.setName(read.nextLine());
+        System.out.print("type chicken's age 2: ");
+        chicken2.setAge(read.nextInt());
+        read.nextLine();
+        System.out.print("type chicken's color 2: ");
+        chicken2.setColor(read.nextLine());
+        System.out.print("type chicken 2 is molting: ");
+        chicken2.setIsMolting(read.nextBoolean());
+                
+        System.out.println("chicken 2 id --> " + chicken2.getId());
+        System.out.println("chicken 2 name -->" + chicken2.getName());
+        System.out.println("chicken 2 age --> " + chicken2.getAge());
+        System.out.println("chicken 2 color -->" + chicken2.getColor());
+        System.out.println("chicken 2 is molting --> " + chicken2.isIsMolting());
+        
+        
     }   
     
 }
