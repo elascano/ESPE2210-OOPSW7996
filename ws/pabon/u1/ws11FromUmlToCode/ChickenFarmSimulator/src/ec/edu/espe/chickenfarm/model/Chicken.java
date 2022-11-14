@@ -1,25 +1,25 @@
+
 package ec.edu.espe.chickenfarm.model;
 
 /**
  *
- * @author Daniel Aviles, DeltaTeam, DCCO-ESPE
+ * @author Elkin Pabon, GiftSoft TEAM, DCCO-ESPE
  */
 public class Chicken {
-    //encapsulated with private
+    
     private int id;
     private String name;
     private String color;
     private int age;
     private boolean isMolting;
-    
-    public int getId(){
+
+    public int getId() {
         return id;
     }
-    
-    public void setId(int id){
-        this.id=id;
+
+    public void setId(int id) {
+        this.id = id;
     }
-    
 
     /**
      * @return the name
@@ -77,4 +77,6 @@ public class Chicken {
         this.isMolting = isMolting;
     }
 
+    
+    
 }
