@@ -22,6 +22,7 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 <<<<<<< HEAD
+<<<<<<< HEAD
 /ws/yaranga/u1/New Folder/ChickenFarmS/nbproject/private/
 /ws/yaranga/u1/New Folder/ChickenFarmS/build/
 /ws/yaranga/u1/ws11FromUml/ChickenFarmS/dist/
@@ -29,7 +30,16 @@ hs_err_pid*
 /ws/yaranga/u1/ws11FromUmlToCode/ChickenFarmS/dist/
 /ws/yaranga/u1/ws11FromUmlToCode/ChickenFarmS/nbproject/private/
 =======
+/ws/panchi/U1/ws11FromUMLtoCode/ChickenFarmSimulator/nbproject/private/
+/ws/panchi/U1/ws11FromUMLtoCode/ChickenFarmSimulator/build/
+/ws/panchi/U1/ws11FromUMLtoCode/ChickenFarmSimulator/dist/
+>>>>>>> 7c3aab9d2ef5682f3e0ed42ed9497754600ba008
+=======
 
 #vpp backup files
 *.vpp.bak_*
+<<<<<<< HEAD
 >>>>>>> c76a0c43db872dc46e41652c3251f55b6d868d85
+=======
+>>>>>>> 799ea488f1592ffe4895eb19b65a07841f563e56
+>>>>>>> 7c3aab9d2ef5682f3e0ed42ed9497754600ba008
