@@ -22,9 +22,15 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 <<<<<<< HEAD
+<<<<<<< HEAD
 /ws/suquillo/u1/ws11FromToUmlCode/ChickenFarmS/nbproject/private/
 /ws/suquillo/u1/ws11FromToUmlCode/ChickenFarmS/build/
 /ws/suquillo/u1/ws11FromToUmlCode/ChickenFarmS/dist/
+=======
+/ws/aviles/u1/ws11FormUmlToCode/ChickenFarmS/nbproject/private/
+/ws/aviles/u1/ws11FormUmlToCode/ChickenFarmS/build/
+/ws/aviles/u1/ws11FormUmlToCode/ChickenFarmS/dist/
+>>>>>>> 28be60e8cd78f03dee4b9085972a47eabc238268
 =======
 
 #vpp backup files
