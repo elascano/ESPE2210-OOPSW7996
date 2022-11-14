@@ -1,4 +1,4 @@
-package chickenfarms;
+package ec.edu.espe.chickenfarm.controller;
 
 /**
  *
