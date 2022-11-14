@@ -18,16 +18,3 @@
 *.zip
 *.tar.gz
 *.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-/ws/villarroel/Unit1/ws11FromUMLToCode/ChicenFarmS/nbproject/private/
-/ws/villarroel/Unit1/ws11FromUmlToCode/ChicenFarmS/nbproject/private/
-/ws/villarroel/Unit1/ws11FromUMLToCode/ChicenFarmS/build/
-/ws/villarroel/Unit1/ws11FromUmlToCode/ChicenFarmS/build/
-/ws/villarroel/Unit1/ws11FromUMLToCode/ChicenFarmS/dist/
-/ws/villarroel/Unit1/ws11FromUmlToCode/ChicenFarmS/dist/
-/ws/villarroel/Unit1/ws11FromUmlToCode/ChickenFarmS/nbproject/private/
-/ws/villarroel/Unit1/ws11FromUmlToCode/ChickenFarmSim/nbproject/private/
-/ws/villarroel/Unit1/ws11FromUmlToCode/ChickenFarmSim/build/
-/ws/villarroel/Unit1/ws11FromUmlToCode/ChickenFarmSim/dist/
