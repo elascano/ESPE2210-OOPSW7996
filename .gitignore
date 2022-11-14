@@ -21,12 +21,6 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-<<<<<<< HEAD
-/ws/gutierrez/u1/ws11FromUmlToCode/ChickenFarmS1/build/
-/ws/gutierrez/u1/ws11FromUmlToCode/ChickenFarmS1/dist/
-=======
 
 #vpp backup files
 *.vpp.bak_*
-
->>>>>>> 9a7fefc376d30611b1ff412583ff2d8c0cf2a899
