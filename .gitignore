@@ -23,6 +23,7 @@
 hs_err_pid*
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /ws/yaranga/u1/New Folder/ChickenFarmS/nbproject/private/
 /ws/yaranga/u1/New Folder/ChickenFarmS/build/
 /ws/yaranga/u1/ws11FromUml/ChickenFarmS/dist/
@@ -43,3 +44,8 @@ hs_err_pid*
 =======
 >>>>>>> 799ea488f1592ffe4895eb19b65a07841f563e56
 >>>>>>> 7c3aab9d2ef5682f3e0ed42ed9497754600ba008
+=======
+
+#vpp backup files
+*.vpp.bak_*
+>>>>>>> 85c634758f7fa712c8f82660fb910bd95165f6a9
