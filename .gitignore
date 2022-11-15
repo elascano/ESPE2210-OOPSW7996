@@ -24,3 +24,4 @@ hs_err_pid*
 
 #vpp backup files
 *.vpp.bak_*
+/ws/villarroel/u1/ws11FromUmlToCode/ChickenFarmS/dist/
