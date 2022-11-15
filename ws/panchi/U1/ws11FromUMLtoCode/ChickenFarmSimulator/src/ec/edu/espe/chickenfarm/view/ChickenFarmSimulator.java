@@ -17,7 +17,6 @@ public class ChickenFarmSimulator {
         System.out.println("Setters and Getters");
         System.out.println("===================");
         
-        
         Chicken chicken;
         
         //initializing the chicken

@@ -24,3 +24,6 @@ hs_err_pid*
 
 #vpp backup files
 *.vpp.bak_*
+/hw/panchi/U1/hw04InputFromKeyboard/ChickenFarmSimulatorHomework/nbproject/private/
+/hw/panchi/U1/hw04InputFromKeyboard/ChickenFarmSimulatorHomework/build/
+/hw/panchi/U1/hw04InputFromKeyboard/ChickenFarmSimulatorHomework/dist/
