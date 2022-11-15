@@ -9,35 +9,69 @@ import java.util.Scanner;
  */
 public class ChickenFarmSimulator {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
+        System.out.println ("*************************");
         System.out.println ("Matias Suarez");
         System.out.println ("setters and getters");
-        System.out.println ("==============");
-        
+        System.out.println ("*************************");
         //AD variableName
+        Chicken chickenOne;
         Chicken chicken;
         
+        int id;
+        String name = new String("");
+        int age;
+        String color = "";
+        boolean molting;
         
-        //creating the instance
         chicken = new Chicken();
+        printChicken(chicken);
+        
+        chicken = new Chicken(2,"Lolita","Black",2,true);
+        printChicken(chicken);
+        
+        chicken.setName("maruja");
+        printChicken(chicken);
+        System.out.println("chicken (from toString -->" + chicken);
+        
+        chickenOne = new Chicken();
+        chickenOne.setId(432);
+        chickenOne.setName("Lucy");
+        chickenOne.setAge(4);
+        chickenOne.setColor("White and Brown");
+        chickenOne.setIsMolting(false);
+        printChicken(chickenOne);
+        
+        //Homework
+        
+        Chicken chickenTwo;
+        chickenTwo = new Chicken();
+        Scanner sc = new Scanner(System.in);
 
-        System.out.println ("chicken --> " + chicken );
-        
-        
+    
+        System.out.println("\nPlease, fill the information below");
         System.out.println("Enter chicken id-->");
-        chicken.setId(sc.nextInt());
-       
+        id = sc.nextInt();
         System.out.println("Enter chicken name-->");
-        chicken.setName(sc.next());
-        
+        name = sc.next();
         System.out.println("Enter the age of the chicken-->");
-        chicken.setAge(sc.nextInt());
-        
+        age = sc.nextInt();
         System.out.println("Enter the colors of the chicken-->");
-        chicken.setColor(sc.next());
+        color = sc.next();
+        System.out.println("Is chicken molting?(True/False)-->\t");
+        molting = sc.nextBoolean();
         
-        System.out.println("Is chicken molting?-->\t");
-        chicken.setIsMolting(sc.nextBoolean());
+        chickenTwo.setId(id);
+        chickenTwo.setName(name);
+        chickenTwo.setAge(age);
+        chickenTwo.setColor(color);
+        chickenTwo.setIsMolting(molting);
+
+        printChicken(chickenTwo);
+    }
+
+    
+    private static void printChicken(Chicken chicken) {
+        System.out.println("          Chicken"+ chicken.getId());
         System.out.println("==========================");
         System.out.println("chicken id-->     \t" + chicken.getId());
         System.out.println("chicken name-->\t" + chicken.getName());
@@ -45,8 +79,6 @@ public class ChickenFarmSimulator {
         System.out.println("chicken color-->\t" + chicken.getColor());
         System.out.println("chicken is Molting-->\t" + chicken.isIsMolting());
         System.out.println("==========================");
-        //read fron the keyboard the information for a new chicken
-         
     }
        
     
