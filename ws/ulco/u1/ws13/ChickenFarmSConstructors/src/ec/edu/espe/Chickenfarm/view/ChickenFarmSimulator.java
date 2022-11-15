@@ -68,6 +68,7 @@ public class ChickenFarmSimulator {
         printChicken(chicken);
         //Using constructors
         chicken = new Chicken(3, "Lolita", "Black", 2, true);
+        
         printChicken(chicken);
     }
     private static void printChicken(Chicken chicken) {
