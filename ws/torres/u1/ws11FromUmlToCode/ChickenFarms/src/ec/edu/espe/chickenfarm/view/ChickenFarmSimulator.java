@@ -7,6 +7,7 @@ package ec.edu.espe.chickenfarm.view;
 import ec.edu.espe.chickenfarm.model.Chicken;
 import ec.edu.espe.chickenfarm.model.Egg;
 import ec.edu.espe.chickenfarm.model.*;
+import java.util.Scanner;
 /**
  *
  * @author Carlos Torres, T09_PACSTORE, DCCO-ESPE
@@ -24,6 +25,7 @@ public class ChickenFarmSimulator {
         
         numberOfFeathers = 5;
         
+        System.out.println("Welcome to chicken farm simulator :)");
         
         System.out.println("The number of feathers is ----->" + numberOfFeathers);
         
@@ -33,17 +35,34 @@ public class ChickenFarmSimulator {
         
         System.out.println("chicken ---->" + chicken);
         
-        chicken.setId(246);
-        chicken.setName("Rita");
-        chicken.setAge(2);
-        chicken.setColor("White");
-        chicken.setIsMolting(true);
+        Scanner scan = new Scanner(System.in);
         
+        System.out.println("Please complete the following information about the chicken");
+        System.out.println("Chicken id: ");
+        chicken.setId(scan.nextInt());
+        
+        System.out.println("Chicken name:");
+        chicken.setName(scan.next());
+        
+        System.out.println("Chicken age: ");
+        chicken.setAge(scan.nextInt());
+        
+        System.out.println("Chicken color: ");
+        chicken.setColor(scan.next());
+        
+        System.out.println("Is the chicken molting?. True or false");
+        chicken.setIsMolting(scan.nextBoolean());
+        
+        
+        System.out.println("=============================");
+        System.out.println("Chicken information ");
+        System.out.println("-----------------------------");
         System.out.println("chicken id -->" + chicken.getId());
         System.out.println("chicken name -->" + chicken.getName());
         System.out.println("chicken age -->" + chicken.getAge());
         System.out.println("chicken color -->" + chicken.getColor());
         System.out.println("chicken is molting -->" + chicken.isIsMolting());
+        
 
         
         
