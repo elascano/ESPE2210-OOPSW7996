@@ -2,7 +2,6 @@
 package ec.edu.espe.chickenfarm.view;
 
 import ec.edu.espe.chickenfarm.model.Chicken;
-
 import ec.edu.espe.chickenfarm.model.Egg;
 /**
  *
@@ -38,18 +37,6 @@ public class ChickenFarmSimulator {
         System.out.println("chicken age \t-->"+chicken.getAge());
         System.out.println("chicken color \t-->"+chicken.getColor());
         System.out.println("chicken is molting \t-->"+chicken.isIsMolting());
-        
-         //System.out.println("chicken id -->"+chicken.getId());
-         //System.out.println("chicken id --> +chickengetId()");
-        
-        
-        
-        
-        
-        
-        
-    }
-            
-    
-    
+ 
+    }   
 }
