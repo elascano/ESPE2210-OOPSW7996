@@ -7,20 +7,21 @@ import ec.edu.espe.chickenfarm.model.Chicken;
  *
  * @author Diego Pilataxi, GitSoftTeam, DCCO-ESPE
  */
-public class ChickenFarmSimulator {
+import java.util.Scanner;
+public class DataFromKeyboard {
     public static void main(String[] args) {
         System.out.println("Diego Pilataxi");
         System.out.println("Setters and Getters");
         System.out.println("====================");
-        
+        Scanner read = new Scanner(System.in);
+        System.out.println("Enter the number of Feathers: ");
         //datatype variable
-        int numberOfFeathers;
+        int numberOfFeathers = read.nextInt();
         
         //declaration
         //ADT variableName
         Chicken chicken;
-        
-        numberOfFeathers = 5;
+       
         
         System.out.println("The number of Feathers is ---> " + numberOfFeathers);
         
@@ -31,11 +32,27 @@ public class ChickenFarmSimulator {
         
         System.out.println("chicken ---> " + chicken);
         
-        chicken.setId(432);
-        chicken.setName("Lucy");
-        chicken.setAge(4);
-        chicken.setColor("White and Brown");
-        chicken.setIsMolting(false);
+        System.out.println("Enter the number Id: ");
+        int numberId = read.nextInt();
+        
+        
+        System.out.println("Enter the Chicken Name: ");
+        String ChickenName = read.next();
+        
+        System.out.println("Enter the Chicken Age: ");
+        int ChickenAge = read.nextInt();
+        
+        System.out.println("Enter the Color Chicken: ");
+        String ColorChicken = read.next();
+        
+        System.out.println("¿Chicken is Molting?: ");
+        boolean Molt = read.nextBoolean();
+        
+        chicken.setId(numberId);
+        chicken.setName(ChickenName);
+        chicken.setAge(ChickenAge);
+        chicken.setColor(ColorChicken);
+        chicken.setIsMolting(Molt);
         
         System.out.println("chicken id \t---> " + chicken.getId());
         System.out.println("chicken name \t---> " + chicken.getName());
