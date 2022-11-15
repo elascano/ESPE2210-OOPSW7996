@@ -1,28 +1,30 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package ec.edu.espe.chickenfarm.model;
 
 /**
  *
- * @author Juan Pablo Pinza, Search Engine Bandits, DCCO-ESPE
+ * @author Jairo Bonilla, Gaman GeekLords, DCCO-ESPE
  */
-public class Chicken {
-
-    //Encapsulated with private
+public class Chicken 
+{
     private int id;
     private String name;
     private String color;
     private int age;
     private boolean isMolting;
 
-    //No argument Constructor
-    public Chicken() {
-        id = 0;
-        name = "";
-        age = 0;
-        isMolting = false;
+    @Override
+    public String toString() {
+        return "Chicken{" + "id=" + id + ", name=" + name + ", color=" + color + ", age=" + age + ", isMolting=" + isMolting + '}';
+    }
+    
+    public Chicken()
+    {
+        id=0;
+        name="";
+        color="";
+        age=0;
+        isMolting=false;
     }
 
     public Chicken(int id, String name, String color, int age, boolean isMolting) {
@@ -33,18 +35,21 @@ public class Chicken {
         this.isMolting = isMolting;
     }
 
-
-
+    
+    /**
+     * @return the id
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * @param id the id to set
+     */
     public void setId(int id) {
         this.id = id;
     }
 
-    //getName
-    //setName
     /**
      * @return the name
      */
@@ -100,5 +105,7 @@ public class Chicken {
     public void setIsMolting(boolean isMolting) {
         this.isMolting = isMolting;
     }
-
+    
+   
+    
 }
