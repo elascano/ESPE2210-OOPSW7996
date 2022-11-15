@@ -17,6 +17,8 @@ public class ChickenFarmSimulator {
 
         Chicken chicken;
         chicken = new Chicken();
+        
+        printChicken(chicken);
 
         int id;
         String name = "";
@@ -64,7 +66,8 @@ public class ChickenFarmSimulator {
 
         printChicken(chickenIngress);
         
-        
+        chicken = new Chicken(123, "Carl", "Brown", 12, true);
+        printChicken(chicken);
     }
 
     private static void printChicken(Chicken chicken) {
