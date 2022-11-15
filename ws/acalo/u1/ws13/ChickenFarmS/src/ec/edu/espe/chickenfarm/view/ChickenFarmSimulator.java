@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author Cristian Acalo, Scriptal, DCCO-ESPE
  */
-public class ChikenFarmSimulator {
+public class ChickenFarmSimulator {
 
     public static void main(String[] args) {
         System.out.println("\t====================");
