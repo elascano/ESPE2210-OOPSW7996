@@ -1,11 +1,12 @@
+
 package ec.edu.espe.chickenfarm.model;
 
 /**
  *
- * @author Matias Suarez,WebMasterTeam,DCCO-ESPE
+ * @author Jairo Bonilla, Gaman GeekLords, DCCO-ESPE
  */
-public class Chicken {
-
+public class Chicken 
+{
     private int id;
     private String name;
     private String color;
@@ -16,14 +17,14 @@ public class Chicken {
     public String toString() {
         return "Chicken{" + "id=" + id + ", name=" + name + ", color=" + color + ", age=" + age + ", isMolting=" + isMolting + '}';
     }
-
     
-    public Chicken() {
-        id = 0;
-        name = "";
-        age = 0;
-        color = "";
-        isMolting = false;
+    public Chicken()
+    {
+        id=0;
+        name="";
+        color="";
+        age=0;
+        isMolting=false;
     }
 
     public Chicken(int id, String name, String color, int age, boolean isMolting) {
@@ -34,10 +35,17 @@ public class Chicken {
         this.isMolting = isMolting;
     }
 
+    
+    /**
+     * @return the id
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * @param id the id to set
+     */
     public void setId(int id) {
         this.id = id;
     }
@@ -97,5 +105,7 @@ public class Chicken {
     public void setIsMolting(boolean isMolting) {
         this.isMolting = isMolting;
     }
-
+    
+   
+    
 }
