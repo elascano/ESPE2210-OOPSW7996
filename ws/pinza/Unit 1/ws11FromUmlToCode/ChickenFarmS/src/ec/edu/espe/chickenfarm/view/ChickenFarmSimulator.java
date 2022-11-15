@@ -45,7 +45,10 @@ public class ChickenFarmSimulator {
         Chicken chicken2;
 
         chicken2 = new Chicken();
-
+        chicken = new Chicken(153, Lolita, Brown, 3, true);
+        
+        
+                
         System.out.println("Please, type the Chicken's ID: ");
         chicken2.setId(read.nextInt());
         read.nextLine();
