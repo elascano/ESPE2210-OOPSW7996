@@ -5,6 +5,7 @@
 package ec.edu.espe.chickenfarm.view;
 
 import ec.edu.espe.chickenfarm.model.Chicken;
+import java.util.Scanner;
 
 /**
  *
@@ -37,8 +38,36 @@ public class ChickenFarmSimulator {
         System.out.println("chicken age \t-> " + chicken.getAge());
         System.out.println("chicken color \t-> " + chicken.getColor());
         System.out.println("chicken is molting \t-> " + chicken.isIsMolting());
+
+        //read from the keyboard the information for a new chicken HW04
+        Scanner read = new Scanner(System.in);
+
+        Chicken chicken2;
+
+        chicken2 = new Chicken();
+
+        System.out.println("Please, type the Chicken's ID: ");
+        chicken2.setId(read.nextInt());
+        read.nextLine();
+        System.out.println("Please, type the Chicken's name: ");
+        chicken2.setName(read.nextLine());
+        System.out.println("Please, type the Chicken's age: ");
+        chicken2.setAge(read.nextInt());
+        read.nextLine();
+        System.out.println("Please, type the Chicken's color: ");
+        chicken2.setColor(read.nextLine());
+        System.out.println("Is the Chicken molting? :");
+        chicken2.setIsMolting(read.nextBoolean());
         
-        //read from the keyboard the information for a new chicken
+        System.out.println("chicken 2 id \t-> " + chicken2.getId());
+        System.out.println("chicken 2 name \t-> " + chicken2.getName());
+        System.out.println("chicken 2 age \t-> " + chicken2.getAge());
+        System.out.println("chicken 2 color \t-> " + chicken2.getColor());
+        System.out.println("chicken 2 is molting \t-> " + chicken2.isIsMolting());
+        
+        
+        
+        
 
     }
 }
