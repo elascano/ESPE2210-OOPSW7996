@@ -1,53 +1,50 @@
-
 package ec.edu.espe.chickenfarm.view;
 
 import ec.edu.espe.chickenfarm.model.Chicken;
-
-
-
-
-
-
-
+import java.util.Scanner;
 
 /**
  *
- * @author NW USER
+ * @author Karla Ansatuña, Scriptal, DCCO-ESPE
  */
 public class ChickenFarmSimulator {
-    public static void main(String[]args){
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner (System.in);
         System.out.println("===================");
         System.out.println("Karla Ansatuña");
         System.out.println("Setters and Getters");
         System.out.println("===================");
-        //datatype variable
-        int numberOfFeathers;
+        System.out.println("=***Wellcome***=");
+        System.out.println("=**To Chicken Farm Simulator**=");
+        System.out.println("    (^ o ^)   ");
         
-        //ADT variableName
         Chicken chicken;
-        //imported Chicken
+        chicken = new Chicken();
+
+        System.out.println("*What's the chicken id?-->\t");
+        chicken.setId(sc.nextInt());
         
-        numberOfFeathers=5;
-        System.out.println("The number of feather is -->"+ numberOfFeathers);
-        chicken=new Chicken();
+        System.out.println("*What's the name of the chicken?-->\t");
+        chicken.setName(sc.next());
         
-        System.out.println("chicken -->"+ chicken);
-        chicken.setId(432);
-        chicken.setName("Lucy");
-        chicken.setAge(4);
-        chicken.setColor("White and Brown");
-        chicken.setIsMolting(false);
-                
-        System.out.println("chicken id-->\t"+ chicken.getId());
-        System.out.println("chicken name-->\t"+ chicken.getName());
-        System.out.println("chicken age-->\t"+ chicken.getAge());
-        System.out.println("chicken color-->\t"+ chicken.getColor());
-        System.out.println("chicken is Molting-->\t"+ chicken.isIsMolting());
-  
-        //initializing the chicken
-        //creating the instance
+        System.out.println("*How old is the chicken?-->\t");
+        chicken.setAge(sc.nextInt());
         
+        System.out.println("*What's the color of the chicken?-->\t");
+        chicken.setColor(sc.next());
         
-                
+        System.out.println("*Is chicken molting?-->\t");
+        chicken.setIsMolting(sc.nextBoolean());
+        
+        System.out.println("==============");
+        System.out.println("Chicken Information");
+        System.out.println("==============");
+        System.out.println("-chicken id-->" + chicken.getId());
+        System.out.println("-chicken name-->" + chicken.getName());
+        System.out.println("-chicken age-->" + chicken.getAge());
+        System.out.println("-chicken color-->" + chicken.getColor());
+        System.out.println("-chicken is Molting-->" + chicken.isIsMolting());
+        System.out.println("==============");
     }
 }
