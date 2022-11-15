@@ -9,5 +9,5 @@ package ec.edu.espe.chickenfarm.model;
  * @author Cristian Acalo, Scriptal, DCCO-ESPE
  */
 public class ChickenCoop {
-    
-}
+          
+    }
