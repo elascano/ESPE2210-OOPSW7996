@@ -1,50 +1,60 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package ec.edu.espe.chickenfarm.view;
-// import class Chicken
+// import Chicken class 
 import ec.edu.espe.chickenfarm.model.Chicken;
 
 /**
  *
  * @author Nahir Carrera, Gaman GeekLords, DCC0-ESPE
  */
+
 public class ChickenFarm { 
-    // psvm
+   
     public static void main(String[] args) {
-        //sout
-        System.out.println("  Nahir Carrera");
-        System.out.println("Setters and getters");
-        System.out.println("===================");
+        System.out.println("\tNahir Carrera\t");
+        System.out.println("\tContructors\t");
+        System.out.println("\t===================\t");
         
-        int numberOfFeathers; // datatype  variable
         // instance the object (declaration)
-        Chicken chicken; // Abstract datatype variable
+        Chicken chickenOne; // Abstract datatype variable
+        // ways to initialize the chicken
         
-        numberOfFeathers = 5;
-        System.out.println("The number of feathers is -->" + numberOfFeathers);
+        // No arguments Constructor
+        System.out.println("Printing chicken information with No arguments constructor");
+        chickenOne = new Chicken();
+        printChicken(chickenOne);
         
-        // initializing the chicken
-        /// creating the instance
-        chicken = new Chicken();
-        System.out.println("chicken ->"+ chicken);
-        // set values
-        chicken.setId(432); //set the chicken id 
-        chicken.setName("Lucy");
-        chicken.setAge(4);
-        chicken.setColor("White and brown");
-        chicken.setIsMolting(false);
+        System.out.println("Printing chicken information with Parametrized constructor");
+        // Parametrized Constructor
+        chickenOne = new Chicken(2, "Lolita", "White", 2, true);;
+        printChicken(chickenOne);
+        
+        System.out.println("Printing chicken modifying attributes with setters");
+        // set values with setters 
+        chickenOne.setId(432); //set the chicken id 
+        chickenOne.setName("Lucy");
+        chickenOne.setAge(4);
+        chickenOne.setColor("White and brown");
+        chickenOne.setIsMolting(false);
+        printChicken(chickenOne);
+ 
+        // print with toString method 
+        System.out.println("Printing chicken information with toString method");
+        System.out.println(chickenOne);
+          
+        System.out.println("Chicken is of class -> " + chickenOne.getClass().getSimpleName());
+ }
+    // REFACTORING
+    private static void printChicken(Chicken chicken) {
         // get values
-        System.out.println("chicken id -> " + chicken.getId()); // get the chicken id
-        System.out.println("chicken name -> " + chicken.getName());
-        System.out.println("chicken age -> "+ chicken.getAge());
-        System.out.println("chicken color -> " + chicken.getColor());
-        System.out.println("chicken is molting? -> " + chicken.isIsMolting());
-  
-        // read from the keyboard the information for a new chicken
-        // declare variables for input
-        // read data from keaboard
-        // set the values for the chicken with the data that was entered
-        // print the information
-}}
+        System.out.println("==================================================================");
+        System.out.println("     __//   ");
+        System.out.println("    /.__.\\   " +"\t\t=        Chicken " + chicken.getId() + "         =");
+        System.out.println("    \\ \\/ /");
+        System.out.println(" '__/    \\    "+ "* chicken id -> " + chicken.getId()); // get the chicken id
+        System.out.println("  \\-      )   "+ "* chicken name -> " + chicken.getName());
+        System.out.println("   \\_____/    "+ "* chicken age -> "+ chicken.getAge());
+        System.out.println("_____|_|___   "+ "* chicken color -> " + chicken.getColor());
+        System.out.println("     \" \"     "+ " * chicken is molting? -> " + chicken.isIsMolting());
+        System.out.println("==================================================================");
+     }
+}
