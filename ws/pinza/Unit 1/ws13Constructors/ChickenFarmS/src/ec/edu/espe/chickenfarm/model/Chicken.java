@@ -17,14 +17,23 @@ public class Chicken {
     private int age;
     private boolean isMolting;
 
+    @Override
+    public String toString() {
+        return "Chicken{" + "id=" + id + ", name=" + name + ", color=" + color + ", age=" + age + ", isMolting=" + isMolting + '}';
+    }
+    
+    
+
     //No argument Constructor
     public Chicken() {
         id = 0;
         name = "";
+        color = "";
         age = 0;
         isMolting = false;
     }
 
+    //Parameter Constructor
     public Chicken(int id, String name, String color, int age, boolean isMolting) {
         this.id = id;
         this.name = name;
@@ -32,9 +41,8 @@ public class Chicken {
         this.age = age;
         this.isMolting = isMolting;
     }
-
-
-
+    //To have the same name for different methods is called polymorphism.
+    
     public int getId() {
         return id;
     }
