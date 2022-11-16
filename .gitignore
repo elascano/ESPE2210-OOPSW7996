@@ -24,4 +24,13 @@ hs_err_pid*
 
 #vpp backup files
 *.vpp.bak_*
-
+/ws/jaguaco/U1/ws11Fromumltocode/ChikenFarmS/nbproject/private/
+/ws/jaguaco/U1/ws11Fromumltocode/ChikenFarmS/build/
+/ws/jaguaco/U1/ws11FromUMLtoCode/ChickerFarmS/nbproject/private/
+/ws/jaguaco/U1/ws11FromUMLtoCode/ChickerFarmS/build/
+/ws/jaguaco/U1/ws11FromUMLtoCode/ChickerFarmS/dist/
+/ws/jaguaco/U1/ws11FromUMLtoCode/ChickenFarmS/nbproject/private/
+/ws/jaguaco/U1/ws11FromUMLtoCode/ChickenFarmS/build/
+/ws/jaguaco/U1/ws11FromUMLtoCode/ChickenFarmS/dist/
+/ws/jaguaco/U1/ws13/ChickenFarmS/nbproject/private/
+/ws/jaguaco/U1/ws13/ChickenFarmS_WS_13/nbproject/private/
