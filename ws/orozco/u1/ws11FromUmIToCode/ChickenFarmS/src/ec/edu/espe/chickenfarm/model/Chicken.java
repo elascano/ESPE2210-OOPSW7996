@@ -7,12 +7,37 @@ package ec.edu.espe.chickenfarm.model;
  */
 public class Chicken {
     
+
     //encapsulated with private
     private int id;
     private String name;
     private String color;
     private int age;
     private boolean isMolting;
+
+    @Override
+    public String toString(){
+        return "Chicken{" + "id = " + getId() + ", name = " + getName() + ", color = " + getColor() + ", age = " + getAge() + ", isMOlting = " + isIsMolting() + "}";
+        
+    }
+    
+    public Chicken(int id1){
+        id = 0;
+        name = "";
+        color = "";
+        age = 0;
+        isMolting = false;
+    }
+    
+    public Chicken(int id, String name, String color, int age, boolean isMolting){
+        this.id = id;
+        this.name = name; 
+        this.color = color;
+        this.age = age;
+        this.isMolting = isMolting;
+        
+       
+    }
 
     /**
      * @return the id
@@ -83,8 +108,5 @@ public class Chicken {
     public void setIsMolting(boolean isMolting) {
         this.isMolting = isMolting;
     }
-
-    
-
     
 }
