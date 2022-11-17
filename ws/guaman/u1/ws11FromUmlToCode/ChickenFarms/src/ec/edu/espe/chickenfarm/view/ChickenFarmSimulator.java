@@ -1,7 +1,6 @@
 package ec.edu.espe.chickenfarm.view;
 
 import ec.edu.espe.chickenfarm.model.Chicken;
-import ec.edu.espe.chickenfarm.model.Egg;
 import java.util.Scanner;
 
 
@@ -20,7 +19,7 @@ public class ChickenFarmSimulator {
         
         //declaration
         //ADT variable name
-        Chicken chicken;
+        Chicken chickenOne;
         
         numberOfFeathers = 5;
         
@@ -28,57 +27,52 @@ public class ChickenFarmSimulator {
         
         //initializing  the chicken
         //creating the instance
-        chicken = new Chicken();
+        chickenOne = new Chicken();
         
-        System.out.println("chicken --> " + chicken);
+        System.out.println("chicken --> " + chickenOne);
         
-        chicken.setId(432);
-        chicken.setName("Lucy");
-        chicken.setAge(4);
-        chicken.setColor("White and Brown");
-        chicken.setIsMolting(false);
+        chickenOne.setId(432);
+        chickenOne.setName("Lucy");
+        chickenOne.setAge(4);
+        chickenOne.setColor("White and Brown");
+        chickenOne.setIsMolting(false);
         
+        printChicken(chickenOne);
+        
+        //chickenTwo
+        
+        Scanner read = new Scanner(System.in);
+        
+        Chicken chickenTwo;
+        
+        chickenTwo = new Chicken();
+        
+        System.out.println("chicken2 --> " + chickenTwo);
+        
+        System.out.print("type chicken's id : ");
+        chickenTwo.setId(read.nextInt());
+        read.nextLine();
+        System.out.print("type chicken's name : ");
+        chickenTwo.setName(read.nextLine());
+        System.out.print("type chicken's age : ");
+        chickenTwo.setAge(read.nextInt());
+        read.nextLine();
+        System.out.print("type chicken's color : ");
+        chickenTwo.setColor(read.nextLine());
+        System.out.print("type chicken is molting: ");
+        chickenTwo.setIsMolting(read.nextBoolean());
+                
+       printChicken(chickenTwo);
+        
+        
+    }   
+
+    private static void printChicken(Chicken chicken) {
         System.out.println("chicken id \t--> " + chicken.getId());
         System.out.println("chicken name \t--> " + chicken.getName());
         System.out.println("chicken age \t--> " + chicken.getAge());
         System.out.println("chicken color \t--> " + chicken.getColor());
         System.out.println("chicken is molting \t--> " + chicken.isIsMolting());
-        
-        //read from the keyboard the information for a new chicken
-        //declare the variables for input
-        //read data from keryboard
-        //create a new chicken
-        //set the values for the chicken with the data that was entered
-        //print the information
-        
-        Scanner read = new Scanner(System.in);
-        
-        Chicken chicken2;
-        
-        chicken2 = new Chicken();
-        
-        System.out.println("chicken2 --> " + chicken2);
-        
-        System.out.print("type chicken's id 2: ");
-        chicken2.setId(read.nextInt());
-        read.nextLine();
-        System.out.print("type chicken's name 2: ");
-        chicken2.setName(read.nextLine());
-        System.out.print("type chicken's age 2: ");
-        chicken2.setAge(read.nextInt());
-        read.nextLine();
-        System.out.print("type chicken's color 2: ");
-        chicken2.setColor(read.nextLine());
-        System.out.print("type chicken 2 is molting: ");
-        chicken2.setIsMolting(read.nextBoolean());
-                
-        System.out.println("chicken 2 id --> " + chicken2.getId());
-        System.out.println("chicken 2 name -->" + chicken2.getName());
-        System.out.println("chicken 2 age --> " + chicken2.getAge());
-        System.out.println("chicken 2 color -->" + chicken2.getColor());
-        System.out.println("chicken 2 is molting --> " + chicken2.isIsMolting());
-        
-        
-    }   
+    }
     
 }
