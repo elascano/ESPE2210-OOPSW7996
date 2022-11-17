@@ -12,16 +12,22 @@ import java.util.Scanner;
 public class ChickenFarmSimulator {
     public static void main(String[] args) {
         System.out.println("Luis Orozco");
-        System.out.println("Setters and Getters");
+        System.out.println("setters and getters");
         System.out.println("===================");
         
+      
+        //declaration
+        //ADT variableName
         Chicken chicken;
-        int id = 0;
-        chicken = new Chicken(id);
         
-               
-        System.out.println("chicken -->" + chicken);
+        //initializing the chicken
+        //creating the instance
+        chicken = new Chicken();
         
+        System.out.println("chicken --> " + chicken);    
+        
+        int id = 0;      
+                      
         chicken.setId(432);
         chicken.setName("Lucy");
         chicken.setAge(4);
