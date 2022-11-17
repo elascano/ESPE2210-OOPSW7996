@@ -1,0 +1,7 @@
+{"students":[
+	{"id":1, "name":"Edison Lascano", "birthDate":"17/12/1970", "gpa":9.0},
+	{"id":2, "name":"Jeremmy Cuadrado", "birthDate":"06/02/2003", "gpa":7.5},
+	{"id":3, "name":"Juan Pinza", "birthDate":"15/03/2004", "gpa":8.0},
+	{"id":4, "name":"Lady Cajilima", "birthDate":"10/02/1999", "gpa":8.1},
+	{"id":5, "name":"Justin Villarroel", "birthDate":"06/09/2006", "gpa":8.0},
+]}

@@ -1,0 +1,20 @@
+<student>
+  <id>1</id>
+  <name>Edison Lascano</name>
+  <birthDate>17/12/1970</birthFaye>
+  <gpa>9.0</gpa>
+</student>
+
+<student>
+  <id>2</id>
+  <name>Jeremy Cuadrado</name>
+  <birthDate>06-02-2003</birthFaye>
+  <gpa>7.5</gpa>
+</student>
+
+<student>
+  <id>3</id>
+  <name>Juan Pienza</name>
+  <birthDate>15-03-2204,</birthFaye>
+  <gpa>8.0</gpa>
+</student>
