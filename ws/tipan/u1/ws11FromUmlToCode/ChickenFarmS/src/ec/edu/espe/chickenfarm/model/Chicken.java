@@ -5,7 +5,7 @@ package ec.edu.espe.chickenfarm.model;
  * @author Reishel Tipan, PACSTORE, DCCO-ESPE
  */
 public class Chicken {
-
+//create attributes (encapsulated with private)
     private int id;
     private String name;
     private String color;
@@ -16,16 +16,15 @@ public class Chicken {
     public String toString() {
         return "Chicken{" + "id=" + id + ", name=" + name + ", color=" + color + ", age=" + age + ", isMolting=" + isMolting + '}';
     }
-
     
     public Chicken() {
         id = 0;
         name = "";
-        age = 0;
         color = "";
+        age = 0;
         isMolting = false;
     }
-
+    
     public Chicken(int id, String name, String color, int age, boolean isMolting) {
         this.id = id;
         this.name = name;
