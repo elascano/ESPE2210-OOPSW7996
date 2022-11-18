@@ -61,6 +61,24 @@ public class ChickenFarmSimulator {
         System.out.println("----Chicken 2-----");
         chicken2 = new Chicken(2,"lolita","black",23,true);
         printChicken(chicken2);
+        System.out.println("__________-----_____---_____-____-_");
+        int numberOfWheels = 0;
+        float weight = 0.0F;
+        System.out.println("number of wheels -->"+numberOfWheels);
+        System.out.println("weight-->"+weight);
+        numberOfWheels=456;
+        weight=numberOfWheels;
+        System.out.println("number of wheels -->"+numberOfWheels);
+        System.out.println("weight-->"+weight);
+        weight=4.8F;
+        numberOfWheels=(int)weight;
+        System.out.println("number of wheels -->"+numberOfWheels);
+        System.out.println("weight-->"+weight);
+        short population;
+        population =(short)40000;
+        System.out.println("40000 is -->"+population);
+        
+        
     }
     private static void printChicken(Chicken chicken){
         System.out.println("chicken Name -->" + chicken.getName());
