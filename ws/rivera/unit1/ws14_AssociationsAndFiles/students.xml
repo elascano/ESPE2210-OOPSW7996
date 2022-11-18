@@ -1,0 +1,26 @@
+<students>
+    <student>
+        <id>1</id>
+        <name>Edison Lascano</name>
+        <birthDate>17/12/1970</birthDate>
+        <GPA>9.0</GPA>
+    </student>
+    <student>
+        <id>2</id>
+        <name>Joel Rivera</name>
+        <birthDate>29/12/2003</birthDate>
+        <GPA>8.3</GPA>
+    </student>
+    <student>
+        <id>3</id>
+        <name>Alejandro Andrade</name>
+        <birthDate>18/08/2003</birthDate>
+        <GPA>8.7</GPA>
+    </student>
+    <student>
+        <id>4</id>
+        <name>Erick Lasluisa</name>
+        <birthDate>17/09/2003</birthDate>
+        <GPA>8.8</GPA>
+    </student>
+</students>
