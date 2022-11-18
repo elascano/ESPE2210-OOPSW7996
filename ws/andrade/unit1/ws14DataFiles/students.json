@@ -1,0 +1,6 @@
+{"students":[
+	{"id":1,"name":"Edison Lascano","birth Date":"17/12/1970","GPA":9.0},
+	{"id":2,"name":"Alejandro Andrade","birth Date":"18/08/1970","GPA":5.0},
+	{"id":3,"name":"Erick Lasluisa","birth Date":"17/09/2003","GPA":7.0},
+	{"id":4,"name":"Juan Perez","birth Date":"15/11/2001","GPA":7.5}
+]}
