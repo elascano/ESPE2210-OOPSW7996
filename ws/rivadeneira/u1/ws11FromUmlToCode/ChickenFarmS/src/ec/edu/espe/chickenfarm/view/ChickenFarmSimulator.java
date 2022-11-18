@@ -15,34 +15,51 @@ public class ChickenFarmSimulator {
         System.out.println("setters and getters");
         System.out.println("==================");
         
-        //datatype varible
-        int numberOfFeathers;
-     
+        System.out.println("abs of -5 --> " + Math.abs(-5));
+        
+        //primitive data types -> int, float, 
+        //user define data types [Abstract data types]-> String, Math, Chicken, ChickenFarm, Egg, Poop
+  
+        
+        
         //declaration
         //ADT varible name
-        Chicken chicken;
+        Chicken chickenOne;
         
-        numberOfFeathers = 5;
-        
-        System.out.println("The number of feathers is -->"+ numberOfFeathers);
+        //initializing the chicken
+        //create instance
+        chickenOne = new Chicken();
+        printChicken(chickenOne);
+        int id;
+        String name = "";
+        int age;
+        String color = "";
+        boolean Ismolting;
         
         //initializing the chicken
         //create the instance
-        chicken = new Chicken();
+        chickenOne = new Chicken();
         
-        System.out.println("chicken -->"+ chicken);
+        System.out.println("chicken class --> " + chickenOne.getClass().getSimpleName());
         
-        chicken.setId(423);
-        chicken.setName("Lucy");
-        chicken.setAge(4);
-        chicken.setColor("White and Brown");
-        chicken.setIsMolting(false);
+        System.out.println("chicken -->" + chickenOne);
+
         
-        System.out.println("chicken id\t -->"+ chicken.getId());
-        System.out.println("chicken name\t -->"+ chicken.getName());
-        System.out.println("chicken age\t -->"+ chicken.getAge());
-        System.out.println("chicken color\t -->"+ chicken.getColor());
-        System.out.println("chicken is molting\t -->"+ chicken.isIsMolting());
+        chickenOne.setId(423);
+        chickenOne.setName("Lucy");
+        chickenOne.setAge(4);
+        chickenOne.setColor("White and Brown");
+        chickenOne.setIsMolting(false);
+        
+        printChicken(chickenOne);
+        
+        chickenOne = new Chicken(2, "Lolita", "black", 2,true);
+        printChicken(chickenOne);
+        
+        chickenOne.setName("maruja");
+        printChicken(chickenOne);
+        
+        System.out.println("Chicken (from toString) --> " + chickenOne);
         
         System.out.println("=========");
         System.out.println("=========");
@@ -51,18 +68,29 @@ public class ChickenFarmSimulator {
         System.out.println("=========");
         
         //homework
+        Chicken chickenTwo;
+        chickenTwo = new Chicken();
         
         Scanner scan = new Scanner(System.in);
         
         System.out.print("chicken id -->");
-        chicken.setId(scan.nextInt());
+        id = scan.nextInt();
         System.out.print("chicken name -->");
-        chicken.setName(scan.next());
+        name = scan.next();
         System.out.print("chicken age -->");
-        chicken.setAge(scan.nextInt());
+        age = scan.nextInt();
         System.out.print("chicken color -->");
-        chicken.setColor(scan.next());
+        color = scan.next();
         System.out.print("chicken is molting -->");
-        chicken.setIsMolting(scan.nextBoolean());
+        Ismolting = scan.nextBoolean();
+    }
+
+    private static void printChicken(Chicken chickentwo) {
+        System.out.println("---------chicken data---------- ");
+        System.out.println("chicken id\t -->"+ chickentwo.getId());
+        System.out.println("chicken name\t -->"+ chickentwo.getName());
+        System.out.println("chicken age\t -->"+ chickentwo.getAge());
+        System.out.println("chicken color\t -->"+ chickentwo.getColor());
+        System.out.println("chicken is molting\t -->"+ chickentwo.isIsMolting());
     }
 }

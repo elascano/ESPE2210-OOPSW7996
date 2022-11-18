@@ -1,0 +1,26 @@
+<students>
+	<student>
+		<id>1</id>
+		<name>Edison Lascano</name>
+		<birthDate>17/12/1970</birthDate>
+		<gpa>9.0</gpa>
+	</student>
+	<student>
+		<id>2</id>
+		<name>Jeremmy Cuadrado</name>
+		<birthDate>06/02/2003</birthDate>
+		<gpa>7.5</gpa>
+	</student>
+	<student>
+		<id>3</id>
+		<name>Juan Pinza</name>
+		<birthDate>15/03/2004</birthDate>
+		<gpa>8.0</gpa>
+	</student>
+	<student>
+		<id>3</id>
+		<name>Lady Cajilima</name>
+		<birthDate>10/02/1999</birthDate>
+		<gpa>8.1</gpa>
+	</student>
+</students>
