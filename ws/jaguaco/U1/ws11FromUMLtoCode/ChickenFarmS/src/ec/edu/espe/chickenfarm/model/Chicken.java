@@ -14,8 +14,8 @@ public class Chicken {
 
     public Chicken() {
         id = 0;
-        name = "";
-        color = "";
+        name = "null";
+        color = "null";
         age = 0;
         isMolting = false;
     }
