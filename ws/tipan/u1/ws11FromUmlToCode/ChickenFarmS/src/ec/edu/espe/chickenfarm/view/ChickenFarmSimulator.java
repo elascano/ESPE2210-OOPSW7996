@@ -73,7 +73,6 @@ public class ChickenFarmSimulator {
         chicken.setIsMolting(isMolting);
         printChicken(chicken);
     }
-    
     private static void printChicken(Chicken chicken) {
         System.out.println("*************************");
         System.out.println("      Chicken  Data      ");
