@@ -1,0 +1,4 @@
+1:Edison Lascano:17/12/1970:9.0
+2:Jeremy Cuadrado:06/02/2003:7.5
+3:Juan Pinza:15/03/2004:8.0
+4:Lady Cajilima:10/02/199:8.1
