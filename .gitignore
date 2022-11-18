@@ -23,7 +23,7 @@
 hs_err_pid*
 
 #vpp backup files
-<<<<<<< HEAD
 *.vpp.bak_*
-=======
-*.vpp.bak_*
+/ws/oña/u1/ws13Constructors/ChickenFarm/nbproject/private/
+/ws/oña/u1/ws13Constructors/ChickenFarmS/nbproject/private/
+/ws/oña/u1/ws13Constructors/ChickenFarmS/build/

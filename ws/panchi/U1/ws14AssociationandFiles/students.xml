@@ -1,0 +1,38 @@
+<students>
+	<student>
+		<id>1</id>
+		<name>Edison Lascano</name>
+		<birthDate>17/12/1970</birthDate>
+		<GPA>9.0</GPA>
+	</student>
+	<student>
+		<id>2</id>
+		<name>Jeremy Cuadrado</name>
+		<birthDate>06/02/2003</birthDate>
+		<GPA>7.5</GPA>
+	</student>
+	<student>
+		<id>3</id>
+		<name>Juan Pinza</name>
+		<birthDate>15/03/2004</birthDate>
+		<GPA>8.0</GPA>
+	</student>
+	<student>
+		<id>4</id>
+		<name>Lady Cajilima</name>
+		<birthDate>10/02/1999</birthDate>
+		<GPA>8.0</GPA>
+	</student>
+	<student>
+		<id>5</id>
+		<name>Allan Panchi</name>
+		<birthDate>24/04/2003</birthDate>
+		<GPA>8.0</GPA>
+	</student>
+	<student>
+		<id>6</id>
+		<name>Luis Andrade</name>
+		<birthDate>24/04/2003</birthDate>
+		<GPA>9.0</GPA>
+	</student>
+</students>
