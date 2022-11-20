@@ -1,0 +1,14 @@
+CHICKENS
+ID: 123
+Name: DAvid
+Age: 12
+Color: red
+Is Molting: true
+Chicken{id=123, name=DAvid, color=red, age=12, isMolting=true}
+CHICKENS
+ID: 1234
+Name: karen
+Age: 12
+Color: while
+Is Molting: false
+Chicken{id=1234, name=karen, color=while, age=12, isMolting=false}
