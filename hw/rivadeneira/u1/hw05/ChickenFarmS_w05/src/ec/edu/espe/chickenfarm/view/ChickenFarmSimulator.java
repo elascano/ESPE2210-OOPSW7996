@@ -56,7 +56,7 @@ public class ChickenFarmSimulator {
         System.out.print("chicken is molting (true/false)-->");
         Ismolting = scan.nextBoolean();
         scan.nextLine();
-        System.out.println("do you wish to continue? yes/no");
+        System.out.println("do you want to continue entering data? yes/no");
         ans = scan.nextLine();
         
         
@@ -123,7 +123,7 @@ public class ChickenFarmSimulator {
         line.println(age);
         line.print("chicken color -->");
         line.println(color);
-        line.print("chicken is molting (true/false)-->");
+        line.print("do you want to continue entering data? yes/no");
         line.println(Ismolting);
         line.close();
         write.close();
@@ -141,4 +141,3 @@ public class ChickenFarmSimulator {
 
 
    
-    
