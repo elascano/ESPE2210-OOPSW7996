@@ -24,6 +24,17 @@ hs_err_pid*
 
 #vpp backup files
 *.vpp.bak_*
+<<<<<<< HEAD
+/hw/rivadeneira/u1/hw05/ChickenFarmS_2/build/
+/hw/rivadeneira/u1/hw05/ChickenFarmS_2/dist/
+/hw/rivadeneira/u1/hw05/ChickenFarmS_2/nbproject/private/
+/hw/rivadeneira/u1/hw05/ChickenFarmS_w05/nbproject/private/
+/hw/rivadeneira/u1/hw05/ChickenFarmS_w05/build/
+/hw/rivadeneira/u1/hw05/ChickenFarmS_w05/dist/
+=======
 /ws/oña/u1/ws13Constructors/ChickenFarm/nbproject/private/
 /ws/oña/u1/ws13Constructors/ChickenFarmS/nbproject/private/
 /ws/oña/u1/ws13Constructors/ChickenFarmS/build/
+/hw/oña/U1/hw05/HW05/hw05/nbproject/private/
+/hw/oña/U1/hw05/HW05/hw05/build/
+>>>>>>> 175e995491a9c6381e92123a17888a4543906374
