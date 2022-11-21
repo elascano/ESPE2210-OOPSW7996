@@ -1,9 +1,9 @@
 
-package ec.edu.espe.chickenfarm.model;
+package ec.edu.espe.Chickenfarm.model;
 
 /**
  *
- * @author Leonardo Yaranga,Progress Team, DCCO-ESPE
+ * @author Jefferson Ulco,ProgressTeam,DCCO-ESPE
  */
 public class Chicken {
 
@@ -15,17 +15,17 @@ public class Chicken {
 
     @Override
     public String toString() {
-        return "======ChickenData====="+ "{" + "id = " + id + ","+ " name = " + name + ","+ " color = " + color + "," + " age = " + age + ","+ "isMolting = " + isMolting + '}';
+        return "Chicken{" + "id=" + id + ", name=" + name + ", color=" + color + ", age=" + age + ", isMolting=" + isMolting + '}';
     }
-    //No-Arg Contructor
-    public Chicken() {
-        id = 0;
-        name = "";
-        color = "";
-        age = 0;
-        isMolting = false;
+
+    public Chicken(){
+        id=0;
+        name="";
+        color="";
+        age=0;
+        isMolting=false;
     }
-    //Arg Constructor
+
     public Chicken(int id, String name, String color, int age, boolean isMolting) {
         this.id = id;
         this.name = name;
@@ -103,5 +103,5 @@ public class Chicken {
     public void setIsMolting(boolean isMolting) {
         this.isMolting = isMolting;
     }
-  
+
 }
