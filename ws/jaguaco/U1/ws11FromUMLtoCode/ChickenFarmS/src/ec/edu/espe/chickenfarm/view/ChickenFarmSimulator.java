@@ -20,7 +20,7 @@ public class ChickenFarmSimulator {
         //ADT variable name
         Chicken chicken;
                 
-        int id;
+        int id;        
         String name = "";
         int age;
         String color = "";
@@ -29,17 +29,22 @@ public class ChickenFarmSimulator {
          //initializaing the chicken
          //creating the instance
          chicken = new Chicken();
-         
+            
          System.out.println("Chicken -->" + chicken);
          
          chicken.setId(432);
          chicken.setName("Lucy");
          chicken.setAge(4);
          chicken.setColor("White and Brown");
-         chicken.setisMolting(false);
+         chicken.setisMolting(false);    
          
          printChicken(chicken);//llamado de la funcion printchicken
          
+          //null chicken
+          chicken = new Chicken();
+         printChicken(chicken);        
+
+        
          //second chicken
         chicken = new Chicken(325, "Lolita", "Black", 2, true);
         printChicken(chicken);
@@ -47,6 +52,7 @@ public class ChickenFarmSimulator {
         // third chicken
         chicken = new Chicken(584, "Maruja", "Red", 1, true);
         printChicken(chicken);
+        
          
     // new chicken 
     

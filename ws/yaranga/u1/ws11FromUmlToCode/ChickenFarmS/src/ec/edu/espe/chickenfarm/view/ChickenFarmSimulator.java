@@ -2,6 +2,7 @@ package ec.edu.espe.chickenfarm.view;
 
 import ec.edu.espe.chickenfarm.model.Chicken;
 import ec.edu.espe.chickenfarm.model.Egg;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -11,88 +12,108 @@ import java.util.Scanner;
 public class ChickenFarmSimulator {
 
     public static void main(String[] args) {
-        System.out.println("Leonardo Yaranga");
-        System.out.println("ImputFromkeyboard");
-        System.out.println("====================");
+        Chicken chicken[] = new Chicken[100];
+        Scanner input = new Scanner(System.in);
+        int position = 0;
+        boolean exit = false;
+        int option;
 
+        for (int i = 0; i < 100; i++) {
+            chicken[i] = new Chicken();
+        }
+
+        while (!exit) {
+            System.out.println("Leonardo Yaranga");
+            System.out.println("ImputFromkeyboard");
+            System.out.println("====================");
+
+            System.out.println("1.Enter a chicken");
+            System.out.println("2.Print all chicken");
+            System.out.println("3.Search chicken to print");
+            System.out.println("3.Exit");
+            try {
+                System.out.println("Enter an option number");
+                option = input.nextInt();//NEED EXCEPTION si no pone un numero!
+                switch (option) {
+                    case 1:
+                        enterChicken(chicken, position);
+                        position++;
+                        break;
+
+                    case 2:
+                        for (int i = 0; i < position; i++) {
+                            printChicken(chicken[i]);
+                        }
+                        break;
+
+                    case 3:
+                        int idNumber;
+                        System.out.println("What is the ID number of the chicken?");
+                        idNumber = input.nextInt();
+                        for (int i = 0; i < 100; i++) {
+                            if (chicken[i].getId() == idNumber) {
+                                printChicken(chicken[i]);
+                            }
+                        }
+                        break;
+                    case 4:
+                        exit = true;
+                    default:
+                        System.out.println("La opcion no existe");
+                        break;
+
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("");
+                input.next();
+            }
+        }
+
+    }
+
+    private static void printChicken(Chicken chicken) {
+        System.out.println(chicken); //print like toString form.
+        /*System.out.println("=========ChickenData===========");
+        System.out.println("chicken id \t --> " + chicken.getId());
+        System.out.println("chicken name \t--> " + chicken.getName()); //MAYBE this gonna be erased
+        System.out.println("chicken age \t-->" + chicken.getAge());
+        System.out.println("chicken color \t--> " + chicken.getColor());
+        System.out.println("chicken is molting \t--> " + chicken.isIsMolting());*/
+    }
+
+    private static void enterChicken(Chicken chicken[], int position) {
         int chickenId;
         String chickenName = "";
         int chickenAge;
         String chickenColor;
         boolean chickenIsMolting;
+        Scanner input = new Scanner(System.in);
 
-        //primitive data types -->int,float,long,Math,Chicken Chicken Farm, Egg, poop
-        //user defined data types (abstract Data Types)--> String, Math, Chicken
-        System.out.println("abs of -5 -->" + Math.abs(-5));
-
-        //declaration
-        Chicken chickenOne;//ADT variableName
-        Chicken chickenTwo;
-
-        //initializing the chicken
-        //creating the instance
-        chickenOne = new Chicken();
-        System.out.println("-----------------");
-        System.out.println("//Default Chicken No-arg//");
-        printChicken(chickenOne);
-
-        System.out.println("chicken is of class " + chickenOne.getClass().getSimpleName());
-        System.out.println("chicken" + chickenOne);
-
-        
-        chickenOne.setId(432);
-        chickenOne.setName("Lucy");
-        chickenOne.setAge(4);
-        chickenOne.setColor("White and Brown");
-        chickenOne.setIsMolting(false);
-
-        printChicken(chickenOne);
-
-        Scanner imput = new Scanner(System.in);
-
-        chickenTwo = new Chicken();
-
+        //CsvWriter csvWriter = new Csvwriter("chickenList.csv")
         System.out.println("What is the id?");
-        chickenId = imput.nextInt();
-        imput.nextLine();
+        chickenId = input.nextInt();
+        input.nextLine();
 
         System.out.println("What is the name?");
-        chickenName = imput.nextLine();
+        chickenName = input.nextLine();
 
         System.out.println("What is the age?");
-        chickenAge = imput.nextInt();
-        imput.nextLine();
+        chickenAge = input.nextInt();
+        input.nextLine();
 
         System.out.println("What is the color?");
-        chickenColor = imput.nextLine();
+        chickenColor = input.nextLine();
 
         System.out.println("Is molting?");
-        chickenIsMolting = imput.nextBoolean();
+        chickenIsMolting = input.nextBoolean();
 
-        chickenTwo.setId(chickenId);
-        chickenTwo.setName(chickenName);
-        chickenTwo.setAge(chickenAge);
-        chickenTwo.setColor(chickenColor);
-        chickenTwo.setIsMolting(chickenIsMolting);
+        chicken[position] = new Chicken(chickenId, chickenName, chickenColor, chickenAge, chickenIsMolting);
 
-        printChicken(chickenTwo);
-
-        chickenOne = new Chicken(12, "Luli", "Brown", 5, true);
-
-        System.out.println("-----------------");
-        System.out.println(" //Parameter Chicken// ");
-        printChicken(chickenOne);
-        System.out.println("chicken(from toString)-->" + chickenOne);
-
-    }
-
-    private static void printChicken(Chicken chicken) {
-        System.out.println("=========ChickenData===========");
-        System.out.println("chicken id \t --> " + chicken.getId());
-        System.out.println("chicken name \t--> " + chicken.getName());
-        System.out.println("chicken age \t-->" + chicken.getAge());
-        System.out.println("chicken color \t--> " + chicken.getColor());
-        System.out.println("chicken is molting \t--> " + chicken.isIsMolting());
+        /*chicken.setId(chickenId);
+        chicken.setName(chickenName);
+        chicken.setAge(chickenAge);      //PROBABLY this was stayed obsolet
+        chicken.setColor(chickenColor);  
+        chicken.setIsMolting(chickenIsMolting);*/
     }
 
 }

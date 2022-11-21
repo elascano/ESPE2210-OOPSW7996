@@ -1,0 +1,17 @@
+====Chicken1=====
+chicken id -->234
+chicken name -->Lulu
+chicken age -->4
+chicken color -->Black
+chicken is molting (true/false)-->true
+====Chiken2=====
+chicken id -->194
+chicken name -->Dora
+chicken age -->2
+chicken color -->Brown
+chicken is molting (true/false)-->true====Chiken2=====
+chicken id: 123
+chicken name: luci
+chicken age: 4
+chicken color: brown
+chicken is molting (true/false): true
