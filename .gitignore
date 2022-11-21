@@ -24,3 +24,5 @@ hs_err_pid*
 
 #vpp backup files
 *.vpp.bak_*
+/hw/pinza/Unit 1/HW05ChickenFarmS Files and Exceptions/ChickenFarmS/nbproject/private/
+/hw/pinza/Unit 1/HW05ChickenFarmS Files and Exceptions/ChickenFarmS/build/
