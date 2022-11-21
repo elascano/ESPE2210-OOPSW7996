@@ -18,102 +18,101 @@ import java.util.Scanner;
  */
 public class ChickenFarmSimulator {
 
-    // throws IOException, InterruptedException (it is for can call clear screen)
     public static void main(String[] args) {
         int option = 0;
         int chickenIndex;
         int chickenId;
 
+        System.out.println("Sheylee Enriquez");
+        System.out.println("Setters, getters and Input from Keyboard");
+        System.out.println("====================================");
+
         //declaration
         //ADT variableName
+        
         Scanner sc;
         Chicken chicken;
         List<Chicken> chickens;
-
-        //initializing the chiken
-        //creating the instance
+        
+        chickens = loadFile();
+        
+        System.out.println("Please look for the options. ");
+        
         sc = new Scanner(System.in);
 
-        chickens = loadFile();
-
         while (option != 7) {
-            System.out.println("Stephen Drouet");
-            System.out.println("Setters, getters and Input from keyboard ");
-            System.out.println("=========================================");
-            System.out.println("                  Menu");
-            System.out.println("=========================================");
-            System.out.println("1. Add Chicken");
-            System.out.println("2. Print Chicken ID record");
-            System.out.println("3. Print Chicken info");
-            System.out.println("4. Load File from .csv");
-            System.out.println("5. Save File as .csv");
+            System.out.println("\n\n====================Options========================");
+            System.out.println("1. Add a new chicken");
+            System.out.println("2. Print a chicken record");
+            System.out.println("3. Print the chicken information");
+            System.out.println("4. Load File");
+            System.out.println("5. Save File"); // csv
             System.out.println("6. Delete File");
             System.out.println("7. Exit");
+            System.out.println("=====================================================");
 
-            System.out.print("\nChoose an option: ");
+            System.out.print("\nPlease choose an option: ");
             try {
                 option = sc.nextInt();
             } catch (Exception e) {
                 option = 0;
             }
             sc.nextLine();
+
             Collections.sort(chickens);
 
             switch (option) {
                 case 1 -> {
-                    System.out.println("----------Add Chicken----------");
+                    System.out.println("\n=============Add a new Chicken================");
                     chicken = addChicken();
                     if (chicken != null) {
                         chickens.add(chicken);
-                        System.out.println("----------------------------------");
-                        System.out.println("Chicken was successfully added");
-                        System.out.println("----------------------------------");
+                        System.out.println("\n=============================================");
+                        System.out.println("The chicken was added");
+                        System.out.println("=============================================\n");
                         Collections.sort(chickens);
                     }
                 }
 
                 case 2 -> {
-                    System.out.println("----------Chicken ID record----------");
-                    printChickenIdRecord(chickens);
+                    System.out.println("\n\n==================Chicken record=====================");
+                    printChickenRecord(chickens);
                 }
 
                 case 3 -> {
-                    System.out.println("----------Chicken info----------");
-                    System.out.print("Enter chicken ID: ");
+                    System.out.println("\n\n==============Chicken information===================\n");
+                    System.out.print("What is the Chicken ID?: ");
                     chickenId = sc.nextInt();
                     sc.nextLine();
                     chickenIndex = findChickenIndex(chickens, chickenId);
                     if (chickenIndex >= 0) {
                         printChicken(chickens.get(chickenIndex));
                     } else {
-                        System.out.println("Chicken ID not found");
+                        System.out.println("Chicken ID was not found");
                     }
                 }
 
                 case 4 -> {
-                    System.out.println("----------File----------");
+                    System.out.println("\n\n===================File=================");
                     chickens = loadFile();
                 }
 
                 case 5 -> {
-                    System.out.println("----------File----------");
+                    System.out.println("\n\n===================File=================");
                     saveFile(chickens);
                 }
 
                 case 6 -> {
-                    System.out.println("----------File----------");
+                    System.out.println("\n\n===================File=================");
                     deleteFile();
                 }
 
                 case 7 ->
-                    System.out.println("The application finished");
+                    System.out.println("Thank you :)");
 
                 default ->
                     System.out.println("Invalid Option");
             }
-
-            System.out.println("\nPress [Enter] to continue...");
-            sc.nextLine();
         }
     }
 
@@ -121,9 +120,9 @@ public class ChickenFarmSimulator {
         File file = new File("./chickens.csv");
         try {
             file.delete();
-            System.out.println("----------File was deleted----------");
+            System.out.println("\nFile was deleted");
         } catch (Exception e) {
-            System.out.println("Error: File not deleted or found");
+            System.out.println("\n File not deleted or found");
         }
     }
 
@@ -136,10 +135,10 @@ public class ChickenFarmSimulator {
                 chickens.add(new Chicken(Integer.parseInt(chickenData[0]), chickenData[1],
                         chickenData[2], Integer.parseInt(chickenData[3]), Boolean.parseBoolean(chickenData[4])));
             }
-            System.out.println("----------File was loaded----------");
+            System.out.println("----------File is being loaded----------");
             Collections.sort(chickens);
         } catch (Exception e) {
-            System.out.println("Error: File not open or found");
+            System.out.println("\nFile was not found");
         }
 
         return chickens;
@@ -153,11 +152,12 @@ public class ChickenFarmSimulator {
             }
             System.out.println("----------File was saved----------");
         } catch (Exception e) {
-            System.out.println("Error: File not open or found");
+            System.out.println("\nFile was not found");
         }
     }
 
     static Chicken addChicken() {
+
         Chicken newChicken = new Chicken();
 
         int id;
@@ -169,16 +169,16 @@ public class ChickenFarmSimulator {
         Scanner sc = new Scanner(System.in);
 
         try {
-            System.out.print("Write chicken Name: ");
+            System.out.print("Chicken Name: ");
             name = sc.nextLine();
-            System.out.print("Write chicken ID: ");
+            System.out.print("Chicken ID: ");
             id = sc.nextInt();
-            System.out.print("Write chicken age: ");
+            System.out.print("Chicken age: ");
             age = sc.nextInt();
-            sc.nextLine(); // Empty buffer
-            System.out.print("Write chicken color: ");
+            sc.nextLine();
+            System.out.print("Chicken color: ");
             color = sc.nextLine();
-            System.out.print("Chicken is Molting? (s/n): ");
+            System.out.print("Chicken is Molting? (true/false): ");
             isMolting = sc.nextLine();
 
             newChicken.setId(id);
@@ -186,16 +186,8 @@ public class ChickenFarmSimulator {
             newChicken.setAge(age);
             newChicken.setColor(color);
 
-            if (isMolting.toLowerCase().equals("s")) {
-                newChicken.setIsMolting(true);
-            } else {
-                newChicken.setIsMolting(false);
-            }
-
         } catch (Exception e) {
-            System.out.println("=============================================");
-            System.out.println("Error: some data entered for chicken is wrong");
-            System.out.println("=============================================");
+            System.out.println("Error! You should verufy the information entered :)");
             return null;
         }
 
@@ -214,27 +206,23 @@ public class ChickenFarmSimulator {
         return -1;
     }
 
-    static void printChickenIdRecord(List<Chicken> chickens) {
+    static void printChickenRecord(List<Chicken> chickens) {
         int numberOfChickens = chickens.size();
         System.out.println("Number of Chickens: " + numberOfChickens);
-        System.out.println("Chicken IDs");
-        for (Chicken chicken : chickens) {
-            System.out.println(chicken.getId());
-        }
     }
 
     static void printChicken(Chicken chicken) {
         System.out.println("=========================================");
-        System.out.println("chicken --> id: " + chicken.getId());
+        System.out.println("chicken\t --> id: " + chicken.getId());
         System.out.println("=========================================");
 
         if (chicken.getName() != null) {
-            System.out.println("Chicken name --> " + chicken.getName());
-            System.out.println("Chicken age --> " + chicken.getAge());
-            System.out.println("Chicken color --> " + chicken.getColor());
-            System.out.println("Chicken is molting --> " + chicken.isIsMolting());
+            System.out.println("Chicken name\t --> \t\t" + chicken.getName());
+            System.out.println("Chicken age\t --> \t\t" + chicken.getAge());
+            System.out.println("Chicken color\t --> \t\t" + chicken.getColor());
+            System.out.println("Chicken is molting --> \t" + chicken.isIsMolting());
         } else {
-            System.out.println("Chicken info is empty");
+            System.out.println("Chicken information is empty!");
         }
     }
 }

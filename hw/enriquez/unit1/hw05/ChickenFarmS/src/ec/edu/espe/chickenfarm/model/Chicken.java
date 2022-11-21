@@ -109,7 +109,6 @@ public class Chicken implements Comparable<Chicken> {
     }
 
     public String ToCSV() {
-        return this.id + ";" + this.name + ";" + this.color + ";" + this.age + ";" + this.isMolting;
+        return "Chicken ID:" + "," + this.id + "," + "Name:" + "," + this.name + "," + "Color:" + "," + this.color + "," + "Age:" + "," + this.age + "," +"Molting:" + "," + this.isMolting;
     }
-
 }
