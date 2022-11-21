@@ -1,0 +1,12 @@
+Id: 432
+Name: Jose
+Age: 3
+Color: white
+Is Molting: false
+Chicken{id=432, name=Jose, color=white, age=3, isMolting=false}
+Id: 583
+Name: Karlita
+Age: 5
+Color: brown
+Is Molting: false
+Chicken{id=583, name=Karlita, color=brown, age=5, isMolting=false}
