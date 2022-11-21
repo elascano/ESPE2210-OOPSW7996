@@ -3,7 +3,7 @@ package ec.edu.espe.chickenfarm.view;
 
 import java.util.Scanner;
 import ec.edu.espe.chickenfarm.model.Chicken;
-import ec.edu.espe.chickenfarm.model.Egg;
+import java.io.*;
 
 /**
  *
@@ -11,68 +11,40 @@ import ec.edu.espe.chickenfarm.model.Egg;
  */
 public class ChickenFarmSimulator {
     public static void main(String[] args) {
-        System.out.println("Ariel Rivadeneira");
-        System.out.println("setters and getters");
-        System.out.println("==================");
         
-        System.out.println("abs of -5 --> " + Math.abs(-5));
+        File file;
+        FileWriter write;
+        PrintWriter line;
         
-        //primitive data types -> int, float, 
-        //user define data types [Abstract data types]-> String, Math, Chicken, ChickenFarm, Egg, Poop
-  
-        
-        
-        //declaration
-        //ADT varible name
         Chicken chickenOne;
-        
-        //initializing the chicken
-        //create instance
-        chickenOne = new Chicken();
-        printChicken(chickenOne);
+        chickenOne= new Chicken();
+
+        String ans;
         int id;
         String name = "";
         int age;
         String color = "";
         boolean Ismolting;
         
-        //initializing the chicken
-        //create the instance
-        chickenOne = new Chicken();
+        file = new File("C:\\Users\\Administrador\\Desktop\\OOP\\ESPE2210-OOPSW7996\\hw\\rivadeneira\\u1\\hw05\\Chicken.txt");
         
-        System.out.println("chicken class --> " + chickenOne.getClass().getSimpleName());
+        if(!file.exists()){
+        try{
         
-        System.out.println("chicken -->" + chickenOne);
-
+        file.createNewFile();
         
-        chickenOne.setId(423);
-        chickenOne.setName("Lucy");
-        chickenOne.setAge(4);
-        chickenOne.setColor("White and Brown");
-        chickenOne.setIsMolting(false);
         
-        printChicken(chickenOne);
-        
-        chickenOne = new Chicken(2, "Lolita", "black", 2,true);
-        printChicken(chickenOne);
-        
-        chickenOne.setName("maruja");
-        printChicken(chickenOne);
-        
-        System.out.println("Chicken (from toString) --> " + chickenOne);
-        
+        System.out.println("Ariel Rivadeneira");
         System.out.println("=========");
         System.out.println("=========");
         System.out.println("Homework");
         System.out.println("=========");
         System.out.println("=========");
-        
-        //homework
-        Chicken chickenTwo;
-        chickenTwo = new Chicken();
+       
         
         Scanner scan = new Scanner(System.in);
-        
+        do {
+        System.out.println("------NEW DATA------");
         System.out.print("chicken id -->");
         id = scan.nextInt();
         System.out.print("chicken name -->");
@@ -81,16 +53,92 @@ public class ChickenFarmSimulator {
         age = scan.nextInt();
         System.out.print("chicken color -->");
         color = scan.next();
-        System.out.print("chicken is molting -->");
+        System.out.print("chicken is molting (true/false)-->");
         Ismolting = scan.nextBoolean();
+        scan.nextLine();
+        System.out.println("do you wish to continue? yes/no");
+        ans = scan.nextLine();
+        
+        
+        write=new FileWriter(file,true); 
+        line = new PrintWriter(write);
+        line.println("------NEW DATA------");
+        line.print("chicken id -->");
+        line.println(id);
+        line.print("chicken name -->");
+        line.println(name);
+        line.print("chicken age -->");
+        line.println(age);
+        line.print("chicken color -->");
+        line.println(color);
+        line.print("chicken is molting (true/false)-->");
+        line.println(Ismolting);
+        line.close();
+        write.close();
+        
+        }while( ans.equals("yes"));
+        System.out.println("Finish the program");
+        
+    }catch(IOException exepcion){
+        exepcion.printStackTrace (System.out);
+    }
+        }else{
+        try{
+
+     
+        System.out.println("Ariel Rivadeneira");
+        System.out.println("=========");
+        System.out.println("=========");
+        System.out.println("Homework");
+        System.out.println("=========");
+        System.out.println("=========");
+       
+        
+        Scanner scan = new Scanner(System.in);
+        do {
+        System.out.println("------NEW DATA------");   
+        System.out.print("chicken id -->");
+        id = scan.nextInt();
+        System.out.print("chicken name -->");
+        name = scan.next();
+        System.out.print("chicken age -->");
+        age = scan.nextInt();
+        System.out.print("chicken color -->");
+        color = scan.next();
+        System.out.print("chicken is molting (true/false)-->");
+        Ismolting = scan.nextBoolean();
+        scan.nextLine();
+        System.out.println("do you wish to continue? yes/no");
+        ans = scan.nextLine();   
+        
+        
+        write=new FileWriter(file,true); 
+        line = new PrintWriter(write);
+        line.println("------NEW DATA------");
+        line.print("chicken id -->");
+        line.println(id);
+        line.print("chicken name -->");
+        line.println(name);
+        line.print("chicken age -->");
+        line.println(age);
+        line.print("chicken color -->");
+        line.println(color);
+        line.print("chicken is molting (true/false)-->");
+        line.println(Ismolting);
+        line.close();
+        write.close();
+        
+        }while( ans.equals("yes"));
+        System.out.println("Finish the program");
+        
+    }catch(IOException exepcion){
+        exepcion.printStackTrace (System.out);
     }
 
-    private static void printChicken(Chicken chickentwo) {
-        System.out.println("---------chicken data---------- ");
-        System.out.println("chicken id\t -->"+ chickentwo.getId());
-        System.out.println("chicken name\t -->"+ chickentwo.getName());
-        System.out.println("chicken age\t -->"+ chickentwo.getAge());
-        System.out.println("chicken color\t -->"+ chickentwo.getColor());
-        System.out.println("chicken is molting\t -->"+ chickentwo.isIsMolting());
+        }
     }
 }
+
+
+   
+    
