@@ -100,13 +100,13 @@ public class Chicken implements Comparable<Chicken> {
     }
 
     @Override
-    public int compareTo(Chicken o) {
+    public int compareTo(Chicken number) {
         Integer newId = id;
-        return newId.compareTo(o.getId());
+        return newId.compareTo(number.getId());
     }
 
     public String ToCSV() {
-        return this.id + "," + this.name + "," + this.color + "," + this.age + "," + this.isMolting;
+        return "Chicken ID:" + "," + this.id + "," + "Name:" + "," + this.name + "," + "Color:" + "," + this.color + "," + "Age:" + "," + this.age + "," +"Molting:" + "," + this.isMolting;
     }
 
 }
