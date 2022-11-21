@@ -1,0 +1,16 @@
+<students>
+	<student>
+		<id>1</id>
+		<name>Edison Lascano</name>
+		<birthDate>17/12/1970</birthDate>
+		<gpa>9.0</gpa>
+	</student>
+	<student>
+                <id>2</id>
+                <name>Lindsay Barrionuevo</name>
+		<birthDate>11/04/2003</birthDate>
+                <gpa>8.0</gpa>
+	</student>
+</students>
+
+
