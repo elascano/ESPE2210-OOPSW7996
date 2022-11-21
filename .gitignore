@@ -24,3 +24,6 @@ hs_err_pid*
 
 #vpp backup files
 *.vpp.bak_*
+/hw/yaranga/u1/hw05/ChickenFarmS_1/nbproject/private/
+/hw/yaranga/u1/hw05/ChickenFarmS_1/build/
+/hw/yaranga/u1/hw05/ChickenFarmS_1/dist/

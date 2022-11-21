@@ -15,7 +15,7 @@ public class Chicken {
 
     @Override
     public String toString() {
-        return "======ChickenData====="+ "{" + "id = " + id + ","+ " name = " + name + ","+ " color = " + color + "," + " age = " + age + ","+ "isMolting = " + isMolting + '}';
+        return "======ChickenData=====\n" + "id = " + id + "\n"+ "name = " + name + "\n"+ "color = " + color + "\n" + "age = " + age + "\n"+ "isMolting = " + isMolting ;
     }
     //No-Arg Contructor
     public Chicken() {

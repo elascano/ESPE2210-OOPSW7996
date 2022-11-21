@@ -1,0 +1,18 @@
+id;name;age;color;isMolting
+45;leo;;;
+1;leo;;;
+46;ver;;;
+1;sad;;;
+45;leo;;;
+45;leo;;;
+1;leo;45;red;true
+2;bard;6;blue;false
+3;vual;4;yes;true
+;;;;
+12;pac;4;blue;true
+
+4;pak;4;blue;true;
+6;ped;6;blue;true;
+77;zeek;6;red;true;
+78;mizu;7;brown;false;
+79;sil;9;white and black;false;
