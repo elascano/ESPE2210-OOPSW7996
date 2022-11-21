@@ -1,4 +1,0 @@
-# ESPE2210-OOPSW7996
-## Instructor: Edison Lascano
-## Student: Ariel Rivadeneira
-### Assignments unit 1
