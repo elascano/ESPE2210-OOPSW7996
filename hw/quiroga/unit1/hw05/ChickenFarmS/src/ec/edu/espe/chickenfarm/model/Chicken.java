@@ -15,7 +15,7 @@ public class Chicken {
     private String color;
     private int age;
     private boolean isMolting;
-
+    
     @Override
     public String toString() {
         return "Chicken{" + "id=" + id + ", name=" + name + ", color=" + color + ", age=" + age + ", isMolting=" + isMolting + '}';
