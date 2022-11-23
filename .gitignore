@@ -24,3 +24,6 @@ hs_err_pid
 
 #vpp backup files
 .vpp.bak_
+/ws/ansatuña/u1/ws16EncaptulationAndAbstraction/EncapsulationAndAbstraction/nbproject/private/
+/ws/ansatuña/u1/ws16EncaptulationAndAbstraction/EncapsulationAndAbstraction/build/
+/ws/ansatuña/u1/ws16EncaptulationAndAbstraction/EncapsulationAndAbstraction/dist/
