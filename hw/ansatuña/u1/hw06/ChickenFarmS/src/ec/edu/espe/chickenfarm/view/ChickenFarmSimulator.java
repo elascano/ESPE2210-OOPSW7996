@@ -79,7 +79,7 @@ public class ChickenFarmSimulator {
         System.out.println("> 3.Exit");
         System.out.println("======================");
         System.out.println("Please choose one: ");
-        System.out.println("> \t");
+        System.out.println(">");
     }
         private static void choiceVerifier(int choice) {
         while (choice < 1 || choice > 3) {
