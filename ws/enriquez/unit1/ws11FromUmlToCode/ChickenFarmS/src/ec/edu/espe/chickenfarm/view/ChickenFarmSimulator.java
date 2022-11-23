@@ -5,6 +5,11 @@
 package ec.edu.espe.chickenfarm.view;
 
 import ec.edu.espe.chickenfarm.model.Chicken;
+import java.io.File;
+import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -13,99 +18,223 @@ import java.util.Scanner;
  */
 public class ChickenFarmSimulator {
 
+    // throws IOException, InterruptedException (it is for can call clear screen)
     public static void main(String[] args) {
-        System.out.println("Sheylee Enriquez");
-        System.out.println("Setters and getters");
-        System.out.println("====================================");
+        int option = 0;
+        int chickenIndex;
+        int chickenId;
 
         //declaration
         //ADT variableName
+        Scanner sc;
         Chicken chicken;
+        List<Chicken> chickens;
 
-        //initializing the chicken
+        //initializing the chiken
         //creating the instance
-        chicken = new Chicken();
+        sc = new Scanner(System.in);
 
-        System.out.println("chicken \t--> " + chicken);
+        chickens = loadFile();
 
-        chicken.setId(432);
-        chicken.setName("Lucy");
-        chicken.setAge(4);
-        chicken.setColor("White and Brown");
-        chicken.setIsMolting(false);
+        while (option != 7) {
+            System.out.println("Stephen Drouet");
+            System.out.println("Setters, getters and Input from keyboard ");
+            System.out.println("=========================================");
+            System.out.println("                  Menu");
+            System.out.println("=========================================");
+            System.out.println("1. Add Chicken");
+            System.out.println("2. Print Chicken ID record");
+            System.out.println("3. Print Chicken info");
+            System.out.println("4. Load File from .csv");
+            System.out.println("5. Save File as .csv");
+            System.out.println("6. Delete File");
+            System.out.println("7. Exit");
 
-        System.out.println("chicken id \t--> " + chicken.getId());
-        System.out.println("chicken name \t--> " + chicken.getName());
-        System.out.println("chicken age \t--> " + chicken.getAge());
-        System.out.println("chicken color \t--> " + chicken.getColor());
-        System.out.println("chicken is molting \t--> " + chicken.isIsMolting());
-        System.out.println("\t====================");
+            System.out.print("\nChoose an option: ");
+            try {
+                option = sc.nextInt();
+            } catch (Exception e) {
+                option = 0;
+            }
+            sc.nextLine();
+            Collections.sort(chickens);
 
-        //datatype variable
-        int numberOfFeathers;
-        int id;
-        String name = new String("");
-        int age;
-        String color = new String("");
-        boolean molting;
-        
-        numberOfFeathers = 5;
-        System.out.println("The number of feathers is --> " + numberOfFeathers);
+            switch (option) {
+                case 1 -> {
+                    System.out.println("----------Add Chicken----------");
+                    chicken = addChicken();
+                    if (chicken != null) {
+                        chickens.add(chicken);
+                        System.out.println("----------------------------------");
+                        System.out.println("Chicken was successfully added");
+                        System.out.println("----------------------------------");
+                        Collections.sort(chickens);
+                    }
+                }
 
-        chicken = new Chicken();
-        System.out.println("Chicken is of class --> " + chicken.getClass().getSimpleName());
-        System.out.println("Chicken --> " + chicken);
-        
-        //Printnig whithout data
-        printChicken(chicken);
+                case 2 -> {
+                    System.out.println("----------Chicken ID record----------");
+                    printChickenIdRecord(chickens);
+                }
 
-        //Using setters
-        chicken.setId(1);
-        chicken.setName("Maruja");
-        chicken.setAge(5);
-        chicken.setColor("Brown");
-        chicken.setIsMolting(true);
-        printChicken(chicken);
-        
-        //Using data from Keyboard
-        
-        Scanner scan = new Scanner(System.in);
+                case 3 -> {
+                    System.out.println("----------Chicken info----------");
+                    System.out.print("Enter chicken ID: ");
+                    chickenId = sc.nextInt();
+                    sc.nextLine();
+                    chickenIndex = findChickenIndex(chickens, chickenId);
+                    if (chickenIndex >= 0) {
+                        printChicken(chickens.get(chickenIndex));
+                    } else {
+                        System.out.println("Chicken ID not found");
+                    }
+                }
 
-        System.out.print("Type chicken id: ");
-        id = scan.nextInt();
-        System.out.print("Type chicken name: ");
-        name = scan.next();
-        System.out.print("Type chicken age: ");
-        age = scan.nextInt();
-        System.out.print("Type chicken color: ");
-        color = scan.next();
-        System.out.print("Type chicken molting: ");
-        molting = scan.nextBoolean();
+                case 4 -> {
+                    System.out.println("----------File----------");
+                    chickens = loadFile();
+                }
 
-        chicken.setId(id);
-        chicken.setName(name);
-        chicken.setAge(age);
-        chicken.setColor(color);
-        chicken.setIsMolting(molting);
+                case 5 -> {
+                    System.out.println("----------File----------");
+                    saveFile(chickens);
+                }
 
-        printChicken(chicken);
-        
-        //Using constructors
-        chicken = new Chicken(3, "Lolita", "Black", 2, true);
+                case 6 -> {
+                    System.out.println("----------File----------");
+                    deleteFile();
+                }
 
-        printChicken(chicken);
+                case 7 ->
+                    System.out.println("The application finished");
+
+                default ->
+                    System.out.println("Invalid Option");
+            }
+
+            System.out.println("\nPress [Enter] to continue...");
+            sc.nextLine();
+        }
     }
 
-    private static void printChicken(Chicken chicken) {
-        System.out.println("===================");
-        System.out.println("           Chicken " + chicken.getId() + " Information");
-        System.out.println("***");
-        System.out.println("chicken id \t--> " + chicken.getId());
-        System.out.println("chicken name \t--> " + chicken.getName());
-        System.out.println("chicken age \t--> " + chicken.getAge());
-        System.out.println("chicken color \t--> " + chicken.getColor());
-        System.out.println("chicken molting \t--> " + chicken.isIsMolting());
-        System.out.println("===================");
-        System.out.println(chicken);
+    private static void deleteFile() {
+        File file = new File("./chickens.csv");
+        try {
+            file.delete();
+            System.out.println("----------File was deleted----------");
+        } catch (Exception e) {
+            System.out.println("Error: File not deleted or found");
+        }
+    }
+
+    private static List<Chicken> loadFile() {
+        List<Chicken> chickens = new ArrayList<>();
+        String[] chickenData;
+        try ( Scanner scFile = new Scanner(new File("./chickens.csv"))) {
+            while (scFile.hasNextLine()) {
+                chickenData = scFile.nextLine().split(";");
+                chickens.add(new Chicken(Integer.parseInt(chickenData[0]), chickenData[1],
+                        chickenData[2], Integer.parseInt(chickenData[3]), Boolean.parseBoolean(chickenData[4])));
+            }
+            System.out.println("----------File was loaded----------");
+            Collections.sort(chickens);
+        } catch (Exception e) {
+            System.out.println("Error: File not open or found");
+        }
+
+        return chickens;
+    }
+
+    private static void saveFile(List<Chicken> chickens) {
+        File file = new File("./chickens.csv");
+        try ( FileWriter fw = new FileWriter(file);) {
+            for (Chicken chicken1 : chickens) {
+                fw.write(chicken1.ToCSV() + "\n");
+            }
+            System.out.println("----------File was saved----------");
+        } catch (Exception e) {
+            System.out.println("Error: File not open or found");
+        }
+    }
+
+    static Chicken addChicken() {
+        Chicken newChicken = new Chicken();
+
+        int id;
+        int age;
+        String name;
+        String color;
+        String isMolting;
+
+        Scanner sc = new Scanner(System.in);
+
+        try {
+            System.out.print("Write chicken Name: ");
+            name = sc.nextLine();
+            System.out.print("Write chicken ID: ");
+            id = sc.nextInt();
+            System.out.print("Write chicken age: ");
+            age = sc.nextInt();
+            sc.nextLine(); // Empty buffer
+            System.out.print("Write chicken color: ");
+            color = sc.nextLine();
+            System.out.print("Chicken is Molting? (s/n): ");
+            isMolting = sc.nextLine();
+
+            newChicken.setId(id);
+            newChicken.setName(name);
+            newChicken.setAge(age);
+            newChicken.setColor(color);
+
+            if (isMolting.toLowerCase().equals("s")) {
+                newChicken.setIsMolting(true);
+            } else {
+                newChicken.setIsMolting(false);
+            }
+
+        } catch (Exception e) {
+            System.out.println("=============================================");
+            System.out.println("Error: some data entered for chicken is wrong");
+            System.out.println("=============================================");
+            return null;
+        }
+
+        return newChicken;
+    }
+
+    static int findChickenIndex(List<Chicken> chickens, int id) {
+        int index = 0;
+
+        for (Chicken chicken : chickens) {
+            if (chicken.getId() == id) {
+                return index;
+            }
+            index++;
+        }
+        return -1;
+    }
+
+    static void printChickenIdRecord(List<Chicken> chickens) {
+        int numberOfChickens = chickens.size();
+        System.out.println("Number of Chickens: " + numberOfChickens);
+        System.out.println("Chicken IDs");
+        for (Chicken chicken : chickens) {
+            System.out.println(chicken.getId());
+        }
+    }
+
+    static void printChicken(Chicken chicken) {
+        System.out.println("=========================================");
+        System.out.println("chicken --> id: " + chicken.getId());
+        System.out.println("=========================================");
+
+        if (chicken.getName() != null) {
+            System.out.println("Chicken name --> " + chicken.getName());
+            System.out.println("Chicken age --> " + chicken.getAge());
+            System.out.println("Chicken color --> " + chicken.getColor());
+            System.out.println("Chicken is molting --> " + chicken.isIsMolting());
+        } else {
+            System.out.println("Chicken info is empty");
+        }
     }
 }
