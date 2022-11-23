@@ -20,13 +20,8 @@
 .rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+hs_err_pid
 
 #vpp backup files
 *.vpp.bak_*
-/hw/jaguaco/unit1/hw05FilesAndExcepcions/Copy_ChickenFarmS_hw05/nbproject/private/
-/hw/jaguaco/unit1/hw05FilesAndExcepcions/Copy_ChickenFarmS_hw05/build/
-/hw/jaguaco/unit1/hw06JsonFiles/Copy_ChickenFarmS_cuatro/nbproject/private/
-/ws/suarez/U1/ws16/EncapsulationAndAbstraction/nbproject/private/
-/ws/suarez/U1/ws16/EncapsulationAndAbstraction/build/
-/ws/suarez/U1/ws16/EncapsulationAndAbstraction/dist/
+
