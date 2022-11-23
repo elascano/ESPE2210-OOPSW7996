@@ -16,7 +16,7 @@
 *.nar
 *.ear
 *.zip
-.tar.gz
+*.tar.gz
 .rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
@@ -24,6 +24,3 @@ hs_err_pid
 
 #vpp backup files
 .vpp.bak_
-/ws/ansatuña/u1/ws16EncaptulationAndAbstraction/EncapsulationAndAbstraction/nbproject/private/
-/ws/ansatuña/u1/ws16EncaptulationAndAbstraction/EncapsulationAndAbstraction/build/
-/ws/ansatuña/u1/ws16EncaptulationAndAbstraction/EncapsulationAndAbstraction/dist/
