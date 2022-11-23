@@ -25,3 +25,5 @@ hs_err_pid*
 #vpp backup files
 *.vpp.bak_*
 /hw/jaguaco/unit1/hw05FilesAndExcepcions/Copy_ChickenFarmS_hw05/nbproject/private/
+/ws/bazurto/u1/ws16/EncapsulationAndAbstraction/nbproject/private/
+/ws/bazurto/u1/ws16/EncapsulationAndAbstraction/build/
