@@ -15,7 +15,7 @@ public class Chicken {
 
     @Override
     public String toString() {
-        return "Chicken{" + "id=" + id + ", name=" + name + ", color=" + color + ", age=" + age + ", isMolting=" + isMolting + '}';
+        return "======ChickenData====="+ "{" + "id = " + id + ","+ " name = " + name + ","+ " color = " + color + "," + " age = " + age + ","+ "isMolting = " + isMolting + '}';
     }
     //No-Arg Contructor
     public Chicken() {
@@ -103,5 +103,5 @@ public class Chicken {
     public void setIsMolting(boolean isMolting) {
         this.isMolting = isMolting;
     }
-
+  
 }
