@@ -8,7 +8,7 @@ package ec.edu.espe.chickenfarm.model;
  *
  * @author Sheylee Enriquez, Developer Bears, DCCO-ESPE
  */
-public class Chicken {
+public class Chicken implements Comparable<Chicken> {
 
     private int id;
     private String name;
@@ -17,11 +17,11 @@ public class Chicken {
     private boolean isMolting;
 
     public Chicken() {
-        id = 0;
-        name = "";
-        color = "";
-        age = 0;
-        isMolting = false;
+        this.id = 0;
+        this.name = "";
+        this.color = "";
+        this.age = 0;
+        this.isMolting = false;
     }
 
     public Chicken(int id, String name, String color, int age, boolean isMolting) {
@@ -32,10 +32,16 @@ public class Chicken {
         this.isMolting = isMolting;
     }
 
+    /**
+     * @return the id
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * @param id the id to set
+     */
     public void setId(int id) {
         this.id = id;
     }
@@ -94,6 +100,16 @@ public class Chicken {
      */
     public void setIsMolting(boolean isMolting) {
         this.isMolting = isMolting;
+    }
+
+    @Override
+    public int compareTo(Chicken number) {
+        Integer newId = id;
+        return newId.compareTo(number.getId());
+    }
+
+    public String ToCSV() {
+        return this.id + ";" + this.name + ";" + this.color + ";" + this.age + ";" + this.isMolting;
     }
 
 }
