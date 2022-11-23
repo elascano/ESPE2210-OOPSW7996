@@ -23,6 +23,5 @@
 hs_err_pid
 
 #vpp backup files
-.vpp.bak_
-/ws/torres/u1/ws16/EncapsulationAndAbstraccion/nbproject/private/
-/ws/torres/u1/ws16/EncapsulationAndAbstraccion/build/
+*.vpp.bak_*
+
