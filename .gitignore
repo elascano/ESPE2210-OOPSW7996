@@ -24,3 +24,4 @@ hs_err_pid*
 
 #vpp backup files
 *.vpp.bak_*
+/ws/enriquez/unit1/ws11FromUmlToCode/JavaApplication2/nbproject/private/

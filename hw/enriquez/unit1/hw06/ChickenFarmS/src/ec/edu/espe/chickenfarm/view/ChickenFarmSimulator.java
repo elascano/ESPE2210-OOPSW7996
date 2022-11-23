@@ -1,16 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package ec.edu.espe.chickenfarm.view;
 
+import com.google.gson.Gson;
 import ec.edu.espe.chickenfarm.model.Chicken;
 import java.io.File;
 import java.io.FileWriter;
+import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  *
@@ -22,41 +20,32 @@ public class ChickenFarmSimulator {
         int option = 0;
         int chickenIndex;
         int chickenId;
-
-        System.out.println("Sheylee Enriquez");
-        System.out.println("Setters, getters and Input from Keyboard");
-        System.out.println("====================================");
+        int answer;
+        System.out.println("\tSheylee Enriquez");
+        System.out.println("---------- HOMEWORK 06 -----------");
 
         //declaration
         //ADT variableName
-        
         Scanner sc;
         Chicken chicken;
-        List<Chicken> chickens;
-        
-        chickens = loadFile();
-        
-        System.out.println("Please look the options. ");
-        
+        ArrayList<Chicken> chickens;
+
+        chickens = loadFileJson();
+
         sc = new Scanner(System.in);
 
-        while (option != 6) {
+        while (option != 5) {
             System.out.println("\n\n====================Options========================");
             System.out.println("1. Add a new chicken");
             System.out.println("2. Print a chicken record");
-            System.out.println("3. Print the chicken information");
-            System.out.println("4. Save File"); // csv
-            System.out.println("5. Delete File");
-            System.out.println("6. Exit");
+            System.out.println("3. Save File"); // json
+            System.out.println("4. Delete File");
+            System.out.println("5. Exit");
             System.out.println("=====================================================");
 
             System.out.print("\nPlease choose an option: ");
-            try {
                 option = sc.nextInt();
-            } catch (Exception e) {
-                option = 0;
-            }
-            sc.nextLine();
+           
 
             Collections.sort(chickens);
 
@@ -68,18 +57,16 @@ public class ChickenFarmSimulator {
                         chickens.add(chicken);
                         System.out.println("\n=============================================");
                         System.out.println("The chicken was added");
-                        System.out.println("=============================================\n");
                         Collections.sort(chickens);
                     }
                 }
-
+                
                 case 2 -> {
-                    System.out.println("\n\n==================Chicken record=====================");
+                    System.out.println("\n\n==============Chicken Record ===================\n");
                     printChickenRecord(chickens);
-                }
-
-                case 3 -> {
-                    System.out.println("\n\n==============Chicken information===================\n");
+                    System.out.println("\nEnter 1 if you want to print the information of a chicken: ");
+                    answer = sc.nextInt();
+                    if (answer == 1) {
                     System.out.print("What is the Chicken ID?: ");
                     chickenId = sc.nextInt();
                     sc.nextLine();
@@ -89,19 +76,20 @@ public class ChickenFarmSimulator {
                     } else {
                         System.out.println("Chicken ID was not found");
                     }
+                    } else {
+
+                    }
+                }
+
+                case 3 -> {
+                    saveFileJson(chickens);
                 }
 
                 case 4 -> {
-                    System.out.println("\n\n===================File=================");
-                    saveFile(chickens);
+                    deleteFileJson();
                 }
 
-                case 5 -> {
-                    System.out.println("\n\n===================File=================");
-                    deleteFile();
-                }
-
-                case 6 ->
+                case 5 ->
                     System.out.println("Thank you :)");
 
                 default ->
@@ -110,8 +98,8 @@ public class ChickenFarmSimulator {
         }
     }
 
-    private static void deleteFile() {
-        File file = new File("./chickens.csv");
+    private static void deleteFileJson() {
+        File file = new File("./chickens.json");
         try {
             file.delete();
             System.out.println("\nFile was deleted");
@@ -120,33 +108,48 @@ public class ChickenFarmSimulator {
         }
     }
 
-    private static List<Chicken> loadFile() {
-        List<Chicken> chickens = new ArrayList<>();
-        String[] chickenData;
-        try ( Scanner scFile = new Scanner(new File("./chickens.csv"))) {
+    private static ArrayList<Chicken> loadFileJson() {
+        Gson gson = new Gson();
+
+        ArrayList<Chicken> chickens = new ArrayList<>();
+        String jsonFile = "";
+        String[] jsonChickens;
+
+        try ( Scanner scFile = new Scanner(new File("./chickens.json"))) {
             while (scFile.hasNextLine()) {
-                chickenData = scFile.nextLine().split(";");
-                chickens.add(new Chicken(Integer.parseInt(chickenData[0]), chickenData[1],
-                        chickenData[2], Integer.parseInt(chickenData[3]), Boolean.parseBoolean(chickenData[4])));
+                jsonFile += scFile.nextLine();
             }
-            System.out.println("----------File is being loaded----------");
+
+            jsonFile = jsonFile.replace("[", "");
+            jsonFile = jsonFile.replace("]", "");
+
+            jsonChickens = jsonFile.split("},");
+
+            for (int i = 0; i < jsonChickens.length; i++) {
+                if (i < jsonChickens.length - 1) {
+                    chickens.add(gson.fromJson(jsonChickens[i] + "}", Chicken.class));
+                } else {
+                    chickens.add(gson.fromJson(jsonChickens[i], Chicken.class));
+                }
+            }
             Collections.sort(chickens);
         } catch (Exception e) {
-            System.out.println("\nFile was not found");
+            System.out.println("There is not a file yet!\nPlease choose an option:");
         }
 
         return chickens;
     }
 
-    private static void saveFile(List<Chicken> chickens) {
-        File file = new File("./chickens.csv");
+    private static void saveFileJson(ArrayList<Chicken> chickens) {
+        Gson gson = new Gson();
+        String json = gson.toJson(chickens);
+
+        File file = new File("./chickens.json");
         try ( FileWriter fw = new FileWriter(file);) {
-            for (Chicken chicken1 : chickens) {
-                fw.write(chicken1.ToCSV() + "\n");
-            }
-            System.out.println("----------File was saved----------");
+            fw.write(json);
+            System.out.println("File was saved");
         } catch (Exception e) {
-            System.out.println("\nFile was not found");
+            System.out.println("File was not found");
         }
     }
 
@@ -158,7 +161,7 @@ public class ChickenFarmSimulator {
         int age;
         String name;
         String color;
-        String isMolting;
+        boolean isMolting;
 
         Scanner sc = new Scanner(System.in);
 
@@ -173,7 +176,7 @@ public class ChickenFarmSimulator {
             System.out.print("Chicken color: ");
             color = sc.nextLine();
             System.out.print("Chicken is Molting? (true/false): ");
-            isMolting = sc.nextLine();
+            isMolting = sc.nextBoolean();
 
             newChicken.setId(id);
             newChicken.setName(name);
@@ -187,7 +190,12 @@ public class ChickenFarmSimulator {
 
         return newChicken;
     }
-
+    
+    static void printChickenRecord(List<Chicken> chickens) {
+        int numberOfChickens = chickens.size();
+        System.out.println("Number of Chickens: " + numberOfChickens);
+    }
+    
     static int findChickenIndex(List<Chicken> chickens, int id) {
         int index = 0;
 
@@ -198,11 +206,6 @@ public class ChickenFarmSimulator {
             index++;
         }
         return -1;
-    }
-
-    static void printChickenRecord(List<Chicken> chickens) {
-        int numberOfChickens = chickens.size();
-        System.out.println("Number of Chickens: " + numberOfChickens);
     }
 
     static void printChicken(Chicken chicken) {
