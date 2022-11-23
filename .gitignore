@@ -24,12 +24,4 @@ hs_err_pid*
 
 #vpp backup files
 *.vpp.bak_*
-/ws/panchi/U1/ws16Abstraction/EncapsulationAndAbstraction/nbproject/private/
-/ws/panchi/U1/ws16Abstraction/EncapsulationAndAbstraction/build/
-/ws/panchi/U1/ws16Abstraction/EncapsulationAndAbstraction/dist/
-/hw/panchi/U1/hw06JsonFiles/ChickenFarmSimulatorHomework/build/
-/hw/panchi/U1/hw06JsonFiles/ChickenFarmSimulatorHomework/dist/
-/hw/panchi/U1/hw06JsonFiles/ChickenFarmSimulatorHomework/nbproject/private/
-/hw/panchi/U1/hw06JsonFiles/ChickenFarmSimulatorJsonFiles/nbproject/private/
-/hw/panchi/U1/hw06JsonFiles/ChickenFarmSimulatorJsonFiles/build/
-/hw/panchi/U1/hw06JsonFiles/ChickenFarmSimulatorJsonFiles/dist/
+
