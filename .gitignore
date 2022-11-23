@@ -24,3 +24,9 @@ hs_err_pid
 
 #vpp backup files
 .vpp.bak_
+/ws/ansatuña/u1/ws11FromUmlToCode/TestingSomeStuff/nbproject/private/
+/ws/ansatuña/u1/ws11FromUmlToCode/TestingSomeStuff/build/
+/ws/ansatuña/u1/ws11FromUmlToCode/TestingSomeStuff/dist/
+/hw/ansatuña/u1/hw06/ChickenFarmS/nbproject/private/
+/hw/ansatuña/u1/hw06/ChickenFarmS/build/
+/hw/ansatuña/u1/hw06/ChickenFarmS/dist/
