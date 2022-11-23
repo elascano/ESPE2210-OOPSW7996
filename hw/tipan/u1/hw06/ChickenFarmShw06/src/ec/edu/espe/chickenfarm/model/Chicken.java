@@ -96,9 +96,5 @@ public class Chicken {
     public void setIsMolting(boolean isMolting) {
         this.isMolting = isMolting;
     }
-    public String[] getArray(){
-        String[] data= {String.valueOf(id),name,color,String.valueOf(age),String.valueOf(isMolting)};
-        return data;
-    }
 
 }

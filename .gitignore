@@ -24,3 +24,8 @@ hs_err_pid
 
 #vpp backup files
 .vpp.bak_
+/ws/tipan/u1/ws16EncapsulationAndAbstraction/EncapsulationAndAbstraction/target/
+/ws/tipan/u1/ws11FromUmlToCode/ChickenFarmS/dist/
+/hw/tipan/u1/hw06/ChickenFarmShw06/build/
+/hw/tipan/u1/hw06/ChickenFarmShw06/dist/
+/hw/tipan/u1/hw06/ChickenFarmShw06/nbproject/private/
