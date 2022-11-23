@@ -27,6 +27,7 @@ public class ChickenFarmSimulator {
         String color;
         boolean isMolting;
         int choiceOfTheMenu=0;
+        //initialization array list
         ArrayList<Chicken> chickenList = new ArrayList();
 
         do{
