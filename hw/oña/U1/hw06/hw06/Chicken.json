@@ -1,0 +1,31 @@
+Blue
+
+		======================
+		
+		=      New Chicken    =
+
+		======================
+		
+ID: 987
+NAME: Tulu
+Age: 2
+Color: Blue
+setIsMolting: True
+Yellow
+
+		======================
+		
+		=      New Chicken    =
+
+		======================
+		
+ID: 987
+NAME: Tulu
+Age: 2
+Color: Blue
+setIsMolting: True
+ID: 789
+NAME: Lucia
+Age: 4
+Color: Yellow
+setIsMolting: False
