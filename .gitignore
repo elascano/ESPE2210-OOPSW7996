@@ -24,3 +24,6 @@ hs_err_pid
 
 #vpp backup files
 *.vpp.bak_*
+/hw/suquillo/u1/hw06/ChickenFarmS/build/
+/hw/suquillo/u1/hw06/ChickenFarmS/dist/
+/hw/suquillo/u1/hw06/ChickenFarmS/nbproject/private/
