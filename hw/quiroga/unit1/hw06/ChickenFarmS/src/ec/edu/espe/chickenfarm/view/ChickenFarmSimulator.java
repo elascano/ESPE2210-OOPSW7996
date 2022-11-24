@@ -21,22 +21,19 @@ public class ChickenFarmSimulator {
 
         Scanner scan = new Scanner(System.in);
 
-        Gson gson = new Gson();
-
-        int id;
-        String name = new String("");
-        int age;
-        String color = "";
-        boolean IsMolting;
+        
         boolean leave = false;
         int option;
-        int position = 0;
+        int position[] = new int[1];
         Chicken chicken = new Chicken();
-
+        position[0] = 0;
+        
         ArrayList<Chicken> chickens = new ArrayList<Chicken>();
+        readJSON(chickens, position);
         
         
-
+        
+        
         while (!leave) {
 
             System.out.println("===== MENU =====");
@@ -54,15 +51,15 @@ public class ChickenFarmSimulator {
                     case 1 -> {
 
                         enterChicken(scan, chickens);
-                        addChickenToCSV(chickens, position);
-                        addChickenToJSON(chickens, position);
-                        position++;
+                        addChickenToCSV(chickens, position[0]);
+                        addChickenToJSON(chickens, position[0]);
+                        position[0]++;
                     }
                     case 2 -> {
                         searchChicken(scan, chickens);
                     }
                     case 3 -> {
-                        for (int i = 0; i < chickens.size(); i++) {
+                        for (int i = 1; i < chickens.size(); i++) {
                             chicken = chickens.get(i);
                             printChicken(chicken);
                         }
@@ -88,7 +85,7 @@ public class ChickenFarmSimulator {
         Chicken chicken;
         System.out.println("Enter the Id of the chicken you want to print: ");
         id = scan.nextInt();
-        for (int i = 0; i < chickens.size(); i++) {
+        for (int i = 1; i < chickens.size(); i++) {
             chicken = chickens.get(i);
             if (id == chicken.getId()) {
                 j = i;
@@ -164,46 +161,47 @@ public class ChickenFarmSimulator {
 
     }
 
+    
     private static void addChickenToJSON(ArrayList<Chicken> chickens, int position) {
-        File file = new File("Chicken File.json");
-        int id = chickens.get(position).getId();
-        int age = chickens.get(position).getAge();
-        String name = chickens.get(position).getName();
-        String color = chickens.get(position).getColor();
-        boolean isMolting = chickens.get(position).isIsMolting();
-
-        String jsonStructure = " {\"id\":" + id + ",\"name\":\"" + name + "\",\"age\":" + age + ",\"color\":\"" + color + "\",\"IsMolting\":" + isMolting + "},";
-
-        try {
-            try ( PrintWriter printFile = new PrintWriter(new FileWriter(file, true))) {
-                printFile.print(jsonStructure);
-                printFile.println("");
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace(System.out);
-        } catch (IOException e) {
-            e.printStackTrace(System.out);
+        File file = new File("Chicken_File.json");
+        Gson gson = new Gson();
+        Chicken chicken = new Chicken();
+        
+        chicken = chickens.get(position);
+        String jsonStructure = new Gson().toJson(chicken);
+         try {
+            PrintWriter write = new PrintWriter(new FileWriter(file, true)); 
+            write.println("");
+            write.print(jsonStructure);
+            write.close();
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace(System.out);
+        } catch (IOException ex) {
+            ex.printStackTrace(System.out);
         }
-
     }
 
-    private static void readJSON(ArrayList<Chicken> chickens) {
-        String json = "";
-        try (BufferedReader reader = new BufferedReader(new FileReader("Chicken File.json"))) {
-            String line = "";
-            try {
-                while ((line = reader.readLine()) != null) {
-                    json += line;
-                }
-            } catch (IOException ex) {
-                Logger.getLogger(ChickenFarmSimulator.class.getName()).log(Level.SEVERE, null, ex);
-            }
+    
+    private static void readJSON(ArrayList<Chicken> chickens, int position[]) {
+        String json = ""; 
+        Gson gson = new Gson();
+        Chicken chicken = new Chicken();
+        try {
+           BufferedReader read = new BufferedReader(new FileReader("Chicken_File.json"));
+           String line = "";
+        while ((line = read.readLine())!= null){
+            json = line;
+            chicken = new Gson().fromJson(json ,Chicken.class);
+            chickens.add(position[0], chicken);
+            position[0]++;
+        }
+            read.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(ChickenFarmSimulator.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
             Logger.getLogger(ChickenFarmSimulator.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-        Gson gson = new Gson();
-        chickens.add(gson.fromJson(json, Chicken.class));
     }
+   
 
 }
