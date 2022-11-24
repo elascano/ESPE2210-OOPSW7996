@@ -1,3 +1,2 @@
-Id;Name;Age;Color;isMolting
-234;dome;4;blavk;true
-123;a;2;a;true
+ID;Name;Age;Color;Is Molting
+1;Lester;4;Black;false

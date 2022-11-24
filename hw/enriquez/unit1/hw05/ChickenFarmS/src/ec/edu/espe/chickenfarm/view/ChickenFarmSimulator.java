@@ -36,19 +36,18 @@ public class ChickenFarmSimulator {
         
         chickens = loadFile();
         
-        System.out.println("Please look for the options. ");
+        System.out.println("Please look the options. ");
         
         sc = new Scanner(System.in);
 
-        while (option != 7) {
+        while (option != 6) {
             System.out.println("\n\n====================Options========================");
             System.out.println("1. Add a new chicken");
             System.out.println("2. Print a chicken record");
             System.out.println("3. Print the chicken information");
-            System.out.println("4. Load File");
-            System.out.println("5. Save File"); // csv
-            System.out.println("6. Delete File");
-            System.out.println("7. Exit");
+            System.out.println("4. Save File"); // csv
+            System.out.println("5. Delete File");
+            System.out.println("6. Exit");
             System.out.println("=====================================================");
 
             System.out.print("\nPlease choose an option: ");
@@ -94,20 +93,15 @@ public class ChickenFarmSimulator {
 
                 case 4 -> {
                     System.out.println("\n\n===================File=================");
-                    chickens = loadFile();
+                    saveFile(chickens);
                 }
 
                 case 5 -> {
                     System.out.println("\n\n===================File=================");
-                    saveFile(chickens);
-                }
-
-                case 6 -> {
-                    System.out.println("\n\n===================File=================");
                     deleteFile();
                 }
 
-                case 7 ->
+                case 6 ->
                     System.out.println("Thank you :)");
 
                 default ->
