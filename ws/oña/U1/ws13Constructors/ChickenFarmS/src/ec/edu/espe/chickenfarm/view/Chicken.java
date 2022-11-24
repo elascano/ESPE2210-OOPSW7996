@@ -100,7 +100,16 @@ public class Chicken {
     public void setIsMolting(boolean isMolting) {
         this.isMolting = isMolting;
     }
+    public static void modify(int a) {
+        a=10;
+    }
     
+    public static void modifyObject(Chicken customer) {
+        customer.setName("Joel");
+        customer.setAge(18);
+        
+        
+    }
     
     
    
