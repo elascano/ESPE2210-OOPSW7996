@@ -1,14 +1,16 @@
 
 package ec.edu.espe.chickenfarm.view;
 
+import com.google.gson.Gson;
 import ec.edu.espe.chickenfarm.model.Chicken;
 import java.util.Scanner;
-import java.util.InputMismatchException;
-import java.util.List;
+import java.util.ArrayList;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
+
+
+//import java.io.PrintWriter;
 //Provides a variety of methods by which data can be recorded
 //import java.util.logging.Level;
 //import java.util.logging.Logger;
@@ -27,93 +29,68 @@ public class ChickenFarmSimulator {
         String color;
         boolean isMolting;
         int caseOption=0;
-        File fileRecord;
-        FileWriter writer;
-        PrintWriter printOut;
+        ArrayList<Chicken> chickenList=new ArrayList();
         
         //read data by keyboard
         Scanner keyboard =new Scanner(System.in);
         
-        while (caseOption !=4){
-            System.out.println("*********************");
-            System.out.println(" Welcome to the menu ");
-            System.out.println("  Reishel's Systems  ");
-            System.out.println("*********************");
-            System.out.println("1.Upload a new chicken");
-            System.out.println("2.Exit");
-            
-            try {
-                caseOption = keyboard.nextInt();
-            } catch(NullPointerException e!)/
-                caseOption=0;
+        do{
+            printMenu();
+            caseOption=keyboard.nextInt();
+            switch(caseOption){
+                case 1 ->{
+                    System.out.println("Insert chicken ID:\t");
+                    id=keyboard.nextInt();
+                    System.out.println("Insert chicken name:\t");
+                    name=keyboard.next();
+                    System.out.println("Insert the age of the chicken:\t");
+                    age=keyboard.nextInt();
+                    System.out.println("Insert the colors of te chicken:\t");
+                    color=keyboard.next();
+                    System.out.println("Is chicken molting? (true/false):\t");
+                    isMolting=keyboard.nextBoolean();
+                    chickenList.add(new Chicken(id,name,color,age,isMolting));
+                break;
+                }
+                case 2 ->{
+                    SaveDataJson(chickenList);
+                    caseOption=3;
+                break;
+                }
+                case 3 ->{
+                break;
+                }
+                default ->{
+                    System.out.println("ERROR!! Invalid option");
+                break;
+                }
+                
             }
-            
-            keyboard.nextLine();
-            
-            switch (caseOption){  
-                case 1 -> {
-                    fileRecord=new File("Chicken.cvs");
-                        if (!fileRecord.exists()) {
-                            try {
-                                fileRecord.createNewFile();
-                                do{
-                                    try{
-                                        for(int i=1;i<1;i++){
-                                            System.out.println("*****NEW CHICKEN*****");
-                                            System.out.println("Insert chicken ID:");
-                                            id = Integer.parseInt(keyboard.nextLine());
-                                            System.out.println("Insert chicken name:");
-                                            name = keyboard.nextLine();
-                                            System.out.println("Insert the age of the chicken:");
-                                            age = Integer.parseInt(keyboard.nextLine());
-                                            System.out.println("Insert the colors of the chicken:");
-                                            color = keyboard.nextLine();
-                                            System.out.println("Is chicken molting?: (true/false)\t");
-                                            isMolting = Boolean.parseBoolean(keyboard.nextLine());
-                                            
-                                            //initializing the chicken
-                                            //creating the instance
-                                            Chicken chicken=new Chicken();
-                                            
-                                            chicken.setId(id);
-                                            chicken.setName(name);
-                                            chicken.setAge(age);
-                                            chicken.setColor(color);
-                                            chicken.setIsMolting(isMolting);
-                                            
-                                            writer= new FileWriter(fileRecord,true);
-                                            printOut=new PrintWriter(writer);
-                                            
-                                            System.out.println("******DATA CHICKEN******");
-                                            printOut.println("Chicken ID:"+ chicken.getId());
-                                            printOut.println("Chicken Name:"+ chicken.getName());
-                                            printOut.println("Chicken Age:"+ chicken.getAge());
-                                            printOut.println("Chicken Color:"+ chicken.getColor());
-                                            printOut.println("Chicken is molting:"+ chicken.isIsMolting());
-                                            System.out.println("************************");
-                                            
-                                            printOut.println(chicken);
-                                            printOut.close();
-                                            writer.close();
-                                        }
-                                    } catch(NullPointerException e!){
-                                        System.out.println("ERROR!! Try again:");
-                                            }
-                                    
-                                System.out.println("Do you want to continue, yes(1) or no(0)?");
-                                caseOption=Integer.parseInt(keyboard.nextLine());
-                                    
-                                }while(caseOption=1);
-                                   
-                            }
-                }
-                case 2 -> {
-                    System.out.println("¡Thanks for using this system!");
-                }
-                default ->
-                    System.out.println("ERROR!! Null option:");
-            }    
+        }while(caseOption!=3);
     }
+    
+    private static void printMenu(){
+        System.out.println("*********WELCOME*********");
+        System.out.println("     Reishel's System    \t");
+        System.out.println("You want to do?\t");
+        System.out.println("1.Insert a chicken\t");
+        System.out.println("2.Create cvs File\t");
+        System.out.println("3.Exit");
+        System.out.print("Select-->");
+    }
+    
+    private static void SaveDataJson(ArrayList<Chicken> chickens){
+        Gson gson=new Gson();
+        String json=gson.toJson(chickens);
+        File file=new File("./chickens.json");
+        try(FileWriter writt=new FileWriter(file);){
+            writt.write(json);
+            System.out.println("¡File converted to Json!");
+        }catch(Exception err){
+            System.out.println("ERROR!! Problems saving the file");
+        }
+    }
+       
 }
 
 // INVESTIGATION:
