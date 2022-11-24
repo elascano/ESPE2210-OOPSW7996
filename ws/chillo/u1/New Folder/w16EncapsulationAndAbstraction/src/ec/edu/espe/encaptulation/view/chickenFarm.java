@@ -1,10 +1,10 @@
 
-package ec.edu.espe.chickenfarm.model;
+package ec.edu.espe.encaptulation.view;
 
 /**
  *
  * @author NicolayChillo Gaman GeekLords at DCOO-ESPE
  */
-public class ChickenCoop {
+public class chickenFarm {
     
 }

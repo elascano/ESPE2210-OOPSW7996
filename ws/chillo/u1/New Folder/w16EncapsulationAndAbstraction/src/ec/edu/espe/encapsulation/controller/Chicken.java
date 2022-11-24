@@ -1,10 +1,10 @@
 
-package ec.edu.espe.chickenfarm.model;
+package ec.edu.espe.encapsulation.controller;
 
 /**
  *
  * @author NicolayChillo Gaman GeekLords at DCOO-ESPE
  */
-public class ChickenCoop {
+public class Chicken {
     
 }
