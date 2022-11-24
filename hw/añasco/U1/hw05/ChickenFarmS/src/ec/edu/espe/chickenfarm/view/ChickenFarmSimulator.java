@@ -20,12 +20,15 @@ public class ChickenFarmSimulator {
         System.out.println("-------------------------------------------");
         
         //declaration
-        Chicken chicken;
+        Chicken chicken[];
+        chicken = new Chicken[100];
         int option=0;
         Scanner sc;
         
         //Initialition
-        chicken= new Chicken();
+        for(int i=0;i<100;i++){
+            chicken[i] = new Chicken();
+        }
         sc = new Scanner(System.in);
         
         while(option!=3){
@@ -40,8 +43,17 @@ public class ChickenFarmSimulator {
             switch (option){
 
                 case 1:{
-                    System.out.println("-----------Input Data-----------");
+                    System.out.println("  ||      ||      ||      ||      ||      ||");
+                    System.out.println("--  ------  ------  ------  ------  ------  ---");
+                    System.out.println("--  ------  ------  ------  ------  ------  ---");
+                    System.out.println("  ||      ||      ||      ||      ||      ||");
+                    System.out.println("");
                     inputChickenDataToCSV(chicken);
+                    System.out.println("  ||      ||      ||      ||      ||      ||");
+                    System.out.println("--  ------  ------  ------  ------  ------  ---");
+                    System.out.println("--  ------  ------  ------  ------  ------  ---");
+                    System.out.println("  ||      ||      ||      ||      ||      ||");
+                    System.out.println("");
                     break;
                 }
 
@@ -63,7 +75,7 @@ public class ChickenFarmSimulator {
         }
     }
     
-    private static void inputChickenDataToCSV(Chicken chicken){
+    private static void inputChickenDataToCSV(Chicken chicken[]){
         int id;
         String name;
         int age;
@@ -74,15 +86,17 @@ public class ChickenFarmSimulator {
         Scanner write = new Scanner (System.in);//Creation of the Scanner object
         
         do {
-            System.out.println("Enter chicken ID --->");
+            System.out.println("           (`･⊝･´)☞Input Chicken Data");
+            System.out.println("");
+            System.out.print("Enter chicken ID ---> ");
             id = write.nextInt();
-            System.out.println("Enter chicken name --->");
+            System.out.print("Enter chicken name ---> ");
             name = write.next();
-            System.out.println("Enter chicken age --->");
+            System.out.print("Enter chicken age ---> ");
             age = write.nextInt();
-            System.out.println("Enter chicken color --->");
+            System.out.print("Enter chicken color ---> ");
             color = write.next();
-            System.out.println("¿Is chicken molting? --->");
+            System.out.print("¿Is chicken molting? ---> ");
             isMolting = write.nextBoolean();
             System.out.println();
             
