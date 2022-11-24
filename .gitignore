@@ -23,3 +23,5 @@
 hs_err_pid
 
 #vpp backup files
+/hw/ulco/u1/hw06/ChickenFarms/nbproject/private/
+/hw/ulco/u1/hw05/ChickenFarmS/dist/
