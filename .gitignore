@@ -25,6 +25,10 @@ hs_err_pid*
 #vpp backup files
 <<<<<<< HEAD
 *.vpp.bak_*
+/ws/quiroga/unit1/ws11FromUmlToCode/ShopInventary/nbproject/private/
+=======
+<<<<<<< HEAD
+*.vpp.bak_*
 /ws/oña/u1/ws13Constructors/ChickenFarm/nbproject/private/
 /ws/oña/u1/ws13Constructors/ChickenFarmS/nbproject/private/
 /ws/oña/u1/ws13Constructors/ChickenFarmS/build/
@@ -55,3 +59,4 @@ hs_err_pid*
 =======
 >>>>>>> 98ae19cf2e8b600b329ea8b62701d3104e7dc839
 >>>>>>> 159d974d553d0caa809c0db0e3870c28376e1651
+>>>>>>> f564429eaa6fa77a8392b875690d0bafd1a8ebbd
