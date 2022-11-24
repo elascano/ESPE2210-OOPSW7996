@@ -27,7 +27,7 @@ public class saveChickenRegister {
         int registrationOfIncomingChickens = 0;
         Chicken listReader;
         Chicken chicken = new Chicken();
-        int position= 0;
+        int position = 0;
 
         Scanner scanner = new Scanner(System.in);
 
@@ -122,7 +122,6 @@ public class saveChickenRegister {
                                 System.out.println("--------List of incoming chickens:---------");
 
                                 for (int i = 0; i < chickenEntered.size(); i++) {
-                                                              
 
                                     printChickenAll(chickenEntered.get(i), position);
                                     position++;
@@ -180,7 +179,7 @@ public class saveChickenRegister {
     private static void chickenIncome(ArrayList<Chicken> chickenEntered, int registrationOfIncomingChickens) {
         System.out.println("--------Chicken Farm Registration System-------");
         System.out.println("--------Chicken " + (registrationOfIncomingChickens + 1) + "---------- ");
-        
+
         saveChickenRegister(chickenEntered);
         Scanner scanner = new Scanner(System.in);
         Chicken chicken = new Chicken();
@@ -207,25 +206,23 @@ public class saveChickenRegister {
     }
 
     private static void printChickenAll(Chicken chickenEntered, int position) {
-        if(position==0){
+        if (position == 0) {
             System.out.println("==========================================================================================");
             System.out.println("ID                 Name               Age                   Color             IsMolting");
         }
         System.out.printf("%2d             %5s             %5d                   %5s                 %5s\n", chickenEntered.getId(), chickenEntered.getName(), chickenEntered.getAge(), chickenEntered.getColor(), chickenEntered.isIsMolting());
-          
+
     }
 
     private static void readFile(ArrayList<Chicken> chickens) throws org.json.simple.parser.ParseException {
 
         JSONParser parser = new JSONParser();
-        try
-        {
+        try {
             Object object = parser.parse(new FileReader("chicken.json"));
             JSONObject jsonObject = (JSONObject) object;
             JSONArray chickensArray = (JSONArray) jsonObject.get("list");
 
-            for (int i = 0; i < chickensArray.size(); i++)
-            {
+            for (int i = 0; i < chickensArray.size(); i++) {
                 Chicken chicken = new Chicken();
                 Object objectChicken = chickensArray.get(i);
                 JSONObject objectChickenJSON = (JSONObject) objectChicken;
@@ -239,99 +236,50 @@ public class saveChickenRegister {
                 chickens.add(chicken);
             }
 
-        } catch (FileNotFoundException ex)
-        {
+        } catch (FileNotFoundException ex) {
             System.out.println("Error reading file (FNF): " + ex);
-        } catch (IOException ex)
-        {
+        } catch (IOException ex) {
             System.out.println("Error reading file (IOE): " + ex);
         }
 
     }
-    
-    
-    
-    private static void saveChickenRegister(ArrayList<Chicken> chickenEntered){
+
+    private static void saveChickenRegister(ArrayList<Chicken> chickenEntered) {
         File fileJson = new File("chicken.json");
 
-        if (!chickenEntered.isEmpty())
-        {
-            try{
+        if (!chickenEntered.isEmpty()) {
+            try {
                 readFile(chickenEntered);
                 JSONObject chickensJSON = new JSONObject();
                 JSONArray list = new JSONArray();
-                
-                for (int i = 0; i < chickenEntered.size(); i++)
-                {
+
+                for (int i = 0; i < chickenEntered.size(); i++) {
                     JSONObject chickenJSON = new JSONObject();
-                    
+
                     chickenJSON.put("id", chickenEntered.get(i).getId());
                     chickenJSON.put("name", chickenEntered.get(i).getName());
                     chickenJSON.put("age", chickenEntered.get(i).getAge());
                     chickenJSON.put("color", chickenEntered.get(i).getColor());
                     chickenJSON.put("isMolting", chickenEntered.get(i).isIsMolting());
-                    
+
                     list.add(chickenJSON);
-                    
+
                 }
-                
+
                 chickensJSON.put("list", list);
-                
-                try(FileWriter file =new FileWriter(fileJson))
-                {
+
+                try ( FileWriter file = new FileWriter(fileJson)) {
                     file.write(chickensJSON.toString());
                     file.flush();
-                } catch (IOException e)
-                {
+                } catch (IOException e) {
                     System.out.println("Error writing file");
                 }
-                
-            } catch (org.json.simple.parser.ParseException ex)
-            {
+
+            } catch (org.json.simple.parser.ParseException ex) {
                 Logger.getLogger(saveChickenRegister.class.getName()).log(Level.SEVERE, null, ex);
             }
 
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /*private static void saveChickenRegister(ArrayList<Chicken> chickenEntered, int registrationOfIncomingChickens) {
-        
-        File   
-                
-                
-        
-        int id = chickenEntered.get(registrationOfIncomingChickens).getId();
-        int age = chickenEntered.get(registrationOfIncomingChickens).getAge();
-        String name = chickenEntered.get(registrationOfIncomingChickens).getName();
-        String color = chickenEntered.get(registrationOfIncomingChickens).getColor();
-        boolean isMolting = chickenEntered.get(registrationOfIncomingChickens).isIsMolting();
-        
-        Gson gson=new Gson();
-        String json=gson.toJson(chickenEntered);
-              
-       
-        try (PrintWriter writeData = new PrintWriter(new FileWriter("chicken.json", true))) {
-                writeData.print(json);
-                writeData.println("");
-                writeData.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace(System.out);
-        } catch (IOException e) {
-            e.printStackTrace(System.out);
-        }      
-        
-       
 
-        
-    }*/
 }
