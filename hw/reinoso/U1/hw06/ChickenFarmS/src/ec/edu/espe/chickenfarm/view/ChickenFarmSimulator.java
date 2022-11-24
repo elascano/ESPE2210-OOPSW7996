@@ -30,7 +30,6 @@ public class ChickenFarmSimulator {
             System.out.println("1.Enter a chicken");
             System.out.println("2.Exit");
             try {
-                System.out.println("Choose an option");
                 option = scan.nextInt();
                 System.out.println("");
                 switch (option) {
