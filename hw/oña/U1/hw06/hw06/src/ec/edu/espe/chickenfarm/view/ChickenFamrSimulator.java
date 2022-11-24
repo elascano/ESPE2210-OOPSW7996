@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package ec.edu.espe.chickenfarm.view;
 import ec.edu.espe.chickenfarm.model.FileManagement;
 import java.util.Scanner;
@@ -30,7 +27,7 @@ public class ChickenFamrSimulator {
             switch(opcion){
                 case 1 -> {
                     System.out.println("*********File creation*********");
-                    FileManagement.createFile("Chicken.json");
+                    FileManagement.createFile("Chicken.txt");
                 }
                 case 2 -> {
                     System.out.println("**********Enter Data********");
@@ -54,14 +51,14 @@ public class ChickenFamrSimulator {
              
                     
                     System.out.println("\n\t\t======================\n\t\t");
-                    FileManagement.writeFile("Chicken.json", color);
-                    FileManagement.writeFile("Chicken.json", "\n\t\t======================\n\t\t");
-                    FileManagement.writeFile("Chicken.json", "\t\t=      New Chicken    =");
-                    FileManagement.writeFile("Chicken.json", "\n\t\t======================\n\t\t");
+                    FileManagement.writeFile("Chicken.txt", color);
+                    FileManagement.writeFile("Chicken.txt", "\n\t\t======================\n\t\t");
+                    FileManagement.writeFile("Chicken.txt", "\t\t=      New Chicken    =");
+                    FileManagement.writeFile("Chicken.txt", "\n\t\t======================\n\t\t");
                     
                     
                     for(int i=0; i<listName.size(); i++){
-                        FileManagement.writeFile("Chicken.json",listName.get(i));
+                        FileManagement.writeFile("Chicken.txt",listName.get(i));
                     }
                     
                     listName.remove(id);
@@ -73,11 +70,11 @@ public class ChickenFamrSimulator {
                 
                 case 3 -> {
                     System.out.println("*******Read Data******");
-                    FileManagement.readFile("Chicken.json");
+                    FileManagement.readFile("Chicken.txt");
                 }
                 case 4 -> {
                     System.out.println("******** Delete File *******");
-                    FileManagement.deletefile("Chicken.json");
+                    FileManagement.deletefile("Chicken.txt");
                 }
                 case 5 -> {
                 }
