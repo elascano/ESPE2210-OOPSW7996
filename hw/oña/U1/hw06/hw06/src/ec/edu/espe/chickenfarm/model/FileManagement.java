@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ec.edu.espe.File;
+package ec.edu.espe.chickenfarm.model;
 import java.io.*;
+
 
 /**
  *
@@ -148,4 +149,3 @@ public class FileManagement {
         System.out.println("Se elimino el archivo");  
     }
 }
-  

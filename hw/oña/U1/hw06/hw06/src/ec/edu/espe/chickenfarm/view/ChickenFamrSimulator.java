@@ -1,20 +1,16 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package hw05;
-import ec.edu.espe.File.FileManagement;
+package ec.edu.espe.chickenfarm.view;
+import ec.edu.espe.chickenfarm.model.FileManagement;
 import java.util.Scanner;
 import java.util.ArrayList;
-
 /**
  *
  * @author Yorman Oña, GiftSoft Team, DCCO-ESPE
  */
-public class Hw05 {
-    /**
-     * @param args the command line arguments
-     */
+public class ChickenFamrSimulator {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ArrayList<String> listName = new ArrayList();
@@ -34,8 +30,7 @@ public class Hw05 {
             switch(opcion){
                 case 1 -> {
                     System.out.println("*********File creation*********");
-                    FileManagement.createFile("Chicken.txt");
-                    FileManagement.createFile("Chicken.csv");
+                    FileManagement.createFile("Chicken.json");
                 }
                 case 2 -> {
                     System.out.println("**********Enter Data********");
@@ -56,22 +51,17 @@ public class Hw05 {
                     listName.add("Age: "+ age);
                     listName.add("Color: "+color);
                     listName.add("setIsMolting: "+setIsMolting);
-                    
-            
-                    //FileManagement date = new FileManagement(id, name, color, age, setIsMolting);
-                    
-                    //FileManagement.writeFile("Chicken.csv",date);
-
+             
                     
                     System.out.println("\n\t\t======================\n\t\t");
-                    FileManagement.writeFile("Chicken.csv", color);
-                    FileManagement.writeFile("Chicken.txt", "\n\t\t======================\n\t\t");
-                    FileManagement.writeFile("Chicken.txt", "\t\t=      New Chicken    =");
-                    FileManagement.writeFile("Chicken.txt", "\n\t\t======================\n\t\t");
+                    FileManagement.writeFile("Chicken.json", color);
+                    FileManagement.writeFile("Chicken.json", "\n\t\t======================\n\t\t");
+                    FileManagement.writeFile("Chicken.json", "\t\t=      New Chicken    =");
+                    FileManagement.writeFile("Chicken.json", "\n\t\t======================\n\t\t");
                     
                     
                     for(int i=0; i<listName.size(); i++){
-                        FileManagement.writeFile("Chicken.txt",listName.get(i));
+                        FileManagement.writeFile("Chicken.json",listName.get(i));
                     }
                     
                     listName.remove(id);
@@ -83,11 +73,11 @@ public class Hw05 {
                 
                 case 3 -> {
                     System.out.println("*******Read Data******");
-                    FileManagement.readFile("Chicken.txt");
+                    FileManagement.readFile("Chicken.json");
                 }
                 case 4 -> {
                     System.out.println("******** Delete File *******");
-                    FileManagement.deletefile("Chicken.txt");
+                    FileManagement.deletefile("Chicken.json");
                 }
                 case 5 -> {
                 }
@@ -95,5 +85,5 @@ public class Hw05 {
             
         }while(opcion!=5);
     }
-    
-}
+    }
+
