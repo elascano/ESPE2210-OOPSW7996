@@ -23,5 +23,6 @@
 hs_err_pid*
 
 #vpp backup files
+
 *.vpp.bak_*
-/ws/chillo/u1/New Folder/w16EncapsulationAndAbstraction/nbproject/private/
+
