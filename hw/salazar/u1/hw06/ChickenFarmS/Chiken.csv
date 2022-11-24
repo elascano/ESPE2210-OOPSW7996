@@ -1,0 +1,28 @@
+CHICKENS
+ID: 1234
+Name: Juliana
+Age: 3
+Color: Black anh white
+Is Molting: true
+Chicken{id=1234, name=Juliana, color=Black anh white, age=3, isMolting=true}
+CHICKENS
+ID: 1234
+Name: Mariano
+Age: 3
+Color: black
+Is Molting: true
+Chicken{id=1234, name=Mariano, color=black, age=3, isMolting=true}
+CHICKENS
+ID: 1234
+Name: Paco
+Age: 3
+Color: Black
+Is Molting: true
+Chicken{id=1234, name=Paco, color=Black, age=3, isMolting=true}
+CHICKENS
+ID: 123
+Name: 
+Age: 4
+Color: White
+Is Molting: false
+Chicken{id=123, name=, color=White, age=4, isMolting=false}

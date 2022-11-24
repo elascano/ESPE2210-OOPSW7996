@@ -1,23 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package hw05;
 import ec.edu.espe.File.FileManagement;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 /**
  *
  * @author Yorman Oña, GiftSoft Team, DCCO-ESPE
  */
 public class Hw05 {
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int opcion =0;
+        ArrayList<String> listName = new ArrayList();
+        int opcion = 0;
         do{
         System.out.println("*******Choose the option******");
         System.out.println("1 Create File");
@@ -31,11 +29,12 @@ public class Hw05 {
             opcion = sc.nextInt();
             
             switch(opcion){
-                case 1:
+                case 1 -> {
                     System.out.println("*********File creation*********");
                     FileManagement.createFile("Chicken.txt");
-                    break;
-                case 2:
+                    FileManagement.createFile("Chicken.csv");
+                }
+                case 2 -> {
                     System.out.println("**********Enter Data********");
                     
                     System.out.println("Chicken id:");
@@ -49,24 +48,46 @@ public class Hw05 {
                     System.out.println("Chicken id molting:");
                     String  setIsMolting = sc.next();
                     
+                    listName.add("ID: "+ id);
+                    listName.add("NAME: "+ name);
+                    listName.add("Age: "+ age);
+                    listName.add("Color: "+color);
+                    listName.add("setIsMolting: "+setIsMolting);
                     
-                    FileManagement.writeFile("Chicken.txt","ID "+ id);
-                    FileManagement.writeFile("Chicken.txt", "Name: "+name);
-                    FileManagement.writeFile("Chicken.txt", "Age: "+age);
-                    FileManagement.writeFile("Chicken.txt", "Color: "+color);
-                    FileManagement.writeFile("Chicken.txt", "setIsMolting: "+setIsMolting);
-                    FileManagement.writeFile("Chicken.txt", "******************************************");
-                    break;
-                case 3:
+            
+                    //FileManagement date = new FileManagement(id, name, color, age, setIsMolting);
+                    
+                    //FileManagement.writeFile("Chicken.csv",date);
+
+                    
+                    System.out.println("\n\t\t======================\n\t\t");
+                    FileManagement.writeFile("Chicken.csv", color);
+                    FileManagement.writeFile("Chicken.txt", "\n\t\t======================\n\t\t");
+                    FileManagement.writeFile("Chicken.txt", "\t\t=      New Chicken    =");
+                    FileManagement.writeFile("Chicken.txt", "\n\t\t======================\n\t\t");
+                    
+                    
+                    for(int i=0; i<listName.size(); i++){
+                        FileManagement.writeFile("Chicken.txt",listName.get(i));
+                    }
+                    
+                    listName.remove(id);
+                    listName.remove(name);
+                    listName.remove(age);
+                    listName.remove(color);
+                    listName.remove(setIsMolting);
+                }
+                
+                case 3 -> {
                     System.out.println("*******Read Data******");
                     FileManagement.readFile("Chicken.txt");
-                    break;
-                case 4:
+                }
+                case 4 -> {
                     System.out.println("******** Delete File *******");
                     FileManagement.deletefile("Chicken.txt");
-                    break;
-                case 5:
-                    break;
+                }
+                case 5 -> {
+                }
         }
             
         }while(opcion!=5);

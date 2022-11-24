@@ -20,9 +20,11 @@ public class Chicken {
         cluck();
         eat(7);
         cluck();
+        wander();
+        wander();
         drink(40);
         cluck();
-        
+
     }
 
     private void cluck() {
@@ -35,6 +37,10 @@ public class Chicken {
 
     private void drink(int mmOfWater) {
         System.out.println("This chicken is drinking " + mmOfWater);
+    }
+
+    private void wander() {
+        System.out.println("This chicken is --> WANDER <--");
     }
 
     @Override
