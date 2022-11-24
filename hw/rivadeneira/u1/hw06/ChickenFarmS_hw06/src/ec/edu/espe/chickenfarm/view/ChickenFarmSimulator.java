@@ -86,7 +86,6 @@ public class ChickenFarmSimulator {
         }while(equal_id == true );
         System.out.print("chicken name -->");
         name = scan.next();
-
         System.out.print("chicken age -->");
         age = scan.nextInt();
         System.out.print("chicken color -->");
