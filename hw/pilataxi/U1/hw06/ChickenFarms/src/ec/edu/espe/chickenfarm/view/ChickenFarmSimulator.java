@@ -31,7 +31,7 @@ public class ChickenFarmSimulator {
         
         chickens = loadJson();
 
-        while (option != 7) {
+        while (option != 4) {
             System.out.println("Diego Pilataxi");
             System.out.println("-----------------------------------------");
             System.out.println("                  MENU"                   );
@@ -96,7 +96,7 @@ public class ChickenFarmSimulator {
         String jsonFile = "";
         String[] jsonChickens;
         
-        try ( Scanner scFile = new Scanner(new File("./chickens.json"))) {
+        try ( Scanner scFile = new Scanner(new File("./chickensAdded.json"))) {
             while (scFile.hasNextLine()) {
                 jsonFile += scFile.nextLine();
             }
@@ -194,7 +194,7 @@ public class ChickenFarmSimulator {
         Gson gson = new Gson();
         String json = gson.toJson(chickens);
         
-        File file = new File("./chickens.json");
+        File file = new File("./chickensAdded.json");
         try ( FileWriter fw = new FileWriter(file);) {            
             fw.write(json);            
             System.out.println("FILE SAVED");
