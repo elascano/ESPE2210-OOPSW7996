@@ -73,16 +73,16 @@ public class ChickenFarmSimulator {
                 }
 
                 case 3 -> {
-                    System.out.println("----------File----------");
+                    System.out.println("----------SAVED----------");
                     //saveFile(chickens);
                     SaveJson(chickens);
                 }
 
                 case 4 ->
-                    System.out.println("The application finished");
+                    System.out.println("GOD BYE....");
 
                 default ->
-                    System.out.println("Invalid Option");
+                    System.out.println("OPTION NOT VALID");
             }
             sc.nextLine();
         }
@@ -122,18 +122,6 @@ public class ChickenFarmSimulator {
         return chickens;
     }
     
-    private static void SaveJson(ArrayList<Chicken> chickens) {
-        Gson gson = new Gson();
-        String json = gson.toJson(chickens);
-        
-        File file = new File("./chickens.json");
-        try ( FileWriter fw = new FileWriter(file);) {            
-            fw.write(json);            
-            System.out.println("FILE SAVED");
-        } catch (Exception e) {
-            System.out.println("FILE NOT FOUND");
-        } 
-    }
 
     static Chicken addChicken() {
         Chicken newChicken = new Chicken();
@@ -200,6 +188,19 @@ public class ChickenFarmSimulator {
             index++;
         }
         return -1;
+    }
+    
+    private static void SaveJson(ArrayList<Chicken> chickens) {
+        Gson gson = new Gson();
+        String json = gson.toJson(chickens);
+        
+        File file = new File("./chickens.json");
+        try ( FileWriter fw = new FileWriter(file);) {            
+            fw.write(json);            
+            System.out.println("FILE SAVED");
+        } catch (Exception e) {
+            System.out.println("FILE NOT FOUND");
+        } 
     }
 
 }
