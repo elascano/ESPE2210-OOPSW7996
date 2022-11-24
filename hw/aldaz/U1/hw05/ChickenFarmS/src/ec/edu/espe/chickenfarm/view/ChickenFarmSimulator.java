@@ -106,7 +106,7 @@ public class ChickenFarmSimulator {
   
     private static void printChicken(Chicken chicken) {
         System.out.println("================================================");
-        System.out.println("           Chicken "+chicken.getId()+" Info");
+        System.out.println("           Chicken " + chicken.getId() + " Info");
         System.out.println("================================================");
         System.out.println("chicken id \t--> " + chicken.getId());
         System.out.println("chicken name \t--> " + chicken.getName());

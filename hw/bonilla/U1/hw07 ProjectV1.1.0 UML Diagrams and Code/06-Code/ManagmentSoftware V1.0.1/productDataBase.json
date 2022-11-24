@@ -1,0 +1,5 @@
+{"id":1,"name":"Nieve","cost":0.0,"description":"Nieve","materials":[{"id":2,"name":"Palitos","quantity":10,"cost":1.0},{"id":1,"name":"Tela","quantity":10,"cost":20.0}],"workingTime":6,"quantity":15}
+{"id":2,"name":"Payaso","cost":0.0,"description":"Payaso","materials":[{"id":1,"name":"Tela","quantity":10,"cost":20.0},{"id":2,"name":"Palitos","quantity":10,"cost":1.0},{"id":1,"name":"Tela","quantity":10,"cost":20.0}],"workingTime":10,"quantity":10}
+{"id":3,"name":"PapaNoel","cost":0.0,"description":"Navidad","materials":[{"id":1,"name":"Tela","quantity":10,"cost":20.0}],"workingTime":3,"quantity":10}
+{"id":4,"name":"Muñeca","cost":0.0,"description":"Muñeca","materials":[{"id":3,"name":"Algodon","quantity":1,"cost":0.5},{"id":2,"name":"Palitos","quantity":10,"cost":1.0}],"workingTime":4,"quantity":5}
+{"id":5,"name":"Duende","cost":0.0,"description":"Duende","materials":[{"id":1,"name":"Tela","quantity":10,"cost":20.0},{"id":2,"name":"Palitos","quantity":10,"cost":1.0}],"workingTime":5,"quantity":5}
