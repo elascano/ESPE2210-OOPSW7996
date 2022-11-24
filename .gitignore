@@ -20,18 +20,9 @@
 .rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+hs_err_pid
 
 #vpp backup files
-<<<<<<< HEAD
+
 *.vpp.bak_*
-/ws/oña/u1/ws13Constructors/ChickenFarm/nbproject/private/
-/ws/oña/u1/ws13Constructors/ChickenFarmS/nbproject/private/
-/ws/oña/u1/ws13Constructors/ChickenFarmS/build/
-/hw/oña/U1/hw05/HW05/hw05/nbproject/private/
-/hw/oña/U1/hw05/HW05/hw05/build/
-/hw/oña/U1/hw06/hw06/nbproject/private/
-/hw/oña/U1/hw06/hw06/build/
-=======
-*.vpp.bak_*
->>>>>>> 05aa45c572085bc6fb78c020bcf1931d7bcc0a26
+
