@@ -1,8 +1,9 @@
 package ec.edu.espe.chickenfarmhomework.view;
 
 import ec.edu.espe.chickenfarmhomework.model.Chicken;
-import java.util.Scanner;
 import java.io.*;
+import java.util.*;
+import com.google.gson.Gson;
 
 /**
  *
@@ -14,17 +15,17 @@ public class ChickenFarmHomework {
     
     public static void main(String[] args){
         System.out.println("Allan Panchi");
-        System.out.println("Homework 05");
+        System.out.println("Homework 06");
         System.out.println("Menu options");
         int option;
         int position = 0;
         
-        Chicken[] chicken = new Chicken[100];
-        
+        /*Chicken[] chicken = new Chicken[100];
         for (int i = 0; i < 100; i++) {
             chicken[i] = new Chicken();
-        }
-        
+        }*/
+        ArrayList<Chicken> chickens = new ArrayList<Chicken>();
+        Chicken chicken = new Chicken();
         
         do{
             System.out.println("============================");
@@ -43,16 +44,17 @@ public class ChickenFarmHomework {
             switch(option){
                 case 1 -> {
                     
-                    enterChicken(chicken[position]);
+                    enterChicken(chickens);
                     position++;
                     
                     break;
                }
                 case 2 -> {        
                     
-                    for (int i = 0; i < position; i++) {
+                    for (int i = 0; i < chickens.size(); i++) {
                     
-                        printChicken(chicken[i]);
+                        chicken = chickens.get(i); 
+                        printChicken(chicken);
                         
                     }
                     
@@ -60,7 +62,8 @@ public class ChickenFarmHomework {
                 }
                 case 3 -> {
                     
-                    chickenFile(position, chicken);
+                    //chickenFile(position, chickens);
+                    chickenJson(position, chickens);
                     
                     break;
                 }
@@ -71,7 +74,7 @@ public class ChickenFarmHomework {
         }while(option!=4);
     }
 
-    private static void chickenFile(int i, Chicken[] chicken) {
+  /*private static void chickenFile(int i, Chicken[] chicken) {
         try
         {
             FileWriter file = new FileWriter("Chickenlist.csv");
@@ -98,9 +101,10 @@ public class ChickenFarmHomework {
         {
             e.printStackTrace();
         }
-    }
+    }*/
     
-    private static void enterChicken(Chicken chicken) {
+    private static void enterChicken(ArrayList<Chicken> chickens) {
+        Chicken chicken = new Chicken();
         int id;
         String name = new String("");
         int age;
@@ -121,14 +125,36 @@ public class ChickenFarmHomework {
         chicken.setAge(age);
         chicken.setColor(color);
         chicken.setIsMolting(Ismolting);
+        chickens.add(chicken);
     }
     
     private static void printChicken(Chicken chicken) {
-        System.out.println("================================1");
+        System.out.println("================================");
         System.out.println("chicken id -->" + chicken.getId());
         System.out.println("chicken name -->" + chicken.getName());
         System.out.println("chicken age -->" + chicken.getAge());
         System.out.println("chicken color -->" + chicken.getColor());
         System.out.println("chicken is molting -->" + chicken.isIsMolting());
+    }
+
+    private static void chickenJson(int position, ArrayList<Chicken> chickens) {
+       File file = new File ("Chickenlist.json");
+       int id = chickens.get(position).getId();
+       int age = chickens.get(position).getAge();
+       String name = chickens.get(position).getName();
+       String color = chickens.get(position).getColor();
+       boolean isMolting = chickens.get(position).isIsMolting();
+       
+       String jsonStructure = " {\"id\":" + id + ",\"name\":\"" + name + "\",\"age\":" + age + ",\"color\":\"" + color + "\",\"IsMolting\":" + isMolting + "},";
+        try {
+            try ( PrintWriter printFile = new PrintWriter(new FileWriter(file, true))) {
+                printFile.print(jsonStructure);
+                printFile.println("");
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace(System.out);
+        } catch (IOException e) {
+            e.printStackTrace(System.out);
+        }  
     }
 }

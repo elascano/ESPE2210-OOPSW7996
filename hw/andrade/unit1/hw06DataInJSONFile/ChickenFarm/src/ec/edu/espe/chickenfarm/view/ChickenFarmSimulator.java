@@ -20,8 +20,6 @@ import org.json.simple.parser.ParseException;
  */
 public class ChickenFarmSimulator {
 
-    ArrayList<Chicken> chickens = new ArrayList<>();
-
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
 
@@ -29,8 +27,8 @@ public class ChickenFarmSimulator {
         boolean exitMenu = false;
         position = 0;
 
-        ArrayList<Chicken> chickens;
-        chickens = new ArrayList<>();
+        ArrayList<Chicken> chickensToWrite = new ArrayList<>();
+        ArrayList<Chicken> chickensToRead;
 
         Chicken chicken = new Chicken();
 
@@ -48,48 +46,57 @@ public class ChickenFarmSimulator {
                 switch (option)
                 {
                     case 1:
-                        newChicken(chickens);
-                        writeInFile(chickens);
+
+                        newChicken(chickensToWrite);
+                        writeInFile(chickensToWrite, position);
                         System.out.println("Chicken have been aggregated\n");
                         position++;
                         break;
                     case 2:
-                        
-                        if (!chickens.isEmpty())
+
+                        chickensToRead = new ArrayList<>();
+                        readFile(chickensToRead);
+
+                        for (int i = 0; i < chickensToRead.size(); i++)
                         {
-                            System.out.println("|\tID\t|\tName\t|\tAge\t|\tColor\t|  Is Molting\t|");
-                        } else{
-                            System.out.println("No chickens have been admitted yet");
-                        }
-                        
-                        for (int i = 0; i < chickens.size(); i++)
-                        {
-                            chicken = chickens.get(i);
-                            printChicken(chicken);                    
+                            if (i == 0 && position > 0)
+                            {
+                                System.out.println("|\tID\t|\tName\t|\tAge\t|\tColor\t|  Is Molting\t|");
+                            }
+                            chicken = chickensToRead.get(i);
+                            printChicken(chicken);
                         }
                         break;
                     case 3:
                         int match;
                         boolean idNotFound = true;
-                        
-                        //readFile(chickens);
+                        chickensToRead = new ArrayList<>();
 
-                        System.out.println("Enter the chicken's id to view");
-                        match = sc.nextInt();
+                        readFile(chickensToRead);
 
-                        for (int i = 0; i < chickens.size(); i++)
+                        if (position > 0)
                         {
-                            chicken = chickens.get(i);
-                            if (match == chicken.getId())
+                            System.out.println("Enter the chicken's id to view");
+                            match = sc.nextInt();
+
+                            for (int i = 0; i < chickensToRead.size(); i++)
                             {
-                                printChicken(chicken);
-                                idNotFound = false;
+                                chicken = chickensToRead.get(i);
+                                if (match == chicken.getId())
+                                {
+                                    if (position > 0)
+                                    {
+                                        System.out.println("|\tID\t|\tName\t|\tAge\t|\tColor\t|  Is Molting\t|");
+                                    }
+                                    printChicken(chicken);
+                                    idNotFound = false;
+                                }
                             }
-                        }
 
-                        if (idNotFound)
-                        {
-                            System.out.println("ID not found");
+                            if (idNotFound)
+                            {
+                                System.out.println("ID not found");
+                            }
                         }
 
                         break;
@@ -115,13 +122,55 @@ public class ChickenFarmSimulator {
         System.out.println("4. Exit");
     }
 
+    private static int validateId(int id) {
+        JSONParser parser = new JSONParser();
+        Scanner sc = new Scanner(System.in);
+
+        try
+        {
+            Object object = parser.parse(new FileReader("Chicken List.json"));
+            JSONObject jsonObject = (JSONObject) object;
+            JSONArray chickensArray = (JSONArray) jsonObject.get("list");
+            Chicken chicken = new Chicken();
+
+            for (int i = 0; i < chickensArray.size(); i++)
+            {
+
+                Object objectChicken = chickensArray.get(i);
+                JSONObject objectChickenJSON = (JSONObject) objectChicken;
+
+                chicken.setId(Integer.parseInt(objectChickenJSON.get("id").toString()));
+
+                while (chicken.getId() == id)
+                {
+                    System.out.println("The Id entered already exists, enter another one: ");
+                    id = sc.nextInt();
+                }
+
+            }
+
+        } catch (FileNotFoundException ex)
+        {
+            System.out.println("Error reading file (FNF): " + ex);
+        } catch (IOException ex)
+        {
+            System.out.println("Error reading file (IOE): " + ex);
+        } catch (ParseException ex)
+        {
+            System.out.print("");
+        }
+        return id;
+    }
+
     private static void newChicken(ArrayList<Chicken> chickens) {
 
         Chicken chicken = new Chicken();
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter the chicken id");
-        chicken.setId(sc.nextInt());
+        int id = sc.nextInt();
+        id = validateId(id);
+        chicken.setId(id);
         System.out.println("Enter the chicken name");
         chicken.setName(sc.next());
         System.out.println("Enter the chicken age");
@@ -192,33 +241,37 @@ public class ChickenFarmSimulator {
             e.printStackTrace(System.out);
         }
     }
-    
-    private static void writeInFile(ArrayList<Chicken> chickens){
+
+    private static void writeInFile(ArrayList<Chicken> chickens, int position) {
         File fileJson = new File("Chicken List.json");
-        
+
         if (!chickens.isEmpty())
         {
-            readFile(chickens);
+            if (position == 0)
+            {
+                readFile(chickens);
+            }
+
             JSONObject chickensJSON = new JSONObject();
             JSONArray list = new JSONArray();
-            
+
             for (int i = 0; i < chickens.size(); i++)
             {
                 JSONObject chickenJSON = new JSONObject();
-                
+
                 chickenJSON.put("id", chickens.get(i).getId());
                 chickenJSON.put("name", chickens.get(i).getName());
                 chickenJSON.put("age", chickens.get(i).getAge());
                 chickenJSON.put("color", chickens.get(i).getColor());
                 chickenJSON.put("isMolting", chickens.get(i).isIsMolting());
-                
+
                 list.add(chickenJSON);
-                
+
             }
-            
+
             chickensJSON.put("list", list);
-            
-            try(FileWriter file =new FileWriter(fileJson))
+
+            try ( FileWriter file = new FileWriter(fileJson))
             {
                 file.write(chickensJSON.toString());
                 file.flush();
@@ -226,13 +279,14 @@ public class ChickenFarmSimulator {
             {
                 System.out.println("Error writing file");
             }
-            
+
         }
     }
 
     private static void readFile(ArrayList<Chicken> chickens) {
 
         JSONParser parser = new JSONParser();
+
         try
         {
             Object object = parser.parse(new FileReader("Chicken List.json"));
@@ -241,9 +295,10 @@ public class ChickenFarmSimulator {
 
             for (int i = 0; i < chickensArray.size(); i++)
             {
-                Chicken chicken = new Chicken();
+
                 Object objectChicken = chickensArray.get(i);
                 JSONObject objectChickenJSON = (JSONObject) objectChicken;
+                Chicken chicken = new Chicken();
 
                 chicken.setName(objectChickenJSON.get("name").toString());
                 chicken.setAge(Integer.parseInt(objectChickenJSON.get("age").toString()));
@@ -252,10 +307,9 @@ public class ChickenFarmSimulator {
                 chicken.setIsMolting(Boolean.parseBoolean(objectChickenJSON.get("isMolting").toString()));
 
                 chickens.add(chicken);
+
             }
-            
-            
-            
+
         } catch (FileNotFoundException ex)
         {
             System.out.println("Error reading file (FNF): " + ex);
