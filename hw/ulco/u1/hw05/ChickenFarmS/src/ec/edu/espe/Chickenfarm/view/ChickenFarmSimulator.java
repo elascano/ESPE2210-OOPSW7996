@@ -7,6 +7,7 @@ package ec.edu.espe.Chickenfarm.view;
 import ec.edu.espe.Chickenfarm.model.Chicken;
 import java.io.PrintWriter;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -30,7 +31,7 @@ public class ChickenFarmSimulator {
             System.out.println("1.Insert the chicken");
             System.out.println("2.View the chickens");
             System.out.println("3.Inicializar  .csv");
-            System.out.println("4.Exit");
+            System.out.println("5.454");
             System.out.println("Write one of the options");
             try {
                 option = scan.nextInt();
@@ -46,18 +47,35 @@ public class ChickenFarmSimulator {
                         createcsv();
                         break;
                     case 4:
-                        exit = true;
+                         try{
+                                     Scanner sc = new Scanner(System.in);
+
+                            Scanner scFile = new Scanner(new File ("ChickenList.csv")); 
+                            ArrayList<Chicken>chickenList  = readChickensFromFile(scFile); 
+                            for (Chicken chicken: chickenList){
+                                printChicken(chicken);
+                            }
+                        }catch(FileNotFoundException error){
+                            System.err.println("""
+                                               \n--------- DEAR USER ----------
+                                                        FILE NOT FOUND
+                                               ------------------------------\n""");}
                         break;
 
-                    default:
+                    
+                default:
                         System.out.println("!!ERROR!!INVALID OPTION ");
                 }
             } catch (IOException e) {
                 System.out.println("Uoop! Error!");
                 scan.next();
             }
+            }
         }
-    }
+
+    
+
+    
 
     private static void createcsv() throws IOException {
         File List = new File("ChickenList.csv");
@@ -67,7 +85,7 @@ public class ChickenFarmSimulator {
     }
 
     private static void read() throws FileNotFoundException, IOException {
-        
+
         FileReader chickenread = null;
         String linea;
         System.out.println("==========================");
@@ -129,4 +147,32 @@ public class ChickenFarmSimulator {
         System.out.println("==============================");
 
     }
+private static ArrayList<Chicken> readChickensFromFile(Scanner scFile){ 
+        ArrayList<Chicken> chickensFromFile  = new ArrayList<>(); 
+        String[] chickenInfoFromFile;
+        Chicken chickenWithFileInfo; 
+            while(scFile.hasNextLine()){
+                chickenInfoFromFile = scFile.nextLine().split(";");
+                if(!chickenInfoFromFile[0].equals("ID")){
+                    chickenWithFileInfo = new Chicken(Integer.parseInt(chickenInfoFromFile[0]), chickenInfoFromFile[1],chickenInfoFromFile[2],Integer.parseInt(chickenInfoFromFile[3]), Boolean.parseBoolean(chickenInfoFromFile[4])); //Crea un objeto pollito con la info leida
+                    chickensFromFile.add(chickenWithFileInfo); 
+                    }
+            }
+        return chickensFromFile;
+    }
+  private static void printChicken(Chicken chicken) {
+        System.out.println("""
+                           ========================= CHICKEN FOUND ===========================""");
+        System.out.println("                         =  Chicken " + chicken.getId() + "  =");
+        System.out.println("        __//      " + "");
+        System.out.println("       /.__.\\    " + "    * Chicken id -> " + chicken.getId());
+        System.out.println("       \\ \\/ /   " + "     * Chicken name -> " + chicken.getName());
+        System.out.println("    '__/    \\    " + "    * Chicken age -> "+ chicken.getAge()); 
+        System.out.println("     \\-      )   " + "    * Chicken color -> " + chicken.getColor());
+        System.out.println("      \\_____/    " + "    * Is the chicken molting? -> " + chicken.isIsMolting());
+        System.out.println("   _____|_|___    " + "");
+        System.out.println("        \" \"     " +"");
+        System.out.println("\n==================================================================\n");
+    }
 }
+
