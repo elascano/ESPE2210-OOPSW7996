@@ -110,10 +110,10 @@ public class ChickenFarmSimulator {
         
     }
     
-        private static void saveJsonData(Chicken chicken) {
-        File chickenList = new File("chickens.json");
-        Gson gson = new Gson();
-        String json = gson.toJson(chicken);
+private static void saveJsonData(Chicken chicken) {
+    File chickenList = new File("chickens.json");
+    Gson gson = new Gson();
+    String json = gson.toJson(chicken);
         
         try {
             PrintWriter writer = new PrintWriter(new FileWriter(chickenList, true)); 
