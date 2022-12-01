@@ -17,38 +17,26 @@
 *.ear
 *.zip
 *.tar.gz
-.rar
+*.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+<<<<<<< HEAD
 hs_err_pid*
 
 #vpp backup files
-<<<<<<< HEAD
 *.vpp.bak_*
-/ws/oña/u1/ws13Constructors/ChickenFarm/nbproject/private/
-/ws/oña/u1/ws13Constructors/ChickenFarmS/nbproject/private/
-/ws/oña/u1/ws13Constructors/ChickenFarmS/build/
-/hw/oña/U1/hw05/HW05/hw05/nbproject/private/
-/hw/oña/U1/hw05/HW05/hw05/build/
-/hw/oña/U1/hw06/hw06/nbproject/private/
-/hw/oña/U1/hw06/hw06/build/
 =======
+hs_errpid
+
+#vpp backup files
 <<<<<<< HEAD
-/hw/yaranga/u1/hw05/ChickenFarmS_1/nbproject/private/
-/hw/yaranga/u1/hw05/ChickenFarmS_1/build/
-/hw/yaranga/u1/hw05/ChickenFarmS_1/dist/
-=======
-.vpp.bak_
->>>>>>> 85e662de914004c07ac6410c35122cd15206c6a1
-/hw/ulco/u1/hw06/ChickenFarms/nbproject/private/
-/hw/ulco/u1/hw06/ChickenFarms/build/
-=======
-.vpp.bak_
->>>>>>> 2d3b90d42543bfc210b6e0d45a8b015814db1094
->>>>>>> 9bc8ce9cd728d39fd892d0fbd5d2640a07233011
-/ws/bazurto/u1/ws16/ApanadosMenu/nbproject/private/
+
+*.vpp.bak_*
+
+/ws/verdugo/u1/ws11FromUMLToCode/JavaApplication2/nbproject/private/
 =======
 *.vpp.bak_*
+<<<<<<< HEAD
 >>>>>>> 05aa45c572085bc6fb78c020bcf1931d7bcc0a26
 <<<<<<< HEAD
 /hw/oña/U1/hw07 Project/RestaurantProject/nbproject/private/
@@ -57,3 +45,7 @@ hs_err_pid*
 >>>>>>> 159d974d553d0caa809c0db0e3870c28376e1651
 /exams/barrionuevo/unit1/ExamPractice/target/
 /exams/barrionuevo/unit1/ExamPractice1/target/
+=======
+>>>>>>> 693dce747d6e140c2d7a1eae24ffc01e8d88e949
+>>>>>>> 95a30cef560b71c33735a872d339bed6b6c61166
+>>>>>>> fbc4fd695b6cf35d1a8a985fe22b871b87e66280

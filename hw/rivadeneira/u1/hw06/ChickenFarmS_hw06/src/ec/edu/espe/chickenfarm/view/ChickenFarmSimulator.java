@@ -86,7 +86,6 @@ public class ChickenFarmSimulator {
         }while(equal_id == true );
         System.out.print("chicken name -->");
         name = scan.next();
-
         System.out.print("chicken age -->");
         age = scan.nextInt();
         System.out.print("chicken color -->");
@@ -111,10 +110,10 @@ public class ChickenFarmSimulator {
         
     }
     
-        private static void saveJsonData(Chicken chicken) {
-        File chickenList = new File("chickens.json");
-        Gson gson = new Gson();
-        String json = gson.toJson(chicken);
+private static void saveJsonData(Chicken chicken) {
+    File chickenList = new File("chickens.json");
+    Gson gson = new Gson();
+    String json = gson.toJson(chicken);
         
         try {
             PrintWriter writer = new PrintWriter(new FileWriter(chickenList, true)); 
