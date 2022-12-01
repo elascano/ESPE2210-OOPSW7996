@@ -26,8 +26,11 @@ hs_err_pid
 
 
 *.vpp.bak_*
+<<<<<<< HEAD
 
 
-/exams/panchi/U1/Question27/CodingSkills/nbproject/private/
-/exams/panchi/U1/Question27/CodingSkills/build/
-/exams/panchi/U1/Question27/CodingSkills/dist/
+/ws/suquillo/u1/ws11FromToUmlCode/ec.edu.espe.ExamOPP/nbproject/private/
+/hw/suquillo/u1/hw06/ExamO.P.P/nbproject/private/
+/hw/suquillo/u1/hw06/ExamO.P.P/build/
+=======
+>>>>>>> 9643c23d9b92f4ba38e52e8f2671d24dfe4e5ef0
