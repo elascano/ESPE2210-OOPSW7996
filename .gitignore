@@ -26,3 +26,4 @@ hs_err_pid
 
 *.vpp.bak_*
 
+/ws/verdugo/u1/ws11FromUMLToCode/JavaApplication2/nbproject/private/
