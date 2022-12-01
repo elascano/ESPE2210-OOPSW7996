@@ -29,15 +29,14 @@ public class ChickenFarmSimulator {
         while (!exit) {
             System.out.println("");
             System.out.println("====================");
-            System.out.println("Leonardo Yaranga");
-            System.out.println("hw06");
+            System.out.println("SUQUILLO MARTIN");
             System.out.println("==========Menu==========");
             System.out.println("1.Enter a chicken");
             System.out.println("2.Print all chicken");
             System.out.println("3.Search chicken to print");
             System.out.println("4.Exit");
             try {
-                System.out.println("Enter an option number");
+                System.out.println("Enter a number");
                 option = input.nextInt();
                 System.out.println("");
                 switch (option) {
@@ -55,7 +54,7 @@ public class ChickenFarmSimulator {
                                 printChicken(chickens.get(i));
                             }
                         } else {
-                            System.out.println("No chickens entered yet");
+                            System.out.println("No chickens entered :( ");
                         }
                     }
                    
