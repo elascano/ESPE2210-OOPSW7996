@@ -23,4 +23,8 @@
 hs_err_pid
 
 #vpp backup files
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ac87b6dce81871ad2b2013f2800ca76dc6bfb865
 *.vpp.bak_*
