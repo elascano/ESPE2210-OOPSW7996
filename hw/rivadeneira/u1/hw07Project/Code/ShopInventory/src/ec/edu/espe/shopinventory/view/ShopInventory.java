@@ -1,10 +1,12 @@
 package ec.edu.espe.shopinventory.view;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import ec.edu.espe.shopinventory.model.Product;
 import java.util.InputMismatchException;
 import java.util.*;
 import java.io.*;
+import java.lang.reflect.Type;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -24,6 +26,8 @@ public class ShopInventory {
         inventoryName = "";
         boolean leave = false;
         boolean leave2 = false;
+        int flag[] = new int[1] ;
+        flag[0] = 1;
         int option;
         int option2;
         int box;
@@ -65,21 +69,29 @@ public class ShopInventory {
 
                                         System.out.println("\n\tWhat Inventory do you want to open?");
                                         inventoryName = scan.next();
-                                        products.clear();
-                                        box = openFile(products, inventoryName);
-                                        if (box > 0) {
+                                        products = openFile(products, inventoryName, flag);
+                                        if (flag[0] == 1) {
                                             System.out.println("\n\tThe File Has Been Opened Successfully!! :]");
                                             System.out.println("\n\t------------------------------------------");
                                             do {
+                                                products.clear();
+                                                products = openFile(products, inventoryName, flag);
                                                 enterProduct(scan, products);
-                                                writeCSV(products, box, inventoryName);
-                                                writeJSON(products, box, inventoryName);
+                                                writeJSON(products, inventoryName);
                                                 box++;
+                                                for (int i = 0; i < products.size(); i++) {
+                                                    printInventory(products.get(i));
+                                                }
                                                 System.out.println("\n\tDo you want to enter a new product?");
                                                 System.out.println("1) YES");
                                                 System.out.println("2) NO");
                                                 enter = scan.nextInt();
                                             } while (enter == 1);
+                                        }else{
+                                            System.out.println("==============");
+                                            System.out.println("File not found");
+                                            System.out.println("Please try again :D ");
+                                            System.out.println("====================");
                                         }
                                     }
                                     case 2 -> {
@@ -88,12 +100,11 @@ public class ShopInventory {
 
                                         System.out.print("\n\t> Enter a name for your new Inventory: ");
                                         inventoryName = scan.next();
-                                        products.clear();
                                         do {
+                                            products.clear();
+                                            products = openFile(products, inventoryName, flag);
                                             enterProduct(scan, products);
-                                            writeCSV(products, box, inventoryName);
-                                            writeJSON(products, box, inventoryName);
-                                            box++;
+                                            writeJSON(products, inventoryName);
                                             System.out.println("\n\tDo you want to enter a new product?");
                                             System.out.println("1) YES");
                                             System.out.println("2) NO");
@@ -120,10 +131,8 @@ public class ShopInventory {
                         System.out.println("\n\t> What Inventory do you want to Print?");
                         inventoryName = scan.next();
                         products.clear();
-                        box = openFile(products, inventoryName);
-                        if (box > 0) {
-                            System.out.println("\n\tERROR: FILE NOT FOUND");
-
+                        products = openFile(products, inventoryName, flag);
+                        if (flag[0] == 1) {
                             System.out.println("\n\t................................");
                             System.out.println("\n\t===========Inventory============");
                             System.out.println("\n\t................................");
@@ -131,12 +140,15 @@ public class ShopInventory {
                                 product = products.get(i);
                                 printInventory(product);
                             }
+                        }else{
+                            System.out.println("==============");
+                            System.out.println("File not found");
+                            System.out.println("Please try again :D ");
+                            System.out.println("====================");
                         }
                     }
-
                     case 3 -> {
                         leave = true;
-
                     }
                     default ->
                         System.out.println("\n\tONLY numbers from 1 to 3!!!");
@@ -170,21 +182,15 @@ public class ShopInventory {
         }
     }
 
-    private static void writeJSON(ArrayList<Product> products, int box, String inventoryName) {
+    private static void writeJSON(ArrayList<Product> products, String inventoryName) {
         Scanner scan = new Scanner(System.in);
-
-        File file = new File(inventoryName + ".json");
-        Gson gson = new Gson();
-        Product product = new Product();
-
-        product = products.get(box);
-        String jsonStructure = new Gson().toJson(product);
+        String jsonStructure = new Gson().toJson(products);
         try {
-            PrintWriter write = new PrintWriter(new FileWriter(file, true));
+            FileWriter file = new FileWriter(inventoryName + ".json");
 
-            write.print(jsonStructure);
-            write.println("");
-            write.close();
+            file.write(jsonStructure);
+            
+            file.close();
 
         } catch (FileNotFoundException ex) {
             ex.printStackTrace(System.out);
@@ -233,31 +239,30 @@ public class ShopInventory {
         System.out.println("\n");
     }
 
-    private static int openFile(ArrayList<Product> products, String inventoryName) {
+    private static ArrayList<Product> openFile(ArrayList<Product> products, String inventoryName, int flag[]) {
         int box = 0;
         String json = "";
         Gson gson = new Gson();
         Product product = new Product();
         Scanner scan = new Scanner(System.in);
-
+        Type type = new TypeToken<ArrayList<Product>>() {}.getType();
+        
         try {
             BufferedReader read = new BufferedReader(new FileReader(inventoryName + ".json"));
             String line = "";
             while ((line = read.readLine()) != null) {
                 json = line;
-                product = new Gson().fromJson(json, Product.class);
-                products.add(box, product);
-                box++;
+                products = new Gson().fromJson(json, type);
+                //products.add(box, product);
+                //box = 1;
             }
             read.close();
+            flag[0] = 1;
         } catch (FileNotFoundException ex) {
-            System.out.println("==============");
-            System.out.println("File not found");
-            System.out.println("Please try again :D ");
-            System.out.println("====================");
+            flag[0] = 0;
         } catch (IOException ex) {
             Logger.getLogger(ShopInventory.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return box;
+        return products;
     }
 }

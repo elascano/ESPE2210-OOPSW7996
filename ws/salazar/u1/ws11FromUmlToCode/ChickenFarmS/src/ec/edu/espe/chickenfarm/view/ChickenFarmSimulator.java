@@ -68,14 +68,12 @@ public class ChickenFarmSimulator {
                         }
                         case 4->{
                             end = true;
-                            //if (!chickenData.exists()) {
                             chickenData.delete();
                             try {
                                 chickenData.createNewFile();
                             }catch(IOException ex){
                                 Logger.getLogger(ChickenFarmSimulator.class.getName()).log(Level.SEVERE, null, ex);
                             }
-                            //}
                             try{
                                 writer = new FileWriter(chickenData, true);
                                 write = new PrintWriter(writer);
