@@ -20,19 +20,7 @@
 .rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid
+hs_errpid
 
 #vpp backup files
-
-
-*.vpp.bak_*
-<<<<<<< HEAD
-
-
-/ws/ansatuña/u1/ws16EncaptulationAndAbstraction/Exam_codingSkills/nbproject/private/
-/exams/ansatuña/u1/Exam1/EXAM/Exam_codingSkills/nbproject/private/
-=======
->>>>>>> 054a26f16cf9f820c76a7ddf736a17a620ae5e52
-/ws/ansatuña/u1/ws16EncaptulationAndAbstraction/Exam_codingSkills/build/
-/ws/ansatuña/u1/ws16EncaptulationAndAbstraction/Exam_codingSkills/dist/
-/exams/ansatuña/u1/Exam1/Question32/Exam_codingSkills/nbproject/private/
+*.vpp.bak*
