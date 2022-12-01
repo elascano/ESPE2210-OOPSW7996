@@ -1,0 +1,7 @@
+CHICKENS
+ID: 12
+Name: david
+Age: 12
+Color: reed
+Is Molting: true
+Chicken{id=12, name=david, color=reed, age=12, isMolting=true}

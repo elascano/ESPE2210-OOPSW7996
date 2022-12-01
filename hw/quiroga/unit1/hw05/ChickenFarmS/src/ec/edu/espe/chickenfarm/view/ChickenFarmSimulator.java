@@ -5,9 +5,11 @@
 package ec.edu.espe.chickenfarm.view;
 
 import ec.edu.espe.chickenfarm.model.Chicken;
-import java.io.FileWriter;
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.util.*;
+import java.io.*;
+import com.google.gson.Gson;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -18,22 +20,18 @@ public class ChickenFarmSimulator {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
+
         
-        int id;
-        String name = new String("");
-        int age;
-        String color = "";
-        boolean IsMolting;
         boolean leave = false;
         int option;
-        int position = 0;
+        int position[] = new int[1];
+        Chicken chicken = new Chicken();
+        position[0] = 0;
         
-        Chicken chickens[] = new Chicken[100];
+        ArrayList<Chicken> chickens = new ArrayList<Chicken>();
+        readJSON(chickens, position);
         
-        for (int i = 0; i < 100; i++){
-          chickens[i] = new Chicken();
-        }
-
+        
         
         
         while (!leave) {
@@ -42,8 +40,7 @@ public class ChickenFarmSimulator {
             System.out.println("1) Enter Chicken");
             System.out.println("2) Print Chicken");
             System.out.println("3) Print all entered Chickens");
-            System.out.println("4) Save Chicken in File");
-            System.out.println("5) Leave");
+            System.out.println("4) Leave");
 
             try {
 
@@ -52,26 +49,27 @@ public class ChickenFarmSimulator {
 
                 switch (option) {
                     case 1 -> {
-                        
-                        enterChicken(chickens[position], scan);
-                        position++;
+
+                        enterChicken(scan, chickens);
+                        addChickenToCSV(chickens, position[0]);
+                        addChickenToJSON(chickens, position[0]);
+                        position[0]++;
                     }
                     case 2 -> {
                         searchChicken(scan, chickens);
                     }
-                    case 3 ->{
-                        for (int i = 0; i < position; i++) {
-                            printChicken(chickens[i]);
+                    case 3 -> {
+                        for (int i = 1; i < chickens.size(); i++) {
+                            chicken = chickens.get(i);
+                            printChicken(chicken);
                         }
                     }
-                    case 4 ->{
-                        saveChicken(chickens,position);
-                        System.out.println("The Chicken List has been saved!");
-                    }
-                    case 5 ->
+                    case 4 -> {
                         leave = true;
+                        System.out.println("Good Bye!");
+                    }
                     default ->
-                        System.out.println("Only numbers from 1 to 5");
+                        System.out.println("Only numbers from 1 to 4");
                 }
             } catch (InputMismatchException e) {
                 System.out.println("You must enter a number");
@@ -80,64 +78,34 @@ public class ChickenFarmSimulator {
         }
 
     }
-    
-    
-    private static void saveChicken(Chicken[] chickens, int position) {
 
-        try
-        {
-            FileWriter file = new FileWriter("Chicken File.csv");
-            file.write("Id;Name;Age;Color;isMolting");
-            for (int i = 0; i < position; i++)
-            {
-                String id = String.valueOf(chickens[i].getId());
-                String age = String.valueOf(chickens[i].getAge());
-                String isMolting = String.valueOf(chickens[i].isIsMolting());
-
-                file.write("\n");
-                file.write(id);
-                file.write(";");
-                file.write(chickens[i].getName());
-                file.write(";");
-                file.write(age);
-                file.write(";");
-                file.write(chickens[i].getColor());
-                file.write(";");
-                file.write(isMolting);
-            }
-
-            file.close();
-
-        } catch (Exception e)
-        {
-            e.printStackTrace();
-        }
-    }
-    
-
-    private static void searchChicken(Scanner scan, Chicken[] chickens) {
+    private static void searchChicken(Scanner scan, ArrayList<Chicken> chickens) {
         int id;
         int j = -1;
+        Chicken chicken;
         System.out.println("Enter the Id of the chicken you want to print: ");
         id = scan.nextInt();
-        for (int i = 0; i < 99; i++) {
-            if (id == chickens[i].getId()) {
+        for (int i = 1; i < chickens.size(); i++) {
+            chicken = chickens.get(i);
+            if (id == chicken.getId()) {
                 j = i;
-                printChicken(chickens[j]);
+                printChicken(chicken);
             }
         }
-        
+
         if (j == -1) {
             System.out.println("There is no a Chicken with that Id");
         }
     }
 
-    private static void enterChicken(Chicken chicken, Scanner scan) {
+    private static void enterChicken(Scanner scan, ArrayList<Chicken> chickens) {
         int id;
         String name;
         int age;
         String color;
         boolean IsMolting;
+        
+        Chicken chicken = new Chicken();
         
         System.out.println("Digit the Id of the chicken: ");
         id = scan.nextInt();
@@ -157,18 +125,83 @@ public class ChickenFarmSimulator {
         chicken.setAge(age);
         chicken.setColor(color);
         chicken.setIsMolting(IsMolting);
-        
+
+        chickens.add(chicken);
     }
 
-    private static void printChicken(Chicken chicken){
-        System.out.println("======== CHICKEN " + chicken.getId() + " DATA =================");
-        System.out.println("Chicken name \t--> " + chicken.getName());
-        System.out.println("Chicken age \t--> " + chicken.getAge());
-        System.out.println("Chicken color \t--> " + chicken.getColor());
-        System.out.println("Chicken is molthing \t--> " + chicken.isIsMolting());
-        System.out.println("=====================================================");
+    private static void printChicken(Chicken chicken) {
+        System.out.println("----------------------------------------------");
+        System.out.println("         CHICKEN " + chicken.getId() + " DATA  \t");
+        System.out.println("   Chicken name        \t |" + chicken.getName() + "\t");
+        System.out.println("   Chicken age         \t |" + chicken.getAge() + "\t");
+        System.out.println("   Chicken color       \t |" + chicken.getColor() + "\t");
+        System.out.println("   Chicken is molthing \t |" + chicken.isIsMolting() + "\t");
+        System.out.println("----------------------------------------------");
+        System.out.println("\n");
     }
+
+    private static void addChickenToCSV(ArrayList<Chicken> chickens, int position) {
+        File file = new File("Chicken File.csv");
+        int id = chickens.get(position).getId();
+        int age = chickens.get(position).getAge();
+        String name = chickens.get(position).getName();
+        String color = chickens.get(position).getColor();
+        boolean isMolting = chickens.get(position).isIsMolting();
+
+        try {
+            PrintWriter printFile = new PrintWriter(new FileWriter(file, true));
+            printFile.print(id + ";" + name + ";" + age + ";" + color + ";" + isMolting);
+            printFile.println("");
+            printFile.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace(System.out);
+        } catch (IOException e) {
+            e.printStackTrace(System.out);
+        }
+
+    }
+
     
+    private static void addChickenToJSON(ArrayList<Chicken> chickens, int position) {
+        File file = new File("Chicken_File.json");
+        Gson gson = new Gson();
+        Chicken chicken = new Chicken();
+        
+        chicken = chickens.get(position);
+        String jsonStructure = new Gson().toJson(chicken);
+         try {
+            PrintWriter write = new PrintWriter(new FileWriter(file, true)); 
+            write.println("");
+            write.print(jsonStructure);
+            write.close();
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace(System.out);
+        } catch (IOException ex) {
+            ex.printStackTrace(System.out);
+        }
+    }
+
+    
+    private static void readJSON(ArrayList<Chicken> chickens, int position[]) {
+        String json = ""; 
+        Gson gson = new Gson();
+        Chicken chicken = new Chicken();
+        try {
+           BufferedReader read = new BufferedReader(new FileReader("Chicken_File.json"));
+           String line = "";
+        while ((line = read.readLine())!= null){
+            json = line;
+            chicken = new Gson().fromJson(json ,Chicken.class);
+            chickens.add(position[0], chicken);
+            position[0]++;
+        }
+            read.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(ChickenFarmSimulator.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(ChickenFarmSimulator.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+   
+
 }
-
-
