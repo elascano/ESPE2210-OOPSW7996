@@ -17,22 +17,10 @@
 *.ear
 *.zip
 *.tar.gz
-.rar
+*.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid
+hs_err_pid*
 
 #vpp backup files
-
-
 *.vpp.bak_*
-
-/exams/tipan/u1/ChickenFarmShw06/build/
-/exams/tipan/u1/ChickenFarmShw06/dist/
-/exams/tipan/u1/ChickenFarmShw06/nbproject/private/
-/exams/tipan/u1/Exam1/ChickenFarmShw06/build/
-/exams/tipan/u1/Exam1/ChickenFarmShw06/dist/
-/exams/tipan/u1/Exam1/ChickenFarmShw06/nbproject/private/
-/exams/tipan/u1/Exam1/build/
-/exams/tipan/u1/Exam1/dist/
-/exams/tipan/u1/Exam1/nbproject/private/
