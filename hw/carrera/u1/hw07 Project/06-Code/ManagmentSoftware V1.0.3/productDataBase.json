@@ -1,0 +1,3 @@
+{"id":2,"name":"Reno","cost":0.18666667,"description":"reno","materials":[{"id":1,"name":"Tela","generalQuantity":2.0,"unitQuantity":0.5,"cost":1.5},{"id":2,"name":"Palitos","generalQuantity":10.0,"unitQuantity":3.0,"cost":1.0}],"workingTime":8,"quantity":15}
+{"id":1,"name":"Nieve","cost":0.14,"description":"Nieve","materials":[{"id":1,"name":"Tela","generalQuantity":2.0,"unitQuantity":0.5,"cost":1.5}],"workingTime":6,"quantity":15}
+{"id":3,"name":"Muñeca","cost":8.333333,"description":"rosa","materials":[{"id":1,"name":"Tela","generalQuantity":2.0,"unitQuantity":0.5,"cost":1.5}],"workingTime":5,"quantity":2}
