@@ -76,7 +76,7 @@ public class ScreenRecorder {
     private static void sendJson(ArrayList<Screen> screen) {
         String json = new Gson().toJson(screen);
         try {
-            FileWriter orderRecord = new FileWriter("sdCards.json");
+            FileWriter orderRecord = new FileWriter("screen.json");
             orderRecord.write(json);
             orderRecord.close();
         } catch (IOException ex) { //Exception
