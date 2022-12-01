@@ -24,11 +24,4 @@ hs_err_pid
 
 #vpp backup files
 
-
 *.vpp.bak_*
-
-
-/exams/drouet/unit1/question33/exam/nbproject/private/
-/exams/drouet/unit1/question33/Exam/nbproject/private/
-/hw/drouet/unit1/hw07/06-Code/InClass/nbproject/private/
-/exams/drouet/unit1/question33/Exam/build/
