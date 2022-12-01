@@ -24,6 +24,7 @@ hs_err_pid
 
 #vpp backup files
 <<<<<<< HEAD
+<<<<<<< HEAD
 .vpp.bak_
 /exams/salazar/u1/q33/exam1CodingSkills/nbproject/private/
 /exams/salazar/u1/q33/exam1CodingSkills/build/
@@ -43,3 +44,6 @@ hs_err_pid
 =======
 >>>>>>> 9643c23d9b92f4ba38e52e8f2671d24dfe4e5ef0
 >>>>>>> bce655d5ee2a639609aed16f2c7ddd71ee5d3157
+=======
+*.vpp.bak_*
+>>>>>>> 08b76d3a9ae1ade1999fc6009392920f0d5de328
