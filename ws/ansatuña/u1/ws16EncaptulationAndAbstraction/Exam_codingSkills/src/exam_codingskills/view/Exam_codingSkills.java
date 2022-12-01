@@ -26,7 +26,7 @@ public class Exam_codingSkills {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         int option;
         boolean leave;
         Scanner sc = new Scanner(System.in);
@@ -39,40 +39,41 @@ public class Exam_codingSkills {
             System.out.println("\n1) Enter a new flash drive in the Inventory >");
             System.out.println("2) Exit the program >");
             option = sc.nextInt();
-        switch (option) {
+            switch (option) {
 
-            case 1 -> {
-                openFile();
-                insertFlashDriver(sc,flashdrivers);
-                writeJson(flashdrivers);
-            }
+                case 1 -> {
+                    flashdrivers = openFile(flashdrivers);
+                    insertFlashDriver(sc, flashdrivers);
+                    writeJSON(flashdrivers);
+                }
 
-            case 2 -> {
-                leave = true;
+                case 2 -> {
+                    leave = true;
+                }
+                default ->
+                    System.out.println("Invalid option");
             }
-            default ->
-                System.out.println("Invalid option");
-        }
-    } while(!leave);
-        
+        } while (option !=2);
+
     }
-    private static ArrayList<FlashDrive> openFile(ArrayList<FlashDrive> flashdrivers) {
+
+    private static ArrayList<FlashDrive> openFile(ArrayList<FlashDrive> flashdrivers) throws FileNotFoundException, IOException {
         int flag[];
         String json = "";
         Gson gson = new Gson();
         FlashDrive product = new FlashDrive();
         Scanner scan = new Scanner(System.in);
-        java.lang.reflect.Type type = new TypeToken<ArrayList<FlashDrive>>() {}.getType();
-        
-            BufferedReader read = new BufferedReader(new FileReader("FlashDrive.json"));
-            String line = "";
-            while ((line = read.readLine()) != null) {
-                json = line;
-                flashdrivers = new Gson().fromJson(json, type);
-            }
-        }
+        java.lang.reflect.Type type = new TypeToken<ArrayList<FlashDrive>>() {
+        }.getType();
 
+        BufferedReader read = new BufferedReader(new FileReader("FlashDrive.json"));
+        String line = "";
+        while ((line = read.readLine()) != null) {
+            json = line;
+            flashdrivers = new Gson().fromJson(json, type);
+        }
         return flashdrivers;
+    }
 
     private static void insertFlashDriver(Scanner scan, ArrayList<FlashDrive> flashdrivers) {
         Scanner sc = new Scanner(System.in);
@@ -96,22 +97,22 @@ public class Exam_codingSkills {
         product.setId(id);
         product.setColor(color);
         product.setQuantity(quantity);
-        
+    }
+
     private static void writeJSON(ArrayList<FlashDrive> flashdrivers) {
         Scanner scan = new Scanner(System.in);
         String jsonStructure = new Gson().toJson(flashdrivers);
-
-            FileWriter file = new FileWriter("FlashDrive.json");
+        try {
+            FileWriter file = new FileWriter("flashdrivers.json");
 
             file.write(jsonStructure);
-            
+
             file.close();
 
- 
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace(System.out);
+        } catch (IOException ex) {
+            ex.printStackTrace(System.out);
+        }
     }
 }
-
-    
-
-
-
