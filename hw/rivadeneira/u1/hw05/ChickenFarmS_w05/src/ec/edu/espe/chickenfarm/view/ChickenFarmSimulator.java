@@ -26,7 +26,7 @@ public class ChickenFarmSimulator {
         String color = "";
         boolean Ismolting;
         
-        file = new File("C:\\Users\\Administrador\\Desktop\\OOP\\ESPE2210-OOPSW7996\\hw\\rivadeneira\\u1\\hw05\\Chicken.txt");
+        file = new File("C:\\Users\\Administrador\\Desktop\\OOP\\ESPE2210-OOPSW7996\\hw\\rivadeneira\\u1\\hw05\\ChickenFarmS_w05\\Chickens.csv");
         
         if(!file.exists()){
         try{
@@ -62,16 +62,15 @@ public class ChickenFarmSimulator {
         
         write=new FileWriter(file,true); 
         line = new PrintWriter(write);
-        line.println("------NEW DATA------");
-        line.print("chicken id -->");
-        line.println(id);
-        line.print("chicken name -->");
-        line.println(name);
-        line.print("chicken age -->");
-        line.println(age);
-        line.print("chicken color -->");
-        line.println(color);
-        line.print("chicken is molting (true/false)-->");
+        
+        line.print(id);
+        line.print(";");
+        line.print(name);
+        line.print(";");
+        line.print(age);
+        line.print(";");
+        line.print(color);
+        line.print(";");
         line.println(Ismolting);
         line.close();
         write.close();
@@ -114,16 +113,14 @@ public class ChickenFarmSimulator {
         
         write=new FileWriter(file,true); 
         line = new PrintWriter(write);
-        line.println("------NEW DATA------");
-        line.print("chicken id -->");
-        line.println(id);
-        line.print("chicken name -->");
-        line.println(name);
-        line.print("chicken age -->");
-        line.println(age);
-        line.print("chicken color -->");
-        line.println(color);
-        line.print("do you want to continue entering data? yes/no");
+        line.print(id);
+        line.print(";");
+        line.print(name);
+        line.print(";");
+        line.print(age);
+        line.print(";");
+        line.print(color);
+        line.print(";");
         line.println(Ismolting);
         line.close();
         write.close();
