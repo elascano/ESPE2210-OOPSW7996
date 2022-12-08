@@ -54,6 +54,7 @@ public class FileManager {
 
     public static void deleteForks(ArrayList<Fork> forks, Fork fork, String json,Scanner sc) {
         Gson gson = new Gson();
+        boolean idNotFound = true;
         System.out.print("Enter the forks id to delete: ");
         int match = sc.nextInt();
         
@@ -61,8 +62,13 @@ public class FileManager {
         {
             if (match == forks.get(i).getId())
             {
-             forks.remove(i);   
+             forks.remove(i);
+             idNotFound = false;
+             System.out.println("||Deleteted information||");
             }
+        }
+         if(idNotFound){
+            System.out.println("ID not found");
         }
         
         json = gson.toJson(forks);
@@ -74,7 +80,7 @@ public class FileManager {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("||Deleteted information||");
+        
     }
     
     public static void updateJson(ArrayList<Fork> forks, Fork fork, String json,Scanner sc) {
@@ -91,6 +97,7 @@ public class FileManager {
             {
                 changeInfo(forks, i, sc);
                 idNotFound = false;
+                System.out.println("||The information changed||");
             }
         }
         
@@ -107,18 +114,18 @@ public class FileManager {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("||The information changed||");
+        
         
     }
     
-    private static void changeInfo(ArrayList<Fork> flashDrives, int position,Scanner sc) {
+    private static void changeInfo(ArrayList<Fork> forks, int position,Scanner sc) {
 
         System.out.print("Enter the new fork material:");
-        flashDrives.get(position).setMaterialFork(sc.next());
+        forks.get(position).setMaterialFork(sc.next());
         System.out.print("Enter the new fork color:");
-        flashDrives.get(position).setColorFork(sc.next());
+        forks.get(position).setColorFork(sc.next());
         System.out.print("Enter the new number of forks:");
-        flashDrives.get(position).setAmountFork(sc.nextInt());
+        forks.get(position).setAmountFork(sc.nextInt());
         
     }
 

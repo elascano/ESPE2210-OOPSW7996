@@ -9,18 +9,18 @@ public class Cup {
    
 
     private int id;
-    private String Material;
-    private String color;
+    private String materialCup;
+    private String colorCup;
 
     public Cup() {
         id = 0;
-        Material = "";
-        color = "";
+        materialCup = "";
+        colorCup = "";
     }
     
     @Override
     public String toString() {
-        return "Cup{" + "id=" + id + ", Material=" + Material + ", color=" + color + '}';
+        return "Cup{" + "id=" + id + ", Material=" + materialCup + ", color=" + colorCup + '}';
     }
 
  
@@ -42,28 +42,28 @@ public class Cup {
      * @return the Material
      */
     public String getMaterial(String next) {
-        return Material;
+        return materialCup;
     }
 
     /**
      * @param Material the Material to set
      */
     public void setMaterial(String Material) {
-        this.Material = Material;
+        this.materialCup = Material;
     }
 
     /**
      * @return the color
      */
     public String getColor() {
-        return color;
+        return colorCup;
     }
 
     /**
      * @param color the color to set
      */
     public void setColor(String color) {
-        this.color = color;
+        this.colorCup = color;
     }
 
     public String getMaterial() {
