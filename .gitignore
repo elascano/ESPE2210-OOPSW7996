@@ -17,16 +17,10 @@
 *.ear
 *.zip
 *.tar.gz
-*.rar
+.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_errpid
 
 #vpp backup files
-*.vpp.bak_*
-
-
-
-
-/hw/yaranga/u2/hw08/question33ExamU1_Yaranga_Leonardo V1.2.0/build/
-/hw/yaranga/u2/hw08/question33ExamU1_Yaranga_Leonardo V1.2.0/dist/
-/hw/yaranga/u2/hw08/question33ExamU1_Yaranga_Leonardo V1.2.0/nbproject/private/
+ 38ddf2b874641434e8b2b62ef639861769a1ff6d
