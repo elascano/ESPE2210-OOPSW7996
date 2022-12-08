@@ -1,0 +1,2 @@
+123;Lulu;3;Blue;false
+96;Ani;6;Brown;true

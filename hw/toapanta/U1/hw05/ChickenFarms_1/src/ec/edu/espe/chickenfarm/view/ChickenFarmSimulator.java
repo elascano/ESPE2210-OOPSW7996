@@ -25,7 +25,10 @@ public class ChickenFarmSimulator {
         int age;
         String color;
         boolean isMolting;
-
+        
+        
+        
+        
         int x = 1;
         String option = "";
 
