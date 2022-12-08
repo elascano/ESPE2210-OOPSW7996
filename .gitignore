@@ -17,18 +17,13 @@
 *.ear
 *.zip
 *.tar.gz
-*.rar
+.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-<<<<<<< HEAD
-hs_err_pid*
-
-#vpp backup files
-*.vpp.bak_*
-=======
 hs_errpid
 
 #vpp backup files
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 *.vpp.bak_*
@@ -54,3 +49,6 @@ hs_errpid
 /hw/panchi/U2/Hw08/CodeSkillsHw/dist/
 /hw/panchi/U2/Hw08/CountryExercise/nbproject/private/
 /hw/panchi/U2/Hw08/CountryExercise/build/
+=======
+ 38ddf2b874641434e8b2b62ef639861769a1ff6d
+>>>>>>> ef26f69899d83a6ea1bd0974e3202eb08dc47ca7
