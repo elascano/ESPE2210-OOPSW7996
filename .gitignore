@@ -1,6 +1,9 @@
 # Compiled class file
 *.class
 
+# Compiled class file
+*.class
+
 # Log file
 *.log
 
@@ -23,5 +26,10 @@
 hs_err_pid
 
 #vpp backup files
-
+<<<<<<< HEAD
+ 38ddf2b874641434e8b2b62ef639861769a1ff6d
+/ws/barrionuevo/unit2/ws19/Cable/nbproject/private/
+/ws/barrionuevo/unit2/ws19/Cable/build
+=======
 .vpp.bak_
+>>>>>>> e75dafb89f138d968031a4fd1ca56e9456c9aecf
