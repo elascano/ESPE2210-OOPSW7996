@@ -105,7 +105,7 @@ public class FileManagerCRUD {
         countries.get(position).setId(sc.nextInt());
         System.out.println("Enter the new country name");
         countries.get(position).setName(sc.next());
-        System.out.println("Enter the name of the cities");
+        System.out.println("Enter the number of the cities");
         countries.get(position).setCities(sc.nextInt());
         
         editJson(countries);
@@ -116,21 +116,10 @@ public class FileManagerCRUD {
         File fileJson = new File("CountriesList.json");
         try
         {
-            System.out.println("Are you sure?\n1. Yes\n2. No");
-            int answer = sc.nextInt();
-            while(answer < 1 || answer > 2){
-                System.out.println("Incorrect value, enter again");
-                answer = sc.nextInt();
-            }
-            
-            if(answer == 1){
-                FileWriter writer = new FileWriter(fileJson);
-                writer.write("[]");
-                writer.close();
-                System.out.println("Data has been deleted");
-            } else {
-                System.out.println("The data hasn't been deleted");
-            }
+            FileWriter writer = new FileWriter(fileJson);
+            writer.write("[]");
+            writer.close();
+            System.out.println("Data has been deleted");
             
         } catch (FileNotFoundException e)
         {
