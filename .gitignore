@@ -1,6 +1,9 @@
 # Compiled class file
 *.class
 
+# Compiled class file
+*.class
+
 # Log file
 *.log
 
@@ -17,15 +20,10 @@
 *.ear
 *.zip
 *.tar.gz
-*.rar
+.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 
 #vpp backup files
+
 *.vpp.bak_*
-
-
-
-
-/ws/quiroga/unit2/ws21/Ws21_CRUD/nbproject/private/
-/ws/quiroga/unit2/ws21/Ws21_CRUD/build/
