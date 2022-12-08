@@ -115,7 +115,7 @@ public class FileManager {
     public static void findDataCup(ArrayList<Cup> cups, Cup cup, String json, Scanner sc) {
         Gson gson = new Gson();
         boolean idNotFound = true;
-        System.out.print("Enter the cup id to delete: ");
+        System.out.print("Enter the cup id to search: ");
         int match = sc.nextInt();
 
         for (int i = 0; i < cups.size(); i++) {
