@@ -33,6 +33,12 @@ public class Screen {
        brand = "";
        price = 0;
     }
+    
+    
+        @Override
+    public String toString() {
+        return "Pencil{" + "id=" + getId() + ", name=" + getBrand() + ", quantity=" + getPrice() + '}';
+    }
 
     /**
      * @return the id
@@ -65,14 +71,8 @@ public class Screen {
     /**
      * @return the price
      */
-    public float getPrice() {
+    public int getPrice() {
         return price;
     }
-
-    /**
-     * @param price the price to set
-     */
-    public void setPrice(float price) {
-        this.setPrice(price);
-    }
+    
 }

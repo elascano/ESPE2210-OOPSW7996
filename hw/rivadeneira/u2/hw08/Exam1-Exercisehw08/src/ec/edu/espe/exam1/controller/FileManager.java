@@ -4,123 +4,155 @@ package ec.edu.espe.exam1.controller;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import ec.edu.espe.exam1.model.Screen;
+import ec.edu.espe.exam1.view.Exam1;
+import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.Reader;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Ariel Rivadeneira, Search Engine Bandits, DCCO-ESPE
  */
 public class FileManager {
-        public static void saveJsonData(ArrayList<Screen> screens, String fileName) {
+    public static void writeJSON(ArrayList<Screen> pencils, String screenFile) {
         Scanner scan = new Scanner(System.in);
-        String jsonStructure = new Gson().toJson(screens);
+        String jsonStructure = new Gson().toJson(pencils);
         try {
-            FileWriter file = new FileWriter(fileName + ".json");
+            FileWriter file = new FileWriter(screenFile + ".json");
+
             file.write(jsonStructure);
+            
             file.close();
-        } catch (FileNotFoundException exepcion) {
-            exepcion.printStackTrace (System.out); 
-        } catch (IOException exepcion) {
-            exepcion.printStackTrace (System.out);
+
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace(System.out);
+        } catch (IOException ex) {
+            ex.printStackTrace(System.out);
         }
     }
 
-
- public static void dataScreen(ArrayList <Screen> screens,Screen screen ,int position[] ){
+    public static void enterScreen(Scanner scan, ArrayList<Screen> screens) {
         int id;
-        String brand = "";
+        String brand;
         int price;
-        boolean equal_id;
-        Scanner scan = new Scanner(System.in);
-        do{
-        equal_id=false;
-        System.out.println("------NEW DATA------");
-        System.out.print("screen id -->");
+        Screen screen = new Screen();
+        System.out.println("=============================");
+        System.out.println("Enter the Id of screen: ");
         id = scan.nextInt();
         scan.nextLine();
-            for (int i = 0; i < screens.size(); i++) {
-                if(screens.get(i).getId()==id){
-            System.out.println("This id was already registered");
-            equal_id=true;
-                }
-            }
-        }while(equal_id == true );
-        System.out.print("brand of screen -->");
-        brand = scan.next();
-        System.out.print("price of screen-->");
+        System.out.println("===============================");
+        System.out.println("Enter the Brand of the screen: ");
+        brand = scan.nextLine();
+        System.out.println("===================================");
+        System.out.println("Enter the Price of the screen: ");
         price = scan.nextInt();
-        
-        screen = new Screen(id, brand, price);
-        screens.add(position[0], screen);
+        scan.nextLine();
+        screen.setId(id);
+        screen.setBrand(brand);
+        screen.setPrice(price);
+        screens.add(screen);
+    }
+
+    public static void printScreen(Screen screen) {
+        System.out.println("====================================");
+        System.out.println("Pencil Id             \t" + screen.getId());
+        System.out.println("====================================");
+        System.out.println("Pencil Brand           \t" + screen.getBrand());
+        System.out.println("====================================");
+        System.out.println("Pencil Price       \t" + screen.getPrice());
+        System.out.println("====================================");
+        System.out.println("\n");
+    }
+
+    public static ArrayList<Screen> openScreenFile(ArrayList<Screen> screens, String screenFile, int flag[]) {
+        int box = 0;
+        String json = "";
+        Gson gson = new Gson();
+        Screen screen = new Screen();
+        Scanner scan = new Scanner(System.in);
+        Type type = new TypeToken<ArrayList<Screen>>() {}.getType();
         
         try {
-            Thread.sleep(5*20*10);
-            System.out.println("=============================");
-        
-            System.out.println("Data saved successfully!");
-        
-            System.out.println("=============================");
-            Thread.sleep(5*20*10);
-            System.out.println("");
-        } catch (InterruptedException exepcion) {
-            exepcion.printStackTrace (System.out);
-        }
-        
-    }
- 
-     public static ArrayList<Screen> openFile(ArrayList<Screen> screens, String fileName) {
-        Gson gson = new Gson();
-        Scanner scan = new Scanner(System.in);    
-        try
-        {
-            Reader readFile = Files.newBufferedReader(Paths.get(fileName + ".json"));
-            TypeToken<ArrayList<Screen>> type = new TypeToken<ArrayList<Screen>>() {};
-            screens = gson.fromJson(readFile, type.getType());
-            readFile.close();
-        } catch (FileNotFoundException exepcion)
-        {
-            System.out.println("File not Found");
-        } catch (IOException exepcion)
-        {
-            System.out.println("Empty File");
+            BufferedReader read = new BufferedReader(new FileReader(screenFile + ".json"));
+            String line = "";
+            while ((line = read.readLine()) != null) {
+                json = line;
+                screens = new Gson().fromJson(json, type);
+            }
+            read.close();
+            flag[0] = 1;
+        } catch (FileNotFoundException ex) {
+            flag[0] = 0;
+        } catch (IOException ex) {
+            Logger.getLogger(Exam1.class.getName()).log(Level.SEVERE, null, ex);
         }
         return screens;
     }
-    
- 
-     public static void deleteJsonFile(String fileName){
+
+    public static void deleteJSON(String pencilFile){
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter the name of the file");
-        fileName = scan.next();
-        try {
-            FileWriter file = new FileWriter(fileName + ".json");
-            file.write("[]");
-            file.close();
-        } catch (FileNotFoundException exepcion) {
-            exepcion.printStackTrace (System.out); 
-        } catch (IOException exepcion) {
-            exepcion.printStackTrace (System.out);
+        System.out.println("Enter the pencil file for detele");
+        pencilFile = scan.next();
+        File file = new File(pencilFile + ".json");
+        file.delete();
+        System.out.println("File deleted succesfully.");
+    }
+  
+    public static int searchScreen(Scanner scan, ArrayList<Screen> screens) {
+        int id;
+        int j = -1;
+        Screen screen;
+        System.out.println("Enter the Id of the pencil: ");
+        id = scan.nextInt();
+        for (int i = 0; i < screens.size(); i++) {
+            screen = screens.get(i);
+            if (id == screen.getId()) {
+                j = i;
+                printScreen(screen);
+            }
         }
-        System.out.println("Data deleted succesfully.");
-    }
- 
-        public static void printContinent(Screen screen) {
-        System.out.println("====================================");
-        System.out.println("Product Id             :" + screen.getId());
-        System.out.println("Product Name           :" + screen.getBrand());
-        System.out.println("Product Quantity       :" + screen.getPrice());
-        System.out.println("====================================");
-    }
-     
+
+        if (j == -1) {
+            System.out.println("There is no a screen with that Id");
+        }
+        
+        return j;
+      
+    
+    }  
+      
+    public static void uptadeScreen(int box, ArrayList<Screen> screens, String screenFile){
+        int id;
+        String brand;
+        int price;
+        Scanner scan = new Scanner(System.in);
+        Screen screen = new Screen();
+        screen = screens.get(box);
+        
+        System.out.println("=============================");
+        System.out.println("Enter the new Id: ");
+        id = scan.nextInt();
+        scan.nextLine();
+        System.out.println("===============================");
+        System.out.println("Enter the new brand ");
+        brand = scan.nextLine();
+        System.out.println("===================================");
+        System.out.println("Enter the new price ");
+        price = scan.nextInt();
+        screen.setId(id);
+        screen.setBrand(brand);
+        screen.setPrice(price);
+        
+        writeJSON(screens, screenFile);
+    }    
 }
 
-     
 
-    

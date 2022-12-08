@@ -1,16 +1,10 @@
 
 package ec.edu.espe.exam1.view;
 
-import com.google.gson.Gson;
-import ec.edu.espe.exam1.model.Screen;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.util.*;
+import ec.edu.espe.exam1.model.Screen;
+import ec.edu.espe.exam1.controller.FileManager;
 
 
 /**
@@ -19,101 +13,115 @@ import java.util.Scanner;
  */
 public class Exam1 {
     public static void main(String[] args) {
-     Scanner scan = new Scanner(System.in);
-     ArrayList <Screen> screens = new ArrayList<Screen>(); 
-     Screen screen = new Screen();
-     int option;
-     int position[] = new int[1];
-     position[0] = 0;
-     boolean exit = false;
+        Scanner scan = new Scanner(System.in);
+        ArrayList<Screen> screens = new ArrayList<Screen>();
+        Screen screen= new Screen();
+        String screenFile = new String();
+        screenFile = "";
+        boolean leave = false;
+        boolean leave2 = false;
+        int flag[] = new int[1] ;
+        flag[0] = 1;
+        int option;
+        int box;
+        box = 0;
 
-        while (!exit) {
-            System.out.println("==========Menu==========");
-            System.out.println("1.Enter a screen");
-            System.out.println("2.Exit");
+        while (!leave2) {
+            leave2 = false;
+            screenMenu();
             try {
-                System.out.println("Choose an option");
+                System.out.print("\n> Please, Select an option: ");
                 option = scan.nextInt();
-                System.out.println("");
-                switch (option) {
-                    case 1:
-                        dataScreen(screens, screen, position);
-                        saveJsonData(screens.get(position[0]));
-                        position[0]++;
-                        break;
-                    case 2:
-                        System.out.println("JSON file created successfully");
-                        System.out.println("Good bye! :)");
-                        exit = true;
-                        break;
-                    default:
-                        System.out.println("the option doesn't exist, please try again");
-                        break;
 
+                switch (option) {
+                    case 1 -> {
+                        while (!leave) {
+                                    box = 0;
+                                    int enter = 0;
+                                    System.out.print("> Enter a name for your new screen File: ");
+                                    screenFile = scan.next();
+                                        do {
+                                            screens.clear();
+                                            screens = FileManager.openScreenFile(screens, screenFile, flag);
+                                            FileManager.enterScreen(scan, screens);
+                                            FileManager.writeJSON(screens, screenFile);
+                                            addMore();
+                                            enter = scan.nextInt();
+                                        } while (enter == 1);
+                                        leave=true; 
+                        }  
+                    }
+                    case 2 -> {
+                        System.out.println("Enter the name of the file you want to open: ");
+                        screenFile = scan.next();
+                        screens.clear();
+                        screens = FileManager.openScreenFile(screens, screenFile, flag);
+                        box = FileManager.searchScreen(scan, screens);
+                        FileManager.uptadeScreen(box, screens, screenFile);
+                    }
+                    case 3 ->{
+                        FileManager.deleteJSON(screenFile);
+                    }
+                    case 4 ->{
+                        System.out.println("> What screen file do you want to Print?");
+                        screenFile = scan.next();
+                        screens.clear();
+                        screens = FileManager.openScreenFile(screens, screenFile, flag);
+                        if (flag[0] == 1) {
+                            textFile();
+                            for (int i = 0; i < screens.size(); i++) {
+                                screen = screens.get(i);
+                                FileManager.printScreen(screen);
+                            }
+                        }else{
+                            again();
+                        }
+                    }
+                    case 5 -> {
+                        leave2 = true;
+                    }
+                    default ->
+                        System.out.println("\tONLY numbers from 1 to 5!!!");
                 }
-            } catch (InputMismatchException exepcion) {
-                exepcion.printStackTrace (System.out);
+            } catch (InputMismatchException e) {
+                System.out.println("==============");
+                System.out.println("Enter a number");
                 scan.next();
             }
         }
-}
-    
- private static void dataScreen(ArrayList <Screen> screens,Screen screen ,int position[] ){
-        int id;
-        String brand = "";
-        int price;
-        boolean equal_id;
-        Scanner scan = new Scanner(System.in);
-        do{
-        equal_id=false;
-        System.out.println("------NEW DATA------");
-        System.out.print("screen id -->");
-        id = scan.nextInt();
-        scan.nextLine();
-            for (int i = 0; i < screens.size(); i++) {
-                if(screens.get(i).getId()==id){
-            System.out.println("This id was already registered");
-            equal_id=true;
-                }
-            }
-        }while(equal_id == true );
-        System.out.print("brand of screen -->");
-        brand = scan.next();
-        System.out.print("price of screen-->");
-        price = scan.nextInt();
-        
-        screen = new Screen(id, brand, price);
-        screens.add(position[0], screen);
-        
-        try {
-            Thread.sleep(5*20*10);
-            System.out.println("=============================");
-        
-            System.out.println("Data saved successfully!");
-        
-            System.out.println("=============================");
-            Thread.sleep(5*20*10);
-            System.out.println("");
-        } catch (InterruptedException exepcion) {
-            exepcion.printStackTrace (System.out);
-        }
-        
-    }  
-    
-    
-
-private static void saveJsonData(Screen screen) {
-    File screenList = new File("screen.json");
-    String json = new Gson().toJson(screen);
-        
-    try {
-        PrintWriter writer = new PrintWriter(new FileWriter(screenList, true)); 
-        writer.print(json);
-        writer.close();
-    } catch (FileNotFoundException exepcion) {
-            exepcion.printStackTrace (System.out); 
-    } catch (IOException exepcion) {
-            exepcion.printStackTrace (System.out);
-        }
     }
+
+    private static void addMore() {
+        System.out.println(">Do you want to enter a new Screen?");
+        System.out.println("1) YES");
+        System.out.println("2) NO");
+    }
+
+    private static void screenMenu() {
+        System.out.println("\t..................................");
+        System.out.println("\t======== SCREEN MENU ==========");
+        System.out.println("\t..................................");
+        System.out.println("\n1) Enter a new file screen");
+        System.out.println("2) Edit screen file");
+        System.out.println("3) Delete a screen file");
+        System.out.println("4) Print all data the screen File");
+        System.out.println("5) Leave");
+    }
+
+    private static void textFile() {
+        System.out.println("\n\t................................");
+        System.out.println("\n\t===========Screen File============");
+        System.out.println("\n\t................................");
+    }
+
+    private static void again() {
+        System.out.println("==============");
+        System.out.println("File not found");
+        System.out.println("Please try again");
+        System.out.println("====================");
+    }
+  
+
 }
+
+ 
