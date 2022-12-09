@@ -1,6 +1,9 @@
 # Compiled class file
 *.class
 
+# Compiled class file
+*.class
+
 # Log file
 *.log
 
@@ -17,36 +20,14 @@
 *.ear
 *.zip
 *.tar.gz
-*.rar
+.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-<<<<<<< HEAD
-hs_err_pid*
 
 #vpp backup files
+
+<<<<<<< HEAD
+<<<<<<< HEAD
 *.vpp.bak_*
 =======
-hs_errpid
-
-#vpp backup files
-<<<<<<< HEAD
-
 *.vpp.bak_*
-
-/ws/verdugo/u1/ws11FromUMLToCode/JavaApplication2/nbproject/private/
-=======
-*.vpp.bak_*
-<<<<<<< HEAD
->>>>>>> 05aa45c572085bc6fb78c020bcf1931d7bcc0a26
-<<<<<<< HEAD
-/hw/oña/U1/hw07 Project/RestaurantProject/nbproject/private/
-=======
->>>>>>> 98ae19cf2e8b600b329ea8b62701d3104e7dc839
->>>>>>> 159d974d553d0caa809c0db0e3870c28376e1651
-/exams/barrionuevo/unit1/ExamPractice/target/
-/exams/barrionuevo/unit1/ExamPractice1/target/
-=======
->>>>>>> 693dce747d6e140c2d7a1eae24ffc01e8d88e949
->>>>>>> 95a30cef560b71c33735a872d339bed6b6c61166
->>>>>>> fbc4fd695b6cf35d1a8a985fe22b871b87e66280
-/exams/barrionuevo/unit1/Cellphone/nbproject/private/

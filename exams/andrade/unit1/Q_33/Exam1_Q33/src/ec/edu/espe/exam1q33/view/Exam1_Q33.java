@@ -105,9 +105,9 @@ public class Exam1_Q33 {
         Mouse mouse = new Mouse();
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter the chicken id");
+        System.out.println("Enter the mouse id");
         mouse.setId(sc.nextInt());
-        System.out.println("Enter the chicken name");
+        System.out.println("Enter the mouse name");
         mouse.setName(sc.next());
         System.out.println("Enter true or false if the mouse have RGB");
         mouse.setRgb(sc.nextBoolean());
