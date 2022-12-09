@@ -53,7 +53,7 @@ public class Exam_codingSkills {
                 default ->
                     System.out.println("Invalid option");
             }
-        } while (option !=2);
+        } while (!leave);
 
     }
 

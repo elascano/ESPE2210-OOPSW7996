@@ -1,6 +1,9 @@
 # Compiled class file
 *.class
 
+# Compiled class file
+*.class
+
 # Log file
 *.log
 
@@ -20,11 +23,10 @@
 .rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_errpid
 
 #vpp backup files
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 *.vpp.bak_*
 
 /ws/verdugo/u1/ws11FromUMLToCode/JavaApplication2/nbproject/private/
@@ -35,3 +37,6 @@ hs_errpid
 /hw/verdugo/u1/hw05FilesandExceptions/ChickenFarmSimulator/nbproject/private/
 /exams/villarroel/u1/q#1/Question33/ShoppingMallProgram/nbproject/private/
 /exams/villarroel/u1/q#1/Question33/ShoppingMallProgram/build/
+=======
+*.vpp.bak_*
+>>>>>>> 57e0d0926e1687d2421f5e00094a0f6405ada1af
