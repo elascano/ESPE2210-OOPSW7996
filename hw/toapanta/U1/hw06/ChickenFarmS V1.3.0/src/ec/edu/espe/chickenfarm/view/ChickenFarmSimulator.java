@@ -140,16 +140,6 @@ public class ChickenFarmSimulator {
         chickens.add(position[0], chicken);
     
     }
-
-     /*private static void createFile() {
-        File chickenList = new File("chickenList.json");
-        try {
-            PrintWriter writer = new PrintWriter(chickenList);
-            writer.close();
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace(System.out);
-        }
-    }*/
     
     private static void saveChicken(Chicken chicken) {
         File chickenList = new File("chickenList.csv");

@@ -7,6 +7,9 @@ package ec.edu.espe.Truck.model;
  */
 public class Truck {
 
+    private int id;
+    private String brand;
+    private String color;
     
     public Truck() {
         id = 0;
@@ -57,8 +60,6 @@ public class Truck {
         this.color = color;
     }
     
-    private int id;
-    private String brand;
-    private String color;
+    
 }
     
