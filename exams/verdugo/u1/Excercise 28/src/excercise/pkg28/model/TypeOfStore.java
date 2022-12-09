@@ -8,6 +8,6 @@ package excercise.pkg28.model;
  *
  * @author Sebastian Verdugo, ProgressTeam, DCOO-ESPE
  */
-public class Brand {
+public class TypeOfStore {
 
 }

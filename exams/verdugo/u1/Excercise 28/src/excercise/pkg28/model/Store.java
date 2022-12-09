@@ -1,25 +1,27 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package excercise.pkg28.model;
-
 /**
  *
- * @author Sebastian Verdugo, ProgressTeam, DCOO-ESPE
+ * @author Sebastian Verdugo, ProgressTeam, DCCO-ESPE
  */
-public class Printer {
+public class Store {
     private String name;
     private int id;
-    private String type;
+    private String localName;
     
-    public Printer(String name, int id, String type) {
+    public Store(String name, int id, String localName) {
         this.name = name;
         this.id = id;
-        this.type = type;
+        this.localName = localName;
     }
     
-    public Printer() {
+    public Store() {
         this.name = "";
         this.id = 0;
-        this.type = "";
+        this.localName = "";
     }
     /**
      * @return the name
@@ -52,14 +54,16 @@ public class Printer {
     /**
      * @return the type
      */
-    public String getType() {
-        return type;
+    public String getlocalName() {
+        return localName;
     }
 
     /**
-     * @param type the type to set
+     * @param localName the type to set
      */
-    public void setType(String type) {
-        this.type = type;
+    public void setlocalName(String localName) {
+        this.localName = localName;
     }
-}
+}    
+    
+

@@ -5,7 +5,7 @@
 package excercise.pkg28.view;
 
 import excercise.pkg28.controller.FileManager;
-import excercise.pkg28.model.Printer;
+import excercise.pkg28.model.Store;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -20,7 +20,7 @@ public class Excercise28 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ArrayList<Printer> printer = new ArrayList<>();
+        ArrayList<Store> store = new ArrayList<>();
 
         Scanner scan = new Scanner(System.in);
         int position[] = new int[1];
@@ -47,32 +47,32 @@ public class Excercise28 {
 
                 switch (option) {
                     case 1:
-                        FileManager.createJsonFile(scan,printer);
+                        FileManager.createJsonFile(scan,store);
                         break;
                         
                     case 2:
                         System.out.println(">>Ingress the file yo need to read: ");
                         nameFile = scan.next();
-                        printer.clear();
-                        printer = FileManager.openJsonFile(printer, nameFile);
-                        FileManager.printPrinter(printer);
+                        store.clear();
+                        store = FileManager.openJsonFile(store, nameFile);
+                        FileManager.printStore(store);
                         break;
 
                     case 3:
                         System.out.println(">>Ingress the file yo need to update: ");
                         nameFile = scan.next();
-                        printer.clear();
-                        printer = FileManager.openJsonFile(printer, nameFile);
-                        box = FileManager.searchPrinter(scan, printer);
-                        FileManager.updatePrinter(box, printer, nameFile);
+                        store.clear();
+                        store = FileManager.openJsonFile(store, nameFile);
+                        box = FileManager.searchStore(scan, store);
+                        FileManager.updateStore(box, store, nameFile);
                         break;
 
                     case 4:
-                        System.out.println(">>Ingress the file you need to delete: ");
+                        System.out.println(">>Ingress the store you need to delete: ");
                         nameFile = scan.next();
-                        printer.clear();
-                        printer = FileManager.openJsonFile(printer, nameFile);
-                        FileManager.deletePrinter(printer, nameFile);
+                        store.clear();
+                        store = FileManager.openJsonFile(store, nameFile);
+                        FileManager.deleteStore(store, nameFile);
                         do {
                             System.out.println("1.DELETE DATA JSON");
                             System.out.println("2.RETURN");
