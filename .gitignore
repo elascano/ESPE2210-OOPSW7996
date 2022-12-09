@@ -24,3 +24,8 @@ hs_errpid
 
 #vpp backup files
 *.vpp.bak*
+/ws/enriquez/unit2/ws21/Goalkeeper/nbproject/private/
+/hw/enriquez/unit2/hw08/TableApp/nbproject/private/
+/ws/enriquez/unit2/ws21/GoalkeeperApp/build/
+/ws/enriquez/unit2/ws21/GoalkeeperApp/nbproject/private/
+/ws/enriquez/unit2/ws21/GoalkeeperApp/dist/
