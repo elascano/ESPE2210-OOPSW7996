@@ -71,19 +71,9 @@ public class FileManager {
             System.out.println("=======================================");
         }
         addJsonVehicle(vehicle);
-        //exportJsonFile(vehicle);
+       
     }
-
-    public static void exportJsonFile(ArrayList<Vehicle> vehicle) {
-        String json = new Gson().toJson(vehicle);
-        try {
-            FileWriter vehicleModified = new FileWriter("Vehicle.json");
-            vehicleModified.write(json);
-            vehicleModified.close();
-        } catch (IOException ex) {
-            java.util.logging.Logger.getLogger(FileManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-    }
+   
 
     public static void printVehicleColor(ArrayList<Vehicle> vehicle, int search) {
         System.out.println("Id vehicle:\t\t\t" + vehicle.get(search).getId());
@@ -145,7 +135,7 @@ public class FileManager {
         String color = "";
 
         System.out.println("__________________Vehicle registration system______________");
-        System.out.println("----------------------------Product" + (incomingVehicleRegistration + 1) + "----------------");
+        System.out.println("----------------------------Vehicle" + (incomingVehicleRegistration + 1) + "----------------");
 
         Scanner scanner = new Scanner(System.in);
 
@@ -287,7 +277,7 @@ public class FileManager {
         public static void printList(int incomingVehicleRegistration, ArrayList<Vehicle> vehicle) {
 
         System.out.println("=======================================================");
-        System.out.println("--------List of products in stock:---------");
+        System.out.println("--------List of vehicles:---------");
         System.out.println("Id\t\t\t\t Name");
         for (int i = 0; i < incomingVehicleRegistration; i++) {
 
