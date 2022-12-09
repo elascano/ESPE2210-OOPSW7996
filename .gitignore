@@ -27,4 +27,7 @@
 #vpp backup files
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+*.vpp.bak_*
+=======
 *.vpp.bak_*
