@@ -17,6 +17,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.*;
 import java.util.Scanner;
@@ -28,8 +30,9 @@ import java.util.Scanner;
 public class Exam01 {
 
     public static void main(String[] args) {
+        FlashDrive flashDrive = new FlashDrive();
         FileManager jsonFile = new FileManager();
-        ArrayList<FlashDrive> flashDrivesToWrite = new ArrayList<>();
+        ArrayList<FlashDrive> flashDrivesToWrite = new ArrayList<>();       
         int choice = 0;
         String json = "";
         boolean option = false;
@@ -47,14 +50,19 @@ public class Exam01 {
 
                 }
                 case 2 -> {
-                    
-                    jsonFile.printFlashDrive();
+                    jsonFile.printFlashDrive(flashDrive);
 
                 }
                 case 3 -> {
-                    jsonFile.findFlashDrives();
+                    jsonFile.updateFile();
                 }
                 case 4 -> {
+                    jsonFile.findFlashDrives(flashDrivesToWrite, flashDrive, json);
+                }
+                case 5 -> {
+                    jsonFile.removeData(flashDrivesToWrite, flashDrive);
+                }
+                case 6 -> {
                     option = true;
                 }
             }
@@ -65,10 +73,12 @@ public class Exam01 {
         System.out.println("===================");
         System.out.println("=====Welcome User=====");
         System.out.println("Please choose an option");
-        System.out.println("1. Enter a flash driver (also save in a Json) >");
-        System.out.println("2. Read Data of a Flash drive >");
-        System.out.println("3. Find a Flash drive by id >");
-        System.out.println("4. Exit the program >");
+        System.out.println("1. Enter a Flash Drive >");
+        System.out.println("2. Read Data of a Flash Drive >");
+        System.out.println("3. Update the Data of a Flash Drive by id >");
+        System.out.println("4. Find a Flash Drive's data >");
+        System.out.println("5. Delete a Flash Drive's data >");
+        System.out.println("6. Exit the program >");
         System.out.println("==========>");
     }
 
