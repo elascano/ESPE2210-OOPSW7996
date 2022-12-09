@@ -1,14 +1,35 @@
 CHICKENS
-ID: 123
-Name: DAvid
+ID: 1234
+Name: David
 Age: 12
 Color: red
 Is Molting: true
-Chicken{id=123, name=DAvid, color=red, age=12, isMolting=true}
+Chicken{id=1234, name=David, color=red, age=12, isMolting=true}
 CHICKENS
-ID: 1234
-Name: karen
-Age: 12
-Color: while
+ID: 1235
+Name: Milton
+Age: 10
+Color: black
 Is Molting: false
-Chicken{id=1234, name=karen, color=while, age=12, isMolting=false}
+Chicken{id=1235, name=Milton, color=black, age=10, isMolting=false}
+CHICKENS
+ID: 122
+Name: Gustavo
+Age: 18
+Color: red
+Is Molting: false
+Chicken{id=122, name=Gustavo, color=red, age=18, isMolting=false}
+CHICKENS
+ID: 2347
+Name: Armadiyo
+Age: 1
+Color: black
+Is Molting: true
+Chicken{id=2347, name=Armadiyo, color=black, age=1, isMolting=true}
+CHICKENS
+ID: 666
+Name: Ñiguentes
+Age: 20
+Color: black
+Is Molting: true
+Chicken{id=666, name=Ñiguentes, color=black, age=20, isMolting=true}
