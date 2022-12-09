@@ -28,15 +28,3 @@
 
 <<<<<<< HEAD
 *.vpp.bak_*
-
-/ws/verdugo/u1/ws11FromUMLToCode/JavaApplication2/nbproject/private/
-=======
-*.vpp.bak_*
->>>>>>> 693dce747d6e140c2d7a1eae24ffc01e8d88e949
-/hw/verdugo/u1/hw05FilesandExceptions/ChickenFarmSimulator/dist/
-/hw/verdugo/u1/hw05FilesandExceptions/ChickenFarmSimulator/nbproject/private/
-/exams/villarroel/u1/q#1/Question33/ShoppingMallProgram/nbproject/private/
-/exams/villarroel/u1/q#1/Question33/ShoppingMallProgram/build/
-=======
-*.vpp.bak_*
->>>>>>> 57e0d0926e1687d2421f5e00094a0f6405ada1af
