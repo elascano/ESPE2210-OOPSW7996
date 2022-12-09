@@ -1,0 +1,6 @@
+[
+{"id":1,"color":"Blue","baseShape":"Circle"},
+{"id":2,"color":"Black","baseShape":"Square"},
+{"id":3,"color":"Red","baseShape":"Circle"},
+{"id":4,"color":"White","baseShape":"Square"}
+]

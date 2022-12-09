@@ -7,6 +7,7 @@ package ec.edu.espe.exam.view;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import ec.edu.espe.exam.model.Galaxy;
+import static ec.espe.edu.exam.controller.FileManager.*;
 import java.io.*;
 import java.util.*;
 
@@ -15,107 +16,114 @@ import java.util.*;
  * @author Cristian Acalo, Scriptal, DCCO-ESPE
  */
 public class GalaxyData {
+
     public static void main(String[] args) {
         int option;
         Scanner sc = new Scanner(System.in);
         ArrayList<Galaxy> actualGalaxiesData = new ArrayList<>();
-        
-        do {
-            System.out.println("******************************");            
-            System.out.println("* Welcome to the Galaxy Data *");
-            System.out.println("******************************");
-            System.out.println("1.Insert new Galaxy \t");
-            System.out.println("2.Exit  \t");
-            System.out.println("******************************");
+        int idToSearch;
 
+        do {
+            actualGalaxiesData = read(actualGalaxiesData, "Galaxies.json");
+
+            System.out.println("\n************************************************");
+            System.out.println("*                                              *");
+            System.out.println("*          Welcome to the Galaxy Data          *");
+            System.out.println("*                                              *");
+            System.out.println("************************************************");
+            System.out.println("*\t\t1.Insert new Galaxy             *");
+            System.out.println("*\t\t2.Find a Galaxy                 *");
+            System.out.println("*\t\t3.Delete a Galaxy               *");
+            System.out.println("*\t\t4.Update a Galaxy               *");
+            System.out.println("*\t\t5.Print Galaxies                *");
+            System.out.println("*\t\t6.Exit                          *");
+            System.out.println("************************************************");
+            System.out.print("Select an option ======> ");
             option = sc.nextInt();
 
             switch (option) {
-                case 1->{
-                    actualGalaxiesData = readJSON(actualGalaxiesData, "Galaxies.json");
+                case 1 -> {
                     addGalaxy(actualGalaxiesData);
-                    writeJson(actualGalaxiesData, "Galaxies.json");
-                    System.out.println("\n*** GALAXY ADDED SUCCESSFULLY ***\n");
+                    save(actualGalaxiesData, "Galaxies.json");
+                    System.out.println("\n\n*** GALAXY ADDED SUCCESSFULLY ***\n");
                 }
-
-                case 2->{
-                    System.out.println("*** YOU HAVE EXITED SUCCESSFULLY ***");
-                }
-
-                default->{
-                    System.out.println("*** INVALID OPTION ***");
-                }
+                case 2 -> findOneGalaxy(actualGalaxiesData);
+                case 3 -> delete(actualGalaxiesData);
+                case 4 -> update(actualGalaxiesData);
+                case 5 -> printList(actualGalaxiesData);
+                
+                case 6 -> System.out.println("*** YOU HAVE EXITED SUCCESSFULLY ***");
+                
+                default -> System.out.println("*** INVALID OPTION ***");
+                
             }
-        } while (option!=2);
-        
-        
+        } while (option != 6);
     }
-    
-    private static ArrayList<Galaxy> readJSON(ArrayList<Galaxy> galaxies, String fileName) {
-        String fromJson = "";
-        Gson gson = new Gson();
-        try
-        {
-            BufferedReader br = new BufferedReader(new FileReader(fileName));
-            String line = "";
-            while ((line = br.readLine()) != null)
-            {
-                fromJson = line;
-                TypeToken<ArrayList<Galaxy>> type = new TypeToken<ArrayList<Galaxy>>() {
-                };
-                galaxies = gson.fromJson(fromJson, type.getType());
+
+    private static void findOneGalaxy(ArrayList<Galaxy> actualGalaxiesData) {
+        int idToSearch;
+        Scanner sc = new Scanner(System.in);
+        try {
+            System.out.print("\n..:: Insert the id of the Galaxy to search: ");
+            idToSearch = sc.nextInt();
+            int galaxyFound = find(actualGalaxiesData, idToSearch, "Galaxies.json");
+            if (galaxyFound != -1) {
+                System.out.println("\nID\t|NAME\t\t|TYPE\t\t|");
+                printLine(actualGalaxiesData.get(galaxyFound));
+            } else {
+                System.out.println("..:: THE ID ENTERED DOESN'T EXIST ::..");
             }
-            br.close();
-        } catch (FileNotFoundException ex){
-            System.out.println("*** THE FILE DOESN'T EXIST, IT WILL BE CREATED ***");
-        } catch (IOException ex){
-            System.out.println("*** THE FILE CAN'T BE READED ***");
+            
+        } catch (Exception e) {
+            System.out.println("..:: INCORRECT DATA, TRY AGAIN ::..");
         }
-        return galaxies;
     }
-    
-    private static void addGalaxy(ArrayList<Galaxy> galaxies) {
-        
+
+    public static void addGalaxy(ArrayList<Galaxy> galaxies) {
+
         Scanner sc = new Scanner(System.in);
         Galaxy galaxy;
         int id;
         String name;
         String type;
-        
+
         try {
-            System.out.println("\n************************************");
-        
-            System.out.println("Enter the id of the Galaxy: ");
-            id=sc.nextInt();
+            System.out.println("\n************************************************");
+            System.out.println("*");
+            System.out.print("* ..:: Enter the id of the Galaxy: ");
+            id = sc.nextInt();
+            while (validateIdExistance(id)) {
+                System.out.print("* ..:: The id already exists. Please enter again: ");
+                id = sc.nextInt();
+            }
             sc.nextLine();
-            System.out.println("Enter the name of the Galaxy: ");
-            name=sc.nextLine();
+            System.out.print("* ..:: Enter the name of the Galaxy: ");
+            name = sc.nextLine();
 
-            System.out.println("Enter the type of Galaxy: ");
-            type=sc.nextLine();
+            System.out.print("* ..:: Enter the type of Galaxy: ");
+            type = sc.nextLine();
 
-            galaxy = new Galaxy(id,name,type);
-
-            System.out.println("************************************");
+            galaxy = new Galaxy(id, name, type);
+            System.out.println("*");
+            System.out.println("************************************************");
             galaxies.add(galaxy);
         } catch (Exception e) {
             System.out.println("*** INVALID DATA, PLEASE INSERT AGAIN ***");
         }
     }
-    
-    private static void writeJson(ArrayList<Galaxy> galaxies, String fileName) {
-        Gson gson = new Gson();
-        String json = gson.toJson(galaxies);
 
-        try
-        {
-            FileWriter writer = new FileWriter(fileName);
-            writer.write(json);
-            writer.close();
-        } catch (FileNotFoundException e){
-            e.printStackTrace(System.out);
-        } catch (IOException e){
-            e.printStackTrace(System.out);
+    public static boolean validateIdExistance(int id) {
+        ArrayList<Galaxy> galaxies = new ArrayList<>();
+        galaxies = read(galaxies, "Galaxies.json");
+        Galaxy galaxy = new Galaxy();
+
+        for (int i = 0; i < galaxies.size(); i++) {
+            galaxy = galaxies.get(i);
+            if (id == galaxy.getId()) {
+                return true;
+            }
         }
+        return false;
+
     }
 }
