@@ -24,12 +24,13 @@ public class DisplayCity {
                
 
         for (int i = 0; i < 5; i++) {
-            city.add(i, new City("id", "Population", "NameofCity", "1842"));
+            city.add(i, new City("1", "3424", "Quito", "1845"));
         }
         sizeCity = city.size();
         for (City printf : city) {
             System.out.println(printf);
         }
+        System.out.println("Juan Pablo Pinza Exam");
         System.out.println("City Data: " + sizeCity);       
         
     }

@@ -32,7 +32,7 @@ public class ChickenFarmSimulator {
         int x = 1;
         String option = "";
 
-        archive = new File("Chiken.json");
+        archive = new File("Chiken.csv");
         if (!archive.exists()) {
             try {
                 archive.createNewFile();
