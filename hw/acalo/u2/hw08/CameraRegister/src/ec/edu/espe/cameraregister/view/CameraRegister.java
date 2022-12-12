@@ -78,7 +78,7 @@ public class CameraRegister {
                 printLine(actualCamerasData.get(cameraFoundPosition));
             } catch (DataNotFoundException ex) {
                 System.out.println("Error: ");
-                ex.printStackTrace(System.out);
+                System.out.println(ex.getMessage());
             }
 
         } catch (Exception e) {
