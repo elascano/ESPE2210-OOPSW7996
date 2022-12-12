@@ -36,7 +36,7 @@ public class CameraRegister {
             System.out.println("************************************************");
             System.out.println("*\t\t1.Insert new Camera             *");
             System.out.println("*\t\t2.Find a Camera                 *");
-            System.out.println("*\t\t3.Print Cameras                  *");
+            System.out.println("*\t\t3.Print Cameras                 *");
             System.out.println("*\t\t0.Exit                          *");
             System.out.println("************************************************");
             System.out.print("Select an option ======> ");
