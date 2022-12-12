@@ -7,9 +7,21 @@ package ec.edu.espe.CodeSkillHw.model;
 public class SoccerBall {
     
     private int id;
-    private float price;
+    private int price;
     private String brand;
- 
+
+    public SoccerBall(){
+        id = 0;
+        brand = "";
+        price = 0;
+    }
+    
+    @Override
+    public String toString() {
+        return "SoccerBall{" + "id=" + id + ", price=" + price + ", brand=" + brand + '}';
+    }
+    
+    
     /**
      * @return the id
      */
@@ -34,7 +46,7 @@ public class SoccerBall {
     /**
      * @param price the price to set
      */
-    public void setPrice(float price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
