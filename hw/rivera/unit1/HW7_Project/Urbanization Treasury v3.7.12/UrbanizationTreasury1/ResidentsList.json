@@ -1,0 +1,5 @@
+[
+{"dni":1727925602,"name":"Augusto","batchNumber":123,"payment":{"aliquot":[130.25,150.0],"accessCard":[],"accessControl":[],"extraordinary":[],"monthOfAliquot":["June","February"],"monthOfAccessCard":[],"monthOfAccessControl":[],"monthOfExtraordinary":[]},"mounths":""},
+{"dni":1722263009,"name":"Joel","batchNumber":432,"payment":{"aliquot":[],"accessCard":[],"accessControl":[],"extraordinary":[],"monthOfAliquot":[],"monthOfAccessCard":[],"monthOfAccessControl":[],"monthOfExtraordinary":[]},"mounths":""},
+{"dni":18,"name":"Paco","batchNumber":631,"payment":{"aliquot":[200.0,250.0],"accessCard":[],"accessControl":[],"extraordinary":[],"monthOfAliquot":["January","June"],"monthOfAccessCard":[],"monthOfAccessControl":[],"monthOfExtraordinary":[]},"mounths":""}
+]

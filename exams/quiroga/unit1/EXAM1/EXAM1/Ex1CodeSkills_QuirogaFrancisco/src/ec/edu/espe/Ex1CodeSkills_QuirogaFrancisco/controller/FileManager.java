@@ -39,8 +39,6 @@ public class FileManager {
         }
     }
     
-    
-    
     public static void enterContinent(Scanner scan, ArrayList<Continent> continents) {
         int id;
         String name;

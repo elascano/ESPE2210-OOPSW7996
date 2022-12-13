@@ -22,36 +22,6 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_errpid
 
-#vpp backup files
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-*.vpp.bak_*
+*.vpp.bak*
 
-/ws/verdugo/u1/ws11FromUMLToCode/JavaApplication2/nbproject/private/
-=======
-*.vpp.bak_*
-<<<<<<< HEAD
->>>>>>> 05aa45c572085bc6fb78c020bcf1931d7bcc0a26
-<<<<<<< HEAD
-/hw/oña/U1/hw07 Project/RestaurantProject/nbproject/private/
-=======
->>>>>>> 98ae19cf2e8b600b329ea8b62701d3104e7dc839
->>>>>>> 159d974d553d0caa809c0db0e3870c28376e1651
-/exams/barrionuevo/unit1/ExamPractice/target/
-/exams/barrionuevo/unit1/ExamPractice1/target/
-=======
->>>>>>> 693dce747d6e140c2d7a1eae24ffc01e8d88e949
->>>>>>> 95a30cef560b71c33735a872d339bed6b6c61166
->>>>>>> fbc4fd695b6cf35d1a8a985fe22b871b87e66280
-/hw/panchi/U2/Hw08/CodeSkillsHw/nbproject/private/
-/hw/panchi/U2/Hw08/CodeSkillsHw/build/
-/hw/panchi/U2/Hw08/CodeSkillsHw/dist/
-/hw/panchi/U2/Hw08/CountryExercise/nbproject/private/
-/hw/panchi/U2/Hw08/CountryExercise/build/
-=======
- 38ddf2b874641434e8b2b62ef639861769a1ff6d
->>>>>>> ef26f69899d83a6ea1bd0974e3202eb08dc47ca7
-/hw/panchi/U2/Hw09Exceptions/Personal Exceptions/nbproject/private/
-/hw/panchi/U2/Hw09Exceptions/Personal Exceptions/build/
-/hw/panchi/U2/Hw09Exceptions/Personal Exceptions/dist/
