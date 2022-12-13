@@ -18,13 +18,14 @@ public class IceCreamApp {
         ArrayList<IceCream> iceCreams;
         iceCreams = FileManager.read();
 
-        while (option != 3) {
+        while (option != 4) {
             System.out.println("\nICE-CREAM APP SIMULATOR ");
             System.out.println("by: Alexander Guaman");
             System.out.println("\nMAIN MENU");
             System.out.println("1. Add a new Ice Cream");
             System.out.println("2. Show all Ice Creams");
-            System.out.println("3. Exit");
+            System.out.println("3. Delete an Ice-Cream");
+            System.out.println("4. Exit");
 
             System.out.print("Enter an option: ");
 
@@ -43,8 +44,13 @@ public class IceCreamApp {
                 case 2 -> {
                     FileManager.showAllIceCreams(iceCreams);
                 }
+                
+                case 3 -> {
+                    FileManager.showAllIceCreams(iceCreams);
+                    FileManager.delete(iceCreams);
+                }
 
-                case 3 ->
+                case 4 ->
                     System.out.println("See you...");
 
                 default ->
