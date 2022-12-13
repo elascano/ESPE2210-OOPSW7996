@@ -33,7 +33,7 @@ public class Exercise {
 
                 case 1 -> {
                     pencilsToWrite = jsonFile.readJSON(pencilsToWrite);
-                    enterFlashDrive(pencilsToWrite);
+                    enterPencil(pencilsToWrite);
                     jsonFile.saveIntoJSON(pencilsToWrite);
 
                 }
@@ -66,7 +66,7 @@ public class Exercise {
         System.out.println("==========>");
     }
 
-    public static void enterFlashDrive(ArrayList<Pencil> pencils) {
+    public static void enterPencil(ArrayList<Pencil> pencils) {
         Scanner sc = new Scanner(System.in);
         Pencil pencil = new Pencil();
         System.out.println("Write the Id of the Pencil >");
