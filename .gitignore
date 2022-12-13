@@ -1,9 +1,6 @@
 # Compiled class file
 *.class
 
-# Compiled class file
-*.class
-
 # Log file
 *.log
 
@@ -23,18 +20,7 @@
 .rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-<<<<<<< HEAD
 hs_err_pid*
 
 #vpp backup files
 *.vpp.bak_*
-=======
-
-#vpp backup files
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-*.vpp.bak_*
-=======
-*.vpp.bak_*
->>>>>>> 25eb333eec68e52587180baa2e4fbe29d6284ff3
