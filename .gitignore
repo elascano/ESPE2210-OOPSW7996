@@ -25,3 +25,4 @@ hs_errpid*
 
 #vpp backup files
 *.vpp.bak_*
+/hw/jaguaco/U2/Hw09/UserDefinedExceptionsHw09/nbproject/private/
