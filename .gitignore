@@ -23,5 +23,15 @@
 hs_errpid
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+*.vpp.bak_*
+=======
+*.vpp.bak_*
+/hw/toapanta/U2/HW09Exceptions/Exception/nbproject/private/
+/hw/toapanta/U2/HW09Exceptions/Exception/build/
+=======
 *.vpp.bak*
 
+>>>>>>> 2ce073c920a592279e184863a3e48cbbba4b400a
