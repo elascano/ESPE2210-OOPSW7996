@@ -86,23 +86,25 @@ public class FileManager {
         return flashDrives;
     }
 
-    public static void enterNewFlashDrive(ArrayList<FlashDrive> flashDrives) throws InvalidId, InvalidSize {
+    public static void enterNewFlashDrive(ArrayList<FlashDrive> flashDrives) throws CustomEx{
         FlashDrive flashDrive = new FlashDrive();
 
         System.out.println("Enter the flash drive id");
         flashDrive.setId(sc.nextInt());
-        if (flashDrive.getId() < 0){
-            throw new InvalidId(flashDrive.getId());
+        if(flashDrive.getId() < 0){
+            throw new CustomEx(" The id must not be negative");
         }
+        
         sc.nextLine();
         System.out.println("Enter the flash drive name");
         flashDrive.setName(sc.nextLine());
+        
         System.out.println("Enter the size");
         flashDrive.setSize(sc.nextInt());
-        if (flashDrive.getSize()< 0){
-            throw new InvalidSize(flashDrive.getSize());
+        if(flashDrive.getSize() < 0){
+            throw new CustomEx(" The size must not be negative");
         }
-
+        
         flashDrives.add(flashDrive);
     }
 
