@@ -31,3 +31,5 @@
 *.vpp.bak_*
 =======
 *.vpp.bak_*
+/hw/toapanta/U2/HW09Exceptions/Exception/nbproject/private/
+/hw/toapanta/U2/HW09Exceptions/Exception/build/
