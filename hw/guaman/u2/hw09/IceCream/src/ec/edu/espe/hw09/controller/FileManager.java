@@ -15,9 +15,9 @@ import java.util.Scanner;
  */
 public class FileManager {
 
-    public static void save(ArrayList<IceCream> goalkeepers) {
+    public static void save(ArrayList<IceCream> iceCreams) {
         Gson gson = new Gson();
-        String json = gson.toJson(goalkeepers);
+        String json = gson.toJson(iceCreams);
         File file = new File("./icecreams.json");
         try ( FileWriter fw = new FileWriter(file);) {
             fw.write(json);
