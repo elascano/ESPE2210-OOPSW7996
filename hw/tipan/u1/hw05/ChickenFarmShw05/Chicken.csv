@@ -1,0 +1,21 @@
+Chicken  Data
+ID-->1263
+Name-->Kira
+Age-->5
+Color-->white
+Is molting-->true
+Chicken{id=1263, name=Kira, color=white, age=5, isMolting=true}
+Chicken  Data
+ID-->5636
+Name-->Tori
+Age-->6
+Color-->black
+Is molting-->false
+Chicken{id=5636, name=Tori, color=black, age=6, isMolting=false}
+Chicken  Data
+ID-->8987
+Name-->Max
+Age-->8
+Color-->brown
+Is molting-->true
+Chicken{id=8987, name=Max, color=brown, age=8, isMolting=true}

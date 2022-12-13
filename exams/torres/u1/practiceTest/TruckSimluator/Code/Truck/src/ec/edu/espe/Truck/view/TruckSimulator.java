@@ -2,6 +2,7 @@
 package ec.edu.espe.Truck.view;
 
 
+import com.google.gson.Gson;
 import java.util.Scanner;
 import ec.edu.espe.Truck.model.Truck;
 import java.io.File;
@@ -72,10 +73,8 @@ public class TruckSimulator {
         System.out.println("            ||\n            ||    Truck data "+ truck.getId());
         System.out.println("            ||\n            ||----------------------------------");
         System.out.println("            ||    chicken id -->" + truck.getId());
-        System.out.println("            ||    chicken name -->" + truck.getName());
-        System.out.println("            ||    chicken age -->" + truck.getAge());
+        System.out.println("            ||    chicken name -->" + truck.getBrand());
         System.out.println("            ||    chicken color -->" + truck.getColor());
-        System.out.println("            ||    chicken is molting -->" + truck.isIsMolting());
         System.out.println("            ||===================================\n\n");
     }
     
@@ -110,4 +109,5 @@ public class TruckSimulator {
             System.err.println("            Oops, Error: file not found");
         }
     }
+
 }
