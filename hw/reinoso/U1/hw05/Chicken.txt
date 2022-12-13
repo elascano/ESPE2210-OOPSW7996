@@ -15,3 +15,9 @@ chicken name: luci
 chicken age: 4
 chicken color: brown
 chicken is molting (true/false): true
+====Chiken2=====
+chicken id: 123
+chicken name: Lulu
+chicken age: 4
+chicken color: black
+chicken is molting (true/false): true

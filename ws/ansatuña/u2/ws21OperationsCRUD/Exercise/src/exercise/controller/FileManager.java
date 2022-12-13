@@ -56,7 +56,7 @@ public class FileManager {
         }
     }
 
-    public void printFlashDrive() {
+    public void printPencil() {
         ArrayList<Pencil> pencils = new ArrayList<>();
         pencils = readJSON(pencils);
         for (int i = 0; i < pencils.size(); i++) {
