@@ -63,11 +63,11 @@ public class hw09Exeption {
             {
                 System.out.println("Incorrect value");
                 sc.next();                
-            } catch (InvalidId | InvalidSize ex)
+            } catch (CustomEx ex)
             {
-                Logger.getLogger(hw09Exeption.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println("The flash drive was not saved because: "
+                + ex.getMessage());
             }
-            
         }
     }    
 
