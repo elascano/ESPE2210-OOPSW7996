@@ -1,9 +1,6 @@
 # Compiled class file
 *.class
 
-# Compiled class file
-*.class
-
 # Log file
 *.log
 
@@ -23,9 +20,10 @@
 .rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_errpid
 
-#vpp backup files
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 *.vpp.bak_*
@@ -33,3 +31,7 @@
 *.vpp.bak_*
 /hw/toapanta/U2/HW09Exceptions/Exception/nbproject/private/
 /hw/toapanta/U2/HW09Exceptions/Exception/build/
+=======
+*.vpp.bak*
+
+>>>>>>> 2ce073c920a592279e184863a3e48cbbba4b400a
