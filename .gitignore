@@ -22,20 +22,16 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_errpid
 
-#vpp backup files
+
 <<<<<<< HEAD
- 38ddf2b874641434e8b2b62ef639861769a1ff6d
-/ws/reinoso/U1/w11FromUmlToCode/ws21Screen/nbproject/private/
-/ws/reinoso/U1/w11FromUmlToCode/ws21Screen/build/
-/ws/reinoso/U2/ws21/ws21Screen/build/
-/ws/reinoso/U2/ws21/ws21Screen/nbproject/private/
-/hw/reinoso/U2/hw08/hw08TvSet/nbproject/private/
-/hw/reinoso/U2/hw08/hw08TvSet/build/
+<<<<<<< HEAD
+<<<<<<< HEAD
+*.vpp.bak_*
+=======
+*.vpp.bak_*
+/hw/toapanta/U2/HW09Exceptions/Exception/nbproject/private/
+/hw/toapanta/U2/HW09Exceptions/Exception/build/
 =======
 *.vpp.bak*
-/ws/enriquez/unit2/ws21/Goalkeeper/nbproject/private/
-/hw/enriquez/unit2/hw08/TableApp/nbproject/private/
-/ws/enriquez/unit2/ws21/GoalkeeperApp/build/
-/ws/enriquez/unit2/ws21/GoalkeeperApp/nbproject/private/
-/ws/enriquez/unit2/ws21/GoalkeeperApp/dist/
->>>>>>> 6e028c4cebabec94590243113631258eb38ff7aa
+
+>>>>>>> 2ce073c920a592279e184863a3e48cbbba4b400a
