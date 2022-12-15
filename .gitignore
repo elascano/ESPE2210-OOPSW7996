@@ -23,13 +23,7 @@
 hs_errpid*
 
 #vpp backup files
-<<<<<<< HEAD
 *.vpp.bak_*
 
 
-/ws/panchi/U2/ws23OOPrincipals/Taller/nbproject/private/
-/ws/panchi/U2/ws23OOPrincipals/Taller/build/
-/ws/panchi/U2/ws23OOPrincipals/Taller/dist/
-=======
-*.vpp.bak_*
->>>>>>> 9534b35ec1cb2a3cfabec84fbc4343f887d79b90
+
