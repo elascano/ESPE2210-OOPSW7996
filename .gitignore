@@ -26,3 +26,6 @@ hs_err_pid*
 *.vpp.bak_*
 
 
+/hw/reinoso/U2/hw10/Hw10Farm1/nbproject/private/
+/hw/reinoso/U2/hw10/hw10Farm/nbproject/private/
+/hw/reinoso/U2/hw10/hw10Farm/build/
