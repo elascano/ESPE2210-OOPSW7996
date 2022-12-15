@@ -4,9 +4,9 @@
  */
 package ec.edu.espe.figures.view;
 
-import ec.edu.espe.figures.model.Círculo;
-import ec.edu.espe.figures.model.Rectángulo;
-import ec.edu.espe.figures.model.Triángulo;
+import ec.edu.espe.figures.model.Circle;
+import ec.edu.espe.figures.model.Rectangle;
+import ec.edu.espe.figures.model.Triangle;
 import java.util.Scanner;
 
 /**
@@ -16,36 +16,36 @@ import java.util.Scanner;
 public class Figures {
 
     public static void main(String[] args) {
-        Círculo círculo;
-        Rectángulo rectángulo;
-        Triángulo triángulo;
+        Circle círculo;
+        Rectangle rectángulo;
+        Triangle triángulo;
 
         Scanner scan = new Scanner(System.in);
         System.out.println("\t*****FIGURES*****");
-        System.out.println("\tCÍRCULO");
-        System.out.println("Ingresar el radio del círculo");
+        System.out.println("------CIRCLE------");
+        System.out.println("Enter the circle radio:");
         float radio = scan.nextFloat();
-        círculo = new Círculo(radio, 0, 0);
+        círculo = new Circle(radio, 0, 0);
         círculo.area(radio);
         círculo.perimeter(radio);
 
-        System.out.println("\tTRIÁNGULO");
-        System.out.println("Medida del primer lado(cm):");
+        System.out.println("-----TRIANGLE-----");
+        System.out.println("first side(cm):");
         float slideA = scan.nextFloat();
-        System.out.println("Medida del segundo lado(cm)");
+        System.out.println("second side(cm): ");
         float slideB = scan.nextFloat();
-        System.out.println("Medida del tercer lado(cm)");
+        System.out.println("third side(cm): ");
         float slideC = scan.nextFloat();
-        triángulo = new Triángulo(slideA, slideB, slideC, 0, 0);
+        triángulo = new Triangle(slideA, slideB, slideC, 0, 0);
         triángulo.perimeter(slideA, slideB, slideC);
         triángulo.area(slideA, slideB, slideC);
         
-        System.out.println("\tRectángulo");
-        System.out.println("Medida de la base(cm):");
+        System.out.println("-----RECTANGLE-----");
+        System.out.println("BASE(cm):");
         float base = scan.nextFloat();
-        System.out.println("Medida de la altura(cm):5");
+        System.out.println("HEIGHT(cm):5");
         float height = scan.nextFloat();
-        rectángulo = new Rectángulo(base, height, 0, 0);
+        rectángulo = new Rectangle(base, height, 0, 0);
         rectángulo.perimeter(base, height);
         rectángulo.area(base, height);
 
