@@ -15,9 +15,9 @@ import java.util.Scanner;
  */
 public class FileManager {
 
-    public static void save(ArrayList<IceCream> goalkeepers) {
+    public static void save(ArrayList<IceCream> iceCreams) {
         Gson gson = new Gson();
-        String json = gson.toJson(goalkeepers);
+        String json = gson.toJson(iceCreams);
         File file = new File("./icecreams.json");
         try ( FileWriter fw = new FileWriter(file);) {
             fw.write(json);
@@ -64,7 +64,7 @@ public class FileManager {
 
     public static void showAllIceCreams(ArrayList<IceCream> iceCreams) {
         for (int iceCreamNumber = 0; iceCreamNumber < iceCreams.size(); iceCreamNumber++) {
-            System.out.println((iceCreamNumber + 1) + ". " + iceCreams.get(iceCreamNumber).getFlavor());
+            System.out.println((iceCreamNumber + 1) + ". " + iceCreams.get(iceCreamNumber));
         }
 
     }
@@ -81,9 +81,9 @@ public class FileManager {
 
                 System.out.println("\n\tNEW ICE-CREAM");
                 System.out.print("Enter the ice cream id: ");
-                id = scan.nextLine();
-                System.out.print("Enter the ice cream flavor: ");
                 flavor = scan.nextLine();
+                System.out.print("Enter the ice cream flavor: ");
+                id = scan.nextLine();
                 iceCreams.add(new IceCream(flavor, id));
 
                 try {
@@ -103,5 +103,29 @@ public class FileManager {
 
         } while ("y".equals(addOtherIceCream.toLowerCase()));
         FileManager.save(iceCreams);
+    }
+    
+    public static void delete(ArrayList<IceCream> iceCreams) {
+
+        int iceCreamNumber;
+        Scanner sc;
+        sc = new Scanner(System.in);
+        
+        System.out.println("Which Ice-Cream do you want to remove?: ");
+        System.out.print("Choose an option: ");
+        try {
+            iceCreamNumber = sc.nextInt()-1;
+        } catch (Exception e) {
+            iceCreamNumber = 0;
+        }
+        sc.nextLine();
+        
+        try {
+            iceCreams.remove(iceCreamNumber);
+            System.out.println("The Ice-Cream was remove successfully");
+            FileManager.save(iceCreams);
+        } catch (Exception e) {
+            System.out.println("The Ice-Cream was not remove");
+        }
     }
 }
