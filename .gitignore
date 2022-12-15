@@ -26,3 +26,6 @@ hs_err_pid*
 *.vpp.bak_*
 
 
+/ws/panchi/U2/ws23OOPrincipals/Taller/nbproject/private/
+/ws/panchi/U2/ws23OOPrincipals/Taller/build/
+/ws/panchi/U2/ws23OOPrincipals/Taller/dist/
