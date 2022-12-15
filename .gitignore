@@ -26,3 +26,5 @@ hs_err_pid*
 *.vpp.bak_*
 
 
+/hw/oña/U2/hw10/Farm/build/
+/hw/oña/U2/hw10/Farm/nbproject/private/
