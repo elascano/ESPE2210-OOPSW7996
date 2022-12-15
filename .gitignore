@@ -42,3 +42,6 @@ hs_errpid
 <<<<<<< HEAD
 *.vpp.bak_*
 >>>>>>> 7c0f4bf6ec1104feb01438807a1d20829f7eba65
+/ws/tipan/u2/ws23OOPrincipals/Figure/nbproject/private/
+/ws/tipan/u2/ws23OOPrincipals/Figure/build/
+/ws/tipan/u2/ws23OOPrincipals/Figure/dist/
