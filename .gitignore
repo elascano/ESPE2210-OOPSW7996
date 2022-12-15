@@ -22,10 +22,9 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_errpid*
 
-
 #vpp backup files
-*.vpp.bak_*
 <<<<<<< HEAD
+*.vpp.bak_*
 =======
 hs_errpid
 
@@ -35,17 +34,6 @@ hs_errpid
 *.vpp.bak_*
 
 /ws/verdugo/u1/ws11FromUMLToCode/JavaApplication2/nbproject/private/
-=======
-<<<<<<< HEAD
-*.vpp.bak*
-/ws/enriquez/unit2/ws21/Goalkeeper/nbproject/private/
-/hw/enriquez/unit2/hw08/TableApp/nbproject/private/
-/ws/enriquez/unit2/ws21/GoalkeeperApp/build/
-/ws/enriquez/unit2/ws21/GoalkeeperApp/nbproject/private/
-/ws/enriquez/unit2/ws21/GoalkeeperApp/dist/
->>>>>>> 6e028c4cebabec94590243113631258eb38ff7aa
-/hw/reinoso/U2/hw09/hw09WildAnimal/nbproject/private/
-/hw/reinoso/U2/hw09/hw09WildAnimal/build/
 =======
 *.vpp.bak_*
 <<<<<<< HEAD
@@ -61,9 +49,8 @@ hs_errpid
 >>>>>>> 693dce747d6e140c2d7a1eae24ffc01e8d88e949
 >>>>>>> 95a30cef560b71c33735a872d339bed6b6c61166
 >>>>>>> fbc4fd695b6cf35d1a8a985fe22b871b87e66280
-/hw/aviles/u1/hw09UserDefinedException/AreaCalculator/build/
-/hw/aviles/u1/hw09UserDefinedException/AreaCalculator/nbproject/private/
+/exams/barrionuevo/unit1/Cellphone/nbproject/private/
+/hw/gutierrez/u2/hw09/HW09/target/
 =======
-/hw/jaguaco/U2/Hw09/UserDefinedExceptionsHw09/nbproject/private/
->>>>>>> 1847d35846a6b757eba8dbefae64ff23335da547
->>>>>>> e31bb6609cdef9aa62b4ac44ed5cc73b563bc7ef
+*.vpp.bak_*
+>>>>>>> 9ef336c0dc3c88469ceeb50fd5005ffb19bfc130
