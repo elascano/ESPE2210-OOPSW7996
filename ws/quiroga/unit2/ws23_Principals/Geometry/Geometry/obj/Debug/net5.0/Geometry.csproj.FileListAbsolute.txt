@@ -1,0 +1,16 @@
+C:\Users\paqui\OneDrive\Escritorio\ESPE\SEGUNDO SEMESTRE\POO\EXPERIMENTO\Geometry\Geometry\obj\Debug\net5.0\Geometry.csproj.AssemblyReference.cache
+C:\Users\paqui\OneDrive\Escritorio\ESPE\SEGUNDO SEMESTRE\POO\EXPERIMENTO\Geometry\Geometry\obj\Debug\net5.0\Geometry.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\paqui\OneDrive\Escritorio\ESPE\SEGUNDO SEMESTRE\POO\EXPERIMENTO\Geometry\Geometry\obj\Debug\net5.0\Geometry.AssemblyInfoInputs.cache
+C:\Users\paqui\OneDrive\Escritorio\ESPE\SEGUNDO SEMESTRE\POO\EXPERIMENTO\Geometry\Geometry\obj\Debug\net5.0\Geometry.AssemblyInfo.cs
+C:\Users\paqui\OneDrive\Escritorio\ESPE\SEGUNDO SEMESTRE\POO\EXPERIMENTO\Geometry\Geometry\obj\Debug\net5.0\Geometry.csproj.CoreCompileInputs.cache
+C:\Users\paqui\OneDrive\Escritorio\ESPE\SEGUNDO SEMESTRE\POO\EXPERIMENTO\Geometry\Geometry\bin\Debug\net5.0\Geometry.exe
+C:\Users\paqui\OneDrive\Escritorio\ESPE\SEGUNDO SEMESTRE\POO\EXPERIMENTO\Geometry\Geometry\bin\Debug\net5.0\Geometry.deps.json
+C:\Users\paqui\OneDrive\Escritorio\ESPE\SEGUNDO SEMESTRE\POO\EXPERIMENTO\Geometry\Geometry\bin\Debug\net5.0\Geometry.runtimeconfig.json
+C:\Users\paqui\OneDrive\Escritorio\ESPE\SEGUNDO SEMESTRE\POO\EXPERIMENTO\Geometry\Geometry\bin\Debug\net5.0\Geometry.runtimeconfig.dev.json
+C:\Users\paqui\OneDrive\Escritorio\ESPE\SEGUNDO SEMESTRE\POO\EXPERIMENTO\Geometry\Geometry\bin\Debug\net5.0\Geometry.dll
+C:\Users\paqui\OneDrive\Escritorio\ESPE\SEGUNDO SEMESTRE\POO\EXPERIMENTO\Geometry\Geometry\bin\Debug\net5.0\Geometry.pdb
+C:\Users\paqui\OneDrive\Escritorio\ESPE\SEGUNDO SEMESTRE\POO\EXPERIMENTO\Geometry\Geometry\obj\Debug\net5.0\Geometry.dll
+C:\Users\paqui\OneDrive\Escritorio\ESPE\SEGUNDO SEMESTRE\POO\EXPERIMENTO\Geometry\Geometry\obj\Debug\net5.0\refint\Geometry.dll
+C:\Users\paqui\OneDrive\Escritorio\ESPE\SEGUNDO SEMESTRE\POO\EXPERIMENTO\Geometry\Geometry\obj\Debug\net5.0\Geometry.pdb
+C:\Users\paqui\OneDrive\Escritorio\ESPE\SEGUNDO SEMESTRE\POO\EXPERIMENTO\Geometry\Geometry\obj\Debug\net5.0\Geometry.genruntimeconfig.cache
+C:\Users\paqui\OneDrive\Escritorio\ESPE\SEGUNDO SEMESTRE\POO\EXPERIMENTO\Geometry\Geometry\obj\Debug\net5.0\ref\Geometry.dll

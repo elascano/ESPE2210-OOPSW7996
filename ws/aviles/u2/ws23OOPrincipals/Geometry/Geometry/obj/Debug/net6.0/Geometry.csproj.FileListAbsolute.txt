@@ -1,0 +1,15 @@
+C:\Users\ASUS\Desktop\Taller\Geometry\Geometry\bin\Debug\net6.0\Geometry.exe
+C:\Users\ASUS\Desktop\Taller\Geometry\Geometry\bin\Debug\net6.0\Geometry.deps.json
+C:\Users\ASUS\Desktop\Taller\Geometry\Geometry\bin\Debug\net6.0\Geometry.runtimeconfig.json
+C:\Users\ASUS\Desktop\Taller\Geometry\Geometry\bin\Debug\net6.0\Geometry.dll
+C:\Users\ASUS\Desktop\Taller\Geometry\Geometry\bin\Debug\net6.0\Geometry.pdb
+C:\Users\ASUS\Desktop\Taller\Geometry\Geometry\obj\Debug\net6.0\Geometry.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\Taller\Geometry\Geometry\obj\Debug\net6.0\Geometry.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\Desktop\Taller\Geometry\Geometry\obj\Debug\net6.0\Geometry.AssemblyInfoInputs.cache
+C:\Users\ASUS\Desktop\Taller\Geometry\Geometry\obj\Debug\net6.0\Geometry.AssemblyInfo.cs
+C:\Users\ASUS\Desktop\Taller\Geometry\Geometry\obj\Debug\net6.0\Geometry.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Taller\Geometry\Geometry\obj\Debug\net6.0\Geometry.dll
+C:\Users\ASUS\Desktop\Taller\Geometry\Geometry\obj\Debug\net6.0\refint\Geometry.dll
+C:\Users\ASUS\Desktop\Taller\Geometry\Geometry\obj\Debug\net6.0\Geometry.pdb
+C:\Users\ASUS\Desktop\Taller\Geometry\Geometry\obj\Debug\net6.0\Geometry.genruntimeconfig.cache
+C:\Users\ASUS\Desktop\Taller\Geometry\Geometry\obj\Debug\net6.0\ref\Geometry.dll

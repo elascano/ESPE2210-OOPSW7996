@@ -1,0 +1,16 @@
+D:\Leonardo Yaranga\Escritorio\POO\Clases\Geometry\Geometry\bin\Debug\net5.0\Geometry.exe
+D:\Leonardo Yaranga\Escritorio\POO\Clases\Geometry\Geometry\bin\Debug\net5.0\Geometry.deps.json
+D:\Leonardo Yaranga\Escritorio\POO\Clases\Geometry\Geometry\bin\Debug\net5.0\Geometry.runtimeconfig.json
+D:\Leonardo Yaranga\Escritorio\POO\Clases\Geometry\Geometry\bin\Debug\net5.0\Geometry.runtimeconfig.dev.json
+D:\Leonardo Yaranga\Escritorio\POO\Clases\Geometry\Geometry\bin\Debug\net5.0\Geometry.dll
+D:\Leonardo Yaranga\Escritorio\POO\Clases\Geometry\Geometry\bin\Debug\net5.0\Geometry.pdb
+D:\Leonardo Yaranga\Escritorio\POO\Clases\Geometry\Geometry\obj\Debug\net5.0\Geometry.csproj.AssemblyReference.cache
+D:\Leonardo Yaranga\Escritorio\POO\Clases\Geometry\Geometry\obj\Debug\net5.0\Geometry.GeneratedMSBuildEditorConfig.editorconfig
+D:\Leonardo Yaranga\Escritorio\POO\Clases\Geometry\Geometry\obj\Debug\net5.0\Geometry.AssemblyInfoInputs.cache
+D:\Leonardo Yaranga\Escritorio\POO\Clases\Geometry\Geometry\obj\Debug\net5.0\Geometry.AssemblyInfo.cs
+D:\Leonardo Yaranga\Escritorio\POO\Clases\Geometry\Geometry\obj\Debug\net5.0\Geometry.csproj.CoreCompileInputs.cache
+D:\Leonardo Yaranga\Escritorio\POO\Clases\Geometry\Geometry\obj\Debug\net5.0\Geometry.dll
+D:\Leonardo Yaranga\Escritorio\POO\Clases\Geometry\Geometry\obj\Debug\net5.0\refint\Geometry.dll
+D:\Leonardo Yaranga\Escritorio\POO\Clases\Geometry\Geometry\obj\Debug\net5.0\Geometry.pdb
+D:\Leonardo Yaranga\Escritorio\POO\Clases\Geometry\Geometry\obj\Debug\net5.0\Geometry.genruntimeconfig.cache
+D:\Leonardo Yaranga\Escritorio\POO\Clases\Geometry\Geometry\obj\Debug\net5.0\ref\Geometry.dll

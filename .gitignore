@@ -17,13 +17,13 @@
 *.ear
 *.zip
 *.tar.gz
-*.rar
+.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-<<<<<<< HEAD
-hs_err_pid*
+hs_errpid*
 
 #vpp backup files
+<<<<<<< HEAD
 *.vpp.bak_*
 =======
 hs_errpid
@@ -51,3 +51,6 @@ hs_errpid
 >>>>>>> fbc4fd695b6cf35d1a8a985fe22b871b87e66280
 /exams/barrionuevo/unit1/Cellphone/nbproject/private/
 /hw/gutierrez/u2/hw09/HW09/target/
+=======
+*.vpp.bak_*
+>>>>>>> 9ef336c0dc3c88469ceeb50fd5005ffb19bfc130
