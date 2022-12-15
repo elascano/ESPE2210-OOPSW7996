@@ -27,8 +27,14 @@ hs_errpid*
 *.vpp.bak_*
 
 
+<<<<<<< HEAD
+/hw/reinoso/U2/hw10/Hw10Farm1/nbproject/private/
+/hw/reinoso/U2/hw10/hw10Farm/nbproject/private/
+/hw/reinoso/U2/hw10/hw10Farm/build/
+=======
 /hw/oña/U2/hw10/Farm/build/
 /hw/oña/U2/hw10/Farm/nbproject/private/
 =======
 *.vpp.bak_*
 >>>>>>> 9ccc68866b2bc242e3e2a3ec2500e4d49914b976
+>>>>>>> 0e0af4da6094b5a02444a1a7ea3508c941241189
