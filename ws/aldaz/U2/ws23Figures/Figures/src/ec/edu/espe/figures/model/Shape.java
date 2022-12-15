@@ -11,15 +11,15 @@ package ec.edu.espe.figures.model;
 public abstract class Shape {
 
     private float area;
-    private float perimetro;
+    private float perimeter;
 
-    public abstract void perimeter(float perimetro);
+    public abstract void perimeter(float perimeter);
 
     public abstract void area(float area);
 
-    public Shape(float area, float perimetro) {
+    public Shape(float area, float perimeter) {
         this.area = area;
-        this.perimetro = perimetro;
+        this.perimeter = perimeter;
     }
 
     public float getArea() {
@@ -30,17 +30,17 @@ public abstract class Shape {
         this.area = area;
     }
 
-    public float getPerimetro() {
-        return perimetro;
+    public float getPerimeter() {
+        return perimeter;
     }
 
-    public void setPerimetro(float perimetro) {
-        this.perimetro = perimetro;
+    public void setPerimetro(float perimeter) {
+        this.perimeter = perimeter;
     }
 
     @Override
     public String toString() {
-        return "Shape{" + "area=" + area + ", perimetro=" + perimetro + '}';
+        return "Shape{" + "area=" + area + ", perimeter=" + perimeter + '}';
     }
     
     
