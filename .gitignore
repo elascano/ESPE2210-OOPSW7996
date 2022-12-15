@@ -31,3 +31,6 @@ hs_errpid
 #vpp backup files
 *.vpp.bak*
 >>>>>>> 77d5c4db702a0306dca99d66e40ecc244ee4eef0
+/ws/tipan/u2/ws22/Farm/nbproject/private/
+/ws/tipan/u2/ws22/Farm/build/
+/ws/tipan/u2/ws22/Farm/dist/
