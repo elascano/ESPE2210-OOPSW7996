@@ -1,0 +1,12 @@
+D:\Usuarios\neortiz\source\repos\Geometry\Geometry\bin\Release\netcoreapp3.1\Geometry.exe
+D:\Usuarios\neortiz\source\repos\Geometry\Geometry\bin\Release\netcoreapp3.1\Geometry.deps.json
+D:\Usuarios\neortiz\source\repos\Geometry\Geometry\bin\Release\netcoreapp3.1\Geometry.runtimeconfig.json
+D:\Usuarios\neortiz\source\repos\Geometry\Geometry\bin\Release\netcoreapp3.1\Geometry.runtimeconfig.dev.json
+D:\Usuarios\neortiz\source\repos\Geometry\Geometry\bin\Release\netcoreapp3.1\Geometry.dll
+D:\Usuarios\neortiz\source\repos\Geometry\Geometry\bin\Release\netcoreapp3.1\Geometry.pdb
+D:\Usuarios\neortiz\source\repos\Geometry\Geometry\obj\Release\netcoreapp3.1\Geometry.AssemblyInfoInputs.cache
+D:\Usuarios\neortiz\source\repos\Geometry\Geometry\obj\Release\netcoreapp3.1\Geometry.AssemblyInfo.cs
+D:\Usuarios\neortiz\source\repos\Geometry\Geometry\obj\Release\netcoreapp3.1\Geometry.csproj.CoreCompileInputs.cache
+D:\Usuarios\neortiz\source\repos\Geometry\Geometry\obj\Release\netcoreapp3.1\Geometry.dll
+D:\Usuarios\neortiz\source\repos\Geometry\Geometry\obj\Release\netcoreapp3.1\Geometry.pdb
+D:\Usuarios\neortiz\source\repos\Geometry\Geometry\obj\Release\netcoreapp3.1\Geometry.genruntimeconfig.cache
