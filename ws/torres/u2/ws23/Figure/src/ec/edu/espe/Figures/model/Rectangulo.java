@@ -10,39 +10,10 @@ package ec.edu.espe.Figures.model;
  */
 public class Rectangulo extends Shape {
 
-    /**
-     * @return the base
-     */
-    public float getBase() {
-        return base;
-    }
-
-    /**
-     * @param base the base to set
-     */
-    public void setBase(float base) {
-        this.base = base;
-    }
-
-    /**
-     * @return the height
-     */
-    public float getHeight() {
-        return height;
-    }
-
-    /**
-     * @param height the height to set
-     */
-    public void setHeight(float height) {
-        this.height = height;
-    }
-
     private float base;
     private float height;
 
-    public Rectangulo(float base, float height, int area, int perimetro) {
-        super(area, perimetro);
+    public Rectangulo(float base, float height) {
         this.base = base;
         this.height = height;
     }
@@ -52,39 +23,26 @@ public class Rectangulo extends Shape {
         return "Rectangulo{" + "base=" + base + ", height=" + height + '}';
     }
 
-
     @Override
     public void Area(float base, float height) {
-        
-        float P;
-        float A;
-        A = base*getHeight();
-        P = base+base+getHeight()+getHeight();
-        
+
+        System.out.println("Area of rectangle is: "+ base * height);
     }
 
     @Override
-    public void AreaAndPerimeter(float radio) {
+    public void  Perimeter(float base, float height) {
+
+        System.out.println("Perimeter of rectangle is: "+ base + base + height + height);
     }
 
     @Override
-    public void Are(float radio) {
+    public void  Area(float radio) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public void Perimeter(float radio) {
+    public void  Perimeter(float radio) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    @Override
-    public void Area(float base, float height) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public void Perimeter(float base, float height) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-    
 }
