@@ -20,15 +20,7 @@
 .rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_errpid*
+hs_errpid
 
 #vpp backup files
-<<<<<<< HEAD
-*.vpp.bak_*
-
-
-/hw/oña/U2/hw10/Farm/build/
-/hw/oña/U2/hw10/Farm/nbproject/private/
-=======
-*.vpp.bak_*
->>>>>>> 9ccc68866b2bc242e3e2a3ec2500e4d49914b976
+*.vpp.bak*
