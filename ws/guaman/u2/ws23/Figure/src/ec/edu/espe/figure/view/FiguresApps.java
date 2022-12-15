@@ -18,7 +18,7 @@ public class FiguresApps {
 
         int option = 0;
         while (option != 4) {
-            System.out.println("\nGOALKEEPER APP SIMULATOR");
+            System.out.println("\tFIGURES APP SIMULATOR");
             System.out.println("by: Alexander Guaman");
             System.out.println("\n\tMAIN MENU");
             System.out.println("1. Circle");
