@@ -26,8 +26,8 @@ public class Triangle extends Shape{
 
     @Override
     public void area(int base, int height) {
-        float area = (base*height);
-        System.out.println("The Area of the rectangle is --> " + area);   
+        float area = (base*height)/2;
+        System.out.println("The Area of the triangle is --> " + area);   
     }
     
     
