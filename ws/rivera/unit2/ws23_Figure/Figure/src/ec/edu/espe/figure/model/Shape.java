@@ -6,7 +6,7 @@ package ec.edu.espe.figure.model;
  */
 public abstract class Shape {
 
-    public abstract void calculatePerimeter(float figureData);
-    public abstract void calculateArea(float figureData);
+    public abstract void calculatePerimeter();
+    public abstract void calculateArea();
     
 }
