@@ -1,0 +1,16 @@
+C:\Users\02ale\source\repos\PruebaPracticaOOP2P\PruebaPracticaOOP2P\obj\Debug\net5.0\PruebaPracticaOOP2P.csproj.AssemblyReference.cache
+C:\Users\02ale\source\repos\PruebaPracticaOOP2P\PruebaPracticaOOP2P\obj\Debug\net5.0\PruebaPracticaOOP2P.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\02ale\source\repos\PruebaPracticaOOP2P\PruebaPracticaOOP2P\obj\Debug\net5.0\PruebaPracticaOOP2P.AssemblyInfoInputs.cache
+C:\Users\02ale\source\repos\PruebaPracticaOOP2P\PruebaPracticaOOP2P\obj\Debug\net5.0\PruebaPracticaOOP2P.AssemblyInfo.cs
+C:\Users\02ale\source\repos\PruebaPracticaOOP2P\PruebaPracticaOOP2P\obj\Debug\net5.0\PruebaPracticaOOP2P.csproj.CoreCompileInputs.cache
+C:\Users\02ale\source\repos\PruebaPracticaOOP2P\PruebaPracticaOOP2P\bin\Debug\net5.0\PruebaPracticaOOP2P.exe
+C:\Users\02ale\source\repos\PruebaPracticaOOP2P\PruebaPracticaOOP2P\bin\Debug\net5.0\PruebaPracticaOOP2P.deps.json
+C:\Users\02ale\source\repos\PruebaPracticaOOP2P\PruebaPracticaOOP2P\bin\Debug\net5.0\PruebaPracticaOOP2P.runtimeconfig.json
+C:\Users\02ale\source\repos\PruebaPracticaOOP2P\PruebaPracticaOOP2P\bin\Debug\net5.0\PruebaPracticaOOP2P.runtimeconfig.dev.json
+C:\Users\02ale\source\repos\PruebaPracticaOOP2P\PruebaPracticaOOP2P\bin\Debug\net5.0\PruebaPracticaOOP2P.dll
+C:\Users\02ale\source\repos\PruebaPracticaOOP2P\PruebaPracticaOOP2P\bin\Debug\net5.0\PruebaPracticaOOP2P.pdb
+C:\Users\02ale\source\repos\PruebaPracticaOOP2P\PruebaPracticaOOP2P\obj\Debug\net5.0\PruebaPracticaOOP2P.dll
+C:\Users\02ale\source\repos\PruebaPracticaOOP2P\PruebaPracticaOOP2P\obj\Debug\net5.0\refint\PruebaPracticaOOP2P.dll
+C:\Users\02ale\source\repos\PruebaPracticaOOP2P\PruebaPracticaOOP2P\obj\Debug\net5.0\PruebaPracticaOOP2P.pdb
+C:\Users\02ale\source\repos\PruebaPracticaOOP2P\PruebaPracticaOOP2P\obj\Debug\net5.0\PruebaPracticaOOP2P.genruntimeconfig.cache
+C:\Users\02ale\source\repos\PruebaPracticaOOP2P\PruebaPracticaOOP2P\obj\Debug\net5.0\ref\PruebaPracticaOOP2P.dll
