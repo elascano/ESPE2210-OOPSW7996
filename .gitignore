@@ -24,3 +24,8 @@ hs_errpid*
 
 #vpp backup files
 *.vpp.bak_*
+/ws/suquillo/u2/ws24/Taxes/nbproject/private/
+/ws/suquillo/u2/ws24/Taxes/build/
+/ws/suquillo/u2/ws24/TaxLibrary/nbproject/private/
+/ws/suquillo/u2/ws24/TaxLibrary/build/
+/ws/suquillo/u2/ws24/TaxLibrary/dist/
