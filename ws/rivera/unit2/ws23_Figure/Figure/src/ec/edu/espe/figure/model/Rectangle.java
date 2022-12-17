@@ -9,13 +9,15 @@ public class Rectangle extends Shape{
     private float base;
     private float height;
     
-    public void calculatePerimeter(float base, float height){
+    @Override
+    public void calculatePerimeter(){
         float total;
         total = 2 * (base + height);
         System.out.println("The perimeter of rectangle is: " + total);
     }
     
-    public void calculateArea(float base, float height){
+    @Override
+    public void calculateArea(){
         float total;
         total = (base * height);
         System.out.println("The area of rectangle is: " + total);
@@ -24,16 +26,6 @@ public class Rectangle extends Shape{
     public Rectangle(float base, float height) {
         this.base = base;
         this.height = height;
-    }
-
-    @Override
-    public void calculatePerimeter(float figureData) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public void calculateArea(float figureData) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public float getBase() {
