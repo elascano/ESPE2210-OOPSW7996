@@ -10,7 +10,8 @@ public class Triangle extends Shape{
     private float height;
     private float lado;
     
-    public void calculatePerimeter(float base, float height){
+    @Override
+    public void calculatePerimeter(){
         float total;
         float hypotenuse;
         hypotenuse = (float) Math.hypot(base,height);
@@ -18,7 +19,8 @@ public class Triangle extends Shape{
         System.out.println("The perimeter of triangle is: " + total);
     }
     
-    public void calculateArea(float base, float height){
+    @Override
+    public void calculateArea(){
         float total;
         total = ((base * height) / 2);
         System.out.println("The area of triangle is: " + total);
@@ -27,16 +29,6 @@ public class Triangle extends Shape{
     public Triangle(float base, float height) {
         this.base = base;
         this.height = height;
-    }
-
-    @Override
-    public void calculateArea(float figureData) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public void calculatePerimeter(float figureData) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public float getBase() {
