@@ -54,3 +54,9 @@ hs_errpid
 =======
 *.vpp.bak_*
 >>>>>>> 9ef336c0dc3c88469ceeb50fd5005ffb19bfc130
+/ws/orozco/u2/ws24/JavaApplication2/nbproject/private/
+/ws/orozco/u2/ws24/TaxLibrary/nbproject/private/
+/ws/orozco/u2/ws24/TaxLibrary/build/
+/ws/orozco/u2/ws24/TaxLibrary/dist/
+/ws/orozco/u2/ws24/Taxes/nbproject/private/
+/ws/orozco/u2/ws24/Taxes/build/
