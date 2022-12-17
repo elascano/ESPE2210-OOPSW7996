@@ -20,7 +20,33 @@
 .rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_errpid
+hs_errpid*
 
 #vpp backup files
+*.vpp.bak_*
+
+<<<<<<< HEAD
+#vpp backup files
 *.vpp.bak*
+>>>>>>> 77d5c4db702a0306dca99d66e40ecc244ee4eef0
+/ws/tipan/u2/ws22/Farm/nbproject/private/
+/ws/tipan/u2/ws22/Farm/build/
+/ws/tipan/u2/ws22/Farm/dist/
+=======
+<<<<<<< HEAD
+*.vpp.bak_*
+<<<<<<< HEAD
+>>>>>>> 9ccc68866b2bc242e3e2a3ec2500e4d49914b976
+>>>>>>> 0e0af4da6094b5a02444a1a7ea3508c941241189
+/ws/reinoso/U2/ws23/ws23Figure/nbproject/private/
+/ws/reinoso/U2/ws23/ws23Figure/build/
+=======
+>>>>>>> 7c0f4bf6ec1104feb01438807a1d20829f7eba65
+/ws/tipan/u2/ws23OOPrincipals/Figure/nbproject/private/
+/ws/tipan/u2/ws23OOPrincipals/Figure/build/
+/ws/tipan/u2/ws23OOPrincipals/Figure/dist/
+=======
+
+
+>>>>>>> 14bc0f97a68fe56671a165a18e48d318e7ecabdb
+>>>>>>> eea947fab6d8fe1ecfdfee6f72810d6c9e52e13f
