@@ -24,3 +24,9 @@ hs_errpid
 
 #vpp backup files
 *.vpp.bak*
+/ws/pinza/Unit 2/ws24Libraries/JavaApplication14/nbproject/private/
+/ws/pinza/Unit 2/ws24Libraries/Taxes/nbproject/private/
+/ws/pinza/Unit 2/ws24Libraries/Taxes/build/
+/ws/pinza/Unit 2/ws24Libraries/TaxLibrary/nbproject/private/
+/ws/pinza/Unit 2/ws24Libraries/TaxLibrary/build/
+/ws/pinza/Unit 2/ws24Libraries/TaxLibrary/dist/
