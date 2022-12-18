@@ -23,11 +23,8 @@
 hs_errpid*
 
 #vpp backup files
-*.vpp.bak_*
-
-<<<<<<< HEAD
-#vpp backup files
 *.vpp.bak*
+<<<<<<< HEAD
 >>>>>>> 77d5c4db702a0306dca99d66e40ecc244ee4eef0
 /ws/tipan/u2/ws22/Farm/nbproject/private/
 /ws/tipan/u2/ws22/Farm/build/
@@ -35,12 +32,6 @@ hs_errpid*
 =======
 <<<<<<< HEAD
 *.vpp.bak_*
-<<<<<<< HEAD
->>>>>>> 9ccc68866b2bc242e3e2a3ec2500e4d49914b976
->>>>>>> 0e0af4da6094b5a02444a1a7ea3508c941241189
-/ws/reinoso/U2/ws23/ws23Figure/nbproject/private/
-/ws/reinoso/U2/ws23/ws23Figure/build/
-=======
 >>>>>>> 7c0f4bf6ec1104feb01438807a1d20829f7eba65
 /ws/tipan/u2/ws23OOPrincipals/Figure/nbproject/private/
 /ws/tipan/u2/ws23OOPrincipals/Figure/build/
@@ -49,4 +40,17 @@ hs_errpid*
 
 
 >>>>>>> 14bc0f97a68fe56671a165a18e48d318e7ecabdb
->>>>>>> eea947fab6d8fe1ecfdfee6f72810d6c9e52e13f
+/ws/tipan/u2/w24/JavaApplication8/nbproject/private/
+/ws/tipan/u2/w24/Taxes/nbproject/private/
+/ws/tipan/u2/w24/Taxes/dist/
+/ws/tipan/u2/w24/Taxes/build/
+/ws/tipan/u2/w24/TaxLibrary/nbproject/private/
+/ws/tipan/u2/w24/TaxLibrary/build/
+/ws/tipan/u2/w24/TaxLibrary/dist/
+=======
+/ws/guaman/u2/ws24Libraries/Taxes/nbproject/private/
+/ws/guaman/u2/ws24Libraries/Taxes/build/
+/ws/guaman/u2/ws24Libraries/TaxLibrary/nbproject/private/
+/ws/guaman/u2/ws24Libraries/TaxLibrary/dist/
+/ws/guaman/u2/ws24Libraries/TaxLibrary/build/
+>>>>>>> 1aa2b5f24fee8e8eba5919a77691a3360c12aa20
