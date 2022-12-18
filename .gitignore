@@ -23,6 +23,7 @@
 hs_errpid*
 
 #vpp backup files
+<<<<<<< HEAD
 *.vpp.bak_*
 
 <<<<<<< HEAD
@@ -52,3 +53,6 @@ hs_errpid*
 >>>>>>> eea947fab6d8fe1ecfdfee6f72810d6c9e52e13f
 /ws/reinoso/U2/ws23/Taxes/nbproject/private/
 /ws/reinoso/U2/ws23/Taxes/build/
+=======
+*.vpp.bak*
+>>>>>>> 6796d3eb99f89f39ade2c5d8617fd48d971bfdbb
