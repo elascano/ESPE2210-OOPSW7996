@@ -25,17 +25,3 @@ hs_errpid*
 #vpp backup files
 *.vpp.bak_*
 
-
-
-/ws/panchi/U2/ws24Libraries/Taxes/nbproject/private/
-/ws/panchi/U2/ws24Libraries/Taxes/build/
-/ws/panchi/U2/ws24Libraries/Taxes/dist/
-/ws/panchi/U2/ws24Libraries/TaxLibrary/nbproject/private/
-/ws/panchi/U2/ws24Libraries/TaxLibrary/build/
-/ws/panchi/U2/ws24Libraries/TaxLibrary/dist/
-/hw/panchi/U2/hw11Libraries/TaxLibrary/build/
-/hw/panchi/U2/hw11Libraries/TaxLibrary/nbproject/private/
-/hw/panchi/U2/hw11Libraries/Taxes/build/
-/hw/panchi/U2/hw11Libraries/Taxes/dist/
-/hw/panchi/U2/hw11Libraries/Taxes/nbproject/private/
-/hw/panchi/U2/hw11Libraries/TaxLibrary/dist/
