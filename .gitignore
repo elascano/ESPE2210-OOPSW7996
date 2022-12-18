@@ -23,11 +23,8 @@
 hs_errpid*
 
 #vpp backup files
-*.vpp.bak_*
-
-<<<<<<< HEAD
-#vpp backup files
 *.vpp.bak*
+<<<<<<< HEAD
 >>>>>>> 77d5c4db702a0306dca99d66e40ecc244ee4eef0
 /ws/tipan/u2/ws22/Farm/nbproject/private/
 /ws/tipan/u2/ws22/Farm/build/
@@ -50,3 +47,10 @@ hs_errpid*
 /ws/tipan/u2/w24/TaxLibrary/nbproject/private/
 /ws/tipan/u2/w24/TaxLibrary/build/
 /ws/tipan/u2/w24/TaxLibrary/dist/
+=======
+/ws/guaman/u2/ws24Libraries/Taxes/nbproject/private/
+/ws/guaman/u2/ws24Libraries/Taxes/build/
+/ws/guaman/u2/ws24Libraries/TaxLibrary/nbproject/private/
+/ws/guaman/u2/ws24Libraries/TaxLibrary/dist/
+/ws/guaman/u2/ws24Libraries/TaxLibrary/build/
+>>>>>>> 1aa2b5f24fee8e8eba5919a77691a3360c12aa20
