@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dome\\Desktop\\Exp.Dome\\Geometry_7996-master\\LINDSAY_DOMENIQUE_BARRIONUEVO_ORDOÑEZ\\Geometry\\Geometry.csproj": {}
+    "C:\\Users\\Dome\\Desktop\\Segundo Semestre\\OOP\\ESPE2210-OOPSW7996\\ws\\barrionuevo\\unit2\\ws23\\CodeGeometry\\Geometry\\Geometry.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dome\\Desktop\\Exp.Dome\\Geometry_7996-master\\LINDSAY_DOMENIQUE_BARRIONUEVO_ORDOÑEZ\\Geometry\\Geometry.csproj": {
+    "C:\\Users\\Dome\\Desktop\\Segundo Semestre\\OOP\\ESPE2210-OOPSW7996\\ws\\barrionuevo\\unit2\\ws23\\CodeGeometry\\Geometry\\Geometry.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dome\\Desktop\\Exp.Dome\\Geometry_7996-master\\LINDSAY_DOMENIQUE_BARRIONUEVO_ORDOÑEZ\\Geometry\\Geometry.csproj",
+        "projectUniqueName": "C:\\Users\\Dome\\Desktop\\Segundo Semestre\\OOP\\ESPE2210-OOPSW7996\\ws\\barrionuevo\\unit2\\ws23\\CodeGeometry\\Geometry\\Geometry.csproj",
         "projectName": "Geometry",
-        "projectPath": "C:\\Users\\Dome\\Desktop\\Exp.Dome\\Geometry_7996-master\\LINDSAY_DOMENIQUE_BARRIONUEVO_ORDOÑEZ\\Geometry\\Geometry.csproj",
+        "projectPath": "C:\\Users\\Dome\\Desktop\\Segundo Semestre\\OOP\\ESPE2210-OOPSW7996\\ws\\barrionuevo\\unit2\\ws23\\CodeGeometry\\Geometry\\Geometry.csproj",
         "packagesPath": "C:\\Users\\Dome\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dome\\Desktop\\Exp.Dome\\Geometry_7996-master\\LINDSAY_DOMENIQUE_BARRIONUEVO_ORDOÑEZ\\Geometry\\obj\\",
+        "outputPath": "C:\\Users\\Dome\\Desktop\\Segundo Semestre\\OOP\\ESPE2210-OOPSW7996\\ws\\barrionuevo\\unit2\\ws23\\CodeGeometry\\Geometry\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dome\\AppData\\Roaming\\NuGet\\NuGet.Config",
