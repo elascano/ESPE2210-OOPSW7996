@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\Espe-Sheylee\\Geometry_7996-master\\SHEYLEE_ARIELLE_ENRIQUEZ_HERNANDEZ\\Geometry\\Geometry.csproj": {}
+    "C:\\Users\\Dome\\Desktop\\Segundo Semestre\\OOP\\ESPE2210-OOPSW7996\\ws\\enriquez\\unit2\\ws23\\GeometryCode\\Geometry\\Geometry.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\Espe-Sheylee\\Geometry_7996-master\\SHEYLEE_ARIELLE_ENRIQUEZ_HERNANDEZ\\Geometry\\Geometry.csproj": {
+    "C:\\Users\\Dome\\Desktop\\Segundo Semestre\\OOP\\ESPE2210-OOPSW7996\\ws\\enriquez\\unit2\\ws23\\GeometryCode\\Geometry\\Geometry.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\Espe-Sheylee\\Geometry_7996-master\\SHEYLEE_ARIELLE_ENRIQUEZ_HERNANDEZ\\Geometry\\Geometry.csproj",
+        "projectUniqueName": "C:\\Users\\Dome\\Desktop\\Segundo Semestre\\OOP\\ESPE2210-OOPSW7996\\ws\\enriquez\\unit2\\ws23\\GeometryCode\\Geometry\\Geometry.csproj",
         "projectName": "Geometry",
-        "projectPath": "C:\\Users\\user\\Desktop\\Espe-Sheylee\\Geometry_7996-master\\SHEYLEE_ARIELLE_ENRIQUEZ_HERNANDEZ\\Geometry\\Geometry.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\Espe-Sheylee\\Geometry_7996-master\\SHEYLEE_ARIELLE_ENRIQUEZ_HERNANDEZ\\Geometry\\obj\\",
+        "projectPath": "C:\\Users\\Dome\\Desktop\\Segundo Semestre\\OOP\\ESPE2210-OOPSW7996\\ws\\enriquez\\unit2\\ws23\\GeometryCode\\Geometry\\Geometry.csproj",
+        "packagesPath": "C:\\Users\\Dome\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dome\\Desktop\\Segundo Semestre\\OOP\\ESPE2210-OOPSW7996\\ws\\enriquez\\unit2\\ws23\\GeometryCode\\Geometry\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dome\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -50,30 +50,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.32, 3.1.32]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

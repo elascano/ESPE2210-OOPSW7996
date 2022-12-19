@@ -88,10 +88,10 @@ public class LibrarySimulator {
         input.nextLine();
         try {
             id = validateId(id);
-        } catch (IdLessThanOneException ex) {
-            System.out.println(ex.getMessage());
-            ex.printStackTrace(System.out);
+        } catch (IdLessThanOneException ex) {        
+            ex.printStackTrace(System.out);     
             while (id < 1) {
+                System.out.println(ex.getMessage());
                 System.out.println("Please reenter a number greater than 0 ");
                 id = input.nextInt();
                 input.nextLine();

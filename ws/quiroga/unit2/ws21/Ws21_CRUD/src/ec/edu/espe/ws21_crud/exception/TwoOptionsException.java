@@ -9,7 +9,5 @@ public class TwoOptionsException extends Exception{
     
     public TwoOptionsException(int enter){
         super("Invalid option, type only the numbers shown");
-    }
-           
-    
+    }   
 }
