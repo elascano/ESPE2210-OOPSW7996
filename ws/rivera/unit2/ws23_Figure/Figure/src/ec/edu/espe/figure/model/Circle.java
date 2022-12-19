@@ -9,14 +9,14 @@ public class Circle extends Shape{
     private float radio;
     
     @Override
-    public void calculatePerimeter(float radio){
+    public void calculatePerimeter(){
         float total;
         total = (3.1416F * radio * 2);
         System.out.println("The perimeter of circle is: " + total);
     }
     
     @Override
-    public void calculateArea(float radio){
+    public void calculateArea(){
         float total;
         total = (3.1416F * (radio * radio));
         System.out.println("The area of circle is: " + total);

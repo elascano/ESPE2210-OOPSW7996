@@ -20,7 +20,6 @@ public class Triangulo extends Shape {
         float side;
         
         side = (float) Math.sqrt(Math.pow(base/2, 2) + Math.pow(height, 2));
-        System.out.println(side);
         perimeter = base + side * 2;
      
         return perimeter;
