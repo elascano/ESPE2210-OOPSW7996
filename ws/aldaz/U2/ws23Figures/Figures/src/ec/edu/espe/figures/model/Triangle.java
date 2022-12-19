@@ -13,7 +13,6 @@ public class Triangle extends Shape {
     private float sideA;
     private float sideB;
     private float sideC;
-    private float totalPerimeter;
 
     public Triangle(float sideA, float sideB, float sideC, float area, float perimeter) {
         super(area, perimeter);
