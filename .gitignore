@@ -80,3 +80,6 @@ hs_errpid
 *.vpp.bak*
 >>>>>>> e56352ed98289a5c972113cec8cc13a821e1027e
 >>>>>>> 06c641e2a7125a8e1c11bdbc400133fad91880f3
+/hw/enriquez/unit2/hw11/TaxLibrary/build/
+/hw/enriquez/unit2/hw11/TaxLibrary/nbproject/private/
+/hw/enriquez/unit2/hw11/TaxLibrary/dist/
