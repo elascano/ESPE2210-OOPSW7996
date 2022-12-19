@@ -20,9 +20,10 @@
 .rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_errpid*
+hs_errpid
 
 #vpp backup files
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 *.vpp.bak_*
@@ -65,3 +66,6 @@ hs_errpid
 >>>>>>> d50a896b655779967e7db43ed865ce013f2ee781
 /ws/toapanta/U2/ws24Libreries/TaxLibrary/build/
 /ws/toapanta/U2/ws24Libreries/TaxLibrary/nbproject/private/
+=======
+*.vpp.bak*
+>>>>>>> e56352ed98289a5c972113cec8cc13a821e1027e
