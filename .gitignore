@@ -54,3 +54,8 @@ hs_errpid
 =======
 *.vpp.bak_*
 >>>>>>> 9ef336c0dc3c88469ceeb50fd5005ffb19bfc130
+/ws/toapanta/U2/ws24Libreries/Taxes/nbproject/private/
+/ws/toapanta/U2/ws24Libreries/TaxtLibrary/nbproject/private/
+/ws/toapanta/U2/ws24Libreries/TaxtLibrary/dist/
+/ws/toapanta/U2/ws24Libreries/TaxtLibrary/build/
+/ws/toapanta/U2/ws24Libreries/Taxes/build/
