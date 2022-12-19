@@ -54,3 +54,8 @@ hs_errpid
 =======
 *.vpp.bak_*
 >>>>>>> 9ef336c0dc3c88469ceeb50fd5005ffb19bfc130
+/ws/verdugo/u2/ws24/Taxes/nbproject/private/
+/ws/verdugo/u2/ws24/TaxLibrary/nbproject/private/
+/ws/verdugo/u2/ws24/TaxLibrary/build/
+/ws/verdugo/u2/ws24/TaxLibrary/dist/
+/ws/verdugo/u2/ws24/Taxes/build/
