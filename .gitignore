@@ -47,6 +47,15 @@ hs_errpid
 
 /ws/verdugo/u1/ws11FromUMLToCode/JavaApplication2/nbproject/private/
 =======
+<<<<<<< HEAD
+/ws/guaman/u2/ws24Libraries/Taxes/nbproject/private/
+/ws/guaman/u2/ws24Libraries/Taxes/build/
+/ws/guaman/u2/ws24Libraries/TaxLibrary/nbproject/private/
+/ws/guaman/u2/ws24Libraries/TaxLibrary/dist/
+/ws/guaman/u2/ws24Libraries/TaxLibrary/build/
+>>>>>>> 1aa2b5f24fee8e8eba5919a77691a3360c12aa20
+/hw/tipan/u2/hw10/Taxes/dist/
+=======
 *.vpp.bak_*
 <<<<<<< HEAD
 >>>>>>> 05aa45c572085bc6fb78c020bcf1931d7bcc0a26
@@ -66,6 +75,14 @@ hs_errpid
 =======
 *.vpp.bak_*
 >>>>>>> 9ef336c0dc3c88469ceeb50fd5005ffb19bfc130
+<<<<<<< HEAD
+/ws/barrionuevo/unit2/ws24Libraries/Taxes/nbproject/private/
+/ws/barrionuevo/unit2/ws24Libraries/Taxes/build/
+/ws/barrionuevo/unit2/ws24Libraries/TaxLibrary/nbproject/private/
+/ws/barrionuevo/unit2/ws24Libraries/Taxes/dist/
+/ws/barrionuevo/unit2/ws24Libraries/TaxLibrary/build/
+/ws/barrionuevo/unit2/ws24Libraries/TaxLibrary/dist/
+=======
 <<<<<<< HEAD
 /ws/verdugo/u2/ws24/Taxes/nbproject/private/
 /ws/verdugo/u2/ws24/TaxLibrary/nbproject/private/
@@ -94,3 +111,5 @@ hs_errpid
 =======
 >>>>>>> d6674b681d3c2900d75c09bba2b7ee7b1711bb98
 >>>>>>> 8be7197c8b56eddef96e8ae1705a8ad9a04cf6b0
+>>>>>>> 3be2701d7071e03942c5c32ece4ec0ad19f4187d
+>>>>>>> e757971272d7c192edced933555d3c87f6358a8d
