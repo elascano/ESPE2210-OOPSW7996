@@ -24,3 +24,10 @@ hs_errpid
 
 #vpp backup files
 *.vpp.bak*
+/hw/enriquez/unit2/hw09/Exercise/nbproject/private/
+/hw/enriquez/unit2/hw09/Taxes/nbproject/private/
+/ws/enriquez/unit2/ws24/Taxes/nbproject/private/
+/ws/enriquez/unit2/ws24/Taxes/build/
+/ws/enriquez/unit2/ws24/TaxLibrary/nbproject/private/
+/ws/enriquez/unit2/ws24/TaxLibrary/build/
+/ws/enriquez/unit2/ws24/TaxLibrary/dist/
