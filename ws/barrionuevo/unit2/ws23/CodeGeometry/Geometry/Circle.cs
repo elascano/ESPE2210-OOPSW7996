@@ -12,11 +12,13 @@ namespace Geometry
         {
             Radius = radius;
         }
-        public double CalculateArea()
+
+        public double calculateArea()
         {
             return Math.PI * Math.Pow(Radius, 2);
         }
-        public double CalculatePerimeter()
+
+        public double calculatePerimeter()
         {
             return 2 * Math.PI * Radius;
         }

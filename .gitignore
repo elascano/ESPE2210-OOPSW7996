@@ -24,6 +24,7 @@ hs_errpid*
 
 #vpp backup files
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.vpp.bak_*
 =======
 hs_errpid
@@ -59,3 +60,8 @@ hs_errpid
 /ws/toapanta/U2/ws24Libreries/TaxtLibrary/dist/
 /ws/toapanta/U2/ws24Libreries/TaxtLibrary/build/
 /ws/toapanta/U2/ws24Libreries/Taxes/build/
+=======
+*.vpp.bak_*
+>>>>>>> d50a896b655779967e7db43ed865ce013f2ee781
+/ws/toapanta/U2/ws24Libreries/TaxLibrary/build/
+/ws/toapanta/U2/ws24Libreries/TaxLibrary/nbproject/private/

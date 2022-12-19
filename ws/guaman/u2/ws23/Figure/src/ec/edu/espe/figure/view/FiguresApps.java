@@ -18,12 +18,12 @@ public class FiguresApps {
 
         int option = 0;
         while (option != 4) {
-            System.out.println("\nGOALKEEPER APP SIMULATOR");
+            System.out.println("\tFIGURES APP SIMULATOR");
             System.out.println("by: Alexander Guaman");
             System.out.println("\n\tMAIN MENU");
             System.out.println("1. Circle");
             System.out.println("2. Triangle");
-            System.out.println("3. Recangle");
+            System.out.println("3. Rectangle");
             System.out.println("4. Exit");
 
             option = askOption();
@@ -70,6 +70,7 @@ public class FiguresApps {
                     shape = new Rectangulo(base, altura);
                     shape.areaRectangle();
                     shape.perimeterRectangle();
+                            
                 }
 
                 case 4 ->

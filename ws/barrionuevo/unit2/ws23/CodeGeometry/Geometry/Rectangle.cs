@@ -6,7 +6,7 @@ namespace Geometry
 {
     class Rectangle : IShape
     {
-        public double Length { get; set; } //internal private variable, getter, setter
+        public double Length { get; set; }
 
         public double Width { get; set; }
 
@@ -16,12 +16,12 @@ namespace Geometry
             Width = width;
         }
 
-        public double CalculateArea()
+        public double calculateArea()
         {
             return Length * Width;
         }
 
-        public double CalculatePerimeter()
+        public double calculatePerimeter()
         {
             return 2 * (Length + Width);
         }
