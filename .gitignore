@@ -20,34 +20,34 @@
 .rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_errpid*
+hs_errpid
 
 #vpp backup files
-*.vpp.bak*
 <<<<<<< HEAD
->>>>>>> 77d5c4db702a0306dca99d66e40ecc244ee4eef0
-/ws/tipan/u2/ws22/Farm/nbproject/private/
-/ws/tipan/u2/ws22/Farm/build/
-/ws/tipan/u2/ws22/Farm/dist/
+*.vpp.bak*
+/hw/enriquez/unit2/hw09/Exercise/nbproject/private/
+/hw/enriquez/unit2/hw09/Taxes/nbproject/private/
+/ws/enriquez/unit2/ws24/Taxes/nbproject/private/
+/ws/enriquez/unit2/ws24/Taxes/build/
+/ws/enriquez/unit2/ws24/TaxLibrary/nbproject/private/
+/ws/enriquez/unit2/ws24/TaxLibrary/build/
+/ws/enriquez/unit2/ws24/TaxLibrary/dist/
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 *.vpp.bak_*
->>>>>>> 7c0f4bf6ec1104feb01438807a1d20829f7eba65
-/ws/tipan/u2/ws23OOPrincipals/Figure/nbproject/private/
-/ws/tipan/u2/ws23OOPrincipals/Figure/build/
-/ws/tipan/u2/ws23OOPrincipals/Figure/dist/
 =======
+hs_errpid
 
+#vpp backup files
+<<<<<<< HEAD
 
->>>>>>> 14bc0f97a68fe56671a165a18e48d318e7ecabdb
-/ws/tipan/u2/w24/JavaApplication8/nbproject/private/
-/ws/tipan/u2/w24/Taxes/nbproject/private/
-/ws/tipan/u2/w24/Taxes/dist/
-/ws/tipan/u2/w24/Taxes/build/
-/ws/tipan/u2/w24/TaxLibrary/nbproject/private/
-/ws/tipan/u2/w24/TaxLibrary/build/
-/ws/tipan/u2/w24/TaxLibrary/dist/
+*.vpp.bak_*
+
+/ws/verdugo/u1/ws11FromUMLToCode/JavaApplication2/nbproject/private/
 =======
+<<<<<<< HEAD
 /ws/guaman/u2/ws24Libraries/Taxes/nbproject/private/
 /ws/guaman/u2/ws24Libraries/Taxes/build/
 /ws/guaman/u2/ws24Libraries/TaxLibrary/nbproject/private/
@@ -55,3 +55,61 @@ hs_errpid*
 /ws/guaman/u2/ws24Libraries/TaxLibrary/build/
 >>>>>>> 1aa2b5f24fee8e8eba5919a77691a3360c12aa20
 /hw/tipan/u2/hw10/Taxes/dist/
+=======
+*.vpp.bak_*
+<<<<<<< HEAD
+>>>>>>> 05aa45c572085bc6fb78c020bcf1931d7bcc0a26
+<<<<<<< HEAD
+/hw/oña/U1/hw07 Project/RestaurantProject/nbproject/private/
+=======
+>>>>>>> 98ae19cf2e8b600b329ea8b62701d3104e7dc839
+>>>>>>> 159d974d553d0caa809c0db0e3870c28376e1651
+/exams/barrionuevo/unit1/ExamPractice/target/
+/exams/barrionuevo/unit1/ExamPractice1/target/
+=======
+>>>>>>> 693dce747d6e140c2d7a1eae24ffc01e8d88e949
+>>>>>>> 95a30cef560b71c33735a872d339bed6b6c61166
+>>>>>>> fbc4fd695b6cf35d1a8a985fe22b871b87e66280
+/exams/barrionuevo/unit1/Cellphone/nbproject/private/
+/hw/gutierrez/u2/hw09/HW09/target/
+=======
+*.vpp.bak_*
+>>>>>>> 9ef336c0dc3c88469ceeb50fd5005ffb19bfc130
+<<<<<<< HEAD
+/ws/barrionuevo/unit2/ws24Libraries/Taxes/nbproject/private/
+/ws/barrionuevo/unit2/ws24Libraries/Taxes/build/
+/ws/barrionuevo/unit2/ws24Libraries/TaxLibrary/nbproject/private/
+/ws/barrionuevo/unit2/ws24Libraries/Taxes/dist/
+/ws/barrionuevo/unit2/ws24Libraries/TaxLibrary/build/
+/ws/barrionuevo/unit2/ws24Libraries/TaxLibrary/dist/
+=======
+<<<<<<< HEAD
+/ws/verdugo/u2/ws24/Taxes/nbproject/private/
+/ws/verdugo/u2/ws24/TaxLibrary/nbproject/private/
+/ws/verdugo/u2/ws24/TaxLibrary/build/
+/ws/verdugo/u2/ws24/TaxLibrary/dist/
+/ws/verdugo/u2/ws24/Taxes/build/
+=======
+/ws/toapanta/U2/ws24Libreries/Taxes/nbproject/private/
+/ws/toapanta/U2/ws24Libreries/TaxtLibrary/nbproject/private/
+/ws/toapanta/U2/ws24Libreries/TaxtLibrary/dist/
+/ws/toapanta/U2/ws24Libreries/TaxtLibrary/build/
+/ws/toapanta/U2/ws24Libreries/Taxes/build/
+=======
+*.vpp.bak_*
+>>>>>>> d50a896b655779967e7db43ed865ce013f2ee781
+/ws/toapanta/U2/ws24Libreries/TaxLibrary/build/
+/ws/toapanta/U2/ws24Libreries/TaxLibrary/nbproject/private/
+=======
+*.vpp.bak*
+>>>>>>> e56352ed98289a5c972113cec8cc13a821e1027e
+>>>>>>> 06c641e2a7125a8e1c11bdbc400133fad91880f3
+<<<<<<< HEAD
+/hw/enriquez/unit2/hw11/TaxLibrary/build/
+/hw/enriquez/unit2/hw11/TaxLibrary/nbproject/private/
+/hw/enriquez/unit2/hw11/TaxLibrary/dist/
+=======
+>>>>>>> d6674b681d3c2900d75c09bba2b7ee7b1711bb98
+>>>>>>> 8be7197c8b56eddef96e8ae1705a8ad9a04cf6b0
+>>>>>>> 3be2701d7071e03942c5c32ece4ec0ad19f4187d
+>>>>>>> e757971272d7c192edced933555d3c87f6358a8d
