@@ -6,7 +6,7 @@ package ec.edu.espe.urecords.model;
 
 /**
  *
- * @author Carlos Torres, T09_PACSTORE, DCCO-ESPE
+ * @author Jefferson Ulco,ProgressTeam,DCCO-ESPE
  */
 public class NRC {
     

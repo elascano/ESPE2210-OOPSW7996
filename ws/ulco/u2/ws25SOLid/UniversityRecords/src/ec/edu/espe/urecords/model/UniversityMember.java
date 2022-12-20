@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Carlos Torres, T09_PACSTORE, DCCO-ESPE
+ * @author Jefferson Ulco,ProgressTeam,DCCO-ESPE
  */
 public abstract class UniversityMember {
 
