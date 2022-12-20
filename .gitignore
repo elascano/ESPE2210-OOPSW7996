@@ -24,7 +24,3 @@ hs_errpid*
 
 #vpp backup files
 *.vpp.bak_*
-
-/ws/suarez/U2/ws25SOLid/UniversityRecords/nbproject/private/
-/ws/suarez/U2/ws25SOLid/UniversityRecords/build/
-/ws/suarez/U2/ws25SOLid/UniversityRecords/dist/
