@@ -25,9 +25,5 @@ hs_errpid*
 #vpp backup files
 *.vpp.bak_*
 
-/ws/panchi/U2/ws25SOLid/UniversityRecords/nbproject/private/
-/ws/panchi/U2/ws25SOLid/UniversityRecords/build/
-/ws/panchi/U2/ws25SOLid/SOLid Principles 1/nbproject/private/
-/ws/panchi/U2/ws26Examination/SOLid Principles 1/nbproject/private/
-/ws/panchi/U2/ws26Examination/SOLid Principles 2/nbproject/private/
-/ws/panchi/U2/ws26Examination/SOLid Principle 3/nbproject/private/
+
+
