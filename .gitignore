@@ -24,5 +24,3 @@ hs_errpid*
 
 #vpp backup files
 *.vpp.bak_*
-/ws/jaguaco/U2/ws25Solid/SRP/nbproject/private/
-/ws/jaguaco/U2/ws25Solid/OCP/nbproject/private/
