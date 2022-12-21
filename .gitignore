@@ -24,3 +24,9 @@ hs_errpid
 
 #vpp backup files
 *.vpp.bak*
+/ws/villarroel/u2/New Folder/srp/nbproject/private/
+/ws/villarroel/u2/New Folder/ocs/nbproject/private/
+/ws/villarroel/u2/ws26/ocs/nbproject/private/
+/ws/villarroel/u2/ws26/srp/nbproject/private/
+/ws/villarroel/u2/ws26/lsp/nbproject/private/
+/ws/villarroel/u2/ws26/lsp/build/
