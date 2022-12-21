@@ -23,48 +23,10 @@
 hs_errpid*
 
 #vpp backup files
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 *.vpp.bak_*
 =======
 hs_errpid
 
 #vpp backup files
-<<<<<<< HEAD
 
-*.vpp.bak_*
-
-/ws/verdugo/u1/ws11FromUMLToCode/JavaApplication2/nbproject/private/
-=======
-*.vpp.bak_*
-<<<<<<< HEAD
->>>>>>> 05aa45c572085bc6fb78c020bcf1931d7bcc0a26
-<<<<<<< HEAD
-/hw/oña/U1/hw07 Project/RestaurantProject/nbproject/private/
-=======
->>>>>>> 98ae19cf2e8b600b329ea8b62701d3104e7dc839
->>>>>>> 159d974d553d0caa809c0db0e3870c28376e1651
-/exams/barrionuevo/unit1/ExamPractice/target/
-/exams/barrionuevo/unit1/ExamPractice1/target/
-=======
->>>>>>> 693dce747d6e140c2d7a1eae24ffc01e8d88e949
->>>>>>> 95a30cef560b71c33735a872d339bed6b6c61166
->>>>>>> fbc4fd695b6cf35d1a8a985fe22b871b87e66280
-/exams/barrionuevo/unit1/Cellphone/nbproject/private/
-/hw/gutierrez/u2/hw09/HW09/target/
-=======
-*.vpp.bak_*
->>>>>>> 9ef336c0dc3c88469ceeb50fd5005ffb19bfc130
-/ws/gutierrez/u2/ws24Libraries/Taxes/nbproject/private/
-/ws/gutierrez/u2/ws24Libraries/TaxLibrary/nbproject/private/
-/ws/gutierrez/u2/ws24Libraries/TaxLibrary/build/
-/ws/gutierrez/u2/ws24Libraries/TaxLibrary/dist/
-/ws/gutierrez/u2/ws24Libraries/Taxes/build/
-/ws/gutierrez/u2/ws24Libraries/SRP/nbproject/private/
-=======
-*.vpp.bak*
->>>>>>> c425f7192c9f66476c311ba1fccec646b60f71e2
-=======
-*.vpp.bak_*
->>>>>>> 07ad8c79b4d790f2a2b1efbb1a02d739bb9d8f13
