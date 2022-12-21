@@ -23,6 +23,7 @@
 hs_errpid*
 
 #vpp backup files
+<<<<<<< HEAD
 *.vpp.bak_*
 /hw/reinoso/U2/hw11/Taxes/nbproject/private/
 /hw/reinoso/U2/hw11/TaxLibrary/nbproject/private/
@@ -38,3 +39,6 @@ hs_errpid*
 /ws/enriquez/unit2/ws26/Exercises/SRP/dist/
 /ws/enriquez/unit2/ws26/Exercises/OCP/build/
 /ws/enriquez/unit2/ws26/Exercises/OCP/dist/
+=======
+.vpp.bak_
+>>>>>>> 75c81646311674ab2501f9d38421e895305c2506
