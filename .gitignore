@@ -24,6 +24,7 @@ hs_errpid*
 
 #vpp backup files
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.vpp.bak_*
 =======
 hs_errpid
@@ -60,3 +61,6 @@ hs_errpid
 /ws/gutierrez/u2/ws24Libraries/TaxLibrary/dist/
 /ws/gutierrez/u2/ws24Libraries/Taxes/build/
 /ws/gutierrez/u2/ws24Libraries/SRP/nbproject/private/
+=======
+*.vpp.bak*
+>>>>>>> c425f7192c9f66476c311ba1fccec646b60f71e2

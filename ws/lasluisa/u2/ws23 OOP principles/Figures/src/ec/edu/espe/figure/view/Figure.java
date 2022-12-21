@@ -17,18 +17,18 @@ public class Figure {
 
         System.out.println("=====\tCircle\t=====");
         circle = new Circle(16.6667F);
-        circle.calculateArea(circle.getRadio());
-        circle.calculatePerimeter(circle.getRadio());
+        circle.calculateArea();
+        circle.calculatePerimeter();
 
         System.out.println("=====\tRectangle\t=====");
         rectangle = new Rectangle(5, 3);
-        rectangle.calculateArea(rectangle.getBase(), rectangle.getHeight());
-        rectangle.calculatePerimeter(rectangle.getBase(), rectangle.getHeight());
+        rectangle.calculateArea();
+        rectangle.calculatePerimeter();
 
         System.out.println("=====\tTriangle\t=====");
         triangle = new Triangle(17, 12);
-        triangle.calculateArea(triangle.getBase(), triangle.getHeight());
-        triangle.calculatePerimeter(triangle.getBase(), triangle.getHeight());
+        triangle.calculateArea();
+        triangle.calculatePerimeter();
 
     }
 }

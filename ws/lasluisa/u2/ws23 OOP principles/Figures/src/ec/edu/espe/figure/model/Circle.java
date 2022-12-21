@@ -9,7 +9,7 @@ public class Circle extends Shape {
     private float radio;
 
     @Override
-    public float calculateArea(float radio) {
+    public float calculateArea() {
         float PI = (float) Math.PI;
         float area = PI * radio * radio;
         System.out.println("area = " + area);
@@ -17,21 +17,11 @@ public class Circle extends Shape {
     }
 
     @Override
-    public float calculatePerimeter(float radio) {
+    public float calculatePerimeter() {
         float PI = (float) Math.PI;
         float perimeter = 2 * PI * radio;
         System.out.println("perimeter = " + perimeter);
         return perimeter;
-    }
-
-    @Override
-    public float calculateArea(float sideA, float sideB) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public float calculatePerimeter(float sideA, float sideB) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public Circle(float radio) {
