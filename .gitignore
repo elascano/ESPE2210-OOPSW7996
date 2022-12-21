@@ -24,3 +24,8 @@ hs_errpid
 
 #vpp backup files
 *.vpp.bak*
+/ws/salazar/u2/ws24Libraries/Taxes/nbproject/private/
+/ws/salazar/u2/ws24Libraries/Taxes/build/
+/ws/salazar/u2/ws24Libraries/TaxLibrary/nbproject/private/
+/ws/salazar/u2/ws24Libraries/TaxLibrary/build/
+/ws/salazar/u2/ws24Libraries/TaxLibrary/dist/
