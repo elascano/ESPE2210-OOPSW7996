@@ -25,6 +25,7 @@ hs_errpid*
 #vpp backup files
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.vpp.bak_*
 =======
 hs_errpid
@@ -64,3 +65,6 @@ hs_errpid
 =======
 *.vpp.bak*
 >>>>>>> c425f7192c9f66476c311ba1fccec646b60f71e2
+=======
+*.vpp.bak_*
+>>>>>>> 07ad8c79b4d790f2a2b1efbb1a02d739bb9d8f13
