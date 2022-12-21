@@ -24,9 +24,12 @@ hs_errpid*
 
 #vpp backup files
 *.vpp.bak_*
+<<<<<<< HEAD
 /ws/suquillo/u2/ws24/SRP solution/nbproject/private/
 /ws/suquillo/u2/ws24/SRP/nbproject/private/
 /ws/suquillo/u2/ws24/OCP/nbproject/private/
 /ws/suquillo/u2/ws24/LSP/nbproject/private/
 /ws/suquillo/u2/ws24/LSP/build/
 /ws/suquillo/u2/ws24/OCP/build/
+=======
+>>>>>>> 3103eab872e3449146d7c22e0b04112993023b7d

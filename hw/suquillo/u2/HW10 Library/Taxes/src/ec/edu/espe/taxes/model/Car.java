@@ -20,30 +20,18 @@ public class Car {
         this.purchaseOn = purchaseOn;
     }
 
-    /**
-     * @return the cylindricalNumber
-     */
     public int getCylindricalNumber() {
         return cylindricalNumber;
     }
 
-    /**
-     * @param cylindricalNumber the cylindricalNumber to set
-     */
     public void setCylindricalNumber(int cylindricalNumber) {
         this.cylindricalNumber = cylindricalNumber;
     }
 
-    /**
-     * @return the purchaseOn
-     */
     public LocalDate getPurchaseOn() {
         return purchaseOn;
     }
 
-    /**
-     * @param purchaseOn the purchaseOn to set
-     */
     public void setPurchaseOn(LocalDate purchaseOn) {
         this.purchaseOn = purchaseOn;
     }

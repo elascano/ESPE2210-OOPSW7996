@@ -2,36 +2,36 @@ package ec.edu.espe.taxes.model;
 
 /**
  *
- * @author Martín Suquillo, WebMasterTeam, DCCO-ESPE
+* @author Martín Suquillo, WebMasterTeam, DCCO-ESPE
  */
 public class Product {
-    private int id;
+    private int ind;
     private String description;
     private float price;
     private float salePrice;
 
-    public Product(int i, float value, float computeIva) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
     @Override
     public String toString() {
-        return "Product{" + "id=" + id + ", description=" + description + ", price=" + price + ", salePrice=" + salePrice + '}';
+        return "Product{" + "ind=" + ind + ", description=" + description + ", price=" + price + ", salePrice=" + salePrice + '}';
     }
 
-    public Product(int id, String description, float price, float salePrice) {
-        this.id = id;
+    
+    
+    public Product(int ind, String description, float price, float salePrice) {
+        this.ind = ind;
         this.description = description;
         this.price = price;
         this.salePrice = salePrice;
     }
     
-    public int getId() {
-        return id;
+    
+
+    public int getInd() {
+        return ind;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setInd(int ind) {
+        this.ind = ind;
     }
 
     public String getDescription() {
