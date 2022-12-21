@@ -23,22 +23,4 @@
 hs_errpid*
 
 #vpp backup files
-<<<<<<< HEAD
 *.vpp.bak_*
-/hw/reinoso/U2/hw11/Taxes/nbproject/private/
-/hw/reinoso/U2/hw11/TaxLibrary/nbproject/private/
-/ws/reinoso/U2/ws25/UniversityRecordsV1.0.0/nbproject/private/
-/ws/reinoso/U2/ws25/UniversityRecords/nbproject/private/
-/ws/reinoso/U2/ws25/UniversityRecords/build/
-/ws/enriquez/unit2/ws26/Project SRP-OCP-LSK/nbproject/private/
-/ws/enriquez/unit2/ws26/Exercises/LSP/nbproject/private/
-/ws/enriquez/unit2/ws26/Exercises/OCP/nbproject/private/
-/ws/enriquez/unit2/ws26/Exercises/srp/nbproject/private/
-/ws/enriquez/unit2/ws26/Exercises/SRP/nbproject/private/
-/ws/enriquez/unit2/ws26/Exercises/SRP/build/
-/ws/enriquez/unit2/ws26/Exercises/SRP/dist/
-/ws/enriquez/unit2/ws26/Exercises/OCP/build/
-/ws/enriquez/unit2/ws26/Exercises/OCP/dist/
-=======
-.vpp.bak_
->>>>>>> 75c81646311674ab2501f9d38421e895305c2506
