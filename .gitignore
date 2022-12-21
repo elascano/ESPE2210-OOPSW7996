@@ -23,27 +23,3 @@
 hs_errpid*
 
 #vpp backup files
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-*.vpp.bak*
-/ws/salazar/u2/ws24Libraries/Taxes/nbproject/private/
-/ws/salazar/u2/ws24Libraries/Taxes/build/
-/ws/salazar/u2/ws24Libraries/TaxLibrary/nbproject/private/
-/ws/salazar/u2/ws24Libraries/TaxLibrary/build/
-/ws/salazar/u2/ws24Libraries/TaxLibrary/dist/
-=======
-*.vpp.bak_*
-<<<<<<< HEAD
-
-
-
->>>>>>> 9662027472f131efc696ab91bb4e6fa6bb1c75be
-=======
->>>>>>> 6595848cd88f0df1f0d174423d1e020af371a878
-=======
-*.vpp.bak*
->>>>>>> 7fef152afa77adafd255e3b3f0e46529a94669c1
-=======
-*.vpp.bak_*
->>>>>>> 358fb23a07955d9b689082282580082e212db93c
