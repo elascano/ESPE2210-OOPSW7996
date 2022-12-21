@@ -24,3 +24,9 @@ hs_errpid*
 
 #vpp backup files
 
+*.vpp.bak_*
+=======
+hs_errpid
+
+#vpp backup files
+
