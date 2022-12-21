@@ -24,3 +24,8 @@ hs_errpid*
 
 #vpp backup files
 *.vpp.bak_*
+/hw/reinoso/U2/hw11/Taxes/nbproject/private/
+/hw/reinoso/U2/hw11/TaxLibrary/nbproject/private/
+/ws/reinoso/U2/ws25/UniversityRecordsV1.0.0/nbproject/private/
+/ws/reinoso/U2/ws25/UniversityRecords/nbproject/private/
+/ws/reinoso/U2/ws25/UniversityRecords/build/
