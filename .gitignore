@@ -24,3 +24,5 @@ hs_errpid*
 
 #vpp backup files
 *.vpp.bak_*
+/ws/suarez/U2/ws27/mavenproject1/target/
+/ws/suarez/U2/ws27/ConsoleMongoDbMaven/target/
