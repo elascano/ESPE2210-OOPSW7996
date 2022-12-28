@@ -19,14 +19,11 @@ public class Ws27MongoDBMaven {
         try (MongoClient mongoClient = MongoClients.create(uri)) {
             MongoDatabase database = mongoClient.getDatabase("oop");
             try {
-                Bson command = new BsonDocument("ping", new BsonInt64(1));
-                Document commandResult = database.runCommand(command);
                 System.out.println("Connected successfully to server."); 
   
                 MongoCollection collection = database.getCollection("Customer"); 
   
                 Bson filter = Filters.and(Filters.gt("age", 18));
-                //System.out.println("---> " + collection.find(filter).first()); 
                 MongoCursor<Document> cursor = collection.find(filter).iterator();
                 System.out.println(" --> "+collection.find(filter).iterator());
                 
@@ -37,7 +34,7 @@ public class Ws27MongoDBMaven {
                 }finally{
                 cursor.close();
                 }
-                //to print some documents, I must use a loop: for, for each, while
+                
             } catch (MongoException me) {
                 System.err.println("An error occurred while attempting to connect: " + me);
             }
