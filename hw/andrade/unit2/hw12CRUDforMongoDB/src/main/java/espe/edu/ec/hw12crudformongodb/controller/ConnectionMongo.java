@@ -1,4 +1,4 @@
-package espe.edu.ec.hw12crudmongodb.controller;
+package espe.edu.ec.hw12crudformongodb.controller;
 
 import com.mongodb.MongoException;
 import com.mongodb.client.*;

@@ -1,5 +1,5 @@
 
-package espe.edu.ec.hw12crudmongodb.model;
+package espe.edu.ec.hw12crudformongodb.model;
 
 /**
  *

@@ -1,6 +1,6 @@
 package espe.edu.ec.hw12crudformongodb.view;
 
-import espe.edu.ec.hw12crudmongodb.controller.ConnectionMongo;
+import espe.edu.ec.hw12crudformongodb.controller.ConnectionMongo;
 import java.util.*;
 
 /**
