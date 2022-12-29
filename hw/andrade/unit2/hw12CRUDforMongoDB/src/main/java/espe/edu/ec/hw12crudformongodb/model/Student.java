@@ -1,6 +1,8 @@
 
 package espe.edu.ec.hw12crudformongodb.model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Alejandro Andrade, Scriptal, DCCO_ESPE
@@ -9,16 +11,27 @@ public class Student {
     private int id;
     private String name;
     private int age;
+    private ArrayList<Double> grades;
+
+    public Student() {
+        id = 0;
+        name = "";
+        age = 0;
+        grades = new ArrayList<>();
+    }
 
     @Override
     public String toString() {
-        return "Student{" + "id=" + id + ", name=" + name + ", age=" + age + '}';
+        return "Student{" + "id=" + id + ", name=" + name + ", age=" + age + ", grades=" + grades + '}';
     }
 
-    public Student(int id, String name, int age) {
+    
+
+    public Student(int id, String name, int age, ArrayList<Double> grades) {
         this.id = id;
         this.name = name;
         this.age = age;
+        this.grades = grades;
     }
 
     /**
@@ -61,5 +74,19 @@ public class Student {
      */
     public void setAge(int age) {
         this.age = age;
+    }
+
+    /**
+     * @return the grades
+     */
+    public ArrayList<Double> getGrades() {
+        return grades;
+    }
+
+    /**
+     * @param grades the grades to set
+     */
+    public void setGrades(ArrayList<Double> grades) {
+        this.grades = grades;
     }
 }
