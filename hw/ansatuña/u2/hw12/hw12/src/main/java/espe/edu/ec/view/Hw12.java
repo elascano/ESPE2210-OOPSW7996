@@ -11,7 +11,7 @@ public class Hw12 {
 
     public static void main(String[] args) {
         int choice = 0;
-        boolean option=false;
+        boolean option = false;
         Scanner sc = new Scanner(System.in);
         do {
             menu();
@@ -32,11 +32,15 @@ public class Hw12 {
                     ConnectionToMaven.deleteEvent();
                 }
                 case 5 -> {
+                    ConnectionToMaven.cancelEvent();
+                }
+                case 6 -> {
                     option = true;
                 }
             }
         } while (!option);
     }
+
     public static void menu() {
         System.out.println("===================");
         System.out.println("=====Welcome User=====");
@@ -45,7 +49,8 @@ public class Hw12 {
         System.out.println("2. Find an event >");
         System.out.println("3. Update the Data of an event by id >");
         System.out.println("4. Delete an event >");
-        System.out.println("5. Exit the program >");
+        System.out.println("5. Cancel an event >");
+        System.out.println("6. Exit the program >");
         System.out.println("==========>");
     }
 }

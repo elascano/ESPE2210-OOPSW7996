@@ -6,7 +6,7 @@ import com.mongodb.MongoException;
 import com.mongodb.client.*;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.Updates;
-import espe.edu.ec.model.Principal;
+import espe.edu.ec.model.CanceledEvent;
 import espe.edu.ec.model.Event;
 import org.bson.conversions.Bson;
 import java.util.Scanner;
@@ -88,12 +88,14 @@ public class ConnectionToMaven {
                 Bson filter = Filters.eq("id", id);
 
                 Event event = updateLocalEvent();
+
                 Bson eventUpdates = Updates.combine(
                         Updates.set("id", event.getId()),
                         Updates.set("name", event.getName()),
                         Updates.set("date", event.getDate()),
-                        Updates.set("discription", event.getDescription()));
-                        eventCollection.updateOne(filter, eventUpdates);
+                        Updates.set("description", event.getDescription()));
+
+                eventCollection.updateOne(filter, eventUpdates);
 
                 System.out.println("Data has been updated");
 
@@ -166,4 +168,60 @@ public class ConnectionToMaven {
                 .append("description", event.getDescription());
     }
 
+    private static void cancelLocalEvent(int id) {
+        String description;
+        String uri = "mongodb+srv://OOP01:OOP123@cluster0.pikbt03.mongodb.net/test";
+
+        try ( MongoClient mongoClient = MongoClients.create(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("hw12Crud");
+            try {
+                MongoCollection eventCollection = database.getCollection("Canceled Event");
+
+                Bson filter = Filters.eq("id", id);
+                System.out.println("Write the reason why the event is canceled:");
+                description = sc.next();  
+                Bson eventUpdates = Updates.combine(Updates.set("description",description));
+
+                eventCollection.updateOne(filter, eventUpdates);
+
+                System.out.println("Data has been updated");
+
+            } catch (MongoException me) {
+                System.out.println("An error occurred while attempting to connect: " + me);
+            }
+
+        }
+    }
+
+    public static void cancelEvent() {
+        int id;
+
+        String uri = "mongodb+srv://OOP01:OOP123@cluster0.pikbt03.mongodb.net/test";
+
+        try ( MongoClient mongoClient = MongoClients.create(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("hw12Crud");
+            try {
+                System.out.println("Connected to the data base.");
+
+                MongoCollection<Document> eventCollection = database.getCollection("Event");
+                MongoCollection<Document> canceledEventCollection = database.getCollection("Canceled Event");
+                System.out.print("\nEnter the id to find: ");
+                id = sc.nextInt();
+                Bson filter = Filters.eq("id", id);
+                try {
+                    Document doc = eventCollection.find(Filters.and(filter)).first();
+                    canceledEventCollection.insertOne(doc);
+                    cancelLocalEvent(id);
+                    System.out.println("Event saved in the Canceled Event db");
+
+                } catch (Exception e) {
+                    System.out.println("Data not found");
+                }
+
+            } catch (MongoException me) {
+                System.out.println("An error occurred while attempting to connect: " + me);
+            }
+
+        }
+    }
 }
