@@ -24,3 +24,4 @@ hs_errpid*
 
 #vpp backup files
 *.vpp.bak_*
+/ws/carrera/u2/ws26/ManagementSoftwareConsole/target/
