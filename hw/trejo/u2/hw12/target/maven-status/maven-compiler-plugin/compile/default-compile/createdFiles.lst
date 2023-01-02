@@ -1,0 +1,4 @@
+ec\edu\espe\hw12\model\Product.class
+ec\edu\espe\hw12\view\Hw12.class
+ec\edu\espe\hw12\controller\MongoDB.class
+ec\edu\espe\hw12\model\Sale.class
