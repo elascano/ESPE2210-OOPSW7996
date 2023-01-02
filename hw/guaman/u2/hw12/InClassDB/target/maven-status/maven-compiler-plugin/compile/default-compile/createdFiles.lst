@@ -1,0 +1,3 @@
+ec\edu\espe\inclass\model\Course.class
+ec\edu\espe\inclass\controller\DataBaseManager.class
+ec\edu\espe\inclass\view\InClassDB.class
