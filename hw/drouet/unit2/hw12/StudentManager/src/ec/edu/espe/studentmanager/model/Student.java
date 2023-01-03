@@ -9,6 +9,12 @@ public class Student {
     private String id;
     private String name;
     private float[] grades;
+    
+    public Student() {
+        id = "";
+        name = "";
+        grades = new float[3];
+    }
 
     public Student(String id, String name, float[] grades) {
         this.id = id;
