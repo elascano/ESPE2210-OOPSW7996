@@ -28,3 +28,7 @@ hs_errpid
 =======
 *.vpp.bak_*
 >>>>>>> 6a1e39743078f62faf15bbf34a156316dae0fce1
+/ws/verdugo/u2/ws26SolidPrinciplesTest/LSP/build/
+/ws/verdugo/u2/ws26SolidPrinciplesTest/OCP/dist/
+/ws/verdugo/u2/ws26SolidPrinciplesTest/OCP/build/
+/hw/verdugo/u2/hw12MongoDbJava/TaxiDriver/target/
