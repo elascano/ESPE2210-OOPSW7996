@@ -1,0 +1,3 @@
+espe\edu\ec\hw12crudmongodb\model\Student.class
+espe\edu\ec\hw12crudmongodb\controller\ConnectionMongo.class
+espe\edu\ec\hw12crudformongodb\view\Hw12CRUDforMongoDB.class
