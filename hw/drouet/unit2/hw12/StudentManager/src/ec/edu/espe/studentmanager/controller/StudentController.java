@@ -1,7 +1,13 @@
 package ec.edu.espe.studentmanager.controller;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonToken;
 import ec.edu.espe.studentmanager.model.Student;
+import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -49,13 +55,13 @@ public class StudentController {
         do {
             try {
                 System.out.print("Enter grade (0-20): ");
-                grade = scan.nextFloat();                
+                grade = scan.nextFloat();
                 if (grade < 0 || grade > 20) {
                     grade = -1;
-                    System.out.println("Error: Grade entered out of bounds (0-20)");                    
+                    System.out.println("Error: Grade entered out of bounds (0-20)");
                 }
             } catch (Exception e) {
-                System.out.println("Error: invalid");                
+                System.out.println("Error: invalid");
             }
             scan.nextLine();
         } while (grade == -1);
@@ -63,39 +69,21 @@ public class StudentController {
         return grade;
     }
 
-    public static ArrayList read(ArrayList<Object> studentsList) {
+    public static ArrayList read(ArrayList<String> studentsList) {
         ArrayList<Student> students;
-        Object[] studentList;
 
         students = new ArrayList<>();
-
-        for (int i = 0; i < studentsList.size(); i++) {
-            studentList = (Object[]) studentsList.get(i);
-            students.add(toStudent(studentList));
+        for (String json : studentsList) {
+            students.add(jsonToStudent(json));
         }
 
         return students;
     }
 
-    public static Student toStudent(Object[] studentList) {
-        Student student;
-        float[] grades;
-
-        if (studentList == null) {
-            return null;
-        }
-
-        grades = new float[3];
-
-        for (int j = 0; j < grades.length; j++) {
-            try {
-                grades[j] = ((Double) ((ArrayList) studentList[3]).get(j)).floatValue();
-            } catch (Exception e) {
-                grades[j] = ((Integer) ((ArrayList) studentList[3]).get(j));
-            }
-        }
-
-        student = new Student((String) studentList[1], (String) studentList[2], grades);
+    public static Student jsonToStudent(String json) {
+        Student student = new Student();
+        Gson gson = new Gson();
+        student = gson.fromJson(json, student.getClass());                               
 
         return student;
     }
