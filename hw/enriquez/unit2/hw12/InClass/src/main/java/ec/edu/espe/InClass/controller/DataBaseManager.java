@@ -185,10 +185,10 @@ public class DataBaseManager {
 
     public static void deleteTeacher(MongoCollection collection) {
         Scanner sc = new Scanner(System.in);
-        int teacherToDelete = 0;
+        String teacherToDelete = "";
         try {
-            System.out.print("type teacher's id to delete: ");
-            teacherToDelete = sc.nextInt();
+            System.out.print("type teacher's name to delete: ");
+            teacherToDelete = sc.nextLine();
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -196,13 +196,13 @@ public class DataBaseManager {
         Bson projectionFields = Projections.fields(
                 Projections.include("name", "id", "tutorship"),
                 Projections.excludeId());
-        Document doc = (Document) collection.find(eq("id", teacherToDelete))
+        Document doc = (Document) collection.find(eq("name", teacherToDelete))
                 .projection(projectionFields)
                 .first();
         if (doc == null) {
             System.out.println("No results found.");
         } else {
-            Bson teacherDelete = eq("id", teacherToDelete);
+            Bson teacherDelete = eq("name", teacherToDelete);
             try {
                 DeleteResult result = collection.deleteOne(teacherDelete);
                 System.out.println("Deleted document count: " + result.getDeletedCount());
