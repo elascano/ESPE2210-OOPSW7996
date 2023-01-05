@@ -39,6 +39,7 @@ public class assignments extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        grRbtnAssignmentType = new javax.swing.ButtonGroup();
         pnlForm = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -101,6 +102,7 @@ public class assignments extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane2.setViewportView(jTextArea1);
 
+        grRbtnAssignmentType.add(rbtnObligatory);
         rbtnObligatory.setText("Obligatory");
         rbtnObligatory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,6 +110,7 @@ public class assignments extends javax.swing.JFrame {
             }
         });
 
+        grRbtnAssignmentType.add(rbtnOptional);
         rbtnOptional.setText("Optional");
 
         pnlSearch.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -377,6 +380,7 @@ public class assignments extends javax.swing.JFrame {
     private javax.swing.JButton btnOpen;
     private com.toedter.calendar.JDateChooser dtDeadline;
     private com.toedter.calendar.JDateChooser dtShipping;
+    private javax.swing.ButtonGroup grRbtnAssignmentType;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
