@@ -17,21 +17,10 @@
 *.ear
 *.zip
 *.tar.gz
-.rar
+*.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid
+hs_err_pid*
 
 #vpp backup files
-
 *.vpp.bak_*
-<<<<<<< HEAD
->>>>>>> 6a1e39743078f62faf15bbf34a156316dae0fce1
-/ws/verdugo/u2/ws26SolidPrinciplesTest/LSP/build/
-/ws/verdugo/u2/ws26SolidPrinciplesTest/OCP/dist/
-/ws/verdugo/u2/ws26SolidPrinciplesTest/OCP/build/
-/hw/verdugo/u2/hw12MongoDbJava/TaxiDriver/target/
-=======
-
-
->>>>>>> a322cc07001c716ba7f47c81152172575b8bab87
