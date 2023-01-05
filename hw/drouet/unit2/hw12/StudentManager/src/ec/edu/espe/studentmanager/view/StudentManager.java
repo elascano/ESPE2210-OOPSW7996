@@ -61,7 +61,8 @@ public class StudentManager {
                     System.out.println("Update Student");
                     System.out.print("Enter the student ID: (L########): ");
                     id = scan.nextLine();
-                    student = StudentController.toStudent(dbManager.findDocument("Student", id));
+
+                    student = StudentController.jsonToStudent(dbManager.findDocument("Student", id));
 
                     if (student != null) {
                         showUpdateMenu(student, dbManager);
@@ -74,8 +75,7 @@ public class StudentManager {
                     System.out.print("Enter the student ID: (L########): ");
                     id = scan.nextLine();
 
-                    student = StudentController.toStudent(dbManager.findDocument("Student", id));
-
+                    student = StudentController.jsonToStudent(dbManager.findDocument("Student", id));
                     if (student != null) {
                         System.out.println("ID\t\tNAME\t\tGRADES");
                         System.out.println(student);

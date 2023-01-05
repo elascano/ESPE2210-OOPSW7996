@@ -8,7 +8,6 @@ import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.Updates;
 import espe.edu.ec.hw12crudformongodb.model.Average;
 import espe.edu.ec.hw12crudformongodb.model.Student;
-import java.util.ArrayList;
 import org.bson.conversions.Bson;
 import java.util.Scanner;
 import org.bson.Document;
@@ -188,14 +187,16 @@ public class ConnectionMongo {
             {
                 System.out.println("Connected successfully to server(Project).");
 
-                MongoCollection collection = database.getCollection("students");
+                MongoCollection studentCollection = database.getCollection("students");
+                MongoCollection averageCollection = database.getCollection("averages");
 
                 System.out.print("\nEnter the id to delete: ");
                 id = sc.nextInt();
 
                 Bson filter = Filters.eq("id", id);
 
-                collection.deleteOne(filter);
+                studentCollection.deleteOne(filter);
+                averageCollection.deleteOne(filter);
 
                 System.out.println("Data has been deleted");
 

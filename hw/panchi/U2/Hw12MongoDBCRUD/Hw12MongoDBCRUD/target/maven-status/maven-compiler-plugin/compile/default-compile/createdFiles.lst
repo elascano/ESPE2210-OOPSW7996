@@ -1,0 +1,5 @@
+ec\edu\espe\MongoDBCRUD\controller\CRUDMongoDB.class
+ec\edu\espe\MongoDBCRUD\view\MongoDBCRUD.class
+ec\edu\espe\MongoDBCRUD\model\GoalAverage.class
+ec\edu\espe\MongoDBCRUD\controller\CRUDMongoDB$1.class
+ec\edu\espe\MongoDBCRUD\model\SoccerPlayer.class
