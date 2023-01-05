@@ -6,6 +6,7 @@ import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
+import java.util.ArrayList;
 import org.bson.BsonDocument;
 import org.bson.BsonInt64;
 import org.bson.Document;
@@ -25,7 +26,6 @@ public class ConsoleMongoDbMaven {
                 Document commandResult = database.runCommand(command);
                 System.out.println("Connected successfully to server.");
                 MongoCollection collection = database.getCollection("Customer");
-
                 Bson filter = Filters.and(Filters.gt("age", 24));
                 System.out.println("---> " + collection.find(filter).first());
 
@@ -33,6 +33,6 @@ public class ConsoleMongoDbMaven {
             } catch (MongoException me) {
                 System.err.println("An error occurred while attempting to connect: " + me);
             }
-        }
+        }  
     }
 }
