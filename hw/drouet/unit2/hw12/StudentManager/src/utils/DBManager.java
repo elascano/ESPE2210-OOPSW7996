@@ -1,6 +1,9 @@
 package utils;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.mongodb.MongoException;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
@@ -56,7 +59,7 @@ public class DBManager {
 
     public ArrayList readCollection(String collectionName) {
         MongoCollection collection;
-        ArrayList<Object> listObjects;
+        ArrayList<String> listObjects;
         listObjects = new ArrayList<>();
 
         try {
@@ -66,7 +69,7 @@ public class DBManager {
 
             try {
                 while (cursor.hasNext()) {                    
-                    listObjects.add(cursor.next().values().toArray());                    
+                    listObjects.add(cursor.next().toJson());
                 }
             } finally {
                 cursor.close();
@@ -115,21 +118,36 @@ public class DBManager {
             
     }
     
-    public Object[] findDocument(String collectionName, String id) {
+    public String findDocument(String collectionName, String id) {
         MongoCollection collection;
         Document document;
-        Object[] object = null;
-        
+        String json = "";
+
         try {
-            collection = getDatabase().getCollection(collectionName);            
+            collection = getDatabase().getCollection(collectionName);
             document = (Document) collection.find(new Document("id", id)).first();
-            object = document.values().toArray();
-            
+           
+            json = document.toJson();
+
         } catch (Exception e) {
             System.out.println("Error: Collection or ID no found");
         }
+
+        return json;
+    }
+    
+    public static String deleteKeyFromJson(String json, String key) {
+        String newJson;
         
-        return object;
+        JsonParser parser = new JsonParser();
+        JsonElement jsonElement = parser.parse(json);
+        JsonObject rootObject = jsonElement.getAsJsonObject();
+        
+        rootObject.remove(key);
+        
+        newJson = rootObject.toString();
+        
+        return  newJson;
     }
     
     public static String toJson(Object object) {

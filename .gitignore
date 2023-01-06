@@ -17,13 +17,9 @@
 *.ear
 *.zip
 *.tar.gz
-.rar
+*.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid
+hs_err_pid*
 
 #vpp backup files
-*.vpp.bak_*
-
-/ws/suquillo/u2/ws28 Forms/TreasuryUrb/nbproject/private/
-/ws/suquillo/u2/ws28 Forms/TreasuryUrb/build/
