@@ -1,0 +1,11 @@
+ec\edu\espe\shopinventory_v2\model\Candy.class
+ec\edu\espe\shopinventory_v2\model\Dairy.class
+ec\edu\espe\shopinventory_v2\model\Beverage.class
+ec\edu\espe\shopinventory_v2\model\Product.class
+ec\edu\espe\shopinventory_v2\model\Grain.class
+ec\edu\espe\shopinventory_v2\model\Meat.class
+ec\edu\espe\shopinventory_v2\model\ProductWithVAT.class
+ec\edu\espe\shopinventory_v2\model\Vegetables.class
+ec\edu\espe\shopinventory_v2\view\ShopInventory_V2.class
+ec\edu\espe\shopinventory_v2\model\Grooming.class
+ec\edu\espe\shopinventory_v2\model\Snack.class
