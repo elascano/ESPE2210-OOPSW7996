@@ -17,18 +17,18 @@
 *.ear
 *.zip
 *.tar.gz
-.rar
+*.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid
+hs_err_pid*
 
 #vpp backup files
 <<<<<<< HEAD
-*.vpp.bak_*
-/hw/enriquez/unit2/hw12/InClass/target/
+/ws/suquillo/u2/ws28 Forms/TreasuryUrbT8/nbproject/private/
+/ws/suquillo/u2/ws28 Forms/TreasuryUrbT8/build/
 =======
-
 *.vpp.bak_*
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 6a1e39743078f62faf15bbf34a156316dae0fce1
 /ws/verdugo/u2/ws26SolidPrinciplesTest/LSP/build/
@@ -44,3 +44,6 @@ hs_err_pid
 /ws/reinoso/U2/ws28/ShopInventory/build/
 /hw/reinoso/U2/hw14/ShopInventoryHw14/nbproject/private/
 /hw/reinoso/U2/hw14/ShopInventoryHw14/build/
+=======
+>>>>>>> fd026ca0886ade915f4bdc13538f9ab6fdfd20b9
+>>>>>>> 20e3dfa86578bccbeeb859e8dc22c341055777fd
