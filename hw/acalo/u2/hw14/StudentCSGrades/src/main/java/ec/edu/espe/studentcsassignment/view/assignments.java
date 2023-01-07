@@ -7,6 +7,8 @@ package ec.edu.espe.studentcsassignment.view;
 //import com.raven.datechooser.DateChooser;
 
 import com.formdev.flatlaf.FlatLightLaf;
+//import com.formdev.flatlaf.intellijthemes.*;
+import com.formdev.flatlaf.intellijthemes.materialthemeuilite.*;
 import javax.swing.UIManager;
 
 /**
@@ -59,24 +61,23 @@ public class assignments extends javax.swing.JFrame {
         btnClean = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Assignments");
         setBackground(new java.awt.Color(255, 255, 255));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setName("Assignments"); // NOI18N
 
-        pnlForm.setBackground(new java.awt.Color(255, 255, 255));
         pnlForm.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Cascadia Code", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(102, 102, 102));
         jLabel1.setText("Assignments");
 
         jLabel2.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
         jLabel2.setText("Object Oriented Programming");
 
-        pnlSearch.setBackground(new java.awt.Color(255, 255, 255));
-        pnlSearch.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
+        pnlSearch.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(jLabel3.getFont().deriveFont(jLabel3.getFont().getSize()+2f));
+        jLabel3.setFont(jLabel3.getFont().deriveFont(jLabel3.getFont().getStyle() | java.awt.Font.BOLD, jLabel3.getFont().getSize()+2));
         jLabel3.setForeground(jLabel1.getForeground());
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Name");
@@ -93,8 +94,6 @@ public class assignments extends javax.swing.JFrame {
         jLabel5.setText("Deadline");
         jLabel5.setBorder(jLabel3.getBorder());
 
-        txtName.setBackground(new java.awt.Color(247, 247, 247));
-        txtName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         txtName.setName(""); // NOI18N
         txtName.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -102,12 +101,14 @@ public class assignments extends javax.swing.JFrame {
             }
         });
 
-        dtShipping.setBackground(new java.awt.Color(255, 255, 255));
+        dtShipping.setDateFormatString("dd/MM/yyyy");
+        dtShipping.setOpaque(false);
 
-        dtDeadline.setBackground(new java.awt.Color(255, 255, 255));
         dtDeadline.setFocusable(false);
+        dtDeadline.setOpaque(false);
 
         btnFind.setFont(btnFind.getFont().deriveFont(btnFind.getFont().getStyle() & ~java.awt.Font.BOLD, btnFind.getFont().getSize()+2));
+        btnFind.setForeground(new java.awt.Color(51, 51, 51));
         btnFind.setText("Find");
         btnFind.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,6 +117,7 @@ public class assignments extends javax.swing.JFrame {
         });
 
         btnNewAssignment.setFont(btnFind.getFont());
+        btnNewAssignment.setForeground(btnFind.getForeground());
         btnNewAssignment.setText("New Assignment");
 
         jLabel6.setFont(jLabel3.getFont());
@@ -182,8 +184,8 @@ public class assignments extends javax.swing.JFrame {
                         .addGroup(pnlSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jScrollPane2)
                             .addComponent(dtDeadline, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(dtShipping, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtName, javax.swing.GroupLayout.DEFAULT_SIZE, 295, Short.MAX_VALUE))))
+                            .addComponent(txtName, javax.swing.GroupLayout.DEFAULT_SIZE, 295, Short.MAX_VALUE)
+                            .addComponent(dtShipping, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(14, 14, 14))
         );
         pnlSearchLayout.setVerticalGroup(
@@ -252,7 +254,7 @@ public class assignments extends javax.swing.JFrame {
         jLabel7.setText("Name");
 
         btnOpen.setBackground(new java.awt.Color(0, 255, 102));
-        btnOpen.setFont(btnFind.getFont());
+        btnOpen.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnOpen.setForeground(new java.awt.Color(255, 255, 255));
         btnOpen.setText("Open");
         btnOpen.addActionListener(new java.awt.event.ActionListener() {
@@ -270,7 +272,7 @@ public class assignments extends javax.swing.JFrame {
         });
 
         btnDelete.setBackground(new java.awt.Color(255, 0, 51));
-        btnDelete.setFont(btnFind.getFont());
+        btnDelete.setFont(btnOpen.getFont());
         btnDelete.setForeground(new java.awt.Color(255, 204, 204));
         btnDelete.setText("Delete");
 
@@ -304,7 +306,7 @@ public class assignments extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtAction, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtAction, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(pnlActionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnOpen)
@@ -312,7 +314,9 @@ public class assignments extends javax.swing.JFrame {
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
-        btnClean.setFont(btnNewAssignment.getFont());
+        btnClean.setBackground(new java.awt.Color(204, 255, 255));
+        btnClean.setFont(btnFind.getFont());
+        btnClean.setForeground(btnFind.getForeground());
         btnClean.setText("Clean");
 
         javax.swing.GroupLayout pnlFormLayout = new javax.swing.GroupLayout(pnlForm);
@@ -356,8 +360,8 @@ public class assignments extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnClean)))
                 .addGap(18, 18, 18)
-                .addComponent(tblAssignments, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addComponent(tblAssignments, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -401,7 +405,12 @@ public class assignments extends javax.swing.JFrame {
     public static void main(String args[]) {
 
         try {
-            UIManager.setLookAndFeel(new FlatLightLaf());
+            //UIManager.setLookAndFeel(new FlatLightLaf());
+            //FlatLightFlatIJTheme.setup();
+            //FlatMaterialDesignDarkIJTheme.setup();
+            FlatMaterialLighterIJTheme.setup();
+            //FlatMaterialLighterContrastIJTheme.setup();
+            //FlatGitHubContrastIJTheme.setup();
         } catch (Exception ex) {
             System.err.println("Failed to initialize LaF");
         }
