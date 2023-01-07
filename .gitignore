@@ -23,5 +23,9 @@
 hs_err_pid*
 
 #vpp backup files
+<<<<<<< HEAD
 /ws/suquillo/u2/ws28 Forms/TreasuryUrbT8/nbproject/private/
 /ws/suquillo/u2/ws28 Forms/TreasuryUrbT8/build/
+=======
+*.vpp.bak_*
+>>>>>>> fd026ca0886ade915f4bdc13538f9ab6fdfd20b9
