@@ -1,7 +1,12 @@
 [
   {
     "id": 1,
-    "name": "alemania",
+    "name": "Ecuador",
+    "cities": 24
+  },
+  {
+    "id": 2,
+    "name": "Francia",
     "cities": 90
   }
 ]
