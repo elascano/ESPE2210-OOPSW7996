@@ -24,3 +24,7 @@ hs_errpid*
 
 #vpp backup files
 *.vpp.bak_*
+/ws/toapanta/U2/ws28Froms/EcomarketManagement/nbproject/private/
+/ws/toapanta/U2/ws28Froms/EcomarketManagement/build/
+/hw/toapanta/U2/HW14/EcoMManagement/nbproject/private/
+/hw/toapanta/U2/HW14/EcoMManagement/build/
