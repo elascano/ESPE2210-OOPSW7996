@@ -1,0 +1,4 @@
+ec\edu\espe\model\Product.class
+ec\edu\espe\view\ConsoleMongoDbMaven.class
+ec\edu\espe\controller\DataBaseManager.class
+ec\edu\espe\model\Offer.class
