@@ -17,17 +17,10 @@
 *.ear
 *.zip
 *.tar.gz
-.rar
+*.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid
+hs_err_pid*
 
 #vpp backup files
-
 *.vpp.bak_*
-
-
-/hw/quiroga/unit2/hw12_MongoCRUD/MongoCRUD/target/
-/hw/quiroga/unit2/hw12_MongoCRUD/Mongo_CRUD/target/
-/ws/quiroga/unit2/ws28Forms/target/
-/hw/quiroga/unit2/HW14/target/
