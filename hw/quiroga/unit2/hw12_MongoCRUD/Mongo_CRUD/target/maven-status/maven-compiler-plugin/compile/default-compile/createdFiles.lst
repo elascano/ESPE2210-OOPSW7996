@@ -1,0 +1,3 @@
+espe\edu\ec\mongo_crud\controller\Controller.class
+espe\edu\ec\mongo_crud\model\Snack.class
+espe\edu\ec\mongo_crud\view\Mongo_CRUD.class
