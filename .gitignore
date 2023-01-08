@@ -27,3 +27,7 @@ hs_err_pid
 *.vpp.bak_*
 
 
+/hw/quiroga/unit2/hw12_MongoCRUD/MongoCRUD/target/
+/hw/quiroga/unit2/hw12_MongoCRUD/Mongo_CRUD/target/
+/ws/quiroga/unit2/ws28Forms/target/
+/hw/quiroga/unit2/HW14/target/
