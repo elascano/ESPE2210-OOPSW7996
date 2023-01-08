@@ -17,14 +17,14 @@
 *.ear
 *.zip
 *.tar.gz
-.rar
+*.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid
+hs_err_pid*
 
 #vpp backup files
-<<<<<<< HEAD
 *.vpp.bak_*
+<<<<<<< HEAD
 /hw/enriquez/unit2/hw12/InClass/target/
 =======
 
@@ -43,3 +43,5 @@ hs_err_pid
 /ws/verdugo/u2/ws28Forms/TaxiScheduling/nbproject/private/
 /ws/verdugo/u2/ws28Forms/TaxiScheduling/build/
 /hw/verdugo/u2/hw14GUIDesingProyect/TaxiScheduling/nbproject/private/
+=======
+>>>>>>> 11ed40d3eee3b906608a32ccc1a027319397febd
