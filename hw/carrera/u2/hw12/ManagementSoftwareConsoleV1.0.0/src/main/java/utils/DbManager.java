@@ -28,6 +28,15 @@ public class DbManager {
         System.out.println("-> Connected successfully to server.");
         return mongoCollection;   
     }
+    public static void insert(MongoCollection productsCollection,ArrayList names, ArrayList attributes){
+        Document document = new Document("_id", new ObjectId());
+        for (int i = 0; i< names.size(); i++){
+            document.append((String) names.get(i),attributes.get(i));
+        }
+        productsCollection.insertOne(document);
+        System.out.println("Product inserted successfully");
+    }
+    
     public static void insert(MongoCollection productsCollection, Product product){
         int id = product.getId();
         String name = product.getName();
@@ -49,6 +58,7 @@ public class DbManager {
         productsCollection.insertOne(document);
         System.out.println("Product inserted successfully"); 
     }
+    
     public static void insert(int id, float totalCost){
         MongoCollection costsCollection = DbManager.createConnection("TotalCosts");
         Document document = new Document("_id", new ObjectId());       
@@ -103,7 +113,7 @@ public class DbManager {
         MongoCursor<Document> cursor = collection.find(filter).projection(projectionDocument).iterator();
         if(cursor.hasNext()){
             while(cursor.hasNext()){
-                foundAttribute = cursor.next().toJson().replaceAll("[{}: "+attribute+"\"\""+"]", ""); 
+                foundAttribute = cursor.next().toJson().replaceAll("[{}: "+"\"\""+"]", "").replaceFirst(attribute, ""); 
             }
         }else{
             System.out.println(attribute + "-> not found");
