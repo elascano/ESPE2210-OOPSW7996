@@ -24,3 +24,7 @@ hs_err_pid*
 
 #vpp backup files
 *.vpp.bak_*
+/hw/tipan/u2/hw14/HEMSystem/dist/
+/ws/tipan/u2/ws30Menus/JavaApplication13/nbproject/private/
+/ws/tipan/u2/ws30Menus/HEMSystem/nbproject/private/
+/ws/tipan/u2/ws30Menus/HEMSystem/build/
