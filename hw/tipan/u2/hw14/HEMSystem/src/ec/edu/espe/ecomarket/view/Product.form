@@ -49,7 +49,7 @@
     <Container class="javax.swing.JPanel" name="pnlInput">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="cc" type="rgb"/>
+          <Color blue="f3" green="f3" red="f5" type="rgb"/>
         </Property>
       </Properties>
 
@@ -166,6 +166,9 @@
           <Properties>
             <Property name="toolTipText" type="java.lang.String" value=" Brand - Product"/>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtNameKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
@@ -254,7 +257,7 @@
     <Container class="javax.swing.JPanel" name="pnlButtons">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="cc" type="rgb"/>
+          <Color blue="f4" green="f4" red="f4" type="rgb"/>
         </Property>
       </Properties>
 
