@@ -24,7 +24,31 @@ hs_err_pid*
 
 #vpp backup files
 *.vpp.bak_*
+<<<<<<< HEAD
+/hw/enriquez/unit2/hw12/InClass/target/
+=======
+
+*.vpp.bak_*
+<<<<<<< HEAD
+>>>>>>> 6a1e39743078f62faf15bbf34a156316dae0fce1
+/ws/verdugo/u2/ws26SolidPrinciplesTest/LSP/build/
+/ws/verdugo/u2/ws26SolidPrinciplesTest/OCP/dist/
+/ws/verdugo/u2/ws26SolidPrinciplesTest/OCP/build/
+/hw/verdugo/u2/hw12MongoDbJava/TaxiDriver/target/
+=======
 
 
+<<<<<<< HEAD
 
 /ws/ansatuña/u2/New Folder/StudentMenus/target/
+=======
+>>>>>>> a322cc07001c716ba7f47c81152172575b8bab87
+>>>>>>> e280fd4e49c8aa8129f46560c7fc30d6fd5eba8c
+/ws/verdugo/u2/ws28Forms/TaxiScheduling/nbproject/private/
+/ws/verdugo/u2/ws28Forms/TaxiScheduling/build/
+/hw/verdugo/u2/hw14GUIDesingProyect/TaxiScheduling/nbproject/private/
+=======
+>>>>>>> 11ed40d3eee3b906608a32ccc1a027319397febd
+/hw/verdugo/u2/hw14GUIDesingProyect/TaxiScheduling/build/
+/hw/verdugo/u2/hw14GUIDesingProyect/TaxiScheduling/dist/
+>>>>>>> 4885d0f0e955b52425264985b2a3a906f4f324db
