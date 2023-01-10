@@ -1,4 +1,7 @@
 package ec.edu.espe.model;
+
+import java.util.ArrayList;
+
 /**
  *
  * @author Nahir Carrera, Gaman GeekLords, DCC0-ESPE
@@ -83,5 +86,20 @@ public class Material {
     public void setCost(float cost) {
         this.cost = cost;
     }
-    
+    public static ArrayList getAttributesNames(){
+        ArrayList names = new ArrayList();
+        names.add("id");
+        names.add("name");
+        names.add("generalQuantity");
+        names.add("cost");
+        return names;   
+    }
+    public static ArrayList getAttributes(Material material){
+        ArrayList attributes = new ArrayList();
+        attributes.add(material.getId());
+        attributes.add(material.getName());
+        attributes.add(material.getGeneralQuantity());
+        attributes.add(material.getCost());
+        return attributes;
+    }
 }
