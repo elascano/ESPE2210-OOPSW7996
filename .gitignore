@@ -24,3 +24,5 @@ hs_err_pid*
 
 #vpp backup files
 *.vpp.bak_*
+/ws/drouet/unit2/ws31/GradeStudent/nbproject/private/
+/ws/drouet/unit2/ws31/GradeStudent/build/
