@@ -133,6 +133,28 @@ public class Product {
         this.id = id;
     }
     
-
+    public static ArrayList getAttributesNames(){
+        ArrayList names = new ArrayList();
+        names.add("id");
+        names.add("name");
+        names.add("cost");
+        names.add("description");
+        names.add("materials");
+        names.add("workingTime");
+        names.add("quantity");
+        return names;   
+    }
+    public static ArrayList getAttributes(Product product){
+        ArrayList attributes = new ArrayList();
+        attributes.add(product.getId());
+        attributes.add(product.getName());
+        attributes.add(product.getCost());
+        attributes.add(product.getDescription());
+        attributes.add(product.getMaterials());
+        attributes.add(product.getWorkingTime());
+        attributes.add(product.getQuantity());
+        return attributes;
+    }
+           
 }
 

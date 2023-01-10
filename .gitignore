@@ -17,17 +17,14 @@
 *.ear
 *.zip
 *.tar.gz
-*.rar
+.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+hs_err_pid
 
 #vpp backup files
-<<<<<<< HEAD
-/ws/suquillo/u2/ws28 Forms/TreasuryUrbT8/nbproject/private/
-/ws/suquillo/u2/ws28 Forms/TreasuryUrbT8/build/
-=======
 *.vpp.bak_*
+<<<<<<< HEAD
 <<<<<<< HEAD
 /ws/toapanta/U2/ws28Froms/EcomarketManagement/nbproject/private/
 /ws/toapanta/U2/ws28Froms/EcomarketManagement/build/
@@ -57,3 +54,5 @@ hs_err_pid*
 /hw/toapanta/U2/HW12/Hw12/target/
 /ws/toapanta/U2/ws30/StudentsRegistration/nbproject/private/
 /ws/toapanta/U2/ws30/StudentsRegistration/build/
+=======
+>>>>>>> 793fed8646252546078c8c83fdb4bd1aa5cdaff3

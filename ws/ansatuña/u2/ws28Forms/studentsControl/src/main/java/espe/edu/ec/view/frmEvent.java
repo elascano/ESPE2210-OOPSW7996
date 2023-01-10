@@ -1,14 +1,28 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package espe.edu.ec.view;
+
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import espe.edu.ec.controller.ConnectionToMaven;
+import static espe.edu.ec.controller.ConnectionToMaven.insertDataEvent;
+import espe.edu.ec.model.Event;
+import java.awt.event.KeyEvent;
+import java.util.Locale;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+import org.bson.Document;
+import org.bson.types.ObjectId;
 
 /**
  *
  * @author NW USER
  */
 public class frmEvent extends javax.swing.JFrame {
+
+    private static final Scanner sc = new Scanner(System.in);
 
     /**
      * Creates new form frmEvent
@@ -46,6 +60,8 @@ public class frmEvent extends javax.swing.JFrame {
         rdFormal = new javax.swing.JRadioButton();
         jLabel9 = new javax.swing.JLabel();
         rdInformal = new javax.swing.JRadioButton();
+        jLabel10 = new javax.swing.JLabel();
+        txtID = new javax.swing.JTextField();
         pnlButtons = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tableEvents = new javax.swing.JTable();
@@ -64,15 +80,40 @@ public class frmEvent extends javax.swing.JFrame {
         jLabel2.setText("Name of the event:");
 
         txtEvent.setToolTipText("Insert the name of the Event");
+        txtEvent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEventActionPerformed(evt);
+            }
+        });
+        txtEvent.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtEventKeyTyped(evt);
+            }
+        });
 
         jLabel3.setText("Date Of the Event:");
 
-        cmbDay.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30" }));
+        cmbDay.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30" }));
         cmbDay.setToolTipText("Day");
+        cmbDay.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbDayActionPerformed(evt);
+            }
+        });
 
-        cmbMonth.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
+        cmbMonth.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
+        cmbMonth.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbMonthActionPerformed(evt);
+            }
+        });
 
-        cmbYear.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030" }));
+        cmbYear.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "----", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030" }));
+        cmbYear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbYearActionPerformed(evt);
+            }
+        });
 
         jLabel5.setText("Day:");
 
@@ -90,6 +131,11 @@ public class frmEvent extends javax.swing.JFrame {
         jLabel8.setText("Who is going to attend?:");
 
         cbCourse01.setText("Course 01");
+        cbCourse01.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cbCourse01MouseClicked(evt);
+            }
+        });
 
         cbCourse02.setText("Course 02");
 
@@ -108,6 +154,19 @@ public class frmEvent extends javax.swing.JFrame {
 
         rdInformal.setText("Informal");
 
+        jLabel10.setText("ID of event:");
+
+        txtID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIDActionPerformed(evt);
+            }
+        });
+        txtID.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtIDKeyTyped(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnlInputLayout = new javax.swing.GroupLayout(pnlInput);
         pnlInput.setLayout(pnlInputLayout);
         pnlInputLayout.setHorizontalGroup(
@@ -123,9 +182,7 @@ public class frmEvent extends javax.swing.JFrame {
                     .addGroup(pnlInputLayout.createSequentialGroup()
                         .addGap(72, 72, 72)
                         .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtEvent, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(pnlInputLayout.createSequentialGroup()
                                 .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(cmbDay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -137,7 +194,15 @@ public class frmEvent extends javax.swing.JFrame {
                                 .addGap(23, 23, 23)
                                 .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(cmbYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(pnlInputLayout.createSequentialGroup()
+                                .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtEvent, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(107, 107, 107)
+                                .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
+                                    .addComponent(txtID)))))
                     .addGroup(pnlInputLayout.createSequentialGroup()
                         .addGap(71, 71, 71)
                         .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,8 +216,8 @@ public class frmEvent extends javax.swing.JFrame {
                                 .addGap(109, 109, 109)
                                 .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(rdFormal, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel9)
-                                    .addComponent(rdInformal, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(rdInformal, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel9))))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlInputLayout.setVerticalGroup(
@@ -163,9 +228,13 @@ public class frmEvent extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(btnBack))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
+                .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel10))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtEvent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtEvent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addGap(18, 18, Short.MAX_VALUE)
@@ -213,7 +282,11 @@ public class frmEvent extends javax.swing.JFrame {
         btnSearch.setText("Search");
 
         btnDelete.setText("Delete");
-        btnDelete.setEnabled(false);
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlButtonsLayout = new javax.swing.GroupLayout(pnlButtons);
         pnlButtons.setLayout(pnlButtonsLayout);
@@ -296,12 +369,116 @@ public class frmEvent extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAddActionPerformed
 
+        DefaultTableModel tblModel = (DefaultTableModel) tableEvents.getModel();
+
+        if (tblModel.getRowCount() == 0) {
+            JOptionPane.showMessageDialog(this, "Table is Empty");
+        } else {
+            String Name, Date, ID, Description;
+            String uri = "mongodb+srv://OOP01:OOP123@cluster0.pikbt03.mongodb.net/test";
+
+            try ( MongoClient mongoClient = MongoClients.create(uri)) {
+                MongoDatabase database = mongoClient.getDatabase("hw15");
+                try {
+                    MongoCollection<Document> eventCollection = database.getCollection("Event");
+                    for (int i = 0; i < tblModel.getRowCount(); i++) {
+                        Name = tblModel.getValueAt(i, 0).toString();
+                        Date = tblModel.getValueAt(i, 1).toString();
+                        ID = tblModel.getValueAt(i, 2).toString();
+                        Description = tblModel.getValueAt(i, 3).toString();
+                        Document event = insertDataEvent();
+                        eventCollection.insertOne(event);
+                    }
+                } catch (Exception e) {
+
+                }
+                /*
+                String[] Datos = new String[3];
+
+                Datos[0] = txtEvent.getText();
+                Datos[1] = cmbDay.getSelectedItem().toString() + cmbMonth.getSelectedItem().toString() + cmbYear.getSelectedItem().toString();
+                Datos[2] = txtID.getText();
+                Datos[3] = txtAreaDescription.getText();
+                txtEvent.setText("");
+                cmbDay.setSelectedIndex(0);
+                cmbMonth.setSelectedIndex(0);
+                cmbYear.setSelectedIndex(0);
+                tableEvents.addRowSelectionInterval(0, 1);
+                txtAreaDescription.setText("");
+                Event event = new Event(Datos[0], Datos[3], Datos[1], Datos[2]);
+                ConnectionToMaven.insertDataEvent();
+
+                 */
+    }//GEN-LAST:event_btnAddActionPerformed
+        }
+    }
     private void cbCourse04ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCourse04ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbCourse04ActionPerformed
+
+    private void txtEventKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEventKeyTyped
+
+        char c = evt.getKeyChar();
+
+        if ((Character.isLetter(c)) || (Character.isWhitespace(c)) || (Character.isISOControl(c))) {
+            txtEvent.setEditable(true);
+
+        } else {
+            txtEvent.setEditable(false);
+            JOptionPane.showMessageDialog(this, c + " is not accepted here", "Warning on input data", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_txtEventKeyTyped
+
+    private void txtEventActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEventActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEventActionPerformed
+
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        // TODO add your handling code here:
+        frmDeleteEvent deleteEvent = new frmDeleteEvent();
+        deleteEvent.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnDeleteActionPerformed
+
+    private void cbCourse01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbCourse01MouseClicked
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_cbCourse01MouseClicked
+
+    private void cmbDayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbDayActionPerformed
+        // TODO add your handling code here:
+        String selectedValueDay = cmbDay.getSelectedItem().toString();
+    }//GEN-LAST:event_cmbDayActionPerformed
+
+    private void cmbMonthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbMonthActionPerformed
+        // TODO add your handling code here:
+        String selectedValueMonth = cmbDay.getSelectedItem().toString();
+    }//GEN-LAST:event_cmbMonthActionPerformed
+
+    private void cmbYearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbYearActionPerformed
+        // TODO add your handling code here:
+        String selectedValueYear = cmbDay.getSelectedItem().toString();
+    }//GEN-LAST:event_cmbYearActionPerformed
+
+    private void txtIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_txtIDActionPerformed
+
+    private void txtIDKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIDKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+
+        if ((Character.isDigit(c)) || (Character.isWhitespace(c)) || (Character.isISOControl(c))) {
+            txtEvent.setEditable(true);
+
+        } else {
+            txtEvent.setEditable(false);
+            JOptionPane.showMessageDialog(this, c + " is not accepted here", "Warning on input data", JOptionPane.WARNING_MESSAGE);
+        }
+
+    }//GEN-LAST:event_txtIDKeyTyped
 
     /**
      * @param args the command line arguments
@@ -337,7 +514,6 @@ public class frmEvent extends javax.swing.JFrame {
             }
         });
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnBack;
@@ -351,6 +527,7 @@ public class frmEvent extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbMonth;
     private javax.swing.JComboBox<String> cmbYear;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -368,5 +545,6 @@ public class frmEvent extends javax.swing.JFrame {
     private javax.swing.JTable tableEvents;
     private javax.swing.JTextArea txtAreaDescription;
     private javax.swing.JTextField txtEvent;
+    private javax.swing.JTextField txtID;
     // End of variables declaration//GEN-END:variables
 }
