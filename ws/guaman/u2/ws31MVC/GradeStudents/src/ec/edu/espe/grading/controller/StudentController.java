@@ -18,7 +18,7 @@ public class StudentController {
             float grades[] = {12.5F, 15.6F, 20.0F};
             float GPA;
             GPA = computeAverage(grades);
-            student = new Student(id, "Edison", grades, GPA);
+            student = new Student(id, "Alexander Guaman", grades, GPA);
         }
 
         
