@@ -17,12 +17,13 @@
 *.ear
 *.zip
 *.tar.gz
-*.rar
+.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+hs_err_pid
 
 #vpp backup files
+<<<<<<< HEAD
 *.vpp.bak_*
 <<<<<<< HEAD
 /hw/enriquez/unit2/hw12/InClass/target/
@@ -50,3 +51,6 @@ hs_err_pid*
 /ws/reinoso/U2/ws31/GradeStudents/build/
 /ws/reinoso/U2/ws31/GradeStudents/nbproject/private/
 /hw/reinoso/U2/hw15/ShopInventory_V2/target/
+=======
+*.vpp.bak_*
+>>>>>>> 6e71a91b407b6ea1f0148bfa872dd413714ba26b
