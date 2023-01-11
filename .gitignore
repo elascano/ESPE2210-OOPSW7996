@@ -54,3 +54,5 @@ hs_err_pid
 =======
 *.vpp.bak_*
 >>>>>>> 6e71a91b407b6ea1f0148bfa872dd413714ba26b
+/hw/reinoso/U2/hw15/ShopInventory/nbproject/private/
+/hw/reinoso/U2/hw15/ShopInventoryCRUD/nbproject/private/
