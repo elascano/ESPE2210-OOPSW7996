@@ -23,8 +23,8 @@
 hs_err_pid
 
 #vpp backup files
-<<<<<<< HEAD
 *.vpp.bak_*
+<<<<<<< HEAD
 <<<<<<< HEAD
 /hw/enriquez/unit2/hw12/InClass/target/
 =======
@@ -56,3 +56,5 @@ hs_err_pid
 >>>>>>> 6e71a91b407b6ea1f0148bfa872dd413714ba26b
 /hw/reinoso/U2/hw15/ShopInventory/nbproject/private/
 /hw/reinoso/U2/hw15/ShopInventoryCRUD/nbproject/private/
+=======
+>>>>>>> 1a23f2c2ce4b000476dd3ff622f977082f6c9233
