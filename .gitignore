@@ -24,3 +24,10 @@ hs_err_pid*
 
 #vpp backup files
 *.vpp.bak_*
+/hw/quiroga/unit2/hw14/ShopInventory_V2/target/
+/hw/quiroga/unit2/hw14Form/ShopInventory_V2/target/
+/ws/quiroga/unit2/ws30Menus/ShopInventory/nbproject/private/
+/ws/quiroga/unit2/ws30Menus/ShopInventory/build/
+/ws/quiroga/unit2/ws31MVC/GradeStudent/nbproject/private/
+/ws/quiroga/unit2/ws31MVC/GradeStudent/build/
+/hw/quiroga/unit2/hw15/ShopInventory_V2_menu/target/
