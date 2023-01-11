@@ -4,6 +4,9 @@
  */
 package ec.edu.espe.ecomarket.view;
 
+import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author David Toapanta, Pacstore, DCCO-ESPE
@@ -92,8 +95,19 @@ public class fmrProducts extends javax.swing.JFrame {
                 txtNameActionPerformed(evt);
             }
         });
+        txtName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNameKeyTyped(evt);
+            }
+        });
 
         jLabel3.setText("Price:");
+
+        txtPrice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPriceActionPerformed(evt);
+            }
+        });
 
         jLabel5.setText("Quantity:");
 
@@ -174,8 +188,18 @@ public class fmrProducts extends javax.swing.JFrame {
         );
 
         byntoBuy.setText("toBuy");
+        byntoBuy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                byntoBuyActionPerformed(evt);
+            }
+        });
 
         btnCancel.setText("Cancel");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlButtonsLayout = new javax.swing.GroupLayout(pnlButtons);
         pnlButtons.setLayout(pnlButtonsLayout);
@@ -226,12 +250,33 @@ public class fmrProducts extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_txtNameActionPerformed
 
     private void cmbQuantityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbQuantityActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cmbQuantityActionPerformed
+
+    private void txtPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPriceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPriceActionPerformed
+
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCancelActionPerformed
+
+    private void byntoBuyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_byntoBuyActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_byntoBuyActionPerformed
+
+    private void txtNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if (!(Character.isAlphabetic(c)) || (c == KeyEvent.VK_BACK_SPACE) || (c == KeyEvent.VK_DELETE)) {
+            JOptionPane.showMessageDialog(this, " is not accepted here", "WARNING", JOptionPane.WARNING_MESSAGE);
+
+        }
+    }//GEN-LAST:event_txtNameKeyTyped
 
     /**
      * @param args the command line arguments
