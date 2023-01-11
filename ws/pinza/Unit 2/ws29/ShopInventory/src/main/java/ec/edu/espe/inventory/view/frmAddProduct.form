@@ -69,62 +69,46 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="204" max="-2" attributes="0"/>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="lblHeading" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="192" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="lblInstructions" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="lblQuantity" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblName" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblID" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblPrice" alignment="1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="txtName" min="-2" pref="113" max="-2" attributes="0"/>
+                      <Component id="txtID" alignment="0" min="-2" pref="73" max="-2" attributes="0"/>
+                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="txtPrice" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtQuantity" alignment="0" min="-2" pref="72" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
               <Component id="pnlButons" alignment="1" max="32767" attributes="0"/>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="0" pref="45" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="lblInstructions" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblCategory" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="cbxCategory" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="195" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="btnWithoutVAT" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="btnIncludesVAT" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblQuantity" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblName" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblID" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblPrice" alignment="1" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txtName" min="-2" pref="113" max="-2" attributes="0"/>
-                              <Component id="txtID" alignment="0" min="-2" pref="73" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="txtPrice" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtQuantity" alignment="0" min="-2" pref="72" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
-              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                  <EmptySpace pref="22" max="32767" attributes="0"/>
                   <Component id="lblHeading" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="lblInstructions" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblCategory" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cbxCategory" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="44" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="lblID" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtID" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -144,12 +128,7 @@
                       <Component id="lblPrice" min="-2" max="-2" attributes="0"/>
                       <Component id="txtPrice" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btnIncludesVAT" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnWithoutVAT" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                   <Component id="pnlButons" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -165,7 +144,7 @@
               <Font name="Trebuchet MS" size="24" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="ADD PRODUCT"/>
+            <Property name="text" type="java.lang.String" value="Product"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Default Cursor"/>
             </Property>
@@ -215,6 +194,9 @@
           <Properties>
             <Property name="toolTipText" type="java.lang.String" value="123"/>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtIDKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtName">
           <Properties>
@@ -234,30 +216,6 @@
             <Property name="toolTipText" type="java.lang.String" value="10.00"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="btnIncludesVAT">
-          <Properties>
-            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="btnGroupVAT"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="12" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Includes VAT"/>
-            <Property name="toolTipText" type="java.lang.String" value="Check if your products pays VAT"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JRadioButton" name="btnWithoutVAT">
-          <Properties>
-            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="btnGroupVAT"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="12" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Without VAT"/>
-            <Property name="toolTipText" type="java.lang.String" value="Check if your product doesn&apos;t pay VAT"/>
-          </Properties>
-        </Component>
         <Container class="javax.swing.JPanel" name="pnlButons">
 
           <Layout>
@@ -266,9 +224,15 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="btnMenu" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="btnSaveProduct" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="31" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -279,6 +243,9 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnSaveProduct" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnMenu" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="25" max="32767" attributes="0"/>
                   </Group>
@@ -288,46 +255,34 @@
           <SubComponents>
             <Component class="javax.swing.JButton" name="btnSaveProduct">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Save Product"/>
+                <Property name="text" type="java.lang.String" value="Add"/>
                 <Property name="toolTipText" type="java.lang.String" value="Save this product in you Database"/>
                 <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnMenu">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Menu"/>
+                <Property name="text" type="java.lang.String" value="Back"/>
                 <Property name="toolTipText" type="java.lang.String" value="Go back to the Inventory Menu"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Read"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton3">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Update"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Delete"/>
               </Properties>
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JLabel" name="lblCategory">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="12" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Category:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JComboBox" name="cbxCategory">
-          <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="8">
-                <StringItem index="0" value="Beverage"/>
-                <StringItem index="1" value="Candy"/>
-                <StringItem index="2" value="Dairy"/>
-                <StringItem index="3" value="Meet"/>
-                <StringItem index="4" value="Grooming"/>
-                <StringItem index="5" value="Snack"/>
-                <StringItem index="6" value="Grain"/>
-                <StringItem index="7" value="Vegetables"/>
-              </StringArray>
-            </Property>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-          </AuxValues>
-        </Component>
       </SubComponents>
     </Container>
   </SubComponents>

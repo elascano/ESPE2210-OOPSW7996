@@ -4,6 +4,7 @@
  */
 package ec.edu.espe.inventory.view;
 
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 
 /**
@@ -41,13 +42,12 @@ public class frmAddProduct extends javax.swing.JFrame {
         txtName = new javax.swing.JTextField();
         txtQuantity = new javax.swing.JTextField();
         txtPrice = new javax.swing.JTextField();
-        btnIncludesVAT = new javax.swing.JRadioButton();
-        btnWithoutVAT = new javax.swing.JRadioButton();
         pnlButons = new javax.swing.JPanel();
         btnSaveProduct = new javax.swing.JButton();
         btnMenu = new javax.swing.JButton();
-        lblCategory = new javax.swing.JLabel();
-        cbxCategory = new javax.swing.JComboBox<>();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -68,7 +68,7 @@ public class frmAddProduct extends javax.swing.JFrame {
         lblHeading.setBackground(new java.awt.Color(255, 255, 255));
         lblHeading.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         lblHeading.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblHeading.setText("ADD PRODUCT");
+        lblHeading.setText("Product");
         lblHeading.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         lblID.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -87,6 +87,11 @@ public class frmAddProduct extends javax.swing.JFrame {
         lblInstructions.setText("Please, fill the information below!");
 
         txtID.setToolTipText("123");
+        txtID.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtIDKeyTyped(evt);
+            }
+        });
 
         txtName.setToolTipText("Enter your product name");
         txtName.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -99,22 +104,18 @@ public class frmAddProduct extends javax.swing.JFrame {
 
         txtPrice.setToolTipText("10.00");
 
-        btnGroupVAT.add(btnIncludesVAT);
-        btnIncludesVAT.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnIncludesVAT.setText("Includes VAT");
-        btnIncludesVAT.setToolTipText("Check if your products pays VAT");
-
-        btnGroupVAT.add(btnWithoutVAT);
-        btnWithoutVAT.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnWithoutVAT.setText("Without VAT");
-        btnWithoutVAT.setToolTipText("Check if your product doesn't pay VAT");
-
-        btnSaveProduct.setText("Save Product");
+        btnSaveProduct.setText("Add");
         btnSaveProduct.setToolTipText("Save this product in you Database");
         btnSaveProduct.setEnabled(false);
 
-        btnMenu.setText("Menu");
+        btnMenu.setText("Back");
         btnMenu.setToolTipText("Go back to the Inventory Menu");
+
+        jButton2.setText("Read");
+
+        jButton3.setText("Update");
+
+        jButton1.setText("Delete");
 
         javax.swing.GroupLayout pnlButonsLayout = new javax.swing.GroupLayout(pnlButons);
         pnlButons.setLayout(pnlButonsLayout);
@@ -123,9 +124,15 @@ public class frmAddProduct extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlButonsLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(btnMenu)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnSaveProduct)
-                .addGap(40, 40, 40))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1)
+                .addContainerGap(31, Short.MAX_VALUE))
         );
         pnlButonsLayout.setVerticalGroup(
             pnlButonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -133,64 +140,50 @@ public class frmAddProduct extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addGroup(pnlButonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSaveProduct)
-                    .addComponent(btnMenu))
+                    .addComponent(btnMenu)
+                    .addComponent(jButton2)
+                    .addComponent(jButton3)
+                    .addComponent(jButton1))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
-
-        lblCategory.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lblCategory.setText("Category:");
-
-        cbxCategory.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Beverage", "Candy", "Dairy", "Meet", "Grooming", "Snack", "Grain", "Vegetables" }));
 
         javax.swing.GroupLayout pnlInputLayout = new javax.swing.GroupLayout(pnlInput);
         pnlInput.setLayout(pnlInputLayout);
         pnlInputLayout.setHorizontalGroup(
             pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlInputLayout.createSequentialGroup()
-                .addGap(204, 204, 204)
-                .addComponent(lblHeading)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(pnlButons, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlInputLayout.createSequentialGroup()
-                .addGap(0, 45, Short.MAX_VALUE)
-                .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblInstructions)
-                    .addComponent(lblCategory))
-                .addGap(18, 18, 18)
-                .addComponent(cbxCategory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(195, 195, 195))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlInputLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblHeading)
+                .addGap(192, 192, 192))
+            .addGroup(pnlInputLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(lblInstructions)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(pnlInputLayout.createSequentialGroup()
+                .addGap(117, 117, 117)
                 .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnWithoutVAT)
-                    .addGroup(pnlInputLayout.createSequentialGroup()
-                        .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnIncludesVAT)
-                            .addComponent(lblQuantity)
-                            .addComponent(lblName)
-                            .addComponent(lblID)
-                            .addComponent(lblPrice))
-                        .addGap(18, 18, 18)
-                        .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(txtPrice, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtQuantity, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(162, 162, 162))
+                    .addComponent(lblQuantity)
+                    .addComponent(lblName)
+                    .addComponent(lblID)
+                    .addComponent(lblPrice))
+                .addGap(18, 18, 18)
+                .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(txtPrice, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(txtQuantity, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(pnlButons, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         pnlInputLayout.setVerticalGroup(
             pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlInputLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
+                .addContainerGap(22, Short.MAX_VALUE)
                 .addComponent(lblHeading)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblInstructions)
-                .addGap(27, 27, 27)
-                .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCategory)
-                    .addComponent(cbxCategory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addGap(40, 40, 40)
                 .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblID)
                     .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -206,11 +199,7 @@ public class frmAddProduct extends javax.swing.JFrame {
                 .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblPrice)
                     .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(56, 56, 56)
-                .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnIncludesVAT)
-                    .addComponent(btnWithoutVAT))
-                .addGap(24, 24, 24)
+                .addGap(44, 44, 44)
                 .addComponent(pnlButons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -229,8 +218,17 @@ public class frmAddProduct extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameKeyTyped
+        char c = evt.getKeyChar();
+        if(!(Character.isAlphabetic(c))|| (c==KeyEvent.VK_BACK_SPACE) || (c==KeyEvent.VK_DELETE))
+        {
+        JOptionPane.showMessageDialog(this, c + " is not accepted here", "WARNING", JOptionPane.WARNING_MESSAGE);}
 
+        
     }//GEN-LAST:event_txtNameKeyTyped
+
+    private void txtIDKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIDKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIDKeyTyped
 
     /**
      * @param args the command line arguments
@@ -269,13 +267,12 @@ public class frmAddProduct extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btnGroupVAT;
-    private javax.swing.JRadioButton btnIncludesVAT;
     private javax.swing.JButton btnMenu;
     private javax.swing.JButton btnSaveProduct;
-    private javax.swing.JRadioButton btnWithoutVAT;
-    private javax.swing.JComboBox<String> cbxCategory;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lblCategory;
     private javax.swing.JLabel lblHeading;
     private javax.swing.JLabel lblID;
     private javax.swing.JLabel lblInstructions;
