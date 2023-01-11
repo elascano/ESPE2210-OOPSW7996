@@ -4,6 +4,9 @@
  */
 package ec.edu.espe.EHAManagement.view;
 
+import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Nahir Carrera, Gaman GeekLords, DCC0-ESPE
@@ -76,6 +79,11 @@ public class frmProduct extends javax.swing.JFrame {
         txtName.setForeground(new java.awt.Color(255, 255, 255));
         txtName.setToolTipText("Product's name");
         txtName.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        txtName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNameKeyTyped(evt);
+            }
+        });
 
         lblQuantity.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
         lblQuantity.setForeground(new java.awt.Color(131, 217, 220));
@@ -291,6 +299,14 @@ public class frmProduct extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameKeyTyped
+        char character = evt.getKeyChar();
+        if(!(Character.isAlphabetic(character) || (character == KeyEvent.VK_BACK_SPACE) || (character == KeyEvent.VK_DELETE ))){
+            JOptionPane.showMessageDialog(this,character+ " is not valid for names","Warning on input data", JOptionPane.WARNING_MESSAGE);
+        }
+        
+    }//GEN-LAST:event_txtNameKeyTyped
 
     /**
      * @param args the command line arguments
