@@ -11,4 +11,17 @@
         <maven.compiler.target>19</maven.compiler.target>
         <exec.mainClass>ec.edu.espe.gradestudent.GradeStudent</exec.mainClass>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.formdev</groupId>
+            <artifactId>flatlaf</artifactId>
+            <version>3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.formdev</groupId>
+            <artifactId>flatlaf-intellij-themes</artifactId>
+            <version>3.0</version>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
 </project>
