@@ -15,6 +15,10 @@ public class Classroom {
     private ArrayList<Student> students;
     private ArrayList<Assignment> assignments;
 
+    public Classroom(){
+        
+    }
+    
     public Classroom(String name, ArrayList<Student> students, ArrayList<Assignment> assignments) {
         this.name = name;
         this.students = students;

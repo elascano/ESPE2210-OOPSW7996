@@ -4,6 +4,9 @@
  */
 package ec.ecu.espe.studentcsassignment.model;
 
+import org.bson.Document;
+import org.bson.types.ObjectId;
+
 /**
  *
  * @author Cristian Acalo, Scriptal, DCCO-ESPE
@@ -11,10 +14,10 @@ package ec.ecu.espe.studentcsassignment.model;
 public class Student extends HighSchoolUser{
     
     private int age;
-    private Enrollment enrollment;
+    private int enrollment;
 
-    public Student(int age, Enrollment enrollment, String name, int id, String password, String email) {
-        super(name, id, password, email);
+    public Student(int age, int enrollment, ObjectId _id, String name, int id, String password, String email) {
+        super(_id, name, id, password, email);
         this.age = age;
         this.enrollment = enrollment;
     }
@@ -23,7 +26,7 @@ public class Student extends HighSchoolUser{
     public String toString() {
         return "Student{" + "age=" + age + ", enrollment=" + enrollment + '}';
     }
-
+    
     /**
      * @return the age
      */
@@ -41,14 +44,14 @@ public class Student extends HighSchoolUser{
     /**
      * @return the enrollment
      */
-    public Enrollment getEnrollment() {
+    public int getEnrollment() {
         return enrollment;
     }
 
     /**
      * @param enrollment the enrollment to set
      */
-    public void setEnrollment(Enrollment enrollment) {
+    public void setEnrollment(int enrollment) {
         this.enrollment = enrollment;
     }
 

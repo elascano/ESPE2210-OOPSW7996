@@ -4,17 +4,22 @@
  */
 package ec.ecu.espe.studentcsassignment.model;
 
+import org.bson.Document;
+import org.bson.types.ObjectId;
+
 /**
  *
  * @author Cristian Acalo, Scriptal, DCCO-ESPE
  */
 public class HighSchoolUser {
-    protected String name;
-    protected int id;
-    protected String password;
-    protected String email;
+    private ObjectId _id;
+    private String name;
+    private int id;
+    private String password;
+    private String email;
 
-    public HighSchoolUser(String name, int id, String password, String email) {
+    public HighSchoolUser(ObjectId _id, String name, int id, String password, String email) {
+        this._id = _id;
         this.name = name;
         this.id = id;
         this.password = password;
@@ -23,9 +28,23 @@ public class HighSchoolUser {
 
     @Override
     public String toString() {
-        return "HighSchoolUser{" + "name=" + name + ", id=" + id + ", password=" + password + ", email=" + email + '}';
+        return "HighSchoolUser{" + "_id=" + _id + ", name=" + name + ", id=" + id + ", password=" + password + ", email=" + email + '}';
     }
-    
+
+    /**
+     * @return the _id
+     */
+    public ObjectId get_Id() {
+        return _id;
+    }
+
+    /**
+     * @param _id the _id to set
+     */
+    public void set_Id(ObjectId _id) {
+        this._id = _id;
+    }
+
     /**
      * @return the name
      */
@@ -81,6 +100,7 @@ public class HighSchoolUser {
     public void setEmail(String email) {
         this.email = email;
     }
+
     
     
 }

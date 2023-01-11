@@ -5,11 +5,21 @@
 package ec.edu.espe.studentcsassignment.view;
 
 //import com.raven.datechooser.DateChooser;
-
 import com.formdev.flatlaf.FlatLightLaf;
+import javax.swing.UIManager;
 //import com.formdev.flatlaf.intellijthemes.*;
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.*;
-import javax.swing.UIManager;
+import ec.ecu.espe.studentcsassignment.model.*;
+import org.bson.Document;
+import com.google.gson.Gson;
+import static ec.ecu.espe.studentcsassignment.controller.AssignmentsController.addAssignment;
+import static ec.ecu.espe.studentcsassignment.controller.AssignmentsController.findAssignment;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import javax.swing.ButtonModel;
+import javax.swing.table.DefaultTableModel;
+import org.bson.types.ObjectId;
 
 /**
  *
@@ -17,11 +27,26 @@ import javax.swing.UIManager;
  */
 public class assignments extends javax.swing.JFrame {
 
+    DefaultTableModel dtm = new DefaultTableModel();
+    
+    
+    
     /**
      * Creates new form assignments
      */
     public assignments() {
         initComponents();
+        
+        String[] head = new String[]{"Name","Shipping","Deadline"};
+        dtm.setColumnIdentifiers(head);
+        tblAssignments.setModel(dtm);
+        
+    }
+    
+    void addToTable(Assignment assignment){
+        dtm.addRow(new Object[]{
+            assignment.getName(),assignment.getShipping(),assignment.getDeadline()
+        });
     }
 
     /**
@@ -33,7 +58,6 @@ public class assignments extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        grRbtnAssignmentType = new javax.swing.ButtonGroup();
         pnlForm = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -48,31 +72,29 @@ public class assignments extends javax.swing.JFrame {
         btnNewAssignment = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        rbtnObligatory = new javax.swing.JRadioButton();
-        rbtnOptional = new javax.swing.JRadioButton();
-        tblAssignments = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        txtAComment = new javax.swing.JTextArea();
+        tblAssignmentsContainer = new javax.swing.JScrollPane();
+        tblAssignments = new javax.swing.JTable();
         pnlActions = new javax.swing.JLayeredPane();
         jLabel7 = new javax.swing.JLabel();
         btnOpen = new javax.swing.JButton();
         txtAction = new javax.swing.JTextField();
         btnDelete = new javax.swing.JButton();
         btnClean = new javax.swing.JButton();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
+        mnPrincipal = new javax.swing.JMenuBar();
+        mnStudentCS = new javax.swing.JMenu();
+        itmAbout = new javax.swing.JMenuItem();
+        itmLogOut = new javax.swing.JMenuItem();
+        mnClassrooms = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem10 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
         jMenuItem12 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        mnManage = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
+        mnHelp = new javax.swing.JMenu();
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
 
@@ -87,7 +109,8 @@ public class assignments extends javax.swing.JFrame {
         jLabel1.setText("Assignments");
 
         jLabel2.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
-        jLabel2.setText("Object Oriented Programming");
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Mathematics");
 
         pnlSearch.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));
 
@@ -116,9 +139,10 @@ public class assignments extends javax.swing.JFrame {
             }
         });
 
-        dtShipping.setDateFormatString("dd/MM/yyyy");
+        dtShipping.setDateFormatString("dd-MM-yyyy");
         dtShipping.setOpaque(false);
 
+        dtDeadline.setDateFormatString("dd-MM-yyyy");
         dtDeadline.setFocusable(false);
         dtDeadline.setOpaque(false);
 
@@ -134,6 +158,11 @@ public class assignments extends javax.swing.JFrame {
         btnNewAssignment.setFont(btnFind.getFont());
         btnNewAssignment.setForeground(btnFind.getForeground());
         btnNewAssignment.setText("New Assignment");
+        btnNewAssignment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNewAssignmentActionPerformed(evt);
+            }
+        });
 
         jLabel6.setFont(jLabel3.getFont());
         jLabel6.setForeground(jLabel1.getForeground());
@@ -141,21 +170,10 @@ public class assignments extends javax.swing.JFrame {
         jLabel6.setText("Comment");
         jLabel6.setBorder(jLabel3.getBorder());
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setBorder(jLabel3.getBorder());
-        jScrollPane2.setViewportView(jTextArea1);
-
-        grRbtnAssignmentType.add(rbtnObligatory);
-        rbtnObligatory.setText("Obligatory");
-        rbtnObligatory.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbtnObligatoryActionPerformed(evt);
-            }
-        });
-
-        grRbtnAssignmentType.add(rbtnOptional);
-        rbtnOptional.setText("Optional");
+        txtAComment.setColumns(20);
+        txtAComment.setRows(5);
+        txtAComment.setBorder(jLabel3.getBorder());
+        jScrollPane2.setViewportView(txtAComment);
 
         pnlSearch.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
         pnlSearch.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -167,8 +185,6 @@ public class assignments extends javax.swing.JFrame {
         pnlSearch.setLayer(btnNewAssignment, javax.swing.JLayeredPane.DEFAULT_LAYER);
         pnlSearch.setLayer(jLabel6, javax.swing.JLayeredPane.DEFAULT_LAYER);
         pnlSearch.setLayer(jScrollPane2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        pnlSearch.setLayer(rbtnObligatory, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        pnlSearch.setLayer(rbtnOptional, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout pnlSearchLayout = new javax.swing.GroupLayout(pnlSearch);
         pnlSearch.setLayout(pnlSearchLayout);
@@ -178,17 +194,9 @@ public class assignments extends javax.swing.JFrame {
                 .addContainerGap(16, Short.MAX_VALUE)
                 .addGroup(pnlSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(pnlSearchLayout.createSequentialGroup()
-                        .addGroup(pnlSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnFind)
-                            .addGroup(pnlSearchLayout.createSequentialGroup()
-                                .addGap(48, 48, 48)
-                                .addComponent(rbtnObligatory, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
-                        .addGroup(pnlSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnNewAssignment, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSearchLayout.createSequentialGroup()
-                                .addComponent(rbtnOptional)
-                                .addGap(48, 48, 48))))
+                        .addComponent(btnFind)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
+                        .addComponent(btnNewAssignment))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlSearchLayout.createSequentialGroup()
                         .addGroup(pnlSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -222,11 +230,7 @@ public class assignments extends javax.swing.JFrame {
                 .addGroup(pnlSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(pnlSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rbtnObligatory)
-                    .addComponent(rbtnOptional))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addGroup(pnlSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnNewAssignment)
                     .addComponent(btnFind))
@@ -237,11 +241,10 @@ public class assignments extends javax.swing.JFrame {
         txtName.getAccessibleContext().setAccessibleDescription("");
         btnFind.getAccessibleContext().setAccessibleDescription("Find an element");
 
-        jTable1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
-        jTable1.setFont(getFont());
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblAssignments.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        tblAssignments.setFont(getFont());
+        tblAssignments.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Juan Nada", "12-4-2022", "2-5-2023"},
                 {null, null, null},
                 {null, null, null},
                 {null, null, null}
@@ -258,9 +261,8 @@ public class assignments extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jTable1.setEnabled(false);
-        jTable1.setOpaque(false);
-        tblAssignments.setViewportView(jTable1);
+        tblAssignments.setOpaque(false);
+        tblAssignmentsContainer.setViewportView(tblAssignments);
 
         pnlActions.setBorder(pnlSearch.getBorder());
 
@@ -346,7 +348,7 @@ public class assignments extends javax.swing.JFrame {
                         .addGap(285, 285, 285))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFormLayout.createSequentialGroup()
                         .addGroup(pnlFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(tblAssignments, javax.swing.GroupLayout.PREFERRED_SIZE, 671, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tblAssignmentsContainer, javax.swing.GroupLayout.PREFERRED_SIZE, 671, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlFormLayout.createSequentialGroup()
                                 .addComponent(pnlSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -357,15 +359,15 @@ public class assignments extends javax.swing.JFrame {
                                         .addComponent(btnClean)))))
                         .addGap(34, 34, 34))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFormLayout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(270, 270, 270))))
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(211, 211, 211))))
         );
         pnlFormLayout.setVerticalGroup(
             pnlFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlFormLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(12, 12, 12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(pnlFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -375,36 +377,41 @@ public class assignments extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnClean)))
                 .addGap(18, 18, 18)
-                .addComponent(tblAssignments, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tblAssignmentsContainer, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
-        jMenu1.setText("Student CS");
-        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+        mnStudentCS.setText("Student CS");
+        mnStudentCS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu1ActionPerformed(evt);
+                mnStudentCSActionPerformed(evt);
             }
         });
 
-        jMenuItem1.setText("About");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        itmAbout.setText("About");
+        itmAbout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                itmAboutActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        mnStudentCS.add(itmAbout);
 
-        jMenuItem2.setText("Log out");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        itmLogOut.setText("Log out");
+        itmLogOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                itmLogOutActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem2);
+        mnStudentCS.add(itmLogOut);
 
-        jMenuBar1.add(jMenu1);
+        mnPrincipal.add(mnStudentCS);
 
-        jMenu4.setText("Classrooms");
+        mnClassrooms.setText("Classrooms");
+        mnClassrooms.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnClassroomsActionPerformed(evt);
+            }
+        });
 
         jMenuItem9.setText("Mathematics");
         jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
@@ -412,43 +419,43 @@ public class assignments extends javax.swing.JFrame {
                 jMenuItem9ActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem9);
+        mnClassrooms.add(jMenuItem9);
 
         jMenuItem10.setText("History");
-        jMenu4.add(jMenuItem10);
+        mnClassrooms.add(jMenuItem10);
 
         jMenuItem11.setText("Biology");
-        jMenu4.add(jMenuItem11);
+        mnClassrooms.add(jMenuItem11);
 
         jMenuItem12.setText("English");
-        jMenu4.add(jMenuItem12);
+        mnClassrooms.add(jMenuItem12);
 
-        jMenuBar1.add(jMenu4);
+        mnPrincipal.add(mnClassrooms);
 
-        jMenu2.setText("Manage");
+        mnManage.setText("Manage");
 
         jMenuItem3.setText("Students");
-        jMenu2.add(jMenuItem3);
+        mnManage.add(jMenuItem3);
 
         jMenuItem5.setText("Absense");
-        jMenu2.add(jMenuItem5);
+        mnManage.add(jMenuItem5);
 
         jMenuItem6.setText("Events");
-        jMenu2.add(jMenuItem6);
+        mnManage.add(jMenuItem6);
 
-        jMenuBar1.add(jMenu2);
+        mnPrincipal.add(mnManage);
 
-        jMenu3.setText("Help");
+        mnHelp.setText("Help");
 
         jMenuItem8.setText("User Manual");
-        jMenu3.add(jMenuItem8);
+        mnHelp.add(jMenuItem8);
 
         jMenuItem7.setText("Technical Contact");
-        jMenu3.add(jMenuItem7);
+        mnHelp.add(jMenuItem7);
 
-        jMenuBar1.add(jMenu3);
+        mnPrincipal.add(mnHelp);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(mnPrincipal);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -467,11 +474,18 @@ public class assignments extends javax.swing.JFrame {
 
     private void btnFindActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFindActionPerformed
         // TODO add your handling code here:
+        String name = txtName.getText();
+        Document assignmentDocument = findAssignment(name);
+        String assignmentJson = assignmentDocument.toJson();
+        Assignment assignment;
+        assignment = new Gson().fromJson(assignmentJson,Assignment.class);
+        
+        if (assignment != null) {
+            addToTable(assignment);
+        } else {
+            System.out.println("..:: DATA NOT FOUND ::..");
+        }
     }//GEN-LAST:event_btnFindActionPerformed
-
-    private void rbtnObligatoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnObligatoryActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rbtnObligatoryActionPerformed
 
     private void txtActionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtActionActionPerformed
         // TODO add your handling code here:
@@ -485,25 +499,57 @@ public class assignments extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNameFocusGained
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void itmAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmAboutActionPerformed
         // TODO add your handling code here:
 
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_itmAboutActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void itmLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmLogOutActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_itmLogOutActionPerformed
 
-    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
+    private void mnStudentCSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnStudentCSActionPerformed
         // TODO add your handling code here:
         FrmAbout frmAbout;
         frmAbout = new FrmAbout();
         frmAbout.setVisible(true);
-    }//GEN-LAST:event_jMenu1ActionPerformed
+    }//GEN-LAST:event_mnStudentCSActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void mnClassroomsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnClassroomsActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_mnClassroomsActionPerformed
+
+    
+    
+    private void btnNewAssignmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewAssignmentActionPerformed
+        // TODO add your handling code here:
+        
+        DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        
+        Date shipping = dtShipping.getDate();
+        Date deadline = dtDeadline.getDate();
+        
+        String shippingStr = dateFormat.format(shipping);
+        String deadlineStr = dateFormat.format(deadline);
+        
+        dtm.addRow(new Object[]{
+            txtName.getText(),shippingStr,deadlineStr
+        });
+        
+        Document assignment;
+        assignment = new Document("_id", new ObjectId())
+                .append("name",txtName.getText())
+                .append("shipping", shippingStr)
+                .append("deadline", deadlineStr)
+                
+                .append("comment",txtAComment.getText());
+        addAssignment(assignment,"Mathematics");
+    }//GEN-LAST:event_btnNewAssignmentActionPerformed
 
     /**
      * @param args the command line arguments
@@ -537,7 +583,8 @@ public class assignments extends javax.swing.JFrame {
     private javax.swing.JButton btnOpen;
     private com.toedter.calendar.JDateChooser dtDeadline;
     private com.toedter.calendar.JDateChooser dtShipping;
-    private javax.swing.ButtonGroup grRbtnAssignmentType;
+    private javax.swing.JMenuItem itmAbout;
+    private javax.swing.JMenuItem itmLogOut;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -545,16 +592,9 @@ public class assignments extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
@@ -562,14 +602,17 @@ public class assignments extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JMenu mnClassrooms;
+    private javax.swing.JMenu mnHelp;
+    private javax.swing.JMenu mnManage;
+    private javax.swing.JMenuBar mnPrincipal;
+    private javax.swing.JMenu mnStudentCS;
     private javax.swing.JLayeredPane pnlActions;
     private javax.swing.JPanel pnlForm;
     private javax.swing.JLayeredPane pnlSearch;
-    private javax.swing.JRadioButton rbtnObligatory;
-    private javax.swing.JRadioButton rbtnOptional;
-    private javax.swing.JScrollPane tblAssignments;
+    private javax.swing.JTable tblAssignments;
+    private javax.swing.JScrollPane tblAssignmentsContainer;
+    private javax.swing.JTextArea txtAComment;
     private javax.swing.JTextField txtAction;
     private javax.swing.JTextField txtName;
     // End of variables declaration//GEN-END:variables

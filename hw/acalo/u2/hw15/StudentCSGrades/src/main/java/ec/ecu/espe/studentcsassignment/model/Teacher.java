@@ -5,6 +5,7 @@
 package ec.ecu.espe.studentcsassignment.model;
 
 import java.util.ArrayList;
+import org.bson.types.ObjectId;
 
 /**
  *
@@ -14,8 +15,8 @@ public class Teacher extends HighSchoolUser{
     
     private ArrayList<Classroom> classroom;
 
-    public Teacher(ArrayList<Classroom> classroom, String name, int id, String password, String email) {
-        super(name, id, password, email);
+    public Teacher(ArrayList<Classroom> classroom, ObjectId _id, String name, int id, String password, String email) {
+        super(_id, name, id, password, email);
         this.classroom = classroom;
     }
 
