@@ -17,22 +17,12 @@
 *.ear
 *.zip
 *.tar.gz
-*.rar
+.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+hs_err_pid
 
 #vpp backup files
 *.vpp.bak_*
 
 
-
-/ws/panchi/U2/ws30Menus/Student Registration/nbproject/private/
-/ws/panchi/U2/ws30Menus/Student Registration/build/
-/ws/panchi/U2/ws30Menus/Student Registration/dist/
-/ws/panchi/U2/ws31MVC/GradeStudents/nbproject/private/
-/ws/panchi/U2/ws31MVC/GradeStudents/build/
-/ws/panchi/U2/ws31MVC/GradeStudents/dist/
-/hw/panchi/U2/Hw15FormsAndCRUD/Menu Registration CRUD/nbproject/private/
-/hw/panchi/U2/Hw15FormsAndCRUD/Menu Registration CRUD/build/
-/hw/panchi/U2/Hw15FormsAndCRUD/Menu Registration CRUD/dist/
