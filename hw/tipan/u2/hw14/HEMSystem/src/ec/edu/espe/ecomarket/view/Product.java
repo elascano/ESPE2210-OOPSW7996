@@ -4,6 +4,8 @@
  */
 package ec.edu.espe.ecomarket.view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Reishel Tipan, PACSTORE, DCCO-ESPE
@@ -51,7 +53,7 @@ public class Product extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        pnlInput.setBackground(new java.awt.Color(204, 255, 255));
+        pnlInput.setBackground(new java.awt.Color(245, 243, 243));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Product");
@@ -59,6 +61,11 @@ public class Product extends javax.swing.JFrame {
         jLabel2.setText("Name:");
 
         txtName.setToolTipText(" Brand - Product");
+        txtName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNameKeyTyped(evt);
+            }
+        });
 
         jLabel3.setText("Unit price:");
 
@@ -160,7 +167,7 @@ public class Product extends javax.swing.JFrame {
                 .addGap(0, 11, Short.MAX_VALUE))
         );
 
-        pnlButtons.setBackground(new java.awt.Color(204, 255, 255));
+        pnlButtons.setBackground(new java.awt.Color(244, 244, 244));
 
         btnRegister.setText("Register");
 
@@ -222,6 +229,22 @@ public class Product extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txtNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameKeyTyped
+        //TODO validate if it not a char
+        char c = evt.getKeyChar();
+        if(!(Character.isAlphabetic(c)) /*|| (c == KeyEvent.VK_BACK_SPACE) || (c == KeyEvent.VK_DELETE)*/)
+        {
+            JOptionPane.showMessageDialog(this, c + " is not accepted here","Warning on input data", JOptionPane.WARNING_MESSAGE);
+            //TODO remove last character
+            //focus the cursor to the input that is wrong
+        }
+    }//GEN-LAST:event_txtNameKeyTyped
+
+    private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt){
+        int option = JOptionPane.showConfirmDialog(this, "Do you want to continue?");
+        JOptionPane.showMessageDialog(this, "", String.valueOf(option), JOptionPane.WARNING_MESSAGE);
+    }
+    
     /**
      * @param args the command line arguments
      */

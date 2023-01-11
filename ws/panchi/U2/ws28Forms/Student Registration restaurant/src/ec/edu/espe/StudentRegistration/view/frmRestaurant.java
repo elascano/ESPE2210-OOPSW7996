@@ -4,6 +4,9 @@
  */
 package ec.edu.espe.StudentRegistration.view;
 
+import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Allan Panchi, GiftSoft Team, DCCO-ESPE
@@ -56,6 +59,11 @@ public class frmRestaurant extends javax.swing.JFrame {
         jLabel2.setText("Name:");
 
         txtName.setToolTipText("LastName and FisrtName");
+        txtName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNameKeyTyped(evt);
+            }
+        });
 
         jLabel3.setText("Email:");
 
@@ -124,7 +132,7 @@ public class frmRestaurant extends javax.swing.JFrame {
                                     .addComponent(jCheckBox2)
                                     .addComponent(jCheckBox1)))))
                     .addGroup(pnlInputLayout.createSequentialGroup()
-                        .addGap(200, 200, 200)
+                        .addGap(145, 145, 145)
                         .addComponent(jLabel1)))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
@@ -161,11 +169,15 @@ public class frmRestaurant extends javax.swing.JFrame {
         );
 
         btnRegister.setText("Register");
+        btnRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisterActionPerformed(evt);
+            }
+        });
 
         btnAssignCourse.setText("Assign Order");
 
         btnFind.setText("Find");
-        btnFind.setEnabled(false);
 
         btnDelete.setText("Delete");
 
@@ -182,7 +194,7 @@ public class frmRestaurant extends javax.swing.JFrame {
                 .addComponent(btnFind)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnDelete)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
         pnlButtonsLayout.setVerticalGroup(
             pnlButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,12 +213,11 @@ public class frmRestaurant extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(pnlButtons, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnlButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pnlInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 12, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -223,6 +234,19 @@ public class frmRestaurant extends javax.swing.JFrame {
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void txtNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameKeyTyped
+        char c = evt.getKeyChar();
+        if(!(Character.isAlphabetic(c)) || (c == KeyEvent.VK_BACK_SPACE) || (c == KeyEvent.VK_DELETE))
+        {
+            JOptionPane.showMessageDialog(this, c + "is not accepted here", "Warning on input data", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_txtNameKeyTyped
+
+    private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
+        int option = JOptionPane.showConfirmDialog(this, "Do you want to continue?");
+        JOptionPane.showConfirmDialog(this, option);
+    }//GEN-LAST:event_btnRegisterActionPerformed
 
     /**
      * @param args the command line arguments
