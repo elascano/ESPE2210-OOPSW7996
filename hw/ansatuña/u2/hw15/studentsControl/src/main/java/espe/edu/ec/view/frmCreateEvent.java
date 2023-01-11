@@ -5,30 +5,37 @@ import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import espe.edu.ec.controller.ConnectionToMaven;
-import static espe.edu.ec.controller.ConnectionToMaven.insertDataEvent;
 import espe.edu.ec.model.Event;
-import java.awt.event.KeyEvent;
-import java.util.Locale;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 import org.bson.Document;
-import org.bson.types.ObjectId;
 
 /**
  *
  * @author NW USER
  */
-public class frmEvent extends javax.swing.JFrame {
+public class frmCreateEvent extends javax.swing.JFrame {
 
+    DefaultTableModel model = new DefaultTableModel();
+
+    private void mostTable() {
+
+        model.addColumn("Id");
+        model.addColumn("Name");
+        model.addColumn("Date");
+        model.addColumn("Guests");
+        model.addColumn("Description");
+        this.table.setModel(model);
+    }
     private static final Scanner sc = new Scanner(System.in);
 
     /**
      * Creates new form frmEvent
      */
-    public frmEvent() {
+    public frmCreateEvent() {
         initComponents();
+        mostTable();
     }
 
     /**
@@ -53,20 +60,15 @@ public class frmEvent extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
-        cbCourse01 = new javax.swing.JCheckBox();
-        cbCourse02 = new javax.swing.JCheckBox();
-        cbCourse03 = new javax.swing.JCheckBox();
-        cbCourse04 = new javax.swing.JCheckBox();
-        rdFormal = new javax.swing.JRadioButton();
-        jLabel9 = new javax.swing.JLabel();
-        rdInformal = new javax.swing.JRadioButton();
         jLabel10 = new javax.swing.JLabel();
         txtID = new javax.swing.JTextField();
+        cmbGuest = new javax.swing.JComboBox<>();
         pnlButtons = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        tableEvents = new javax.swing.JTable();
         btnSearch = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        table = new javax.swing.JTable();
+        btnUpdate = new javax.swing.JButton();
         btnAdd = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtAreaDescription = new javax.swing.JTextArea();
@@ -130,30 +132,6 @@ public class frmEvent extends javax.swing.JFrame {
 
         jLabel8.setText("Who is going to attend?:");
 
-        cbCourse01.setText("Course 01");
-        cbCourse01.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                cbCourse01MouseClicked(evt);
-            }
-        });
-
-        cbCourse02.setText("Course 02");
-
-        cbCourse03.setText("Course 03");
-
-        cbCourse04.setText("Course 04");
-        cbCourse04.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbCourse04ActionPerformed(evt);
-            }
-        });
-
-        rdFormal.setText("Formal");
-
-        jLabel9.setText("Event type:");
-
-        rdInformal.setText("Informal");
-
         jLabel10.setText("ID of event:");
 
         txtID.addActionListener(new java.awt.event.ActionListener() {
@@ -166,6 +144,8 @@ public class frmEvent extends javax.swing.JFrame {
                 txtIDKeyTyped(evt);
             }
         });
+
+        cmbGuest.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Select--", "Course1", "Course 2", "Course 3", "Course 4" }));
 
         javax.swing.GroupLayout pnlInputLayout = new javax.swing.GroupLayout(pnlInput);
         pnlInput.setLayout(pnlInputLayout);
@@ -205,20 +185,10 @@ public class frmEvent extends javax.swing.JFrame {
                                     .addComponent(txtID)))))
                     .addGroup(pnlInputLayout.createSequentialGroup()
                         .addGap(71, 71, 71)
-                        .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cbCourse01)
-                            .addComponent(cbCourse03)
-                            .addComponent(cbCourse04)
-                            .addGroup(pnlInputLayout.createSequentialGroup()
-                                .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cbCourse02)
-                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(109, 109, 109)
-                                .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(rdFormal, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(rdInformal, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel9))))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)
+                            .addComponent(cmbGuest, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(205, Short.MAX_VALUE))
         );
         pnlInputLayout.setVerticalGroup(
             pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -248,43 +218,43 @@ public class frmEvent extends javax.swing.JFrame {
                     .addComponent(cmbMonth, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cmbYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel9))
+                .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cbCourse01)
-                    .addComponent(rdFormal))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cbCourse02)
-                    .addComponent(rdInformal))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cbCourse03)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cbCourse04)
-                .addContainerGap())
+                .addComponent(cmbGuest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(71, 71, 71))
         );
 
-        tableEvents.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Name", "Date", "ID", "Description"
-            }
-        ));
-        jScrollPane2.setViewportView(tableEvents);
-
         btnSearch.setText("Search");
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
 
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteActionPerformed(evt);
+            }
+        });
+
+        table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane2.setViewportView(table);
+
+        btnUpdate.setText("Update");
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateActionPerformed(evt);
             }
         });
 
@@ -298,21 +268,24 @@ public class frmEvent extends javax.swing.JFrame {
                         .addGap(155, 155, 155)
                         .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pnlButtonsLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(42, 42, 42)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 522, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlButtonsLayout.setVerticalGroup(
             pnlButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlButtonsLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(26, 26, 26)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addGroup(pnlButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSearch)
-                    .addComponent(btnDelete))
+                    .addComponent(btnDelete)
+                    .addComponent(btnUpdate))
                 .addGap(37, 37, 37))
         );
 
@@ -350,15 +323,15 @@ public class frmEvent extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(pnlInput, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnlInput, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnAdd)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pnlButtons, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(pnlButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -370,52 +343,23 @@ public class frmEvent extends javax.swing.JFrame {
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
 
-        DefaultTableModel tblModel = (DefaultTableModel) tableEvents.getModel();
-
-        if (tblModel.getRowCount() == 0) {
-            JOptionPane.showMessageDialog(this, "Table is Empty");
-        } else {
-            String Name, Date, ID, Description;
-            String uri = "mongodb+srv://OOP01:OOP123@cluster0.pikbt03.mongodb.net/test";
-
-            try ( MongoClient mongoClient = MongoClients.create(uri)) {
-                MongoDatabase database = mongoClient.getDatabase("hw15");
-                try {
-                    MongoCollection<Document> eventCollection = database.getCollection("Event");
-                    for (int i = 0; i < tblModel.getRowCount(); i++) {
-                        Name = tblModel.getValueAt(i, 0).toString();
-                        Date = tblModel.getValueAt(i, 1).toString();
-                        ID = tblModel.getValueAt(i, 2).toString();
-                        Description = tblModel.getValueAt(i, 3).toString();
-                        Document event = insertDataEvent();
-                        eventCollection.insertOne(event);
-                    }
-                } catch (Exception e) {
-
-                }
-                /*
-                String[] Datos = new String[3];
-
-                Datos[0] = txtEvent.getText();
-                Datos[1] = cmbDay.getSelectedItem().toString() + cmbMonth.getSelectedItem().toString() + cmbYear.getSelectedItem().toString();
-                Datos[2] = txtID.getText();
-                Datos[3] = txtAreaDescription.getText();
-                txtEvent.setText("");
-                cmbDay.setSelectedIndex(0);
-                cmbMonth.setSelectedIndex(0);
-                cmbYear.setSelectedIndex(0);
-                tableEvents.addRowSelectionInterval(0, 1);
-                txtAreaDescription.setText("");
-                Event event = new Event(Datos[0], Datos[3], Datos[1], Datos[2]);
-                ConnectionToMaven.insertDataEvent();
-
-                 */
+        String[] Datos = new String[5];
+        Datos[0] = txtEvent.getText();
+        Datos[1] = cmbDay.getSelectedItem().toString() + cmbMonth.getSelectedItem().toString() + cmbYear.getSelectedItem().toString();
+        Datos[2] = txtID.getText();
+        Datos[3] = txtAreaDescription.getText();
+        Datos[4] = cmbGuest.getSelectedItem().toString();
+        model.addRow(Datos);
+        Event event = new Event(Datos[0], Datos[3], Datos[1], Datos[2], Datos[4]);
+        ConnectionToMaven.insertEvent(event);
+        txtID.setText("");
+        txtEvent.setText("");
+        cmbDay.setSelectedIndex(0);
+        cmbMonth.setSelectedIndex(0);
+        cmbYear.setSelectedIndex(0);
+        txtAreaDescription.setText("");
+        cmbGuest.setSelectedIndex(0);
     }//GEN-LAST:event_btnAddActionPerformed
-        }
-    }
-    private void cbCourse04ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCourse04ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbCourse04ActionPerformed
 
     private void txtEventKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEventKeyTyped
 
@@ -441,24 +385,16 @@ public class frmEvent extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnDeleteActionPerformed
 
-    private void cbCourse01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbCourse01MouseClicked
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_cbCourse01MouseClicked
-
     private void cmbDayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbDayActionPerformed
-        // TODO add your handling code here:
-        String selectedValueDay = cmbDay.getSelectedItem().toString();
+
     }//GEN-LAST:event_cmbDayActionPerformed
 
     private void cmbMonthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbMonthActionPerformed
-        // TODO add your handling code here:
-        String selectedValueMonth = cmbDay.getSelectedItem().toString();
+
     }//GEN-LAST:event_cmbMonthActionPerformed
 
     private void cmbYearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbYearActionPerformed
-        // TODO add your handling code here:
-        String selectedValueYear = cmbDay.getSelectedItem().toString();
+
     }//GEN-LAST:event_cmbYearActionPerformed
 
     private void txtIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDActionPerformed
@@ -480,6 +416,21 @@ public class frmEvent extends javax.swing.JFrame {
 
     }//GEN-LAST:event_txtIDKeyTyped
 
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        // TODO add your handling code here:
+        frmSearchEvent searchEvent = new frmSearchEvent();
+        searchEvent.setVisible(true);
+        this.dispose();
+
+    }//GEN-LAST:event_btnSearchActionPerformed
+
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+        // TODO add your handling code here:
+        frmUpdateEvent updateEvent = new frmUpdateEvent();
+        updateEvent.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnUpdateActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -497,20 +448,21 @@ public class frmEvent extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(frmEvent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmCreateEvent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(frmEvent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmCreateEvent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(frmEvent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmCreateEvent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(frmEvent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmCreateEvent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmEvent().setVisible(true);
+                new frmCreateEvent().setVisible(true);
             }
         });
     }
@@ -519,11 +471,9 @@ public class frmEvent extends javax.swing.JFrame {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnSearch;
-    private javax.swing.JCheckBox cbCourse01;
-    private javax.swing.JCheckBox cbCourse02;
-    private javax.swing.JCheckBox cbCourse03;
-    private javax.swing.JCheckBox cbCourse04;
+    private javax.swing.JButton btnUpdate;
     private javax.swing.JComboBox<String> cmbDay;
+    private javax.swing.JComboBox<String> cmbGuest;
     private javax.swing.JComboBox<String> cmbMonth;
     private javax.swing.JComboBox<String> cmbYear;
     private javax.swing.JLabel jLabel1;
@@ -535,14 +485,11 @@ public class frmEvent extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JPanel pnlButtons;
     private javax.swing.JPanel pnlInput;
-    private javax.swing.JRadioButton rdFormal;
-    private javax.swing.JRadioButton rdInformal;
-    private javax.swing.JTable tableEvents;
+    private javax.swing.JTable table;
     private javax.swing.JTextArea txtAreaDescription;
     private javax.swing.JTextField txtEvent;
     private javax.swing.JTextField txtID;

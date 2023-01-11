@@ -10,19 +10,36 @@ public class Event {
     private String description;
     private String date;
     private String id;
+    private String guest;
 
     public Event() {
         id = "";
         name = "";
         description = "";
         date = "";
+        guest="";
     }
 
     @Override
     public String toString() {
-        return "Event{" + "name=" + name + ", description=" + description + ", date=" + date + ", id=" + id + '}';
+        return "Event{" + "name=" + name + ", description=" + description + ", date=" + date + ", id=" + id + ", guest=" + guest + '}';
     }
 
+    public Event(String name, String description, String date, String id, String guest) {
+        this.name = name;
+        this.description = description;
+        this.date = date;
+        this.id = id;
+        this.guest = guest;
+    }
+
+    public String getGuest() {
+        return guest;
+    }
+
+    public void setGuest(String guest) {
+        this.guest = guest;
+    }
     public Event(String name, String description, String date, String id) {
         this.name = name;
         this.description = description;

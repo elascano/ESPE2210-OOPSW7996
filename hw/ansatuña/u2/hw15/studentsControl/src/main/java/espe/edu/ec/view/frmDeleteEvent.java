@@ -1,9 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package espe.edu.ec.view;
 
+import espe.edu.ec.controller.ConnectionToMaven;
+import espe.edu.ec.model.Event;
 import javax.swing.JOptionPane;
 
 /**
@@ -49,6 +48,11 @@ public class frmDeleteEvent extends javax.swing.JFrame {
 
         jLabel2.setText("Enter the ID of the event to delete:");
 
+        txtIDToDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIDToDeleteActionPerformed(evt);
+            }
+        });
         txtIDToDelete.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtIDToDeleteKeyTyped(evt);
@@ -116,20 +120,24 @@ public class frmDeleteEvent extends javax.swing.JFrame {
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
-        frmEvent Event = new frmEvent();
-        Event.setVisible(true);
+        frmCreateEvent btnBack = new frmCreateEvent();
+        btnBack.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-
-        if (!(txtIDToDelete.getText().equals(""))) {
-            frmConfirmDelete confirmDelete = new frmConfirmDelete();
-            confirmDelete.setVisible(true);
+        int option = JOptionPane.showConfirmDialog(this, "Do you want to continue?");
+        if (option == 0) {
+            Event event=new Event("","" , "", txtIDToDelete.getText(), "");
+            ConnectionToMaven.deleteEvent(event);
+            JOptionPane.showMessageDialog(this, "Event Delete");
+            txtIDToDelete.setText("");
+        } else if (option == 1) {
+            JOptionPane.showMessageDialog(this, "Operation Cancelled");
+        } else if (option == 2) {
+            frmCreateEvent btnBack = new frmCreateEvent();
+            btnBack.setVisible(true);
             this.dispose();
-        } else {
-            JOptionPane.showMessageDialog(this, "Please enter all data");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -144,6 +152,10 @@ public class frmDeleteEvent extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, c + " is not accepted here", "Warning on input data", JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_txtIDToDeleteKeyTyped
+
+    private void txtIDToDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDToDeleteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIDToDeleteActionPerformed
 
     /**
      * @param args the command line arguments
