@@ -6,7 +6,6 @@ import com.mongodb.MongoException;
 import com.mongodb.client.*;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.Updates;
-import espe.edu.ec.model.CanceledEvent;
 import espe.edu.ec.model.Event;
 import org.bson.conversions.Bson;
 import java.util.Scanner;
