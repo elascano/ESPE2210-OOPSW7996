@@ -30,8 +30,8 @@ public class MileageInKilometers {
 
             MongoDatabase database = mongoClient.getDatabase("TaxiDriver");
             try {
-                Bson command = new BsonDocument("ping", new BsonInt64(1));
-                org.bson.Document commandResult = database.runCommand(command);
+                //Bson command = new BsonDocument("ping", new BsonInt64(1));
+                //org.bson.Document commandResult = database.runCommand(command);
                 System.out.println("Connected successfully to server.");
 
                 while (!exit) {
