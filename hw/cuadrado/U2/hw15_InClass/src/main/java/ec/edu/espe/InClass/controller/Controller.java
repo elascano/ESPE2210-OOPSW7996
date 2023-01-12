@@ -1,0 +1,145 @@
+package ec.edu.espe.InClass.controller;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.mongodb.MongoException;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
+import com.mongodb.client.model.Updates;
+import ec.edu.espe.InClass.model.Tutorship;
+import java.util.Scanner;
+import org.bson.Document;
+import org.bson.conversions.Bson;
+import org.bson.types.ObjectId;
+/**
+ *
+ * @author Alejandro Cuadrado, DCCO-ESPE
+ */
+public class Controller {
+
+    public static int dniValidation(String dniValidation) {
+
+        int number = 0, suma = 0, resultado = 0, result = 0;
+
+        for (int i = 0; i < dniValidation.length(); i++) {
+            number = Integer.parseInt(String.valueOf(dniValidation.charAt(i)));
+            if (i % 2 == 0) {
+                number = number * 2;
+                if (number > 9) {
+                    number = number - 9;
+                }
+            }
+            suma = suma + number;
+        }
+        if (suma % 10 != 0) {
+            resultado = 10 - (suma % 10);
+            if (resultado == number) {
+                System.out.println("Valid DNI");
+            } else if (resultado != number) {
+                System.out.println("Invalid DNI");
+            }
+        } else {
+            System.out.println("Valid DNI");
+            result = 1;
+        }
+        return (result);
+    }
+    private static final Scanner sc = new Scanner(System.in);
+
+    public static void insertResident(Tutorship addtutorship) {
+        String uri = "mongodb+srv://Poo:mortadela1@cluster0.7o2yta6.mongodb.net/?retryWrites=true&w=majority";
+        try ( MongoClient mongoClient = MongoClients.create(uri)) {
+
+            MongoDatabase database = mongoClient.getDatabase("Tutorship");
+            try {
+                System.out.println("Connected successfully to server(menu).");
+                MongoCollection<Document> collectionResident = database.getCollection("addtutorship");
+
+                Document tutorship = new Document("_id", new ObjectId())
+                        .append("id", addtutorship.getId())
+                        .append("name", addtutorship.getName())
+                        .append("NRC", addtutorship.getBatch());
+                collectionResident.insertOne(tutorship);
+
+            } catch (MongoException me) {
+                System.out.println("An error occurred while attempting to connect: " + me);
+            }
+
+        }
+    }
+
+    public static Tutorship findResident(Tutorship addtutorship) {
+        String Data;
+        Gson gson = new Gson();
+        String uri = "mongodb+srv://Poo:mortadela1@cluster0.7o2yta6.mongodb.net/?retryWrites=true&w=majority";
+        try ( MongoClient mongoClient = MongoClients.create(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("Tutorship");
+            try {
+                MongoCollection<Document> collectionBurguer = database.getCollection("addtutorship");
+
+                Bson filter = Filters.eq("id", addtutorship.getId());
+                try {
+                    Document doc = collectionBurguer.find(Filters.and(filter)).first();
+                    Data = doc.toJson();
+                    TypeToken<Tutorship> type = new TypeToken<Tutorship>() {
+                    };
+                    addtutorship = gson.fromJson(Data, type.getType());
+
+                } catch (Exception e) {
+                    System.out.println("Data not found");
+                }
+
+            } catch (MongoException me) {
+                System.out.println("An error occurred while attempting to connect: " + me);
+            }
+        }
+
+        return addtutorship;
+    }
+
+    public static void updateResident(Tutorship resident) {
+        String uri = "mongodb+srv://Poo:mortadela1@cluster0.7o2yta6.mongodb.net/?retryWrites=true&w=majority";
+
+        try ( MongoClient mongoClient = MongoClients.create(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("Tutorship");
+
+            try {
+
+                MongoCollection collectionBurger = database.getCollection("addtutorship");
+
+                Bson filter = Filters.eq("id", resident.getId());
+
+                Bson updates = Updates.combine(Updates.set("id", resident.getId()),
+                        Updates.set("name", resident.getName()),
+                        Updates.set("batch", resident.getBatch()));
+
+                collectionBurger.updateOne(filter, updates);
+
+            } catch (MongoException me) {
+                System.out.println("An error occurred while attempting to connect: " + me);
+            }
+
+        }
+    }
+
+    public static void deleteResident(Tutorship resident) {
+
+        String uri = "mongodb+srv://Poo:mortadela1@cluster0.7o2yta6.mongodb.net/?retryWrites=true&w=majority";
+
+        try ( MongoClient mongoClient = MongoClients.create(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("Tutorship");
+            try {
+                MongoCollection collectionResident = database.getCollection("addtutorship");
+
+                Bson filter = Filters.eq("id", resident.getId());
+                collectionResident.deleteOne(filter);
+
+            } catch (MongoException me) {
+                System.out.println("An error occurred while attempting to connect: " + me);
+            }
+
+        }
+    }
+}

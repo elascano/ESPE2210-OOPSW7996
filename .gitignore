@@ -23,34 +23,4 @@
 hs_err_pid
 
 #vpp backup files
-<<<<<<< HEAD
 *.vpp.bak_*
-<<<<<<< HEAD
-/hw/enriquez/unit2/hw12/InClass/target/
-=======
-
-*.vpp.bak_*
-<<<<<<< HEAD
->>>>>>> 6a1e39743078f62faf15bbf34a156316dae0fce1
-/ws/verdugo/u2/ws26SolidPrinciplesTest/LSP/build/
-/ws/verdugo/u2/ws26SolidPrinciplesTest/OCP/dist/
-/ws/verdugo/u2/ws26SolidPrinciplesTest/OCP/build/
-/hw/verdugo/u2/hw12MongoDbJava/TaxiDriver/target/
-=======
-
-
->>>>>>> a322cc07001c716ba7f47c81152172575b8bab87
->>>>>>> e280fd4e49c8aa8129f46560c7fc30d6fd5eba8c
-/ws/verdugo/u2/ws28Forms/TaxiScheduling/nbproject/private/
-/ws/verdugo/u2/ws28Forms/TaxiScheduling/build/
-/hw/verdugo/u2/hw14GUIDesingProyect/TaxiScheduling/nbproject/private/
-=======
->>>>>>> 11ed40d3eee3b906608a32ccc1a027319397febd
-/ws/reinoso/U2/ws30/ShopInventoryMenu/nbproject/private/
-/ws/reinoso/U2/ws30/ShopInventoryMenu/build/
-/ws/reinoso/U2/ws31/GradeStudents/build/
-/ws/reinoso/U2/ws31/GradeStudents/nbproject/private/
-/hw/reinoso/U2/hw15/ShopInventory_V2/target/
-=======
-*.vpp.bak_*
->>>>>>> 6e71a91b407b6ea1f0148bfa872dd413714ba26b
