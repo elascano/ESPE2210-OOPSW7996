@@ -57,6 +57,10 @@ public class FrmDeleteResident extends javax.swing.JFrame {
         txtIdDelete.setBackground(new java.awt.Color(0, 0, 102));
         txtIdDelete.setForeground(new java.awt.Color(204, 204, 204));
         txtIdDelete.setToolTipText("Enter the Id to delete");
+        txtIdDelete.setCaretColor(new java.awt.Color(204, 204, 204));
+        txtIdDelete.setDisabledTextColor(new java.awt.Color(204, 204, 204));
+        txtIdDelete.setSelectedTextColor(new java.awt.Color(204, 204, 204));
+        txtIdDelete.setSelectionColor(new java.awt.Color(204, 204, 204));
         txtIdDelete.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtIdDeleteKeyTyped(evt);

@@ -66,6 +66,9 @@ public class FrmUpdateResident extends javax.swing.JFrame {
         jLabel2.setText("Id:");
 
         txtId.setBackground(new java.awt.Color(0, 0, 51));
+        txtId.setForeground(new java.awt.Color(204, 204, 204));
+        txtId.setDisabledTextColor(new java.awt.Color(204, 204, 204));
+        txtId.setSelectedTextColor(new java.awt.Color(204, 204, 204));
         txtId.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtIdKeyTyped(evt);
@@ -79,6 +82,10 @@ public class FrmUpdateResident extends javax.swing.JFrame {
 
         txtName.setBackground(new java.awt.Color(0, 0, 51));
         txtName.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        txtName.setForeground(new java.awt.Color(204, 204, 204));
+        txtName.setDisabledTextColor(new java.awt.Color(204, 204, 204));
+        txtName.setSelectedTextColor(new java.awt.Color(204, 204, 204));
+        txtName.setSelectionColor(new java.awt.Color(204, 204, 204));
         txtName.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtNameKeyTyped(evt);
