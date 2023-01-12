@@ -1,7 +1,7 @@
-
 package ec.edu.espe.shopinventory_v2.view;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 import java.awt.event.KeyEvent;
 import com.mongodb.MongoException;
@@ -13,6 +13,7 @@ import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.Updates;
 import ec.edu.espe.shopinventory_v2.model.Beverage;
+import java.awt.HeadlessException;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -23,7 +24,7 @@ import org.bson.Document;
 import org.bson.conversions.Bson;
 import org.bson.types.ObjectId;
 import javax.swing.table.DefaultTableModel;
-
+import ec.edu.espe.shopinventory_v2.controller.*;
 
 /**
  *
@@ -34,17 +35,20 @@ public class frmBeverage extends javax.swing.JFrame {
     private static final String uri = "mongodb+srv://t07:seb@cluster0.cjkwcyi.mongodb.net/test";
     private static final Scanner scan = new Scanner(System.in);
     private static final String collection = "Beverage";
+    Gson gson = new Gson();
+    MongoCollection<Document> productCollection = DBConection.getCollection(collection);
 
-    DefaultTableModel tabla = new DefaultTableModel(){
+    DefaultTableModel tabla = new DefaultTableModel() {
         @Override
-        public boolean isCellEditable(int row, int column){
-        return false;
+        public boolean isCellEditable(int row, int column) {
+            return false;
         }
     };
+
     /**
      * Creates new form frmBeverage
      */
-    public  frmBeverage() {
+    public frmBeverage() {
         initComponents();
         tabla.addColumn("ObjectId");
         tabla.addColumn("Id");
@@ -53,7 +57,7 @@ public class frmBeverage extends javax.swing.JFrame {
         tabla.addColumn("Price Per Unit");
         tabla.addColumn("Price with Vat");
         jTable.setModel(tabla);
-        
+
     }
 
     /**
@@ -307,52 +311,9 @@ public class frmBeverage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-        String document = "";
-        Gson gson = new Gson();
-        
-        try ( MongoClient mongoClient = MongoClients.create(uri)) {
-            MongoDatabase database = mongoClient.getDatabase("ShopInventory");
-            try {
-                System.out.println("Connected successfully to server.");
-                MongoCollection<Document> productCollection = database.getCollection(collection);
-
-                Bson filter = Filters.eq("id", Integer.parseInt(txtID.getText()));
-                Document query = productCollection.find(Filters.and(filter)).first();
-
-                if(query != null){
-                    JOptionPane.showMessageDialog(this, "Id already exist", "Warning on input data", JOptionPane.WARNING_MESSAGE);
-                    txtID.setText("");
-                    txtName.setText("");
-                    txtQuantity.setText("");
-                    txtPrice.setText("");
-                }
-                
-                else if(query == null){
-                    double iva;
-                    iva = Double.parseDouble(txtPrice.getText()) * 1.12D;
-                    
-                   Document beverageDoc = new Document("_id", new ObjectId())
-                    .append("id", Integer.parseInt(txtID.getText()))
-                    .append("name", txtName.getText())
-                    .append("quantity", Integer.parseInt(txtQuantity.getText()))
-                    .append("pricePerUnit", Float.parseFloat(txtPrice.getText()))
-                    .append("priceWithVAT", iva);
-                   
-                    productCollection.insertOne(beverageDoc);
-                    
-                    JOptionPane.showMessageDialog(this, "Beverage added succesfully", "Add Product", JOptionPane.INFORMATION_MESSAGE);
-                }
-                
-                
-                    
-                
-
-            } catch (MongoException me) {
-                System.out.println("An error occurred while attempting to connect: " + me);
-            }
-
-        }
+        addProduct();
     }//GEN-LAST:event_btnAddActionPerformed
+
 
     private void btnAddComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_btnAddComponentHidden
         // TODO add your handling code here:
@@ -368,168 +329,171 @@ public class frmBeverage extends javax.swing.JFrame {
     }//GEN-LAST:event_txtIDKeyTyped
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
-        String document = "";
-        Gson gson = new Gson();
-        
-        try ( MongoClient mongoClient = MongoClients.create(uri)) {
-            MongoDatabase database = mongoClient.getDatabase("ShopInventory");
-            try {
-                System.out.println("Connected successfully to server.");
-                MongoCollection<Document> productCollection = database.getCollection(collection);
 
-                Bson filter = Filters.eq("id", Integer.parseInt(txtID.getText()));
-                Document query = productCollection.find(Filters.and(filter)).first();
+        searchProduct(productCollection, gson);
 
-                if(query != null){
-                    document = query.toJson();
-                TypeToken<Beverage> type = new TypeToken<Beverage>() {
-                };
-                Beverage beverage = gson.fromJson(document, type.getType());
 
-                txtName.setText(beverage.getName());
-                txtQuantity.setText(Integer.toString(beverage.getQuantity()));
-                txtPrice.setText(Float.toString(beverage.getPricePerUnit()));
-                
-                btnDelete.setEnabled(true);
-                btnUpdate.setEnabled(true);
-                btnAdd.setEnabled(false);
-                }
-                else if(query == null){
-                   JOptionPane.showMessageDialog(this, "Id not found", "Warning on input data", JOptionPane.WARNING_MESSAGE);
-                   txtName.setText("");
-                   txtQuantity.setText("");
-                   txtPrice.setText("");
-                   btnDelete.setEnabled(false);
-                    btnUpdate.setEnabled(false);
-                    btnAdd.setEnabled(true);
-                }
-            } catch (MongoException me) {
-                System.out.println("An error occurred while attempting to connect: " + me);
-            }
-
-        }
     }//GEN-LAST:event_btnSearchActionPerformed
+
 
     private void btnReadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReadActionPerformed
         showData();
     }//GEN-LAST:event_btnReadActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
-        String document = "";
-        Gson gson = new Gson();
-        
-        try ( MongoClient mongoClient = MongoClients.create(uri)) {
-            MongoDatabase database = mongoClient.getDatabase("ShopInventory");
-            try {
-                System.out.println("Connected successfully to server.");
-                MongoCollection<Document> productCollection = database.getCollection(collection);
 
-                Bson filter = Filters.eq("id", Integer.parseInt(txtID.getText()));
-                Document query = productCollection.find(Filters.and(filter)).first();
+        deleteProduct();
 
-                if(query != null){
-                    productCollection.deleteOne(filter);
-                    JOptionPane.showMessageDialog(this, "Beverage deleted succesfully", "Delete Product", JOptionPane.INFORMATION_MESSAGE);
-                    txtID.setText("");
-                    txtName.setText("");
-                    txtQuantity.setText("");
-                    txtPrice.setText("");
-                }
-                else if(query == null){
-                   JOptionPane.showMessageDialog(this, "Id not found", "Warning on input data", JOptionPane.WARNING_MESSAGE);
-                }
-                
-            } catch (MongoException me) {
-                System.out.println("An error occurred while attempting to connect: " + me);
-            }
 
-        }
     }//GEN-LAST:event_btnDeleteActionPerformed
 
+
     private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
+        clear();
+    }//GEN-LAST:event_btnClearActionPerformed
+
+
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+
+        updateProduct();
+
+
+    }//GEN-LAST:event_btnUpdateActionPerformed
+
+
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
+
+    private void btnBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseClicked
+        frmMenu open = new frmMenu();
+        open.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnBackMouseClicked
+
+    //FUNCIONES
+    private void clear() {
         txtID.setText("");
         txtName.setText("");
         txtQuantity.setText("");
         txtPrice.setText("");
         btnDelete.setEnabled(false);
         btnUpdate.setEnabled(false);
-        btnRead.setEnabled(false);
         btnAdd.setEnabled(false);
-    }//GEN-LAST:event_btnClearActionPerformed
+    }
 
-    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
-        String document = "";
-        Gson gson = new Gson();
-        
+    public void showData() {
         try ( MongoClient mongoClient = MongoClients.create(uri)) {
             MongoDatabase database = mongoClient.getDatabase("ShopInventory");
             try {
                 System.out.println("Connected successfully to server.");
                 MongoCollection<Document> productCollection = database.getCollection(collection);
 
-                Bson filter = Filters.eq("id", Integer.parseInt(txtID.getText()));
-                Document query = productCollection.find(Filters.and(filter)).first();
-
-                double iva;
-                    iva = Double.parseDouble(txtPrice.getText()) * 1.12D;
-                
-                if(query != null){
-                    Bson modifyProduct = Updates.combine(
-                        Updates.set("name", txtName.getText()),
-                        Updates.set("quantity", Integer.parseInt(txtQuantity.getText())),
-                        Updates.set("pricePerUnit", Float.parseFloat(txtPrice.getText())),
-                        Updates.set("priceWithVAT", iva));
-                    
-                        productCollection.updateOne(filter, modifyProduct);
-                    JOptionPane.showMessageDialog(this, "Beverage updated succesfully", "Update Product", JOptionPane.INFORMATION_MESSAGE);    
-                        
-                }
-                else if(query == null){
-                   JOptionPane.showMessageDialog(this, "Id not found", "Warning on input data", JOptionPane.WARNING_MESSAGE);
-                }
-                
-            } catch (MongoException me) {
-                System.out.println("An error occurred while attempting to connect: " + me);
-            }
-
-        }
-    }//GEN-LAST:event_btnUpdateActionPerformed
-
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBackActionPerformed
-
-    private void btnBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseClicked
-        // TODO add your handling code here:
-        frmMenu open = new frmMenu();
-        open.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_btnBackMouseClicked
-
-    public void showData(){
-       try ( MongoClient mongoClient = MongoClients.create(uri)) {
-            MongoDatabase database = mongoClient.getDatabase("ShopInventory");
-            try {
-                System.out.println("Connected successfully to server.");
-                MongoCollection<Document> productCollection = database.getCollection(collection);  
-                
                 MongoCursor<Document> consult = productCollection.find().iterator();
                 int total = tabla.getRowCount();
-                for(int i=0; i<total; i++){
+                for (int i = 0; i < total; i++) {
                     tabla.removeRow(0);
                 }
-                while(consult.hasNext()){
-                    ArrayList<Object> doc = new ArrayList<Object>(consult.next().values()); 
+                while (consult.hasNext()) {
+                    ArrayList<Object> doc = new ArrayList<Object>(consult.next().values());
                     tabla.addRow(doc.toArray());
                 }
-                
+
             } catch (MongoException me) {
                 System.out.println("An error occurred while attempting to connect: " + me);
             }
 
         }
     }
-    
+
+    private void searchProduct(MongoCollection<Document> productCollection, Gson gson) throws NumberFormatException, HeadlessException, JsonSyntaxException {
+        String document;
+        Bson filter = Filters.eq("id", Integer.valueOf(txtID.getText()));
+        Document query = productCollection.find(Filters.and(filter)).first();
+        if (query != null) {
+            document = query.toJson();
+            TypeToken<Beverage> type = new TypeToken<Beverage>() {
+            };
+            Beverage beverage = gson.fromJson(document, type.getType());
+
+            txtName.setText(beverage.getName());
+            txtQuantity.setText(Integer.toString(beverage.getQuantity()));
+            txtPrice.setText(Float.toString(beverage.getPricePerUnit()));
+
+            btnDelete.setEnabled(true);
+            btnUpdate.setEnabled(true);
+            btnAdd.setEnabled(false);
+        } else if (query == null) {
+            JOptionPane.showMessageDialog(this, "Id not found", "Warning on input data", JOptionPane.WARNING_MESSAGE);
+            txtName.setText("");
+            txtQuantity.setText("");
+            txtPrice.setText("");
+            btnDelete.setEnabled(false);
+            btnUpdate.setEnabled(false);
+            btnAdd.setEnabled(true);
+        }
+    }
+
+    private void addProduct() throws HeadlessException, NumberFormatException {
+        Bson filter = Filters.eq("id", Integer.parseInt(txtID.getText()));
+        Document query = productCollection.find(Filters.and(filter)).first();
+
+        if (query != null) {
+            JOptionPane.showMessageDialog(this, "Id already exist", "Warning on input data", JOptionPane.WARNING_MESSAGE);
+            clear();
+        } else if (query == null) {
+            double iva;
+            iva = Double.parseDouble(txtPrice.getText()) * 1.12D;
+
+            Document productDoc = new Document("_id", new ObjectId())
+                    .append("id", Integer.parseInt(txtID.getText()))
+                    .append("name", txtName.getText())
+                    .append("quantity", Integer.parseInt(txtQuantity.getText()))
+                    .append("pricePerUnit", Float.parseFloat(txtPrice.getText()))
+                    .append("priceWithVAT", iva);
+
+            productCollection.insertOne(productDoc);
+
+            JOptionPane.showMessageDialog(this, "Product added succesfully", "Add Product", JOptionPane.INFORMATION_MESSAGE);
+            clear();
+        }
+    }
+
+    private void deleteProduct() throws NumberFormatException, HeadlessException {
+        Bson filter = Filters.eq("id", Integer.parseInt(txtID.getText()));
+        Document query = productCollection.find(Filters.and(filter)).first();
+
+        if (query != null) {
+            productCollection.deleteOne(filter);
+            JOptionPane.showMessageDialog(this, "Beverage deleted succesfully", "Delete Product", JOptionPane.INFORMATION_MESSAGE);
+            clear();
+        } else if (query == null) {
+            JOptionPane.showMessageDialog(this, "Id not found", "Warning on input data", JOptionPane.WARNING_MESSAGE);
+        }
+    }
+
+    private void updateProduct() throws NumberFormatException, HeadlessException {
+        Bson filter = Filters.eq("id", Integer.parseInt(txtID.getText()));
+        Document query = productCollection.find(Filters.and(filter)).first();
+
+        double iva;
+        iva = Double.parseDouble(txtPrice.getText()) * 1.12D;
+
+        if (query != null) {
+            Bson modifyProduct = Updates.combine(
+                    Updates.set("name", txtName.getText()),
+                    Updates.set("quantity", Integer.parseInt(txtQuantity.getText())),
+                    Updates.set("pricePerUnit", Float.parseFloat(txtPrice.getText())),
+                    Updates.set("priceWithVAT", iva));
+
+            productCollection.updateOne(filter, modifyProduct);
+            JOptionPane.showMessageDialog(this, "Beverage updated succesfully", "Update Product", JOptionPane.INFORMATION_MESSAGE);
+            clear();
+
+        } else if (query == null) {
+            JOptionPane.showMessageDialog(this, "Id not found", "Warning on input data", JOptionPane.WARNING_MESSAGE);
+        }
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -604,4 +568,4 @@ public class frmBeverage extends javax.swing.JFrame {
     private javax.swing.JTextField txtPrice;
     private javax.swing.JTextField txtQuantity;
     // End of variables declaration//GEN-END:variables
-    }
+}
