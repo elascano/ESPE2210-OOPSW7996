@@ -24,6 +24,7 @@ hs_err_pid
 
 #vpp backup files
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.vpp.bak_*
 /hw/enriquez/unit2/hw12/InClass/target/
 =======
@@ -43,3 +44,6 @@ hs_err_pid
 /ws/enriquez/unit2/ws28Forms/InClass/target/
 /hw/enriquez/unit2/hw14/InClass/target/
 /hw/enriquez/unit2/hw15/InClass/target/
+=======
+*.vpp.bak_*
+>>>>>>> 894276d0fde5ea88f5b7d37772c973368fd4b57e
