@@ -62,10 +62,12 @@ public class frmFind extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(204, 153, 255));
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel2.setText("List of Speaker");
 
-        lblWarning.setText("Click the Button to print a list");
+        lblWarning.setText("Click the button to print a list");
 
         btnFind.setText("Find");
         btnFind.addActionListener(new java.awt.event.ActionListener() {
@@ -93,9 +95,7 @@ public class frmFind extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnFind)
-                    .addComponent(jLabel2))
+                .addComponent(btnFind)
                 .addGap(156, 156, 156))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,15 +104,18 @@ public class frmFind extends javax.swing.JFrame {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(24, 24, 24)
-                        .addComponent(lblWarning)))
+                        .addComponent(lblWarning))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(133, 133, 133)
+                        .addComponent(jLabel2)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(40, 40, 40)
                 .addComponent(jLabel2)
-                .addGap(43, 43, 43)
+                .addGap(27, 27, 27)
                 .addComponent(lblWarning)
                 .addGap(18, 18, 18)
                 .addComponent(btnFind)

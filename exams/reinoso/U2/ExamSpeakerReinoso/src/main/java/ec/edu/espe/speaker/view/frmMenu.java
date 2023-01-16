@@ -31,9 +31,12 @@ public class frmMenu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(204, 153, 255));
+
         lblMenu.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         lblMenu.setText("Speaker's Menu");
 
+        btnRead.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnRead.setText("Add");
         btnRead.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -41,6 +44,7 @@ public class frmMenu extends javax.swing.JFrame {
             }
         });
 
+        btnFind.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnFind.setText("List");
         btnFind.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -48,6 +52,7 @@ public class frmMenu extends javax.swing.JFrame {
             }
         });
 
+        btnExit.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnExit.setText("Exit");
         btnExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,7 +88,7 @@ public class frmMenu extends javax.swing.JFrame {
                 .addComponent(btnRead)
                 .addGap(18, 18, 18)
                 .addComponent(btnFind)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                 .addComponent(btnExit)
                 .addGap(23, 23, 23))
         );
