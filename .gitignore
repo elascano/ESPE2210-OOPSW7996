@@ -24,3 +24,8 @@ hs_err_pid
 
 #vpp backup files
 *.vpp.bak_*
+/ws/tipan/u2/ws32/ChickenFarmer/nbproject/private/
+/exams/tipan/u2/Q38-51/nbproject/private/
+/exams/tipan/u2/examTipan/HardDrivesSystem/target/
+/exams/tipan/u2/examTipan/HardDrivesSyste/target/
+/exams/tipan/u2/exam2Tipan/HardDrivesSystem/target/
