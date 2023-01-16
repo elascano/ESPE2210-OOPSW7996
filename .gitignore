@@ -1,26 +1,77 @@
-# Compiled class file
-*.class
+# Archivo de clase compilado
+*..class
 
-# Log file
-*.log
+# Archivo de registro
+*..log
 
-# BlueJ files
+# Archivos BlueJ
 *.ctxt
 
-# Mobile Tools for Java (J2ME)
+# Herramientas m�viles para Java (J2ME)
 .mtj.tmp/
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-.rar
+# Archivos de paquete #
+*..jar
+*.guerra
+*.Nar
+*.oreja
+*..zip
+*..tar.gz
+..rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# Registros de bloqueo de m�quinas virtuales, consulte http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid
 
 #vpp backup files
+<<<<<<< HEAD
+
+<<<<<<< HEAD
 *.vpp.bak_*
+<<<<<<< HEAD
+>>>>>>> 6a1e39743078f62faf15bbf34a156316dae0fce1
+/ws/verdugo/u2/ws26SolidPrinciplesTest/LSP/build/
+/ws/verdugo/u2/ws26SolidPrinciplesTest/OCP/dist/
+/ws/verdugo/u2/ws26SolidPrinciplesTest/OCP/build/
+/hw/verdugo/u2/hw12MongoDbJava/TaxiDriver/target/
+=======
+
+
+>>>>>>> a322cc07001c716ba7f47c81152172575b8bab87
+>>>>>>> e280fd4e49c8aa8129f46560c7fc30d6fd5eba8c
+/ws/enriquez/unit2/ws28Forms/InClass/target/
+/hw/enriquez/unit2/hw14/InClass/target/
+/hw/enriquez/unit2/hw15/InClass/target/
+=======
+*.vpp.bak_*
+>>>>>>> 894276d0fde5ea88f5b7d37772c973368fd4b57e
+/exams/enriquez/u2/Q38-51/ExamCode/nbproject/private/
+=======
+>>>>>>> d61f932156bd9c008948e56b9ab484756c69f140
+/exams/enriquez/u2/Q71-100/Exam/target/
+=======
+*.vpp.bak_*
+<<<<<<< HEAD
+>>>>>>> 9ef336c0dc3c88469ceeb50fd5005ffb19bfc130
+/ws/gutierrez/u2/ws24Libraries/Taxes/nbproject/private/
+/ws/gutierrez/u2/ws24Libraries/TaxLibrary/nbproject/private/
+/ws/gutierrez/u2/ws24Libraries/TaxLibrary/build/
+/ws/gutierrez/u2/ws24Libraries/TaxLibrary/dist/
+/ws/gutierrez/u2/ws24Libraries/Taxes/build/
+/ws/gutierrez/u2/ws24Libraries/SRP/nbproject/private/
+=======
+*.vpp.bak*
+>>>>>>> c425f7192c9f66476c311ba1fccec646b60f71e2
+=======
+*.vpp.bak_*
+>>>>>>> 07ad8c79b4d790f2a2b1efbb1a02d739bb9d8f13
+/ws/gutierrez/u2/ws28Forms/ws28Forms/nbproject/private/
+/ws/gutierrez/u2/ws28Forms/ws28Forms/build/
+/hw/gutierrez/u2/hw14/Interfaces/nbproject/private/
+/hw/gutierrez/u2/hw14/Interfaces/build/
+/hw/gutierrez/u2/hw14/ws30/nbproject/private/
+/hw/gutierrez/u2/hw14/ws30/build/
+/hw/gutierrez/u2/hw14/GradeStudents/nbproject/private/
+/hw/gutierrez/u2/hw15/hw15/target/
+=======
+>>>>>>> a441105895b81f8aa1c7e1422c6a9fcf5682b211
+>>>>>>> e966ee275030769cc584c9dc52f25d2070a4f5af

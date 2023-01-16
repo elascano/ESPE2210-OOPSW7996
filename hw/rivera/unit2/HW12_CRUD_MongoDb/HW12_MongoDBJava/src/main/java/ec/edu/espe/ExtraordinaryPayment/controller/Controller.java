@@ -78,10 +78,7 @@ public class Controller {
         Scanner sc = new Scanner(System.in);
         String month;
 
-        System.out.println("----------------------");
-        System.out.println("Enter the resident id:");
         resident.setId(sc.nextInt());
-        System.out.println("----------------------");
 
         MongoCollection<Document> collection = database.getCollection("ExtraordinaryPayment");
         Bson query = Filters.eq("id", resident.getId());
