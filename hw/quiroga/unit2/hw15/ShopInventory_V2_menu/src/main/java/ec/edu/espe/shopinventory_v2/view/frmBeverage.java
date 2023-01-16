@@ -3,7 +3,6 @@ package ec.edu.espe.shopinventory_v2.view;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
-import java.awt.event.KeyEvent;
 import com.mongodb.MongoException;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
@@ -14,11 +13,8 @@ import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.Updates;
 import ec.edu.espe.shopinventory_v2.model.Beverage;
 import java.awt.HeadlessException;
-import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import org.bson.Document;
 import org.bson.conversions.Bson;
@@ -37,7 +33,11 @@ public class frmBeverage extends javax.swing.JFrame {
     private static final String collection = "Beverage";
     Gson gson = new Gson();
     MongoCollection<Document> productCollection = DBConection.getCollection(collection);
-
+    boolean flag;
+    
+    
+    
+    
     DefaultTableModel tabla = new DefaultTableModel() {
         @Override
         public boolean isCellEditable(int row, int column) {
@@ -311,7 +311,18 @@ public class frmBeverage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-        addProduct();
+        int productID = Integer.parseInt(txtID.getText());
+        String productName = txtName.getText();
+        int productQuantity = Integer.parseInt(txtQuantity.getText());
+        float productPrice = Float.parseFloat(txtPrice.getText());
+        
+        flag = DBConection.addProduct(productID, productName, productQuantity, productPrice, productCollection);
+        if(flag == false){
+            JOptionPane.showMessageDialog(this, "Id not found", "Warning on input data", JOptionPane.WARNING_MESSAGE);
+        }else{
+            JOptionPane.showMessageDialog(this, "Product added succesfully", "Add Product", JOptionPane.INFORMATION_MESSAGE);
+            clear();  
+        }
     }//GEN-LAST:event_btnAddActionPerformed
 
 
@@ -329,10 +340,7 @@ public class frmBeverage extends javax.swing.JFrame {
     }//GEN-LAST:event_txtIDKeyTyped
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
-
         searchProduct(productCollection, gson);
-
-
     }//GEN-LAST:event_btnSearchActionPerformed
 
 
@@ -341,8 +349,17 @@ public class frmBeverage extends javax.swing.JFrame {
     }//GEN-LAST:event_btnReadActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
-
-        deleteProduct();
+        int productID = Integer.parseInt(txtID.getText());
+        
+        DBConection.deleteProduct(productID, productCollection);
+        if(flag == false){
+            JOptionPane.showMessageDialog(this, "Id already exist", "Warning on input data", JOptionPane.WARNING_MESSAGE);
+            clear();
+        }else{
+            JOptionPane.showMessageDialog(this, "Beverage deleted succesfully", "Delete Product", JOptionPane.INFORMATION_MESSAGE);
+            clear();
+        }
+        
 
 
     }//GEN-LAST:event_btnDeleteActionPerformed
@@ -354,8 +371,20 @@ public class frmBeverage extends javax.swing.JFrame {
 
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+        int productID = Integer.parseInt(txtID.getText());
+        String productName = txtName.getText();
+        int productQuantity = Integer.parseInt(txtQuantity.getText());
+        float productPrice = Float.parseFloat(txtPrice.getText());
+        
+        flag = DBConection.updateProduct(productID, productName, productQuantity, productPrice, productCollection);
+        
+        if (flag == true) {
+            JOptionPane.showMessageDialog(this, "Beverage updated succesfully", "Update Product", JOptionPane.INFORMATION_MESSAGE);
+            clear();
 
-        updateProduct();
+        } else {
+            JOptionPane.showMessageDialog(this, "Id not found", "Warning on input data", JOptionPane.WARNING_MESSAGE);
+        }
 
 
     }//GEN-LAST:event_btnUpdateActionPerformed
@@ -433,66 +462,7 @@ public class frmBeverage extends javax.swing.JFrame {
         }
     }
 
-    private void addProduct() throws HeadlessException, NumberFormatException {
-        Bson filter = Filters.eq("id", Integer.parseInt(txtID.getText()));
-        Document query = productCollection.find(Filters.and(filter)).first();
-
-        if (query != null) {
-            JOptionPane.showMessageDialog(this, "Id already exist", "Warning on input data", JOptionPane.WARNING_MESSAGE);
-            clear();
-        } else if (query == null) {
-            double iva;
-            iva = Double.parseDouble(txtPrice.getText()) * 1.12D;
-
-            Document productDoc = new Document("_id", new ObjectId())
-                    .append("id", Integer.parseInt(txtID.getText()))
-                    .append("name", txtName.getText())
-                    .append("quantity", Integer.parseInt(txtQuantity.getText()))
-                    .append("pricePerUnit", Float.parseFloat(txtPrice.getText()))
-                    .append("priceWithVAT", iva);
-
-            productCollection.insertOne(productDoc);
-
-            JOptionPane.showMessageDialog(this, "Product added succesfully", "Add Product", JOptionPane.INFORMATION_MESSAGE);
-            clear();
-        }
-    }
-
-    private void deleteProduct() throws NumberFormatException, HeadlessException {
-        Bson filter = Filters.eq("id", Integer.parseInt(txtID.getText()));
-        Document query = productCollection.find(Filters.and(filter)).first();
-
-        if (query != null) {
-            productCollection.deleteOne(filter);
-            JOptionPane.showMessageDialog(this, "Beverage deleted succesfully", "Delete Product", JOptionPane.INFORMATION_MESSAGE);
-            clear();
-        } else if (query == null) {
-            JOptionPane.showMessageDialog(this, "Id not found", "Warning on input data", JOptionPane.WARNING_MESSAGE);
-        }
-    }
-
-    private void updateProduct() throws NumberFormatException, HeadlessException {
-        Bson filter = Filters.eq("id", Integer.parseInt(txtID.getText()));
-        Document query = productCollection.find(Filters.and(filter)).first();
-
-        double iva;
-        iva = Double.parseDouble(txtPrice.getText()) * 1.12D;
-
-        if (query != null) {
-            Bson modifyProduct = Updates.combine(
-                    Updates.set("name", txtName.getText()),
-                    Updates.set("quantity", Integer.parseInt(txtQuantity.getText())),
-                    Updates.set("pricePerUnit", Float.parseFloat(txtPrice.getText())),
-                    Updates.set("priceWithVAT", iva));
-
-            productCollection.updateOne(filter, modifyProduct);
-            JOptionPane.showMessageDialog(this, "Beverage updated succesfully", "Update Product", JOptionPane.INFORMATION_MESSAGE);
-            clear();
-
-        } else if (query == null) {
-            JOptionPane.showMessageDialog(this, "Id not found", "Warning on input data", JOptionPane.WARNING_MESSAGE);
-        }
-    }
+    
 
     /**
      * @param args the command line arguments
