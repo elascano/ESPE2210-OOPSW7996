@@ -24,3 +24,10 @@ hs_err_pid
 
 #vpp backup files
 *.vpp.bak_*
+/exams/drouet/unit2/Q38-51/FromUmlToCodeQ3851/nbproject/private/
+/exams/drouet/unit2/Q61-70/BankManager/nbproject/private/
+/exams/drouet/unit2/Q61-70/BankManager/build/
+/exams/drouet/unit2/Nueva carpeta/BankManager/build/
+/exams/drouet/unit2/Nueva carpeta/BankManager/nbproject/private/
+/exams/drouet/unit2/Q71-100/BankManager/build/
+/exams/drouet/unit2/Q71-100/BankManager/nbproject/private/
