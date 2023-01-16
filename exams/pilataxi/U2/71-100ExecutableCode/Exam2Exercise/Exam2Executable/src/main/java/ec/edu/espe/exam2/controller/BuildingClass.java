@@ -14,10 +14,10 @@ public class BuildingClass extends CRUDMongoDB implements BuildingInterface{
     } 
 
     @Override
-    public Document RegisterAndBuildDocument(String id, String name, String height) {
+    public Document RegisterAndBuildDocument(String id, String name, String originCountry) {
         Document document = new Document("id", id)
             .append("Name", name)
-            .append("Height", height);
+            .append("Origin Country", originCountry);
 
     return document;
     }
