@@ -1,0 +1,6 @@
+ec\edu\espe\hw12crudmongodb\controller\MongoConnection.class
+ec\edu\espe\hw12crudmongodb\view\Fish.class
+ec\edu\espe\hw12crudmongodb\model\Fish.class
+ec\edu\espe\hw12crudmongodb\view\Hw12.class
+ec\edu\espe\students\utils\NegativeValuesException.class
+ec\edu\espe\hw12crudmongodb\view\Fish$1.class
