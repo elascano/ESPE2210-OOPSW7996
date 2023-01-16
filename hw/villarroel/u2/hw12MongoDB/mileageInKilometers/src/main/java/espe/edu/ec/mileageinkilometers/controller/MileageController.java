@@ -121,7 +121,7 @@ public class MileageController {
             System.out.println("Change the Kilometers: ");
             mileage.setKilometers(sc.nextFloat());
 
-            Bson updates = Updates.combine(Updates.set("Kilometers", mileage.getKilometers()));
+            Bson updates = Updates.combine(Updates.set("kilometers", mileage.getKilometers()));
             collection.updateOne(query, updates);
 
             System.out.println("===========================================");
