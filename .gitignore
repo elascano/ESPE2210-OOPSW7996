@@ -24,3 +24,9 @@ hs_errpid*
 
 #vpp backup files
 *.vpp.bak_*
+/ws/chillo/u2/ws26/ExcerciseSOLid/build/
+/ws/chillo/u2/ws27 MongoConection/MongoConection/target/
+/ws/chillo/u2/Ws28Forms/BTAndCMangement/target/
+/ws/chillo/u2/Ws30Menu/Menu/target/
+/ws/chillo/u2/Ws31MVC/GradeStudents/target/
+/exams/chillo/u2/ExamTheory2/nbproject/private/
