@@ -50,4 +50,28 @@ hs_err_pid
 /exams/enriquez/u2/Q71-100/Exam/target/
 =======
 *.vpp.bak_*
+<<<<<<< HEAD
+>>>>>>> 9ef336c0dc3c88469ceeb50fd5005ffb19bfc130
+/ws/gutierrez/u2/ws24Libraries/Taxes/nbproject/private/
+/ws/gutierrez/u2/ws24Libraries/TaxLibrary/nbproject/private/
+/ws/gutierrez/u2/ws24Libraries/TaxLibrary/build/
+/ws/gutierrez/u2/ws24Libraries/TaxLibrary/dist/
+/ws/gutierrez/u2/ws24Libraries/Taxes/build/
+/ws/gutierrez/u2/ws24Libraries/SRP/nbproject/private/
+=======
+*.vpp.bak*
+>>>>>>> c425f7192c9f66476c311ba1fccec646b60f71e2
+=======
+*.vpp.bak_*
+>>>>>>> 07ad8c79b4d790f2a2b1efbb1a02d739bb9d8f13
+/ws/gutierrez/u2/ws28Forms/ws28Forms/nbproject/private/
+/ws/gutierrez/u2/ws28Forms/ws28Forms/build/
+/hw/gutierrez/u2/hw14/Interfaces/nbproject/private/
+/hw/gutierrez/u2/hw14/Interfaces/build/
+/hw/gutierrez/u2/hw14/ws30/nbproject/private/
+/hw/gutierrez/u2/hw14/ws30/build/
+/hw/gutierrez/u2/hw14/GradeStudents/nbproject/private/
+/hw/gutierrez/u2/hw15/hw15/target/
+=======
 >>>>>>> a441105895b81f8aa1c7e1422c6a9fcf5682b211
+>>>>>>> e966ee275030769cc584c9dc52f25d2070a4f5af
