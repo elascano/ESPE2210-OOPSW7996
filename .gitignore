@@ -23,12 +23,8 @@
 hs_err_pid
 
 #vpp backup files
-<<<<<<< HEAD
-<<<<<<< HEAD
-*.vpp.bak_*
-/hw/enriquez/unit2/hw12/InClass/target/
-=======
 
+<<<<<<< HEAD
 *.vpp.bak_*
 <<<<<<< HEAD
 >>>>>>> 6a1e39743078f62faf15bbf34a156316dae0fce1
@@ -48,3 +44,6 @@ hs_err_pid
 *.vpp.bak_*
 >>>>>>> 894276d0fde5ea88f5b7d37772c973368fd4b57e
 /exams/enriquez/u2/Q38-51/ExamCode/nbproject/private/
+=======
+>>>>>>> d61f932156bd9c008948e56b9ab484756c69f140
+/exams/enriquez/u2/Q71-100/Exam/target/

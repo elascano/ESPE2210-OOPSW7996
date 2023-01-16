@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package ec.edu.espe.exam.controller;
 
 import ec.edu.espe.exam.model.Student;
@@ -21,14 +17,14 @@ public class DBManager {
         return student;
     }
 
-    public static ArrayList read(ArrayList<Object> studentList) {
+    public static ArrayList read(ArrayList<Object> studentsList) {
         ArrayList<Student> students;
         Object[] studentList;
 
         students = new ArrayList<>();
 
-        for (int i = 0; i < studentList.size(); i++) {
-            studentList = (Object[]) studentList.get(i);
+        for (int i = 0; i < studentsList.size(); i++) {
+            studentList = (Object[]) studentsList.get(i);
             students.add(toStudent(studentList));
         }
 
