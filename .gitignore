@@ -24,3 +24,4 @@ hs_err_pid
 
 #vpp backup files
 *.vpp.bak_*
+/exams/suquillo/u2/New Folder/Exam2p/nbproject/private/
