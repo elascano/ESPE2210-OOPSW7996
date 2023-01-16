@@ -68,3 +68,11 @@ hs_errpid
 =======
 *.vpp.bak_*
 >>>>>>> 07ad8c79b4d790f2a2b1efbb1a02d739bb9d8f13
+/ws/gutierrez/u2/ws28Forms/ws28Forms/nbproject/private/
+/ws/gutierrez/u2/ws28Forms/ws28Forms/build/
+/hw/gutierrez/u2/hw14/Interfaces/nbproject/private/
+/hw/gutierrez/u2/hw14/Interfaces/build/
+/hw/gutierrez/u2/hw14/ws30/nbproject/private/
+/hw/gutierrez/u2/hw14/ws30/build/
+/hw/gutierrez/u2/hw14/GradeStudents/nbproject/private/
+/hw/gutierrez/u2/hw15/hw15/target/
