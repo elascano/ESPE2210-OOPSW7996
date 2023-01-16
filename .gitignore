@@ -1,32 +1,26 @@
-# Compiled class file
-*.class
+# Archivo de clase compilado
+*..class
 
-# Log file
-*.log
+# Archivo de registro
+*..log
 
-# BlueJ files
+# Archivos BlueJ
 *.ctxt
 
-# Mobile Tools for Java (J2ME)
+# Herramientas m�viles para Java (J2ME)
 .mtj.tmp/
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-.rar
+# Archivos de paquete #
+*..jar
+*.guerra
+*.Nar
+*.oreja
+*..zip
+*..tar.gz
+..rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_errpid*
+# Registros de bloqueo de m�quinas virtuales, consulte http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid
 
 #vpp backup files
 *.vpp.bak_*
-/ws/chillo/u2/ws26/ExcerciseSOLid/build/
-/ws/chillo/u2/ws27 MongoConection/MongoConection/target/
-/ws/chillo/u2/Ws28Forms/BTAndCMangement/target/
-/ws/chillo/u2/Ws30Menu/Menu/target/
-/ws/chillo/u2/Ws31MVC/GradeStudents/target/
-/exams/chillo/u2/ExamTheory2/nbproject/private/

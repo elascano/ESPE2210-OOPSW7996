@@ -1,0 +1,3 @@
+espe\edu\ec\Store\controller\ConnectionMongoStore.class
+espe\edu\ec\Store\view\MongoDBStore.class
+espe\edu\ec\Store\model\Product.class
