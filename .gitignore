@@ -22,11 +22,6 @@
 # Registros de bloqueo de máquinas virtuales, consulte http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid
 
-<<<<<<< HEAD
 #vpp backup files
 *.vpp.bak_*
-/exams/reinoso/U2/38-51FromUmlToCode/38-51_FromUmlToCode/nbproject/private/
-/exams/reinoso/U2/PracticExam/Exam2Practic/nbproject/private/
-/exams/reinoso/U2/ExamSpeakerReinoso/target/
-=======
->>>>>>> dfd1e6a849b287c6ecdb439052791d43f3568f75
+
