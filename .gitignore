@@ -24,3 +24,6 @@ hs_err_pid
 
 #vpp backup files
 *.vpp.bak_*
+/exams/reinoso/U2/38-51FromUmlToCode/38-51_FromUmlToCode/nbproject/private/
+/exams/reinoso/U2/PracticExam/Exam2Practic/nbproject/private/
+/exams/reinoso/U2/ExamSpeakerReinoso/target/
