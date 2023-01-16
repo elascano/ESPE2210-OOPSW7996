@@ -25,6 +25,7 @@ public class MongoCRUD {
     private static final String uri = "mongodb+srv://t07:seb@cluster0.cjkwcyi.mongodb.net/test";
     private static final Scanner scan = new Scanner(System.in);
     
+   
     public static void addToMongo(Document product, String collection) {
 
         try ( MongoClient mongoClient = MongoClients.create(uri))
