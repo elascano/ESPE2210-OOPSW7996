@@ -292,13 +292,13 @@ public class frmGrain extends javax.swing.JFrame {
                 
                 else if(query == null){
                     
-                   Document beverageDoc = new Document("_id", new ObjectId())
+                   Document productDoc = new Document("_id", new ObjectId())
                     .append("id", Integer.parseInt(txtID.getText()))
                     .append("name", txtName.getText())
                     .append("quantity", Integer.parseInt(txtQuantity.getText()))
                     .append("pricePerUnit", Float.parseFloat(txtPrice.getText()));
                    
-                    productCollection.insertOne(beverageDoc);
+                    productCollection.insertOne(productDoc);
                     
                     JOptionPane.showMessageDialog(this, "Grain added succesfully", "Add Product", JOptionPane.INFORMATION_MESSAGE);
                 }
