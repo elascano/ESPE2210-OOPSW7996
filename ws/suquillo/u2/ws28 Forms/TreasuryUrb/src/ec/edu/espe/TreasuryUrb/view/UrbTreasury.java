@@ -4,6 +4,9 @@
  */
 package ec.edu.espe.TreasuryUrb.view;
 
+import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Martín Suquillo, WebMasterTeam, DCCO-ESPE
@@ -57,6 +60,11 @@ public class UrbTreasury extends javax.swing.JFrame {
         jLabel2.setText("Name :");
 
         txtNameField.setToolTipText("name lastname");
+        txtNameField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNameFieldKeyTyped(evt);
+            }
+        });
 
         jLabel3.setText("ID :");
 
@@ -174,6 +182,11 @@ public class UrbTreasury extends javax.swing.JFrame {
         );
 
         btnSubmit.setText("Submit");
+        btnSubmit.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnSubmitKeyPressed(evt);
+            }
+        });
 
         btnCancel.setText("Cancel");
 
@@ -222,6 +235,18 @@ public class UrbTreasury extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txtNameFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameFieldKeyTyped
+    char c = evt.getKeyChar();
+         if(!(Character.isAlphabetic(c))|| (c==KeyEvent.VK_BACK_SPACE) || (c==KeyEvent.VK_DELETE))
+        {
+        JOptionPane.showMessageDialog(this, c + " is not accepted here", "WARNING", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_txtNameFieldKeyTyped
+
+    private void btnSubmitKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnSubmitKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSubmitKeyPressed
+    
     /**
      * @param args the command line arguments
      */
