@@ -53,7 +53,9 @@ public class frmRegister extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblRegister.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(204, 153, 255));
+
+        lblRegister.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lblRegister.setText("Add Speaker");
 
         lblWarning.setText("Please, fill the info below");
