@@ -11,21 +11,21 @@ import java.util.ArrayList;
  * @author Francisco Quiroga, Search Engine Bandits , DCCO-ESPE
  */
 public class D extends A{
-    private ArrayList<D> d = new ArrayList<D>();
+    private ArrayList<F> f = new ArrayList<F>();
     private E e[] = new E[5];
 
     /**
-     * @return the d
+     * @return the f
      */
-    public ArrayList<D> getD() {
-        return d;
+    public ArrayList<F> getF() {
+        return f;
     }
 
     /**
-     * @param d the d to set
+     * @param f the f to set
      */
-    public void setD(ArrayList<D> d) {
-        this.d = d;
+    public void setF(ArrayList<F> f) {
+        this.f = f;
     }
 
     /**
@@ -41,6 +41,8 @@ public class D extends A{
     public void setE(E[] e) {
         this.e = e;
     }
+
+    
     
     
 }
