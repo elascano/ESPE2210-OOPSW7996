@@ -1,0 +1,8 @@
+utils\MongoDbManager.class
+ec\edu\espe\exam\view\Exam.class
+ec\edu\espe\exam\view\FrmPrincipal.class
+ec\edu\espe\exam\controller\ApartmentController.class
+ec\edu\espe\exam\view\FrmPrincipal$1.class
+ec\edu\espe\exam\model\Apartment.class
+ec\edu\espe\exam\view\FrmAddApartment$1.class
+ec\edu\espe\exam\view\FrmAddApartment.class
