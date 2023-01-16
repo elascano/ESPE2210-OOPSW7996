@@ -37,13 +37,13 @@ public class frmUpdateEvent extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        txtID = new javax.swing.JTextField();
         cmbGuest = new javax.swing.JComboBox<>();
         btnUpdate = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtAreaDescription = new javax.swing.JTextArea();
+        txtIdToUp = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,7 +57,7 @@ public class frmUpdateEvent extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("Name of the event:");
+        jLabel3.setText("New name of the event:");
 
         txtEvent.setToolTipText("Insert the name of the Event");
         txtEvent.addActionListener(new java.awt.event.ActionListener() {
@@ -103,19 +103,6 @@ public class frmUpdateEvent extends javax.swing.JFrame {
 
         jLabel8.setText("Who is going to attend?:");
 
-        jLabel10.setText("ID of event:");
-
-        txtID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtIDActionPerformed(evt);
-            }
-        });
-        txtID.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtIDKeyTyped(evt);
-            }
-        });
-
         cmbGuest.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Select--", "Course1", "Course 2", "Course 3", "Course 4" }));
 
         javax.swing.GroupLayout pnlInputLayout = new javax.swing.GroupLayout(pnlInput);
@@ -140,32 +127,22 @@ public class frmUpdateEvent extends javax.swing.JFrame {
                                 .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(cmbYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(pnlInputLayout.createSequentialGroup()
-                                .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtEvent, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(31, 31, 31)
-                                .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(txtEvent, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(pnlInputLayout.createSequentialGroup()
                         .addGap(71, 71, 71)
                         .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)
                             .addComponent(cmbGuest, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addContainerGap(245, Short.MAX_VALUE))
         );
         pnlInputLayout.setVerticalGroup(
             pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlInputLayout.createSequentialGroup()
                 .addGap(47, 47, 47)
-                .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel10))
+                .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtEvent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(txtEvent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -199,6 +176,14 @@ public class frmUpdateEvent extends javax.swing.JFrame {
         txtAreaDescription.setToolTipText("General description of the event");
         jScrollPane1.setViewportView(txtAreaDescription);
 
+        txtIdToUp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIdToUpActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setText("Id of the event to Update:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -217,8 +202,10 @@ public class frmUpdateEvent extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(84, 84, 84)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtIdToUp, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel9)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2))))
                 .addContainerGap(144, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -236,7 +223,11 @@ public class frmUpdateEvent extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(32, 32, 32)
                         .addComponent(jLabel1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 213, Short.MAX_VALUE)
+                .addGap(24, 24, 24)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
+                .addComponent(txtIdToUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 237, Short.MAX_VALUE)
                 .addComponent(jLabel9)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -245,9 +236,9 @@ public class frmUpdateEvent extends javax.swing.JFrame {
                 .addGap(23, 23, 23))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(22, 22, 22)
-                    .addComponent(pnlInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(123, Short.MAX_VALUE)))
+                    .addGap(109, 109, 109)
+                    .addComponent(pnlInput, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(194, Short.MAX_VALUE)))
         );
 
         pack();
@@ -289,34 +280,23 @@ public class frmUpdateEvent extends javax.swing.JFrame {
 
     }//GEN-LAST:event_cmbYearActionPerformed
 
-    private void txtIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtIDActionPerformed
-
-    private void txtIDKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIDKeyTyped
-        // TODO add your handling code here:
-        char c = evt.getKeyChar();
-
-        if ((Character.isDigit(c)) || (Character.isWhitespace(c)) || (Character.isISOControl(c))) {
-            txtEvent.setEditable(true);
-
-        } else {
-            txtEvent.setEditable(false);
-            JOptionPane.showMessageDialog(this, c + " is not accepted here", "Warning on input data", JOptionPane.WARNING_MESSAGE);
-        }
-    }//GEN-LAST:event_txtIDKeyTyped
-
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+
         String[] Datos = new String[5];
         Datos[0] = txtEvent.getText();
         Datos[1] = cmbDay.getSelectedItem().toString() + cmbMonth.getSelectedItem().toString() + cmbYear.getSelectedItem().toString();
-        Datos[2] = txtID.getText();
+        Datos[2] = txtIdToUp.getText();
         Datos[3] = txtAreaDescription.getText();
         Datos[4] = cmbGuest.getSelectedItem().toString();
         Event event = new Event(Datos[0], Datos[3], Datos[1], Datos[2], Datos[4]);
-        ConnectionToMaven.insertEvent(event);
+        event.setName(txtEvent.getText());
+        event.setDescription(txtAreaDescription.getText());
+        event.setDate(cmbDay.getSelectedItem().toString() + cmbMonth.getSelectedItem().toString() + cmbYear.getSelectedItem().toString());
+        event.setId(txtIdToUp.getText());
+        event.setGuest(cmbGuest.getSelectedItem().toString());
+        ConnectionToMaven.updateEvent(event);
         JOptionPane.showMessageDialog(this, "Event Updated");
-        txtID.setText("");
+        txtIdToUp.setText("");
         txtEvent.setText("");
         cmbDay.setSelectedIndex(0);
         cmbMonth.setSelectedIndex(0);
@@ -324,6 +304,10 @@ public class frmUpdateEvent extends javax.swing.JFrame {
         txtAreaDescription.setText("");
         cmbGuest.setSelectedIndex(0);
     }//GEN-LAST:event_btnUpdateActionPerformed
+
+    private void txtIdToUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdToUpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIdToUpActionPerformed
 
     /**
      * @param args the command line arguments
@@ -369,7 +353,7 @@ public class frmUpdateEvent extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbMonth;
     private javax.swing.JComboBox<String> cmbYear;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -381,6 +365,6 @@ public class frmUpdateEvent extends javax.swing.JFrame {
     private javax.swing.JPanel pnlInput;
     private javax.swing.JTextArea txtAreaDescription;
     private javax.swing.JTextField txtEvent;
-    private javax.swing.JTextField txtID;
+    private javax.swing.JTextField txtIdToUp;
     // End of variables declaration//GEN-END:variables
 }
