@@ -25,3 +25,8 @@ hs_err_pid
 #vpp backup files
 *.vpp.bak_*
 
+/ws/lasluisa/u2/ws30Menus/FashionStore/nbproject/private/
+/ws/lasluisa/u2/ws30Menus/FashionStore/build/
+/ws/lasluisa/u2/ws31/GradeStudents/nbproject/private/
+/ws/lasluisa/u2/ws31/GradeStudents/build/
+/exams/lasluisa/u2/FromUmlToCode/nbproject/private/
