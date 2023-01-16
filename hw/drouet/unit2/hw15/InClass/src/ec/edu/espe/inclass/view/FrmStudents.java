@@ -8,7 +8,6 @@ import ec.edu.espe.inclass.model.Course;
 import ec.edu.espe.inclass.model.Student;
 import ec.edu.espe.inclass.model.Teacher;
 import ec.edu.espe.inclass.model.Tutorship;
-import static ec.edu.espe.inclass.view.InClass.dBManager;
 import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
@@ -54,7 +53,7 @@ public class FrmStudents extends javax.swing.JFrame {
     public void addStudentGui(String name, String id) {
         Student student;
         student = teacher.getCourses().get(0).addStudent(name, id);
-        //dBManager.createDocument("Students", StudentController.studentToJsonForDB(student, teacher.getCourses().get(0).getNrc()));
+        dBManager.createDocument("Students", StudentController.studentToJsonForDB(student, teacher.getCourses().get(0).getNrc()));
         refreshTable();
     }
 
@@ -105,7 +104,7 @@ public class FrmStudents extends javax.swing.JFrame {
         lblTypeUser.setForeground(new java.awt.Color(255, 255, 255));
         lblTypeUser.setText("profesor");
 
-        btnStudents.setBackground(new java.awt.Color(42, 140, 74));
+        btnStudents.setBackground(new java.awt.Color(100, 194, 123));
         btnStudents.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
         btnStudents.setForeground(new java.awt.Color(255, 255, 255));
         btnStudents.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -143,7 +142,6 @@ public class FrmStudents extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnStudents, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnHome)
@@ -151,7 +149,8 @@ public class FrmStudents extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblTypeUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblUser, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE)))
-            .addComponent(btnAttendance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnStudents, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnAttendance, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -164,11 +163,11 @@ public class FrmStudents extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblTypeUser, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(12, 12, 12)))
-                .addGap(36, 36, 36)
+                .addGap(47, 47, 47)
                 .addComponent(btnStudents, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnAttendance, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(495, Short.MAX_VALUE))
+                .addContainerGap(484, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 720));
@@ -310,12 +309,12 @@ public class FrmStudents extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAddStudentMouseExited
 
     private void btnAddStudentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddStudentMouseClicked
-        FrmAddStudent frmAddStudent;
-        frmAddStudent = new FrmAddStudent(this);
-        frmAddStudent.setVisible(true);
+        FrmDialogAddStudent frmDialogAddStudent;
+        frmDialogAddStudent = new FrmDialogAddStudent(this, true, this);
+        frmDialogAddStudent.setVisible(true);
     }//GEN-LAST:event_btnAddStudentMouseClicked
 
-    public static void connectMongoDB() {
+    private static void connectMongoDB() {
         ArrayList<Tutorship> tutorships;
         ArrayList<Course> courses;
         ArrayList<Student> students;
