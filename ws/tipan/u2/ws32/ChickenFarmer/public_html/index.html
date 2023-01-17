@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<!DOCTYPE html>
+class Coop{
+    constructor(id,chickens){
+        this.id=id;
+        this.chickens=[];
+    }
+
+    addChicken(){
+        const id=prompt("Insert id -> ");
+        const name=prompt("Insert name -> ");
+        const color=prompt("Insert color -> ");
+        const age=prompt("Insert age -> ");
+        const isMolting=prompt("Is molting? (true/false)");
+        const chicken=new Chicken(id,name,color,age,isMolting);
+        this.chickens.push(chicken);
+
+        console.log('${name} chicken added');
+
+    }
+    remove(id){
+        const index=this.chickens.findIndex(chicken =>chicken.id===id);
+        this.chickens.splice(index,1);
+    }
+
+    resetIteration(){}
+    next(){}
+
+}

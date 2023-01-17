@@ -7,22 +7,12 @@ package ec.edu.espe.ws26.OPC;
 public class Vehicle {
     private int power;
     private int suspensionHeight;
-
-    public Vehicle(int power, int suspensionHeight) {
-        this.power = power;
-        this.suspensionHeight = suspensionHeight;
-    }
-
-    @Override
-    public String toString() {
-        return "Vehicle{" + "power=" + power + ", suspensionHeight=" + suspensionHeight + '}';
-    }
-
+    
     public int getPower() {
         return power;
     }
 
-    public void setPower(int power) {
+    public void setPower(final int power) {
         this.power = power;
     }
 
@@ -30,9 +20,7 @@ public class Vehicle {
         return suspensionHeight;
     }
 
-    public void setSuspensionHeight(int suspensionHeight) {
+    public void setSuspensionHeight(final int suspensionHeight) {
         this.suspensionHeight = suspensionHeight;
-    }
-    
-    
+    } 
 }
