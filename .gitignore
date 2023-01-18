@@ -1,4 +1,4 @@
-# Archivo de clase compilado
+ï»¿# Archivo de clase compilado
 *..class
 
 # Archivo de registro
@@ -7,7 +7,7 @@
 # Archivos BlueJ
 *.ctxt
 
-# Herramientas móviles para Java (J2ME)
+# Herramientas mï¿½viles para Java (J2ME)
 .mtj.tmp/
 
 # Archivos de paquete #
@@ -19,6 +19,8 @@
 *..tar.gz
 ..rar
 
-# Registros de bloqueo de máquinas virtuales, consulte http://www.java.com/en/download/help/error_hotspot.xml
+# Registros de bloqueo de mï¿½quinas virtuales, consulte http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid
 
+#vpp backup files
+*.vpp.bak*

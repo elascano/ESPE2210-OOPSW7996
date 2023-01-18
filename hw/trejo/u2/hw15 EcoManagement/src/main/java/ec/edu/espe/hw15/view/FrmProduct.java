@@ -78,6 +78,11 @@ public class FrmProduct extends javax.swing.JFrame {
         jLabel2.setText("Name:");
 
         txtName.setFont(new java.awt.Font("Roboto Black", 0, 12)); // NOI18N
+        txtName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNameActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Roboto Black", 0, 12)); // NOI18N
         jLabel3.setText("Unit Price:");
@@ -296,6 +301,10 @@ public class FrmProduct extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnDeleteActionPerformed
 
+    private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNameActionPerformed
+
     private String name() {
         String name = txtName.getText();
         return name;
@@ -389,7 +398,6 @@ public class FrmProduct extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField txtName;
