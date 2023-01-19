@@ -24,3 +24,5 @@ hs_err_pid
 
 #vpp backup files
 *.vpp.bak_*
+/hw/suquillo/u2/HW16/JavaApplication14/nbproject/private/
+/hw/suquillo/u2/HW15/HW15/nbproject/private/
