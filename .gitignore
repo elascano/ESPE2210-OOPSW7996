@@ -24,3 +24,9 @@ hs_err_pid
 
 #vpp backup files
 *.vpp.bak_*
+/ws/verdugo/u2/ws28Forms/AntColonySimulator/nbproject/private/
+/ws/verdugo/u2/ws28Forms/AntColonySimulator/build/
+/exams/verdugo/u2/Exam Project/nbproject/private/
+/exams/verdugo/u2/FromUMLToCode 38-51/nbproject/private/
+/exams/verdugo/u2/38-51_FromUmlToCode/nbproject/private/
+/exams/verdugo/u2/71-100-ExecutableCode/ExamExercise/target/
