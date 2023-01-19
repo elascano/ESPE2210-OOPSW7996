@@ -1,4 +1,4 @@
-# Archivo de clase compilado
+﻿# Archivo de clase compilado
 *..class
 
 # Archivo de registro
@@ -23,6 +23,7 @@
 hs_err_pid
 
 #vpp backup files
+<<<<<<< HEAD
 *.vpp.bak_*
 /ws/verdugo/u2/ws28Forms/AntColonySimulator/nbproject/private/
 /ws/verdugo/u2/ws28Forms/AntColonySimulator/build/
@@ -30,3 +31,5 @@ hs_err_pid
 /exams/verdugo/u2/FromUMLToCode 38-51/nbproject/private/
 /exams/verdugo/u2/38-51_FromUmlToCode/nbproject/private/
 /exams/verdugo/u2/71-100-ExecutableCode/ExamExercise/target/
+=======
+>>>>>>> 88051d71b208a49f305874b082c0407c8c3bc4b2
