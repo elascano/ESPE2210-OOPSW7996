@@ -6,7 +6,7 @@ package ec.edu.espe.model;
 
 /**
  *
- * @author Labs-DCCO
+ * @author Karla Ansatuña
  */
 public class Furniture {
     String name;
