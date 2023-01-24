@@ -7,7 +7,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author NW USER
+ * @author Karla Ansatuña
  */
 public class frmSearchItem extends javax.swing.JFrame {
 
