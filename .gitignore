@@ -1,4 +1,4 @@
-# Archivo de clase compilado
+﻿# Archivo de clase compilado
 *..class
 
 # Archivo de registro
@@ -24,6 +24,7 @@ hs_err_pid
 
 #vpp backup files
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.vpp.bak_*
 /ws/bonilla/u2/ws30 V1/ws30/nbproject/private/
 =======
@@ -38,15 +39,12 @@ hs_err_pid
 /ws/verdugo/u2/ws26SolidPrinciplesTest/OCP/build/
 /hw/verdugo/u2/hw12MongoDbJava/TaxiDriver/target/
 =======
-
-
->>>>>>> a322cc07001c716ba7f47c81152172575b8bab87
->>>>>>> e280fd4e49c8aa8129f46560c7fc30d6fd5eba8c
-/ws/enriquez/unit2/ws28Forms/InClass/target/
-/hw/enriquez/unit2/hw14/InClass/target/
-/hw/enriquez/unit2/hw15/InClass/target/
+/exams/añasco/U2/Q38-51/FromUmlToCode/build/
+>>>>>>> 5ae9e1933a45b6497dfb671550cc9fb98759859a
 =======
+
 *.vpp.bak_*
+<<<<<<< HEAD
 >>>>>>> 894276d0fde5ea88f5b7d37772c973368fd4b57e
 /exams/enriquez/u2/Q38-51/ExamCode/nbproject/private/
 =======
@@ -80,3 +78,8 @@ hs_err_pid
 >>>>>>> a441105895b81f8aa1c7e1422c6a9fcf5682b211
 >>>>>>> e966ee275030769cc584c9dc52f25d2070a4f5af
 >>>>>>> db3a6f7d297ed48c9854867a653f70df5a187bda
+=======
+>>>>>>> fd1ad6b2be9e97b279749f7ee953147bd623e1ba
+/ws/barrionuevo/unit2/ws28/MegaApanadosService/build/
+/exams/barrionuevo/unit2/Exam2Practice/CodeExcecution/Exam2Practice/target/
+>>>>>>> 5ae9e1933a45b6497dfb671550cc9fb98759859a

@@ -4,6 +4,8 @@
  */
 package ec.edu.espe.rateservice.view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Lindsay Barrionuevo, DeltaTeam, DCCO-ESPE
@@ -58,6 +60,11 @@ public class frmRating extends javax.swing.JFrame {
 
         txtName.setFont(new java.awt.Font("Lucida Bright", 0, 12)); // NOI18N
         txtName.setToolTipText("If you do not want, enter anonymous");
+        txtName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNameKeyTyped(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Lucida Bright", 0, 12)); // NOI18N
         jLabel1.setText("Select from 1 to 5 your degree of satisfaction");
@@ -192,6 +199,15 @@ public class frmRating extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if (!(Character.isAlphabetic(c)))
+        {
+            JOptionPane.showMessageDialog(this,c+" This character is not accepted here");
+        }
+    }//GEN-LAST:event_txtNameKeyTyped
 
     /**
      * @param args the command line arguments

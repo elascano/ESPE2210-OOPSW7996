@@ -1,0 +1,12 @@
+C:\Users\ASUS\Desktop\New projects\Quiz\obj\Debug\Quiz.vbproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\New projects\Quiz\obj\Debug\Quiz.vbproj.SuggestedBindingRedirects.cache
+C:\Users\ASUS\Desktop\New projects\Quiz\obj\Debug\Quiz.Resources.resources
+C:\Users\ASUS\Desktop\New projects\Quiz\obj\Debug\Quiz.vbproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\New projects\Quiz\obj\Debug\Quiz.vbproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\New projects\Quiz\bin\Debug\Quiz.exe.config
+C:\Users\ASUS\Desktop\New projects\Quiz\bin\Debug\Quiz.exe
+C:\Users\ASUS\Desktop\New projects\Quiz\bin\Debug\Quiz.pdb
+C:\Users\ASUS\Desktop\New projects\Quiz\bin\Debug\Quiz.xml
+C:\Users\ASUS\Desktop\New projects\Quiz\obj\Debug\Quiz.exe
+C:\Users\ASUS\Desktop\New projects\Quiz\obj\Debug\Quiz.xml
+C:\Users\ASUS\Desktop\New projects\Quiz\obj\Debug\Quiz.pdb
