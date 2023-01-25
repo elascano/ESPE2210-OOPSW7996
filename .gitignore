@@ -29,3 +29,5 @@ hs_err_pid
 
 *.vpp.bak_*
 >>>>>>> fd1ad6b2be9e97b279749f7ee953147bd623e1ba
+/ws/barrionuevo/unit2/ws28/MegaApanadosService/build/
+/exams/barrionuevo/unit2/Exam2Practice/CodeExcecution/Exam2Practice/target/
