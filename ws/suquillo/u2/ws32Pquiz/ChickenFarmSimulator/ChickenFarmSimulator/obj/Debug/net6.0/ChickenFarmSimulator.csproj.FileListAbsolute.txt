@@ -1,0 +1,15 @@
+C:\Users\User\Desktop\2DO SEMESTRE\P.O.O\WH-COPIAS\ChickenFarmSimulator\ChickenFarmSimulator\bin\Debug\net6.0\ChickenFarmSimulator.exe
+C:\Users\User\Desktop\2DO SEMESTRE\P.O.O\WH-COPIAS\ChickenFarmSimulator\ChickenFarmSimulator\bin\Debug\net6.0\ChickenFarmSimulator.deps.json
+C:\Users\User\Desktop\2DO SEMESTRE\P.O.O\WH-COPIAS\ChickenFarmSimulator\ChickenFarmSimulator\bin\Debug\net6.0\ChickenFarmSimulator.runtimeconfig.json
+C:\Users\User\Desktop\2DO SEMESTRE\P.O.O\WH-COPIAS\ChickenFarmSimulator\ChickenFarmSimulator\bin\Debug\net6.0\ChickenFarmSimulator.dll
+C:\Users\User\Desktop\2DO SEMESTRE\P.O.O\WH-COPIAS\ChickenFarmSimulator\ChickenFarmSimulator\bin\Debug\net6.0\ChickenFarmSimulator.pdb
+C:\Users\User\Desktop\2DO SEMESTRE\P.O.O\WH-COPIAS\ChickenFarmSimulator\ChickenFarmSimulator\obj\Debug\net6.0\ChickenFarmSimulator.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\2DO SEMESTRE\P.O.O\WH-COPIAS\ChickenFarmSimulator\ChickenFarmSimulator\obj\Debug\net6.0\ChickenFarmSimulator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\2DO SEMESTRE\P.O.O\WH-COPIAS\ChickenFarmSimulator\ChickenFarmSimulator\obj\Debug\net6.0\ChickenFarmSimulator.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\2DO SEMESTRE\P.O.O\WH-COPIAS\ChickenFarmSimulator\ChickenFarmSimulator\obj\Debug\net6.0\ChickenFarmSimulator.AssemblyInfo.cs
+C:\Users\User\Desktop\2DO SEMESTRE\P.O.O\WH-COPIAS\ChickenFarmSimulator\ChickenFarmSimulator\obj\Debug\net6.0\ChickenFarmSimulator.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\2DO SEMESTRE\P.O.O\WH-COPIAS\ChickenFarmSimulator\ChickenFarmSimulator\obj\Debug\net6.0\ChickenFarmSimulator.dll
+C:\Users\User\Desktop\2DO SEMESTRE\P.O.O\WH-COPIAS\ChickenFarmSimulator\ChickenFarmSimulator\obj\Debug\net6.0\refint\ChickenFarmSimulator.dll
+C:\Users\User\Desktop\2DO SEMESTRE\P.O.O\WH-COPIAS\ChickenFarmSimulator\ChickenFarmSimulator\obj\Debug\net6.0\ChickenFarmSimulator.pdb
+C:\Users\User\Desktop\2DO SEMESTRE\P.O.O\WH-COPIAS\ChickenFarmSimulator\ChickenFarmSimulator\obj\Debug\net6.0\ChickenFarmSimulator.genruntimeconfig.cache
+C:\Users\User\Desktop\2DO SEMESTRE\P.O.O\WH-COPIAS\ChickenFarmSimulator\ChickenFarmSimulator\obj\Debug\net6.0\ref\ChickenFarmSimulator.dll
