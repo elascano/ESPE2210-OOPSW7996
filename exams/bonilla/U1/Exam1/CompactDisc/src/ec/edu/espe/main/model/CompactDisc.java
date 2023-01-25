@@ -1,12 +1,19 @@
 
-package ec.edu.espe.exam.model;
+package ec.edu.espe.main.model;
 
 public class CompactDisc
 {
     private int id;
     private float memory ;
     private String color;
-
+    
+    
+    public CompactDisc(int id, float memory, String color) 
+    {
+        this.id = id;
+        this.memory = memory;
+        this.color = color;
+    }
     public int getId() {
         return id;
     }
@@ -30,14 +37,6 @@ public class CompactDisc
     public void setColor(String color) {
         this.color = color;
     }
-
-    public CompactDisc(int id, float memory, String color) {
-        this.id = id;
-        this.memory = memory;
-        this.color = color;
-    }
-
-    
 
     @Override
     public String toString() 

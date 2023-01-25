@@ -24,12 +24,62 @@ hs_err_pid
 
 #vpp backup files
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.vpp.bak_*
-/ws/verdugo/u2/ws28Forms/AntColonySimulator/nbproject/private/
-/ws/verdugo/u2/ws28Forms/AntColonySimulator/build/
-/exams/verdugo/u2/Exam Project/nbproject/private/
-/exams/verdugo/u2/FromUMLToCode 38-51/nbproject/private/
-/exams/verdugo/u2/38-51_FromUmlToCode/nbproject/private/
-/exams/verdugo/u2/71-100-ExecutableCode/ExamExercise/target/
+/ws/bonilla/u2/ws30 V1/ws30/nbproject/private/
 =======
->>>>>>> 88051d71b208a49f305874b082c0407c8c3bc4b2
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+*.vpp.bak_*
+<<<<<<< HEAD
+>>>>>>> 6a1e39743078f62faf15bbf34a156316dae0fce1
+/ws/verdugo/u2/ws26SolidPrinciplesTest/LSP/build/
+/ws/verdugo/u2/ws26SolidPrinciplesTest/OCP/dist/
+/ws/verdugo/u2/ws26SolidPrinciplesTest/OCP/build/
+/hw/verdugo/u2/hw12MongoDbJava/TaxiDriver/target/
+=======
+/exams/añasco/U2/Q38-51/FromUmlToCode/build/
+>>>>>>> 5ae9e1933a45b6497dfb671550cc9fb98759859a
+=======
+
+*.vpp.bak_*
+<<<<<<< HEAD
+>>>>>>> 894276d0fde5ea88f5b7d37772c973368fd4b57e
+/exams/enriquez/u2/Q38-51/ExamCode/nbproject/private/
+=======
+>>>>>>> d61f932156bd9c008948e56b9ab484756c69f140
+/exams/enriquez/u2/Q71-100/Exam/target/
+=======
+*.vpp.bak_*
+<<<<<<< HEAD
+>>>>>>> 9ef336c0dc3c88469ceeb50fd5005ffb19bfc130
+/ws/gutierrez/u2/ws24Libraries/Taxes/nbproject/private/
+/ws/gutierrez/u2/ws24Libraries/TaxLibrary/nbproject/private/
+/ws/gutierrez/u2/ws24Libraries/TaxLibrary/build/
+/ws/gutierrez/u2/ws24Libraries/TaxLibrary/dist/
+/ws/gutierrez/u2/ws24Libraries/Taxes/build/
+/ws/gutierrez/u2/ws24Libraries/SRP/nbproject/private/
+=======
+*.vpp.bak*
+>>>>>>> c425f7192c9f66476c311ba1fccec646b60f71e2
+=======
+*.vpp.bak_*
+>>>>>>> 07ad8c79b4d790f2a2b1efbb1a02d739bb9d8f13
+/ws/gutierrez/u2/ws28Forms/ws28Forms/nbproject/private/
+/ws/gutierrez/u2/ws28Forms/ws28Forms/build/
+/hw/gutierrez/u2/hw14/Interfaces/nbproject/private/
+/hw/gutierrez/u2/hw14/Interfaces/build/
+/hw/gutierrez/u2/hw14/ws30/nbproject/private/
+/hw/gutierrez/u2/hw14/ws30/build/
+/hw/gutierrez/u2/hw14/GradeStudents/nbproject/private/
+/hw/gutierrez/u2/hw15/hw15/target/
+=======
+>>>>>>> a441105895b81f8aa1c7e1422c6a9fcf5682b211
+>>>>>>> e966ee275030769cc584c9dc52f25d2070a4f5af
+>>>>>>> db3a6f7d297ed48c9854867a653f70df5a187bda
+=======
+>>>>>>> fd1ad6b2be9e97b279749f7ee953147bd623e1ba
+/ws/barrionuevo/unit2/ws28/MegaApanadosService/build/
+/exams/barrionuevo/unit2/Exam2Practice/CodeExcecution/Exam2Practice/target/
+>>>>>>> 5ae9e1933a45b6497dfb671550cc9fb98759859a
