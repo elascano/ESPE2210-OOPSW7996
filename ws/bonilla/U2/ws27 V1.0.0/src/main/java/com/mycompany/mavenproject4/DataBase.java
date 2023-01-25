@@ -16,14 +16,18 @@ import org.bson.BsonInt64;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 
+
 /**
  *
  * @author Jairo Bonilla, Gaman GeekLords, DCCO-ESPE
  */
-public class DataBase {
+public class DataBase
+{
+    
 
-       public static void main(String[] args) {
- 
+       public static void main(String[] args) 
+       {
+           int anios=15;
         String uri = "mongodb+srv://oop:oop@cluster0.9knxc.mongodb.net/?retryWrites=true&w=majority";
         try (MongoClient mongoClient = MongoClients.create(uri)) {
             MongoDatabase database = mongoClient.getDatabase("oop");
@@ -33,9 +37,11 @@ public class DataBase {
                 System.out.println("Connected successfully to server.");
  
                 MongoCollection collection = database.getCollection("Customer");
- 
+               // collection.insertOne(anios);
+               
                 Bson filter = Filters.and(Filters.gt("age", 15));
                 System.out.println("---> " + collection.find(filter).first());
+                
  
                 //to print some documents, I must use a loop: for, for each, while
             } catch (MongoException me) {

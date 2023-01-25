@@ -129,7 +129,7 @@ public class ChickenFarmSimulator
 
         ArrayList<Chicken> chickens = new ArrayList<>();
         String jsonFile = "";
-        String[] jsonChickens;
+        String jsonChickens[];
 
         try ( Scanner scFile = new Scanner(new File("./chickens.json"))) {
             while (scFile.hasNextLine()) {
@@ -141,8 +141,8 @@ public class ChickenFarmSimulator
 
             jsonChickens = jsonFile.split("},");
 
-            for (int i = 0; i < jsonChickens.length; i++) {
-                if (i < jsonChickens.length - 1) {
+            for (int i = 0; i < jsonChickens.length-1; i++) {
+                if (i < jsonChickens.length ) {
                     chickens.add(gson.fromJson(jsonChickens[i] + "}", Chicken.class));
                 } else {
                     chickens.add(gson.fromJson(jsonChickens[i], Chicken.class));
