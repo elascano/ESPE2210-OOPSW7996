@@ -29,3 +29,6 @@ hs_err_pid
 
 *.vpp.bak_*
 >>>>>>> fd1ad6b2be9e97b279749f7ee953147bd623e1ba
+/ws/jaguaco/U2/ws30/FashionStore/nbproject/private/
+/ws/jaguaco/U2/ws28/FashionOrder/nbproject/private/
+/ws/jaguaco/U2/ws31/Student/nbproject/private/
