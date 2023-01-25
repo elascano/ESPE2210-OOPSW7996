@@ -1,0 +1,5 @@
+C:\Users\CPU\OneDrive\Documentos\OOP\ESPE2210-OOPSW7996\ws\verdugo\u2\ws32ProgramInC#\ChickenFarmSimulator\obj\Debug\net6.0\ChickenFarmSimulator.csproj.AssemblyReference.cache
+C:\Users\CPU\OneDrive\Documentos\OOP\ESPE2210-OOPSW7996\ws\verdugo\u2\ws32ProgramInC#\ChickenFarmSimulator\obj\Debug\net6.0\ChickenFarmSimulator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CPU\OneDrive\Documentos\OOP\ESPE2210-OOPSW7996\ws\verdugo\u2\ws32ProgramInC#\ChickenFarmSimulator\obj\Debug\net6.0\ChickenFarmSimulator.AssemblyInfoInputs.cache
+C:\Users\CPU\OneDrive\Documentos\OOP\ESPE2210-OOPSW7996\ws\verdugo\u2\ws32ProgramInC#\ChickenFarmSimulator\obj\Debug\net6.0\ChickenFarmSimulator.AssemblyInfo.cs
+C:\Users\CPU\OneDrive\Documentos\OOP\ESPE2210-OOPSW7996\ws\verdugo\u2\ws32ProgramInC#\ChickenFarmSimulator\obj\Debug\net6.0\ChickenFarmSimulator.csproj.CoreCompileInputs.cache
