@@ -23,4 +23,9 @@
 hs_err_pid
 
 #vpp backup files
+<<<<<<< HEAD
 /exams/añasco/U2/Q38-51/FromUmlToCode/build/
+=======
+
+*.vpp.bak_*
+>>>>>>> fd1ad6b2be9e97b279749f7ee953147bd623e1ba
