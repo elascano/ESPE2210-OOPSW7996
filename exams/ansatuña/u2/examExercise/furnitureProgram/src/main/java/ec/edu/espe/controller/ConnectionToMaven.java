@@ -13,14 +13,13 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
 import ec.edu.espe.model.Furniture;
-import java.awt.Event;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 import org.bson.types.ObjectId;
 
 /**
  *
- * @author Labs-DCCO
+ * @author Karla Ansatuña
  */
 public class ConnectionToMaven {
 

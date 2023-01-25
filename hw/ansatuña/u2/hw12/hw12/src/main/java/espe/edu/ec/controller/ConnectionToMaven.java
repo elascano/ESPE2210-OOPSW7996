@@ -167,8 +167,8 @@ public class ConnectionToMaven {
                 .append("description", event.getDescription());
     }
 
-    private static void cancelLocalEvent(int id) {
-        String description;
+    private static void cancelLocalEvent(String id, String description) {
+
         String uri = "mongodb+srv://OOP01:OOP123@cluster0.pikbt03.mongodb.net/test";
 
         try ( MongoClient mongoClient = MongoClients.create(uri)) {
@@ -177,8 +177,7 @@ public class ConnectionToMaven {
                 MongoCollection eventCollection = database.getCollection("Canceled Event");
 
                 Bson filter = Filters.eq("id", id);
-                System.out.println("Write the reason why the event is canceled:");
-                description = sc.next();  
+                
                 Bson eventUpdates = Updates.combine(Updates.set("description",description));
 
                 eventCollection.updateOne(filter, eventUpdates);
