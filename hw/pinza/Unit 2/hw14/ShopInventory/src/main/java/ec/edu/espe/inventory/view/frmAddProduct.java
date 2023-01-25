@@ -4,6 +4,8 @@
  */
 package ec.edu.espe.inventory.view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Juan Pablo Pinza, Search Engine Bandits, DCCO-ESPE
@@ -87,6 +89,11 @@ public class frmAddProduct extends javax.swing.JFrame {
         txtID.setToolTipText("123");
 
         txtName.setToolTipText("Enter your product name");
+        txtName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNameKeyTyped(evt);
+            }
+        });
 
         txtQuantity.setToolTipText("123");
 
@@ -220,6 +227,10 @@ public class frmAddProduct extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameKeyTyped
+
+    }//GEN-LAST:event_txtNameKeyTyped
 
     /**
      * @param args the command line arguments
