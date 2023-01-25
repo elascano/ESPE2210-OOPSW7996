@@ -14,9 +14,10 @@ public class FrmAddStudent extends javax.swing.JFrame {
      * Creates new form frmAddStudent
      * @param frmStudents
      */
-    public FrmAddStudent(FrmStudents frmStudents) {
+    public FrmAddStudent(FrmStudents frmStudents) {        
         initComponents();
         this.frmStudents = frmStudents;
+        setLocationRelativeTo(frmStudents);
     }
 
     /**
