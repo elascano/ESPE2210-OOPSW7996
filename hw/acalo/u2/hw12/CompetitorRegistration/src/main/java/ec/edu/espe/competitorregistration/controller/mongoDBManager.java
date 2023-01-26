@@ -17,8 +17,8 @@ import org.bson.types.ObjectId;
  */
 public class mongoDBManager {
 
-    public static void addCompetitor() {
-        Document competitor;
+    public static void addClient() {
+        Document client;
         Document averageCalculated;
 
         competitor = insertCompetitorData();

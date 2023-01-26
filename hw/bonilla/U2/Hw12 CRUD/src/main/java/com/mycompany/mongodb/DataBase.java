@@ -1,5 +1,6 @@
 package com.mycompany.mongodb;
 
+import com.mongodb.DBObject;
 import com.mongodb.MongoException;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
@@ -27,6 +28,11 @@ import java.util.Arrays;
  */
 public class DataBase 
 {
+   public  void conection()
+   {
+      
+   }
+   
     
 
     public static void main(String[] args) {
@@ -37,6 +43,8 @@ public class DataBase
         float priceProduct;
         boolean salir;
         int chooseOption;
+        
+        
         //
         int iterator = 1;
         //

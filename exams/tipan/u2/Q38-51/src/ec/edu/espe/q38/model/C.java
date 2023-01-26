@@ -8,6 +8,6 @@ package ec.edu.espe.q38.model;
  *
  * @author Reishel Tipan, PACSTORE, DCCO-ESPE
  */
-public class C extends A{
+public class C extends A{ // 0.5, no setters getters, constructor, toString
     
 }
