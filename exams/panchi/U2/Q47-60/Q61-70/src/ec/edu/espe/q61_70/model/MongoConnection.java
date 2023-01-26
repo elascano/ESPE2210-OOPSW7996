@@ -13,8 +13,8 @@ public static MongoDatabase database = null;
         public MongoDatabase connectDatabase(){
         
         if (database == null) {
-            String uri = "mongodb+srv://avpanchi:avpp2404@cluster0.pbnwbgy.mongodb.net/test";
-            String db = "Exam";
+            String uri = "mongodb+srv://avpanchi:allan2003@cluster0.pbnwbgy.mongodb.net/test";
+            String db = "Exam2";
 
             com.mongodb.client.MongoClient mongoClient = MongoClients.create(uri);
 
