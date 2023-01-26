@@ -13,7 +13,7 @@ import org.bson.Document;
 
 /**
  *
- * @author NW USER
+ * @author Karla Ansatuña
  */
 public class frmCreateItem extends javax.swing.JFrame {
 
