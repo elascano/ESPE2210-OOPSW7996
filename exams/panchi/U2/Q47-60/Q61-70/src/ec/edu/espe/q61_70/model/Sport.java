@@ -5,32 +5,31 @@ package ec.edu.espe.q61_70.model;
  * @author Allan Panchi, GiftSoft Team, DCCO-ESPE
  */
 public class Sport {
-    private int id;
-    private String name;
-    private boolean isInTeam;
+    protected String id;
+    protected String name;
+    protected String isInTeam;
 
-    @Override
-    public String toString() {
-        return "Sport{" + "id=" + id + ", name=" + name + ", isInTeam=" + isInTeam + '}';
-    }
-
-    public Sport(int id, String name, boolean isInTeam) {
+    public Sport(String id, String name, String isInTeam) {
         this.id = id;
         this.name = name;
         this.isInTeam = isInTeam;
+    }
+    
+   
+    public Sport(){
     }
 
     /**
      * @return the id
      */
-    public int getId() {
+    public String getId() {
         return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -51,16 +50,18 @@ public class Sport {
     /**
      * @return the isInTeam
      */
-    public boolean isIsInTeam() {
+    public String getIsInTeam() {
         return isInTeam;
     }
 
     /**
      * @param isInTeam the isInTeam to set
      */
-    public void setIsInTeam(boolean isInTeam) {
+    public void setIsInTeam(String isInTeam) {
         this.isInTeam = isInTeam;
     }
+
+    
     
     
 }

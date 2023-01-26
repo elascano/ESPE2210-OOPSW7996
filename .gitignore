@@ -1,49 +1,26 @@
-﻿# Archivo de clase compilado
-*..class
+﻿# Compiled class file
+*.class
 
-# Archivo de registro
-*..log
+# Log file
+*.log
 
-# Archivos BlueJ
+# BlueJ files
 *.ctxt
 
-# Herramientas m�viles para Java (J2ME)
+# Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# Archivos de paquete #
-*..jar
-*.guerra
-*.Nar
-*.oreja
-*..zip
-*..tar.gz
-..rar
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+.rar
 
-# Registros de bloqueo de m�quinas virtuales, consulte http://www.java.com/en/download/help/error_hotspot.xml
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid
 
 #vpp backup files
-*.vpp.bak_*
-
-
-<<<<<<< HEAD
->>>>>>> a322cc07001c716ba7f47c81152172575b8bab87
->>>>>>> e280fd4e49c8aa8129f46560c7fc30d6fd5eba8c
-/ws/reinoso/U2/ws28/ShopInventory/nbproject/private/
-/ws/reinoso/U2/ws28/ShopInventory/build/
-/hw/reinoso/U2/hw14/ShopInventoryHw14/nbproject/private/
-/hw/reinoso/U2/hw14/ShopInventoryHw14/build/
-=======
->>>>>>> fd026ca0886ade915f4bdc13538f9ab6fdfd20b9
->>>>>>> 20e3dfa86578bccbeeb859e8dc22c341055777fd
->>>>>>> b4ad3d4fa9af399f82edabad64a5915e12bd868a
-/hw/toapanta/U2/HW12/Hw12/target/
-/ws/toapanta/U2/ws30/StudentsRegistration/nbproject/private/
-/ws/toapanta/U2/ws30/StudentsRegistration/build/
-=======
->>>>>>> 793fed8646252546078c8c83fdb4bd1aa5cdaff3
-/ws/toapanta/U2/ws31Registration/GradeStudents_/nbproject/private/
-/ws/toapanta/U2/ws30/peluqueriaCanina/target/
-=======
-
->>>>>>> c23241a252d4d872b47841805e29d99b36009960
+.vpp.bak_
