@@ -8,6 +8,6 @@ package ec.edu.espe.exam38.model;
  *
  * @author Francisco Quiroga, Search Engine Bandits , DCCO-ESPE
  */
-public class J {
+public class J { //0.9
     
 }
