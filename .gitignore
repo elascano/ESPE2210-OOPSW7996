@@ -23,8 +23,8 @@
 hs_err_pid
 
 #vpp backup files
-<<<<<<< HEAD
 *.vpp.bak_*
+<<<<<<< HEAD
 /ws/verdugo/u2/ws28Forms/AntColonySimulator/nbproject/private/
 /ws/verdugo/u2/ws28Forms/AntColonySimulator/build/
 /exams/verdugo/u2/Exam Project/nbproject/private/
@@ -34,3 +34,7 @@ hs_err_pid
 =======
 >>>>>>> 88051d71b208a49f305874b082c0407c8c3bc4b2
 /hw/reinoso/U3/HW15/CorrectionExamSpeakerReinoso/target/
+=======
+
+
+>>>>>>> ce9813d7566033d9cbec35085fedf3935d08e800
