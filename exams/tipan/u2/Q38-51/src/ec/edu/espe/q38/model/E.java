@@ -8,6 +8,6 @@ package ec.edu.espe.q38.model;
  *
  * @author Reishel Tipan, PACSTORE, DCCO-ESPE
  */
-public class E {
+public class E { // 0.9, No contructor,toString
     
 }
