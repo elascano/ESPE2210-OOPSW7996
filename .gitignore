@@ -24,6 +24,11 @@ hs_err_pid*
 
 #vpp backup files
 <<<<<<< HEAD
+.vpp.bak_
+/ws/ansatuña/u3/ws39TestCase/ws39TestCase/nbproject/private/
+/ws/ansatuña/u3/ws39UnitTest/ws39TestCase/build/
+=======
+<<<<<<< HEAD
 *.vpp.bak_*
 <<<<<<< HEAD
 
@@ -50,3 +55,4 @@ hs_err_pid*
 >>>>>>> 92e1305298437f8bce992889644fac5412b17bc3
 >>>>>>> f2d2d0462fbddf3022d9bdb3b6c059e100c037d5
 >>>>>>> 45a29872dc7a24933fb85f91fef986baa487899e
+>>>>>>> b8305a958967ee3254cf9cc6912c836c0db66f1e
