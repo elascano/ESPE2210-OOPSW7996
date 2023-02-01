@@ -17,5 +17,13 @@
             <artifactId>mongodb-driver-sync</artifactId>
             <version>4.2.3</version>
         </dependency>
+        <dependency>
+	<groupId>org.mongodb</groupId>
+	<artifactId>mongo-java-driver</artifactId>
+	<version>3.8.0</version>
+</dependency>
+<!-- Thanks for using https://jar-download.com -->
+
     </dependencies>
+    
 </project>
