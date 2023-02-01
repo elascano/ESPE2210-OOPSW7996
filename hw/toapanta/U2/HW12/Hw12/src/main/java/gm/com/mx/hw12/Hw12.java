@@ -53,8 +53,10 @@ public class Hw12 {
                                     addStudent(collection);
                                 }
                                 case 2:{
+                                    deleteStudent(collection);
                                 }
                                 case 3:{
+                                    editeStudent(collection);
                                 }
                                 case 4:{
                                 }
@@ -161,6 +163,28 @@ public class Hw12 {
                 System.out.println("Document with that id already exists");
             }
         }
+    }
+    
+    private static void deleteStudent(MongoCollection collection) {
+        int id;
+        id=readOfId();
+        Bson filter = Filters.and(Filters.eq("_id", id));
+        collection.deleteOne(filter);
+        System.out.println("Deleted student");
+    }
+    
+    private static void editeStudent(MongoCollection collection) {
+        Scanner console = new Scanner(System.in);
+        int id;
+        int age;
+        id=readOfId();
+        Bson filter = Filters.and(Filters.eq("_id", id));
+        Document studentEdited = new Document();
+        String name;
+        age = readOfAge();
+        System.out.print("Insert student's name: ");
+        name=console.nextLine();
+        studentEdited.append("name", name);
     }
 }
 

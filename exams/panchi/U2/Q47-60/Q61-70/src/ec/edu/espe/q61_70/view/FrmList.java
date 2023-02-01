@@ -1,8 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package ec.edu.espe.q61_70.view;
+
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import ec.edu.espe.q61_70.model.MongoConnection;
+import ec.edu.espe.q61_70.model.Sport;
+import java.util.ArrayList;
+import java.util.List;
+import org.bson.Document;
+import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
+import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
+import org.bson.codecs.configuration.CodecRegistry;
+import org.bson.codecs.pojo.PojoCodecProvider;
 
 /**
  *
@@ -17,6 +26,29 @@ public class FrmList extends javax.swing.JFrame {
         initComponents();
     }
 
+    public void loadSports(){
+        MongoConnection connection;
+        connection = new MongoConnection();
+        connection.connectDatabase();
+        
+        CodecRegistry codecRegistry = fromRegistries(MongoClient.getDefaultCodecRegistry(),
+            fromProviders(PojoCodecProvider.builder().automatic(true).build()));
+        
+        MongoDatabase db = connection.connectDatabase().withCodecRegistry(codecRegistry);
+        MongoCollection<Sport> collectionStylists = db.getCollection("Sports", Sport.class); 
+        List<Sport> sports = collectionStylists.find(new Document(), Sport.class).into(new ArrayList<>());
+        
+        Object[][] objects = new Object[sports.size()][2];
+        
+        for (int i = 0; i < sports.size(); i++) {
+            objects[i][0] = sports.get(i).getId();
+            objects[i][1] = sports.get(i).getName();
+            objects[i][2] = sports.get(i).getIsInTeam();
+            
+            jTable1.setModel(new javax.swing.table.DefaultTableModel(objects, new String[]{"Id", "Name", "Is In Team"}));
+        }
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -43,7 +75,15 @@ public class FrmList extends javax.swing.JFrame {
             new String [] {
                 "id", "Name", "Is In Team"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 3, 48)); // NOI18N
@@ -89,7 +129,7 @@ public class FrmList extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnShowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowActionPerformed
-        // TODO add your handling code here:
+        loadSports();
     }//GEN-LAST:event_btnShowActionPerformed
 
     /**
