@@ -23,4 +23,18 @@
 hs_err_pid
 
 #vpp backup files
+<<<<<<< HEAD
 *.vpp.bak_*
+<<<<<<< HEAD
+>>>>>>> fd1ad6b2be9e97b279749f7ee953147bd623e1ba
+/ws/barrionuevo/unit2/ws28/MegaApanadosService/build/
+/exams/barrionuevo/unit2/Exam2Practice/CodeExcecution/Exam2Practice/target/
+/exams/barrionuevo/unit2/Exam2Practice/CodeExcecution/ExamPractice2Code/nbproject/private/
+/hw/barrionuevo/unit3/hw15/CorrectionExam/target/
+/ws/barrionuevo/unit3/ws39/Calculator/nbproject/private/
+=======
+>>>>>>> 447e9edf3474282f7b80e22499f3845de23a10ba
+/ws/barrionuevo/unit3/ws39/Calculator/build/
+=======
+*.vpp.bak_*
+>>>>>>> 92e1305298437f8bce992889644fac5412b17bc3
