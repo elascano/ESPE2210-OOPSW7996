@@ -24,3 +24,5 @@ hs_err_pid
 
 #vpp backup files
 .vpp.bak_
+/ws/ansatuña/u3/ws39TestCase/ws39TestCase/nbproject/private/
+/ws/ansatuña/u3/ws39UnitTest/ws39TestCase/build/
