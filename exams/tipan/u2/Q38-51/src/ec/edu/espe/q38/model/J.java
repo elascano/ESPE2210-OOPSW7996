@@ -8,6 +8,6 @@ package ec.edu.espe.q38.model;
  *
  * @author Reishel Tipan, PACSTORE, DCCO-ESPE
  */
-public class J {
+public class J {// 0.9
     
 }
