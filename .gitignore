@@ -23,6 +23,7 @@
 hs_err_pid
 
 #vpp backup files
+<<<<<<< HEAD
 *.vpp.bak_*
 <<<<<<< HEAD
 >>>>>>> fd1ad6b2be9e97b279749f7ee953147bd623e1ba
@@ -34,3 +35,6 @@ hs_err_pid
 =======
 >>>>>>> 447e9edf3474282f7b80e22499f3845de23a10ba
 /ws/barrionuevo/unit3/ws39/Calculator/build/
+=======
+*.vpp.bak_*
+>>>>>>> 92e1305298437f8bce992889644fac5412b17bc3
