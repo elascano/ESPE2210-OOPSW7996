@@ -26,3 +26,7 @@ hs_err_pid
 
 *.vpp.bak_*
 
+/ws/verdugo/u2/ws28Forms/Calculator/nbproject/private/
+/ws/verdugo/u3/ws35CalculatorUnitTest/Calculator/nbproject/private/
+/ws/verdugo/u3/ws39CalculatorUnitTest/Calculator/nbproject/private/
+/ws/verdugo/u3/ws39CalculatorUnitTest/Calculator/build/
