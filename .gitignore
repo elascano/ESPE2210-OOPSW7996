@@ -24,3 +24,6 @@ hs_err_pid
 
 #vpp backup files
 .vpp.bak_
+/ws/tipan/u3/ws39UnitTest/Calculator/nbproject/private/
+/ws/tipan/u3/ws39UnitTest/Calculator/build/
+/ws/tipan/u3/ws39UnitTest/Calculator/dist/
