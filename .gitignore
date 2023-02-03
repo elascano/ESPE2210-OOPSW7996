@@ -17,12 +17,13 @@
 *.ear
 *.zip
 *.tar.gz
-*.rar
+.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+hs_err_pid
 
 #vpp backup files
+<<<<<<< HEAD
 <<<<<<< HEAD
 *.vpp.bak_*
 <<<<<<< HEAD
@@ -54,3 +55,6 @@ hs_err_pid*
 /ws/verdugo/u3/ws40TaxUnitTest/TaxLibrary/nbproject/private/
 /ws/verdugo/u3/ws40TaxUnitTest/TaxLibrary/build/
 /ws/verdugo/u3/ws40TaxUnitTest/TaxLibrary/dist/
+=======
+.vpp.bak_
+>>>>>>> 5f09b905d884be000bf92d4d8c30d352b76dc066
