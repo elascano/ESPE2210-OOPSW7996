@@ -23,4 +23,38 @@
 hs_err_pid
 
 #vpp backup files
+<<<<<<< HEAD
+<<<<<<< HEAD
 *.vpp.bak_*
+<<<<<<< HEAD
+
+/ws/verdugo/u2/ws28Forms/Calculator/nbproject/private/
+/ws/verdugo/u3/ws35CalculatorUnitTest/Calculator/nbproject/private/
+/ws/verdugo/u3/ws39CalculatorUnitTest/Calculator/nbproject/private/
+/ws/verdugo/u3/ws39CalculatorUnitTest/Calculator/build/
+=======
+=======
+<<<<<<< HEAD
+*.vpp.bak_*
+<<<<<<< HEAD
+>>>>>>> fd1ad6b2be9e97b279749f7ee953147bd623e1ba
+/ws/barrionuevo/unit2/ws28/MegaApanadosService/build/
+/exams/barrionuevo/unit2/Exam2Practice/CodeExcecution/Exam2Practice/target/
+/exams/barrionuevo/unit2/Exam2Practice/CodeExcecution/ExamPractice2Code/nbproject/private/
+/hw/barrionuevo/unit3/hw15/CorrectionExam/target/
+/ws/barrionuevo/unit3/ws39/Calculator/nbproject/private/
+=======
+>>>>>>> 447e9edf3474282f7b80e22499f3845de23a10ba
+/ws/barrionuevo/unit3/ws39/Calculator/build/
+=======
+*.vpp.bak_*
+>>>>>>> 92e1305298437f8bce992889644fac5412b17bc3
+>>>>>>> f2d2d0462fbddf3022d9bdb3b6c059e100c037d5
+>>>>>>> 45a29872dc7a24933fb85f91fef986baa487899e
+/ws/verdugo/u2/ws24Libraries/TaxLibrary/dist/
+/ws/verdugo/u3/ws40TaxUnitTest/TaxLibrary/nbproject/private/
+/ws/verdugo/u3/ws40TaxUnitTest/TaxLibrary/build/
+/ws/verdugo/u3/ws40TaxUnitTest/TaxLibrary/dist/
+=======
+.vpp.bak_
+>>>>>>> 5f09b905d884be000bf92d4d8c30d352b76dc066
