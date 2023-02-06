@@ -23,29 +23,40 @@
 hs_err_pid
 
 #vpp backup files
+<<<<<<< HEAD
+<<<<<<< HEAD
 *.vpp.bak_*
-
 <<<<<<< HEAD
 
+/ws/verdugo/u2/ws28Forms/Calculator/nbproject/private/
+/ws/verdugo/u3/ws35CalculatorUnitTest/Calculator/nbproject/private/
+/ws/verdugo/u3/ws39CalculatorUnitTest/Calculator/nbproject/private/
+/ws/verdugo/u3/ws39CalculatorUnitTest/Calculator/build/
+=======
+=======
 <<<<<<< HEAD
->>>>>>> a322cc07001c716ba7f47c81152172575b8bab87
->>>>>>> e280fd4e49c8aa8129f46560c7fc30d6fd5eba8c
-/ws/reinoso/U2/ws28/ShopInventory/nbproject/private/
-/ws/reinoso/U2/ws28/ShopInventory/build/
-/hw/reinoso/U2/hw14/ShopInventoryHw14/nbproject/private/
-/hw/reinoso/U2/hw14/ShopInventoryHw14/build/
+*.vpp.bak_*
+<<<<<<< HEAD
+>>>>>>> fd1ad6b2be9e97b279749f7ee953147bd623e1ba
+/ws/barrionuevo/unit2/ws28/MegaApanadosService/build/
+/exams/barrionuevo/unit2/Exam2Practice/CodeExcecution/Exam2Practice/target/
+/exams/barrionuevo/unit2/Exam2Practice/CodeExcecution/ExamPractice2Code/nbproject/private/
+/hw/barrionuevo/unit3/hw15/CorrectionExam/target/
+/ws/barrionuevo/unit3/ws39/Calculator/nbproject/private/
 =======
->>>>>>> fd026ca0886ade915f4bdc13538f9ab6fdfd20b9
->>>>>>> 20e3dfa86578bccbeeb859e8dc22c341055777fd
->>>>>>> b4ad3d4fa9af399f82edabad64a5915e12bd868a
-/hw/toapanta/U2/HW12/Hw12/target/
-/ws/toapanta/U2/ws30/StudentsRegistration/nbproject/private/
-/ws/toapanta/U2/ws30/StudentsRegistration/build/
+>>>>>>> 447e9edf3474282f7b80e22499f3845de23a10ba
+/ws/barrionuevo/unit3/ws39/Calculator/build/
 =======
->>>>>>> 793fed8646252546078c8c83fdb4bd1aa5cdaff3
-/ws/toapanta/U2/ws31Registration/GradeStudents_/nbproject/private/
-/ws/toapanta/U2/ws30/peluqueriaCanina/target/
+*.vpp.bak_*
+>>>>>>> 92e1305298437f8bce992889644fac5412b17bc3
+>>>>>>> f2d2d0462fbddf3022d9bdb3b6c059e100c037d5
+>>>>>>> 45a29872dc7a24933fb85f91fef986baa487899e
+/ws/verdugo/u2/ws24Libraries/TaxLibrary/dist/
+/ws/verdugo/u3/ws40TaxUnitTest/TaxLibrary/nbproject/private/
+/ws/verdugo/u3/ws40TaxUnitTest/TaxLibrary/build/
+/ws/verdugo/u3/ws40TaxUnitTest/TaxLibrary/dist/
 =======
+<<<<<<< HEAD
 
 >>>>>>> c23241a252d4d872b47841805e29d99b36009960
 /hw/toapanta/U3/Hw15/Movie/target/
@@ -55,3 +66,7 @@ hs_err_pid
 >>>>>>> dd29957d4066096eb064a87280924f97148a36d1
 /ws/toapanta/U3/Hw39/IVA/nbproject/private/
 /ws/toapanta/U3/Hw39/IVA/build/
+=======
+.vpp.bak_
+>>>>>>> 5f09b905d884be000bf92d4d8c30d352b76dc066
+>>>>>>> d83e7b45d1ab877b828434ae48c4d0da99d249b5
