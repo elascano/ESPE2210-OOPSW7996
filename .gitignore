@@ -24,3 +24,7 @@ hs_err_pid
 
 #vpp backup files
 *.vpp.bak_*
+/ws/jaguaco/U3/Hw40/Taxes_1/nbproject/private/
+/ws/jaguaco/U3/Hw40/UnitTest/nbproject/private/
+/ws/jaguaco/U3/Hw40/Taxes_1/build/
+/ws/jaguaco/U3/Hw40/Taxes_1_1/nbproject/private/
