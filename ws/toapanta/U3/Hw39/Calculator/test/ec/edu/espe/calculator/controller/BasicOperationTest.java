@@ -1,31 +1,28 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
- */
 package ec.edu.espe.calculator.controller;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.ArrayList;
+import jdk.dynalink.Operation;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
 
 /**
  *
  * @author David Toapanta, Pacstore, DCCO-ESPE
  */
 public class BasicOperationTest {
+   
     
     public BasicOperationTest() {
     }
-
-    /**
-     * Test of add method, of class BasicOperation.
-     */
+ 
     @Test
     public void testAdd() {
         System.out.println("add");
-        float addend1 = 12.33F;
-        float addend2 = 54.84F;
+        float addend1 = 1.0F;
+        float addend2 = 1.0F;
         BasicOperation instance = new BasicOperation();
-        float expResult = 67.17F;
+        float expResult = 2.0F;
         float result = instance.add(addend1, addend2);
         assertEquals(expResult, result, 0);
     }
@@ -36,8 +33,8 @@ public class BasicOperationTest {
     @Test
     public void testSubtract() {
         System.out.println("subtract");
-        float minuend = 0.0F;
-        float subtrahend = 0.0F;
+        float minuend = 1.0F;
+        float subtrahend = 1.0F;
         BasicOperation instance = new BasicOperation();
         float expResult = 0.0F;
         float result = instance.subtract(minuend, subtrahend);
@@ -51,10 +48,10 @@ public class BasicOperationTest {
     @Test
     public void testMultiply() {
         System.out.println("multiply");
-        float multiplicand = 0.0F;
-        float multiplicator = 0.0F;
+        float multiplicand = 2.0F;
+        float multiplicator = 2.0F;
         BasicOperation instance = new BasicOperation();
-        float expResult = 0.0F;
+        float expResult = 4.0F;
         float result = instance.multiply(multiplicand, multiplicator);
         assertEquals(expResult, result, 0);
 
@@ -66,10 +63,10 @@ public class BasicOperationTest {
     @Test
     public void testDivide() {
         System.out.println("divide");
-        float divisor = 0.0F;
-        float dividend = 0.0F;
+        float divisor = 6.0F;
+        float dividend = 2.0F;
         BasicOperation instance = new BasicOperation();
-        float expResult = 0.0F;
+        float expResult = 3.0F;
         float result = instance.divide(divisor, dividend);
         assertEquals(expResult, result, 0);
 
