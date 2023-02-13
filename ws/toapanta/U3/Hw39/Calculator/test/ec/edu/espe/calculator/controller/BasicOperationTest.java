@@ -1,5 +1,7 @@
 package ec.edu.espe.calculator.controller;
 
+import java.util.ArrayList;
+import jdk.dynalink.Operation;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -9,16 +11,13 @@ import static org.junit.Assert.*;
  * @author David Toapanta, Pacstore, DCCO-ESPE
  */
 public class BasicOperationTest {
+   
     
     public BasicOperationTest() {
     }
-
-    /**
-     * Test of add method, of class BasicOperation.
-     */
+ 
     @Test
     public void testAdd() {
-        
         System.out.println("add");
         float addend1 = 1.0F;
         float addend2 = 1.0F;
