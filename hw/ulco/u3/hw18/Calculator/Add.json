@@ -1,0 +1,10 @@
+[{"addent1":145,"addent2":9,"expectedResult":154},
+ {"addent1": 44,"addent2": 33,"expectedResult": 77},
+ {"addent1": -62,"addent2": 78,"expectedResult": 16},
+ {"addent1": 256,"addent2": 20004,"expectedResult": 20260},
+ {"addent1": 12,"addent2": 98,"expectedResult": 110},
+ {"addent1": -452,"addent2": -66,"expectedResult": -518},
+ {"addent1": 901,"addent2": -34,"expectedResult": 867},
+ {"addent1": 0,"addent2": 0,"expectedResult": 0},
+ {"addent1": 23.1,"addent2": 44.78,"expectedResult": 67.88},
+ {"addent1": 11111,"addent2": -11111,"expectedResult": 0}]
