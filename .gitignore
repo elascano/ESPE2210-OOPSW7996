@@ -22,7 +22,13 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid
 
-#vpp backup files
+<<<<<<< HEAD
+*.vpp.bak_*
+
+
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 *.vpp.bak_*
 <<<<<<< HEAD
@@ -38,5 +44,17 @@ hs_err_pid
 =======
 *.vpp.bak_*
 >>>>>>> 92e1305298437f8bce992889644fac5412b17bc3
+<<<<<<< HEAD
 /ws/barrionuevo/unit3/New Folder/ServiceActivator/nbproject/private/
 /ws/barrionuevo/unit3/New Folder/ServiceActivator/build/
+=======
+>>>>>>> f2d2d0462fbddf3022d9bdb3b6c059e100c037d5
+>>>>>>> 45a29872dc7a24933fb85f91fef986baa487899e
+/hw/reinoso/U3/HW19/Template/nbproject/private/
+/hw/reinoso/U3/HW19/Template/build/
+/ws/reinoso/U3/New Folder/Singleton/nbproject/private/
+/ws/reinoso/U3/New Folder/Singleton/build/
+=======
+#vpp backup files
+>>>>>>> 3276f702f0575f25226bc64dab92e5bc431de2d8
+>>>>>>> b4bb3e1a09935be7f830f37b3fe8ba6298437223

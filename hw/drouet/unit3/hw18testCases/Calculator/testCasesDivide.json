@@ -1,0 +1,27 @@
+[
+    {
+        "value1": 6,
+        "value2": 3,
+        "expectedResult": 2.0
+    },
+        {
+        "value1": 3,
+        "value2": 2,
+        "expectedResult": 1.5
+    },
+    {
+        "value1": 7.8,
+        "value2": 2,
+        "expectedResult": 3.9
+    },
+    {
+        "value1": 70,
+        "value2": 8,
+        "expectedResult": 8.750
+    },
+    {
+        "value1": 9,
+        "value2": 10,
+        "expectedResult": 0.9
+    }
+]
