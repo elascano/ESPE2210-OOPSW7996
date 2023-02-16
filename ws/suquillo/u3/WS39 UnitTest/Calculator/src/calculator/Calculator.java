@@ -29,7 +29,7 @@ public class Calculator {
                 System.out.println("Enter a number: ");
                 addend2 = sc.nextFloat();
                 sum = basicOperation.add(addend1, addend2);
-                System.out.println("Addition--> "+sum);
+                System.out.println("Sum--> "+sum);
             }
             case 2 ->{
                 float difference=0;
@@ -39,7 +39,7 @@ public class Calculator {
                 System.out.println("Enter susbtraend: ");
                 susbtraend = sc.nextFloat();
                 difference = basicOperation.substrac(minuend, susbtraend);
-                System.out.println("Subtraction--> "+difference);
+                System.out.println("Difference--> "+difference);
             }
             case 3 ->{
                 float multiplication=0;
@@ -49,7 +49,7 @@ public class Calculator {
                 System.out.println("Enter multiplier: ");
                 multiplier = sc.nextFloat();
                 multiplication = basicOperation.multiply(miltiplicand, multiplier);
-                System.out.println("Multiplication--> "+multiplication);
+                System.out.println("Product--> "+multiplication);
             }
             case 4 ->{
                 float division=0;
@@ -59,7 +59,7 @@ public class Calculator {
                 System.out.println("Enter divisor: ");
                 divisor = sc.nextFloat();
                 division = basicOperation.divide(dividend, divisor);
-                System.out.println("Division--> "+division);
+                System.out.println("Quotient--> "+division);
             }
             case 5 ->{
                 exit = true;
