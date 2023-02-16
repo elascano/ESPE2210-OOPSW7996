@@ -16,7 +16,7 @@ public class Calculator {
         
         USTax tax = USTax.getInstance();
         taxPercentage = tax.getIvaPercentage();
-        priceWithIVA = tax.salesTotal(price);
+        priceWithIVA = tax.computeSalesTotal(price);
         
         System.out.println("Current tax -> " + taxPercentage);
         System.out.println("PRICE WITHOUT IVA ->"  + price);
@@ -24,7 +24,7 @@ public class Calculator {
         
         tax.setIvaPercentage(0.12F);
         taxPercentage = tax.getIvaPercentage();
-        priceWithIVA = tax.salesTotal(price);
+        priceWithIVA = tax.computeSalesTotal(price);
         System.out.println("Current tax -> " + taxPercentage);
         System.out.println("PRICE WITHOUT IVA ->"  + price);
         System.out.println("PRICE WITH IVA ->"  + priceWithIVA);

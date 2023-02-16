@@ -29,7 +29,7 @@ public class USTax {
         return instance;      
     }
         
-    public float salesTotal(float price){
+    public float computeSalesTotal(float price){
         float priceWithIVA;
         priceWithIVA = roundToTwoDecimalPlaces(price+ price*ivaPercentage);
         return priceWithIVA;      
