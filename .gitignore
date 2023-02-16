@@ -38,3 +38,5 @@ hs_err_pid
 =======
 *.vpp.bak_*
 >>>>>>> 92e1305298437f8bce992889644fac5412b17bc3
+/ws/barrionuevo/unit3/New Folder/ServiceActivator/nbproject/private/
+/ws/barrionuevo/unit3/New Folder/ServiceActivator/build/
