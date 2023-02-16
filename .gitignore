@@ -17,10 +17,9 @@
 *.ear
 *.zip
 *.tar.gz
-*.rar
+.rar
 
 # virtual machine crash logs, see 
-hs_err_pid*
+hs_err_pid
 
-#vpp backup files
-.vpp.bak_
+*.vpp.bak_*
