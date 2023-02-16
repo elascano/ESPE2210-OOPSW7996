@@ -12,6 +12,31 @@ public class BasicOperation {
     int a;
     int b;
     int value1;
+
+    public int getA() {
+        return a;
+    }
+
+    public void setA(int a) {
+        this.a = a;
+    }
+
+    public int getB() {
+        return b;
+    }
+
+    public void setB(int b) {
+        this.b = b;
+    }
+
+    public int getValue1() {
+        return value1;
+    }
+
+    public void setValue1(int value1) {
+        this.value1 = value1;
+        
+    }
     
     
     public float add(float addend1, float addend2){
