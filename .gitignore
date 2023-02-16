@@ -24,3 +24,7 @@ hs_err_pid
 
 #vpp backup files
 *.vpp.bak_*
+/hw/suquillo/u3/HW19/HW19/nbproject/private/
+/hw/suquillo/u3/HW19/HW19/build/
+/hw/suquillo/u3/HW19/WS41 Quizz/nbproject/private/
+/hw/suquillo/u3/HW19/WS41 Quizz/build/
