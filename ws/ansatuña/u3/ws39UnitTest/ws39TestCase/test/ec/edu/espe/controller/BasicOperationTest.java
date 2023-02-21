@@ -1,13 +1,13 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit4TestClass.java to edit this template
  */
 package ec.edu.espe.controller;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -20,19 +20,19 @@ public class BasicOperationTest {
     public BasicOperationTest() {
     }
     
-    @BeforeAll
+    @BeforeClass
     public static void setUpClass() {
     }
     
-    @AfterAll
+    @AfterClass
     public static void tearDownClass() {
     }
     
-    @BeforeEach
+    @Before
     public void setUp() {
     }
     
-    @AfterEach
+    @After
     public void tearDown() {
     }
 
@@ -42,28 +42,18 @@ public class BasicOperationTest {
     @Test
     public void testAdd() {
         System.out.println("add");
-        float addend1 = 1.4F;
-        float addend2 = 2.05F;
+        float addend1 = 0.0F;
+        float addend2 = 0.0F;
         BasicOperation instance = new BasicOperation();
-        float expResult = 3.45F;
+        float expResult = 0.0F;
         float result = instance.add(addend1, addend2);
         assertEquals(expResult, result, 0);
-        
-        addend1=-42.0F;
-        addend2=28.99F;
-        expResult=-13.01F;
-        result = instance.add(addend1, addend2);
-        assertEquals(expResult, result, 0);
-
-        addend1=1.2F;
-        addend2=2.4F;
-        expResult=3.6F;
-        result = instance.add(addend1, addend2);
-        assertEquals(expResult, result, 0.000001F);
-
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
-        /**
-     * Test of add method, of class BasicOperation.
+
+    /**
+     * Test of subtract method, of class BasicOperation.
      */
     @Test
     public void testAddNegatives() {
@@ -75,10 +65,6 @@ public class BasicOperationTest {
         float result = instance.add(addend1, addend2);
         assertEquals(expResult, result, 0);
     }
-
-    /**
-     * Test of subtract method, of class BasicOperation.
-     */
     @Test
     public void testSubtract() {
         System.out.println("subtract");
@@ -88,6 +74,8 @@ public class BasicOperationTest {
         float expResult = 0.0F;
         float result = instance.subtract(minuend, subtrahend);
         assertEquals(expResult, result, 0);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -102,6 +90,8 @@ public class BasicOperationTest {
         float expResult = 0.0F;
         float result = instance.multiply(multiplicand, multiplier);
         assertEquals(expResult, result, 0);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -111,11 +101,13 @@ public class BasicOperationTest {
     public void testDivision() {
         System.out.println("division");
         float dividend = 0.0F;
-        float divider = 1.0F;
+        float divider = 0.0F;
         BasicOperation instance = new BasicOperation();
         float expResult = 0.0F;
         float result = instance.division(dividend, divider);
         assertEquals(expResult, result, 0);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
     
 }

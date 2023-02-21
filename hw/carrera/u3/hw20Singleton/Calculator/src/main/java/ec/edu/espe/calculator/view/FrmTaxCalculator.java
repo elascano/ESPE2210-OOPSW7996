@@ -1,6 +1,6 @@
 package ec.edu.espe.calculator.view;
 
-import ec.espe.edu.calculator.model.USTax;
+import ec.edu.espe.calculator.controller.USTax;
 
 /**
  *
@@ -14,31 +14,34 @@ public class FrmTaxCalculator extends javax.swing.JFrame {
     public FrmTaxCalculator() {
         initComponents();
     }
+    
     private float selectStateTaxPercentage(String state){
         switch(state){
-            case("Utah")-> {return 0.047F;}
-            case("Ohio")-> {return 0.0723F;}
-            case("California")->{return 0.0868F;}
-            case("Kansas")->{return 0.0869F;}
-            case("Texas")->{return 0.0819F;}
+            case("Utah")-> {return 4.7F;}
+            case("Ohio")-> {return 7.23F;}
+            case("California")->{return 8.68F;}
+            case("Kansas")->{return 8.69F;}
+            case("Texas")->{return 8.19F;}
             default ->{return 0.00F;}
         }
     }
+    
     private void computePriceWithTax(){
         float price;
         float priceWithIVA;
         String state;
         float taxPercentage;
+        
         price = Float.parseFloat(String.valueOf(spnrPrice.getValue()));
         state = String.valueOf(cbxState.getSelectedItem());
         taxPercentage  = selectStateTaxPercentage(state);
          
         USTax tax = USTax.getInstance();
-        tax.setIvaPercentage(taxPercentage);
+        tax.modifyIvaPercentage(taxPercentage);
         taxPercentage = tax.getIvaPercentage();
         priceWithIVA = tax.computeSalesTotal(price);
         
-        lblResult.setText("The sale price is : " + priceWithIVA);
+        lblResult.setText("The sale price is: $ " + priceWithIVA);
         lblTax.setText("Tax: " + taxPercentage + "%");
     }
     /**

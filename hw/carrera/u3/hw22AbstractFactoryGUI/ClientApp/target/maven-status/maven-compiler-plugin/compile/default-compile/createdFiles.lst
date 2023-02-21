@@ -1,0 +1,10 @@
+ec\edu\espe\clientapp\controller\LinuxMenu.class
+ec\edu\espe\clientapp\view\ClientApp.class
+ec\edu\espe\clientapp\controller\WinMenu.class
+ec\edu\espe\clientapp\controller\GUIFactory.class
+ec\edu\espe\clientapp\controller\WinFactory.class
+ec\edu\espe\clientapp\controller\Button.class
+ec\edu\espe\clientapp\controller\LinuxFactory.class
+ec\edu\espe\clientapp\controller\Menu.class
+ec\edu\espe\clientapp\controller\LinuxButton.class
+ec\edu\espe\clientapp\controller\WinButton.class
