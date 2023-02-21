@@ -22,12 +22,5 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid
 
-<<<<<<< HEAD
-*.vpp.bak_*
-
-
-=======
 #vpp backup files
-<<<<<<< HEAD
 *.vpp.bak_*
->>>>>>> 641a632653c6b3e4fd092295627149654d0b2329
