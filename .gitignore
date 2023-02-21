@@ -22,44 +22,5 @@
 # virtual machine crash logs, see 
 hs_err_pid
 
-<<<<<<< HEAD
-*.vpp.bak_*
-=======
-<<<<<<< HEAD
-*.vpp.bak_*
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-*.vpp.bak_*
-<<<<<<< HEAD
->>>>>>> fd1ad6b2be9e97b279749f7ee953147bd623e1ba
-/ws/barrionuevo/unit2/ws28/MegaApanadosService/build/
-/exams/barrionuevo/unit2/Exam2Practice/CodeExcecution/Exam2Practice/target/
-/exams/barrionuevo/unit2/Exam2Practice/CodeExcecution/ExamPractice2Code/nbproject/private/
-/hw/barrionuevo/unit3/hw15/CorrectionExam/target/
-/ws/barrionuevo/unit3/ws39/Calculator/nbproject/private/
-=======
->>>>>>> 447e9edf3474282f7b80e22499f3845de23a10ba
-/ws/barrionuevo/unit3/ws39/Calculator/build/
-=======
-*.vpp.bak_*
->>>>>>> 92e1305298437f8bce992889644fac5412b17bc3
-<<<<<<< HEAD
-/ws/barrionuevo/unit3/New Folder/ServiceActivator/nbproject/private/
-/ws/barrionuevo/unit3/New Folder/ServiceActivator/build/
-=======
->>>>>>> f2d2d0462fbddf3022d9bdb3b6c059e100c037d5
->>>>>>> 45a29872dc7a24933fb85f91fef986baa487899e
-/hw/reinoso/U3/HW19/Template/nbproject/private/
-/hw/reinoso/U3/HW19/Template/build/
-/ws/reinoso/U3/New Folder/Singleton/nbproject/private/
-/ws/reinoso/U3/New Folder/Singleton/build/
-=======
 #vpp backup files
->>>>>>> 3276f702f0575f25226bc64dab92e5bc431de2d8
->>>>>>> b4bb3e1a09935be7f830f37b3fe8ba6298437223
->>>>>>> f98836017d47911e1a0eb7f4cd342671bdc7e365
-/hw/carrera/u3/hw20Singleton/Calculator/target/
+*.vpp.bak_*

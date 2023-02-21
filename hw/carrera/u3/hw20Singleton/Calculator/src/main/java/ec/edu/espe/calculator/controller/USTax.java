@@ -1,4 +1,4 @@
-package ec.espe.edu.calculator.model;
+package ec.edu.espe.calculator.controller;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -9,17 +9,17 @@ import java.math.RoundingMode;
  */
 public class USTax {
     private static USTax instance;
-    private static float ivaPercentage;
+    private float ivaPercentage;
 
     private USTax() {
     }
 
     public float getIvaPercentage() {
-        return roundToTwoDecimalPlaces(ivaPercentage * 100.00F);
+        return ivaPercentage;
     }
 
-    public void setIvaPercentage(float ivaPercentage) {
-        USTax.ivaPercentage = ivaPercentage;
+    public void modifyIvaPercentage(float ivaPercentage) {
+        this.ivaPercentage = ivaPercentage;
     }
 
     public static USTax getInstance(){
@@ -31,7 +31,7 @@ public class USTax {
         
     public float computeSalesTotal(float price){
         float priceWithIVA;
-        priceWithIVA = roundToTwoDecimalPlaces(price+ price*ivaPercentage);
+        priceWithIVA = roundToTwoDecimalPlaces(price + price*ivaPercentage/100);
         return priceWithIVA;      
     }
     
