@@ -24,3 +24,7 @@ hs_err_pid
 
 #vpp backup files
 .vpp.bak_
+/ws/ansatuña/u3/ws39UnitTest/ws39TestCase/dist/
+/hw/ansatuña/u3/hw18testCaseJSON/Calculator/nbproject/private/
+/hw/ansatuña/u3/hw20SingletonCalculator/USCalculator/nbproject/private/
+/hw/ansatuña/u3/hw20SingletonCalculator/USCalculator/build/
