@@ -1,65 +1,23 @@
-package ec.edu.espe.tax;
+package ec.edu.espe.Tax.controller;
 
 /**
  *
- * @author Nicolay Chillo, Gaman GeekLords at DCOO-ESPE
+ * @author NICOLAY CHILLO, Gaman GeekLords at DCOO-ESPE
  */
 public class Tax {
-    public static float computeIVA(float base, float ivaPercentage){
+    
+    public static float computeIVA(float base){
         float iva;
-        iva = base * ivaPercentage;
-        return iva;
-    }
-    public static float computeValueOfEspecificTax(int cylinderCapacity){
-       float valueOfEspecificTax;
-       valueOfEspecificTax = 0.00F;
-       if (cylinderCapacity < 1500){
-           valueOfEspecificTax = 0.00F;
-       } if (cylinderCapacity > 1500 & cylinderCapacity < 2001){
-           valueOfEspecificTax = 0.08F;
-       } if (cylinderCapacity > 2000 & cylinderCapacity < 2501){
-           valueOfEspecificTax = 0.09F;
-       } if (cylinderCapacity > 2500 & cylinderCapacity < 3001){
-           valueOfEspecificTax = 0.11F;
-       } if (cylinderCapacity > 3000 & cylinderCapacity < 3501){
-           valueOfEspecificTax = 0.12F;
-       } if (cylinderCapacity > 3500 & cylinderCapacity < 4001){
-           valueOfEspecificTax = 0.24F;
-       } if (cylinderCapacity > 4000){
-           valueOfEspecificTax = 0.35F;
-       }
-       return valueOfEspecificTax;
+        float ivaTwoDecimal;
+        iva = base * 0.12F;
+        ivaTwoDecimal = Math.round(iva * 100.0F)/ 100.0F;
+        return ivaTwoDecimal;
     }
     
-    public static float computeAdjustmentFactor(int yearsOfTheVehicle, boolean hybrid){
-        float adjustmentFactor;
-        adjustmentFactor = 0.00F;
-        hybrid = true;
-        if (yearsOfTheVehicle < 5){
-           adjustmentFactor = 0.00F;
-        } if (yearsOfTheVehicle >= 5 & yearsOfTheVehicle <= 10){
-           adjustmentFactor = 0.05F;
-        } if (yearsOfTheVehicle >= 11 & yearsOfTheVehicle <= 15){
-           adjustmentFactor = 0.10F;
-        } if (yearsOfTheVehicle >= 16 & yearsOfTheVehicle <= 20){
-           adjustmentFactor = 0.15F;
-        } if (yearsOfTheVehicle > 20){
-           adjustmentFactor = 0.20F;
-        } if ( hybrid = true){
-           adjustmentFactor = 0.20F;
-        }
-        return adjustmentFactor;
-    }
-    
-    public static float computeGreenTax(int cylinderCapacity, float valueOfEspecificTax, float adjustmentFactor){
-        float  greenTax;
-        greenTax = ((cylinderCapacity - 1500) * ( valueOfEspecificTax)) * (1 + adjustmentFactor);
-        return greenTax;
-    }
-    
-    public static float computeSurplusFractionTax(float monthlySalary){
+     public static float computeSurplusFractionTax(float monthlySalary){
         float surplusFractionTax;
         float annualSalary;
+        float surplusFractionTax2Decimal;
         surplusFractionTax = 0.00F;
         annualSalary = monthlySalary * 12;
         if(annualSalary < 11310){
@@ -83,11 +41,14 @@ public class Tax {
         }else if(annualSalary >= 100000){
             surplusFractionTax = annualSalary * 0.37F;
         }
-        return surplusFractionTax;
+        
+        surplusFractionTax2Decimal = Math.round(surplusFractionTax * 100.0F)/100.0F;
+        return surplusFractionTax2Decimal;
     }
     
     public static float computeRentTax(float monthlySalary, float surplusFractionTax){
         float rentTax;
+        float rentTaxTwoDecimal;
         float annualSalary;
         rentTax = 0.00F;
         annualSalary = monthlySalary * 12;
@@ -112,12 +73,9 @@ public class Tax {
         }else if(annualSalary >= 100000){
             rentTax = 23378.88F;
         }
-        return rentTax;
+        
+        rentTaxTwoDecimal= Math.round(rentTax * 100.0F)/100.0F;
+        return rentTaxTwoDecimal;
     }
-    
-    public static float computeIVA(float base){
-        float iva;
-        iva = base * 0.12F;
-        return iva;
-    }
+
 }
