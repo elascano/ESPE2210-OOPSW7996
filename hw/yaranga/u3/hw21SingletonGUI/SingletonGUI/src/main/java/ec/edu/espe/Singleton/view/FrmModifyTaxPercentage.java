@@ -35,7 +35,7 @@ public class FrmModifyTaxPercentage extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jtblTaxes = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        btnAccept = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
 
@@ -108,10 +108,10 @@ public class FrmModifyTaxPercentage extends javax.swing.JFrame {
                 .addGap(33, 33, 33))
         );
 
-        jButton1.setText("Accept");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnAccept.setText("Accept");
+        btnAccept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnAcceptActionPerformed(evt);
             }
         });
 
@@ -139,7 +139,7 @@ public class FrmModifyTaxPercentage extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jButton2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(btnAccept)
                 .addGap(63, 63, 63))
         );
         jPanel2Layout.setVerticalGroup(
@@ -149,7 +149,7 @@ public class FrmModifyTaxPercentage extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(btnBack)
-                    .addComponent(jButton1))
+                    .addComponent(btnAccept))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
@@ -176,11 +176,11 @@ public class FrmModifyTaxPercentage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
         USTax tax = USTax.getInstance();
         tax.modifyTax(Float.parseFloat(lblTaxValue.getText()) / 100);
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnAcceptActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -233,8 +233,8 @@ public class FrmModifyTaxPercentage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAccept;
     private javax.swing.JButton btnBack;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

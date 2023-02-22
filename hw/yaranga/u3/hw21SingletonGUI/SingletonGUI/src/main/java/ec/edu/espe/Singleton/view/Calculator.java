@@ -22,13 +22,13 @@ public class Calculator {
 tax1.modifyTax(0.045F);
  System.out.println("UTAHTax==>" + tax.getTaxValue());
 
-        System.out.println("Enter the value of the product");
+       /* System.out.println("Enter the value of the product");
         Scanner inputData = new Scanner(System.in);
 
         float value = inputData.nextFloat();
-        System.out.println("UTAHTax==>" + tax.getTaxValue());
+        System.out.println("UTAHTax==>" + tax.getTaxValue());*/
 
-        System.out.println("Value with UTAHTax ==>" + USTaxController.salesTotal(value,tax1.getTaxValue()));
+        /*System.out.println("Value with UTAHTax ==>" + USTaxController.salesTotal(value,tax1.getTaxValue()));*/
     }
 
 }

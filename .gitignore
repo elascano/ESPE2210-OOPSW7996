@@ -23,4 +23,5 @@
 hs_err_pid
 
 #vpp backup files
-*.vpp.bak_*
+.vpp.bak_
+/hw/ansatuña/u3/hw22AbstractFactory/02AbstractFactory/nbproject/private/
