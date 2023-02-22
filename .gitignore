@@ -24,6 +24,3 @@ hs_err_pid
 
 #vpp backup files
 .vpp.bak_
-/hw/ansatuña/u3/hw23StrategyPattern/StrategyPattern/nbproject/private/
-/hw/ansatuña/u3/hw23StrategyPattern/StrategyPattern/build/
-/hw/ansatuña/u3/hw23StrategyPattern/StrategyPattern/dist/

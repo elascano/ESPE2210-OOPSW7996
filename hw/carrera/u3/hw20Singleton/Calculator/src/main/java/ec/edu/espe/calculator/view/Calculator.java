@@ -1,6 +1,6 @@
 package ec.edu.espe.calculator.view;
 
-import ec.espe.edu.calculator.model.USTax;
+import ec.edu.espe.calculator.controller.USTax;
 
 /**
  *
@@ -22,7 +22,7 @@ public class Calculator {
         System.out.println("PRICE WITHOUT IVA ->"  + price);
         System.out.println("PRICE WITH IVA ->"  + priceWithIVA);
         
-        tax.setIvaPercentage(0.12F);
+        tax.modifyIvaPercentage(0.12F);
         taxPercentage = tax.getIvaPercentage();
         priceWithIVA = tax.computeSalesTotal(price);
         System.out.println("Current tax -> " + taxPercentage);
