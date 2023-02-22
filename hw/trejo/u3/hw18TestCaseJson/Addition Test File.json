@@ -1,0 +1,17 @@
+[
+  {
+    "firstValue": 1.00,
+    "secondValue": -2.12,
+    "expectedResult": -1.12
+  },
+  {
+    "firstValue": 4.00,
+    "secondValue": 5.00,
+    "expectedResult": 9.00
+  },
+  {
+    "firstValue": 7.35,
+    "secondValue": 5.55,
+    "expectedResult": 12.90
+  }
+]
