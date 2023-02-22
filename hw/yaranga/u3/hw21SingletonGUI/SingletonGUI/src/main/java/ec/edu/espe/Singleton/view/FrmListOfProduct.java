@@ -35,8 +35,8 @@ public class FrmListOfProduct extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        btnAddProduct = new javax.swing.JButton();
+        btnCalculateTotal = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -73,17 +73,17 @@ public class FrmListOfProduct extends javax.swing.JFrame {
             .addGap(0, 61, Short.MAX_VALUE)
         );
 
-        jButton5.setText("Add Product");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btnAddProduct.setText("Add Product");
+        btnAddProduct.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btnAddProductActionPerformed(evt);
             }
         });
 
-        jButton6.setText("Calculate Total");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        btnCalculateTotal.setText("Calculate Total");
+        btnCalculateTotal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                btnCalculateTotalActionPerformed(evt);
             }
         });
 
@@ -107,9 +107,9 @@ public class FrmListOfProduct extends javax.swing.JFrame {
                         .addGap(37, 37, 37)
                         .addComponent(btnBack)
                         .addGap(79, 79, 79)
-                        .addComponent(jButton5)
+                        .addComponent(btnAddProduct)
                         .addGap(70, 70, 70)
-                        .addComponent(jButton6)))
+                        .addComponent(btnCalculateTotal)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -117,9 +117,9 @@ public class FrmListOfProduct extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
+                    .addComponent(btnAddProduct)
                     .addComponent(btnBack)
-                    .addComponent(jButton6))
+                    .addComponent(btnCalculateTotal))
                 .addGap(353, 353, 353)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -237,14 +237,14 @@ public class FrmListOfProduct extends javax.swing.JFrame {
         frmCalculator.setVisible(true);
     }//GEN-LAST:event_btnBackActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void btnCalculateTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculateTotalActionPerformed
         calculateTotal();
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_btnCalculateTotalActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void btnAddProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddProductActionPerformed
         addToTable();
         clean();
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_btnAddProductActionPerformed
 
     /**
      * @param args the command line arguments
@@ -282,9 +282,9 @@ public class FrmListOfProduct extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAddProduct;
     private javax.swing.JButton btnBack;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton btnCalculateTotal;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
