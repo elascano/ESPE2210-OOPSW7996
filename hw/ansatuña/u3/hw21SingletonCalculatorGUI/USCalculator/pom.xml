@@ -22,10 +22,5 @@
             <artifactId>flatlaf-intellij-themes</artifactId>
             <version>3.0</version>
         </dependency>
-        <dependency>
-            <groupId>espe.edu.ec</groupId>
-            <artifactId>StudentSystem</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
     </dependencies>
 </project>
