@@ -1,4 +1,3 @@
-
 package ec.edu.espe.taxes.model;
 
 /**
@@ -6,24 +5,24 @@ package ec.edu.espe.taxes.model;
  * @author Alex Trejo, PACSTORE, DCCO-ESPE
  */
 public class Person {
-    
-     private String name;
+
+    private String name;
     private float salary;
-    private float costs;  
+    private float costs;
     private Vehicle vehicle;
 
-     @Override
+    @Override
     public String toString() {
         return "NaturalPerson{" + "name=" + name + ", salary=" + salary + ", costs=" + costs + ", vehicle=" + vehicle + '}';
     }
-    
+
     public Person(String name, float salary, float costs, Vehicle vehicle) {
         this.name = name;
         this.salary = salary;
         this.costs = costs;
         this.vehicle = vehicle;
     }
- 
+
     /**
      * @return the name
      */
@@ -79,5 +78,5 @@ public class Person {
     public void setVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
     }
-    
+
 }
