@@ -25,3 +25,11 @@ hs_err_pid
 #vpp backup files
 <<<<<<< HEAD
 *.vpp.bak_*
+/hw/suarez/U3/hw20Singleton/USCalculator1/build/
+/hw/suarez/U3/hw20Singleton/USCalculator1/nbproject/private/
+/hw/suarez/U3/hw21SingletonGrafical/USCalculator/build/
+/hw/suarez/U3/hw21SingletonGrafical/USCalculator/dist/
+/hw/suarez/U3/hw21SingletonGrafical/USCalculator/nbproject/private/
+/hw/suarez/U3/hw22AbstractFactory/022AbstractFactory/build/
+/hw/suarez/U3/hw22AbstractFactory/022AbstractFactory/dist/
+/hw/suarez/U3/hw22AbstractFactory/022AbstractFactory/nbproject/private/
