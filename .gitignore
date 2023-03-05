@@ -20,9 +20,10 @@
 .rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid
+hs_errpid
 
 #vpp backup files
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 *.vpp.bak_*
@@ -69,3 +70,6 @@ hs_err_pid
 /hw/verdugo/u3/hw21SingletonGUI/SingletonGUI/target/
 /hw/verdugo/u3/hw22AbstractFactory/02AbstractFactory/build/
 /hw/verdugo/u3/hw23StrategyPattern/StrategyPattern/build/
+=======
+*.vpp.bak*
+>>>>>>> 14290affd5da14daf7f3696de8d120a2ce07cdd3
