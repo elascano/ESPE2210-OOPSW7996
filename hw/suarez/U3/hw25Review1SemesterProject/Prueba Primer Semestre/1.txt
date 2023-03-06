@@ -1,0 +1,32 @@
+||||Matricula||||
+Codigo matricula: ES1111PE
+|||Informacion estudiante|||
+Cedula: 1750890699
+Nombre: Matias
+Edad: 20
+|||Informacion materias|||
+Codigo materia:MA111RI
+Nombre materia: Lenguaje
+El numero de creditos: 7
+La nota es: 20.000000
+La nota es: 12.000000
+La nota es: 16.000000
+Nota final: 48.000000
+Materia aprobada
+Codigo materia:MA222RI
+Nombre materia: Quimica
+El numero de creditos: 8
+La nota es: 15.000000
+La nota es: 18.000000
+La nota es: 20.000000
+Nota final: 53.000000
+Materia aprobada
+Codigo materia:MA333RI
+Nombre materia: Arte
+El numero de creditos: 2
+La nota es: 5.000000
+La nota es: 20.000000
+La nota es: 16.000000
+Nota final: 41.000000
+Materia reprobada
+El valor a pagar es: 255.000000$

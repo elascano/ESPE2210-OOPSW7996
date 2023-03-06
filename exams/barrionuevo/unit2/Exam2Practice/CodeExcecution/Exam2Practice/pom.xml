@@ -16,6 +16,7 @@
             <groupId>org.mongodb</groupId>
             <artifactId>mongodb-driver-sync</artifactId>
             <version>4.2.3</version>
+            <type>jar</type>
         </dependency>
     </dependencies>
     <name>Exam2Practice</name>
