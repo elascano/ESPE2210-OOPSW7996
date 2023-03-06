@@ -17,14 +17,10 @@
 *.ear
 *.zip
 *.tar.gz
-.rar
+*.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid
+hs_err_pid*
 
 #vpp backup files
 *.vpp.bak_*
-/hw/tipan/u3/hw22/AbstractFactory/nbproject/private/
-/hw/tipan/u3/hw22/AbstractFactory/build/
-/hw/tipan/u3/hw22/AbstractFactory/dist/
-/hw/tipan/u3/hw22/PatternStrategy/target/
