@@ -1,48 +1,36 @@
-# Archivo de clase compilado
-*..class
+﻿# Compiled class file
+*.class
 
-# Archivo de registro
-*..log
+# Log file
+*.log
 
-# Archivos BlueJ
+# BlueJ files
 *.ctxt
 
-# Herramientas m�viles para Java (J2ME)
+# Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# Archivos de paquete #
-*..jar
-*.guerra
-*.Nar
-*.oreja
-*..zip
-*..tar.gz
-..rar
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
 
-# Registros de bloqueo de m�quinas virtuales, consulte http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
 
 #vpp backup files
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-*.vpp.bak_*
-<<<<<<< HEAD
->>>>>>> 6a1e39743078f62faf15bbf34a156316dae0fce1
-/ws/verdugo/u2/ws26SolidPrinciplesTest/LSP/build/
-/ws/verdugo/u2/ws26SolidPrinciplesTest/OCP/dist/
-/ws/verdugo/u2/ws26SolidPrinciplesTest/OCP/build/
-/hw/verdugo/u2/hw12MongoDbJava/TaxiDriver/target/
-=======
-
-
->>>>>>> a322cc07001c716ba7f47c81152172575b8bab87
->>>>>>> e280fd4e49c8aa8129f46560c7fc30d6fd5eba8c
-/ws/enriquez/unit2/ws28Forms/InClass/target/
-/hw/enriquez/unit2/hw14/InClass/target/
-/hw/enriquez/unit2/hw15/InClass/target/
+>>>>>>> 3276f702f0575f25226bc64dab92e5bc431de2d8
+>>>>>>> b4bb3e1a09935be7f830f37b3fe8ba6298437223
+/hw/barrionuevo/unit3/New Folder/SingletonGUI/target/
+/hw/barrionuevo/unit3/hw22/AbstractFactoryhw22/nbproject/private/
 =======
 *.vpp.bak_*
+<<<<<<< HEAD
 >>>>>>> 894276d0fde5ea88f5b7d37772c973368fd4b57e
 /exams/enriquez/u2/Q38-51/ExamCode/nbproject/private/
 =======
@@ -79,3 +67,6 @@ hs_err_pid
 /ws/enriquez/unit3/ws39/CalculatorApp/build/
 /exams/enriquez/u3/FinalExam/Exercise/nbproject/private/
 /exams/enriquez/u3/FinalExam/Exercise/build/
+=======
+>>>>>>> 2f54be4f5deb559067d65803f55db71299f6f83d
+>>>>>>> f3f14c7043ad28cca2f07b41eb0901a7a50deb13

@@ -16,7 +16,7 @@ import java.util.logging.Logger;
 public class ChickenFarmSimulator {
 
     public static void main(String[] args) {
-        ArrayList<Chicken> chickens = new ArrayList<Chicken>();
+        ArrayList<Chicken> chickens = new ArrayList<>();
         Chicken chicken = new Chicken();
         Scanner input = new Scanner(System.in);
         int arrayPosition[] = new int[1];
@@ -120,11 +120,12 @@ public class ChickenFarmSimulator {
         chickenId = input.nextInt();
         input.nextLine();
             for (int i = 0; i < chickens.size(); i++) {
-                if(chickens.get(i).getId()==chickenId){
-            System.out.println("The chicken alredy exists");
-            System.out.println("Insert other");
-            repeatchicken=true;
-                }
+                if(chickenId!=chickens.get(i).getId()){
+                } else {
+                    System.out.println("The chicken alredy exists");
+                    System.out.println("Insert other");
+                    repeatchicken=true;
+            }
             }
         }while(repeatchicken == true );
         

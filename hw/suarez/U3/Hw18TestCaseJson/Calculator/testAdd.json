@@ -1,0 +1,1 @@
+[ { "addend1": 5, "addend2": 3, "result": 8 }, { "addend1": -2, "addend2": 7, "result": 5 }, { "addend1": 0, "addend2": 0, "result": 0 }, { "addend1": 100, "addend2": 200, "result": 300 }, { "addend1": -50, "addend2": -100, "result": -150 }, { "addend1": 10, "addend2": 20, "result": 30 }, { "addend1": 8, "addend2": 4, "result": 12 }]

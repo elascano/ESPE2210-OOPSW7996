@@ -8,6 +8,6 @@ package ec.edu.espe.q38.model;
  *
  * @author Reishel Tipan, PACSTORE, DCCO-ESPE
  */
-public class D extends A{
+public class D extends A{ // 0.5 no ArrayList,setters getters, constructor, toString
     
 }
