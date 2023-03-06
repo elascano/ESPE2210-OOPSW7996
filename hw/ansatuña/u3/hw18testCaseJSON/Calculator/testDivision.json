@@ -1,0 +1,6 @@
+[ { "dividend": 50.0, "divisor": 5.0, "quotient": 10.0 },
+{ "dividend": 90.6, "divisor": 30.0, "quotient": 3.02 },
+{ "dividend": -6.0, "divisor": 2.0, "quotient": -3.0 },
+{ "dividend": 10.0, "divisor": 2.5, "quotient": 4.0 },
+{ "dividend": 0.0, "divisor": 4.0, "quotient": 0.0 },
+{ "dividend": 100.0, "divisor": 10.0, "quotient": 10.0 }]

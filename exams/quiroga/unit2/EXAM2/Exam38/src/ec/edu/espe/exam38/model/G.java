@@ -8,8 +8,8 @@ package ec.edu.espe.exam38.model;
  *
  * @author Francisco Quiroga, Search Engine Bandits , DCCO-ESPE
  */
-public class G extends H{
-    private J methos(J j){
+public class G extends H{ //0.5
+    private J methos(J j){ //0.4
         return j;
     }
 }
