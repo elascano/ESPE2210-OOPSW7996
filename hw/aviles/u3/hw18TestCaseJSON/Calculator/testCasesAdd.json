@@ -1,0 +1,9 @@
+[
+{"addend1":123.45,"addend2":423.0,"expResult":11.0,"actResult":546.45,"pass":"FAIL"}
+,
+{"addend1":5342.0,"addend2":2.32,"expResult":6.1,"actResult":5344.32,"pass":"FAIL"}
+,
+{"addend1":0.423,"addend2":0.56,"expResult":7.9,"actResult":0.98,"pass":"FAIL"}
+,
+{"addend1":0.4,"addend2":0.6,"expResult":1.0,"actResult":1.0,"pass":"OK"}
+]

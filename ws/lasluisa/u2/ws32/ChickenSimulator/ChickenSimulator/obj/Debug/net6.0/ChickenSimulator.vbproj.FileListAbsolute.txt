@@ -1,0 +1,15 @@
+C:\Users\erick\Desktop\ESPE\POO\Proyectos VisualBasic\ChickenSimulator\ChickenSimulator\bin\Debug\net6.0\ChickenSimulator.exe
+C:\Users\erick\Desktop\ESPE\POO\Proyectos VisualBasic\ChickenSimulator\ChickenSimulator\bin\Debug\net6.0\ChickenSimulator.deps.json
+C:\Users\erick\Desktop\ESPE\POO\Proyectos VisualBasic\ChickenSimulator\ChickenSimulator\bin\Debug\net6.0\ChickenSimulator.runtimeconfig.json
+C:\Users\erick\Desktop\ESPE\POO\Proyectos VisualBasic\ChickenSimulator\ChickenSimulator\bin\Debug\net6.0\ChickenSimulator.dll
+C:\Users\erick\Desktop\ESPE\POO\Proyectos VisualBasic\ChickenSimulator\ChickenSimulator\bin\Debug\net6.0\ChickenSimulator.pdb
+C:\Users\erick\Desktop\ESPE\POO\Proyectos VisualBasic\ChickenSimulator\ChickenSimulator\obj\Debug\net6.0\ChickenSimulator.vbproj.AssemblyReference.cache
+C:\Users\erick\Desktop\ESPE\POO\Proyectos VisualBasic\ChickenSimulator\ChickenSimulator\obj\Debug\net6.0\ChickenSimulator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\erick\Desktop\ESPE\POO\Proyectos VisualBasic\ChickenSimulator\ChickenSimulator\obj\Debug\net6.0\ChickenSimulator.AssemblyInfoInputs.cache
+C:\Users\erick\Desktop\ESPE\POO\Proyectos VisualBasic\ChickenSimulator\ChickenSimulator\obj\Debug\net6.0\ChickenSimulator.AssemblyInfo.vb
+C:\Users\erick\Desktop\ESPE\POO\Proyectos VisualBasic\ChickenSimulator\ChickenSimulator\obj\Debug\net6.0\ChickenSimulator.vbproj.CoreCompileInputs.cache
+C:\Users\erick\Desktop\ESPE\POO\Proyectos VisualBasic\ChickenSimulator\ChickenSimulator\obj\Debug\net6.0\ChickenSimulator.dll
+C:\Users\erick\Desktop\ESPE\POO\Proyectos VisualBasic\ChickenSimulator\ChickenSimulator\obj\Debug\net6.0\refint\ChickenSimulator.dll
+C:\Users\erick\Desktop\ESPE\POO\Proyectos VisualBasic\ChickenSimulator\ChickenSimulator\obj\Debug\net6.0\ChickenSimulator.pdb
+C:\Users\erick\Desktop\ESPE\POO\Proyectos VisualBasic\ChickenSimulator\ChickenSimulator\obj\Debug\net6.0\ChickenSimulator.genruntimeconfig.cache
+C:\Users\erick\Desktop\ESPE\POO\Proyectos VisualBasic\ChickenSimulator\ChickenSimulator\obj\Debug\net6.0\ref\ChickenSimulator.dll
