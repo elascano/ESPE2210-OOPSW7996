@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/Descargar%201TB/HW19%20Abstract%20Factory/AbstractFactoryPattern/src/ec/edu/espe/factorypattern/model/Button.java</file>
+            <file>file:/D:/Descargar%201TB/HW19%20Abstract%20Factory/AbstractFactoryPattern/src/ec/edu/espe/factorypattern/model/GUIFactory.java</file>
+            <file>file:/D:/Descargar%201TB/HW19%20Abstract%20Factory/AbstractFactoryPattern/src/ec/edu/espe/factorypattern/model/Menu.java</file>
+            <file>file:/D:/Descargar%201TB/HW19%20Abstract%20Factory/AbstractFactoryPattern/src/ec/edu/espe/factorypattern/model/WinFactory.java</file>
+            <file>file:/D:/Descargar%201TB/HW19%20Abstract%20Factory/AbstractFactoryPattern/src/ec/edu/espe/factorypattern/model/WinButton.java</file>
+            <file>file:/D:/Descargar%201TB/HW19%20Abstract%20Factory/AbstractFactoryPattern/src/ec/edu/espe/factorypattern/view/ClientApp.java</file>
+            <file>file:/D:/Descargar%201TB/HW19%20Abstract%20Factory/AbstractFactoryPattern/src/ec/edu/espe/factorypattern/model/WinMenu.java</file>
+            <file>file:/D:/Descargar%201TB/HW19%20Abstract%20Factory/AbstractFactoryPattern/src/ec/edu/espe/factorypattern/model/LinuxFactory.java</file>
+        </group>
+    </open-files>
+</project-private>

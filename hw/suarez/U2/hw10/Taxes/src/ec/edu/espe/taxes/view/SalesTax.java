@@ -42,7 +42,7 @@ public class SalesTax {
         System.out.println("");
         System.out.println("|||Computer Rent Tax|||");
 
-        monthlySalary = 4960.50F;
+        monthlySalary = 5800.50F;
 
         salaryPerson = new SalaryPerson(monthlySalary, Tax.computerRentTax(monthlySalary));
         System.out.println("Salary Person -->" + salaryPerson);

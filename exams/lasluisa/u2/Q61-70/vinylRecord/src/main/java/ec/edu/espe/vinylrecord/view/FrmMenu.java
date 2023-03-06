@@ -28,15 +28,12 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        btnReviewVinyls = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        itmAbout = new javax.swing.JMenuItem();
+        itmExitProgram = new javax.swing.JMenu();
         itmExit = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        itmAddVinyl = new javax.swing.JMenuItem();
+        itmReview = new javax.swing.JMenu();
         itmReviewVinyl = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        itmReportIssue = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -46,37 +43,37 @@ public class FrmMenu extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel2.setText("Vinyl Records");
 
-        jMenu1.setText("Vinyl Record");
-
-        itmAbout.setText("About");
-        itmAbout.addActionListener(new java.awt.event.ActionListener() {
+        btnReviewVinyls.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnReviewVinyls.setText("Review Vinyl Orders");
+        btnReviewVinyls.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itmAboutActionPerformed(evt);
+                btnReviewVinylsActionPerformed(evt);
             }
         });
-        jMenu1.add(itmAbout);
+
+        itmExitProgram.setText("Vinyl Record");
 
         itmExit.setText("Exit");
-        jMenu1.add(itmExit);
+        itmExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmExitActionPerformed(evt);
+            }
+        });
+        itmExitProgram.add(itmExit);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(itmExitProgram);
 
-        jMenu2.setText("Vinyls");
-
-        itmAddVinyl.setText("Add Vinyl");
-        jMenu2.add(itmAddVinyl);
+        itmReview.setText("Vinyls");
 
         itmReviewVinyl.setText("Review Vinyl");
-        jMenu2.add(itmReviewVinyl);
+        itmReviewVinyl.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmReviewVinylActionPerformed(evt);
+            }
+        });
+        itmReview.add(itmReviewVinyl);
 
-        jMenuBar1.add(jMenu2);
-
-        jMenu3.setText("Help");
-
-        itmReportIssue.setText("Report Issue");
-        jMenu3.add(itmReportIssue);
-
-        jMenuBar1.add(jMenu3);
+        jMenuBar1.add(itmReview);
 
         setJMenuBar(jMenuBar1);
 
@@ -84,31 +81,49 @@ public class FrmMenu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(95, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(90, 90, 90))
             .addGroup(layout.createSequentialGroup()
-                .addGap(129, 129, 129)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(130, 130, 130)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(89, 89, 89)
+                        .addComponent(jLabel2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(79, 79, 79)
+                        .addComponent(btnReviewVinyls)))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(55, 55, 55)
+                .addGap(40, 40, 40)
                 .addComponent(jLabel1)
-                .addGap(31, 31, 31)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel2)
-                .addContainerGap(111, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addComponent(btnReviewVinyls)
+                .addGap(55, 55, 55))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void itmAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmAboutActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itmAboutActionPerformed
+    private void btnReviewVinylsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReviewVinylsActionPerformed
+        FrmReviewVinyl reviewVinyl = new FrmReviewVinyl();
+        reviewVinyl.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnReviewVinylsActionPerformed
+
+    private void itmExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmExitActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_itmExitActionPerformed
+
+    private void itmReviewVinylActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmReviewVinylActionPerformed
+        FrmReviewVinyl reviewVinyl = new FrmReviewVinyl();
+        reviewVinyl.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_itmReviewVinylActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,16 +161,13 @@ public class FrmMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem itmAbout;
-    private javax.swing.JMenuItem itmAddVinyl;
+    private javax.swing.JButton btnReviewVinyls;
     private javax.swing.JMenuItem itmExit;
-    private javax.swing.JMenuItem itmReportIssue;
+    private javax.swing.JMenu itmExitProgram;
+    private javax.swing.JMenu itmReview;
     private javax.swing.JMenuItem itmReviewVinyl;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
 }

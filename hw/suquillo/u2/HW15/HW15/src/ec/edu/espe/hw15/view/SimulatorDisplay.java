@@ -40,7 +40,6 @@ public class SimulatorDisplay {
         foods = new ArrayList<>();
         foodPiles = new ArrayList<>();
 
-        area = new Area(10,20,5,2);
     }
     
 }
