@@ -24,3 +24,7 @@ hs_err_pid
 
 #vpp backup files
 *.vpp.bak_*
+/hw/tipan/u3/hw22/AbstractFactory/nbproject/private/
+/hw/tipan/u3/hw22/AbstractFactory/build/
+/hw/tipan/u3/hw22/AbstractFactory/dist/
+/hw/tipan/u3/hw22/PatternStrategy/target/
