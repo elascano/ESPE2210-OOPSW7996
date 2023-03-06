@@ -1,4 +1,4 @@
-﻿# Compiled class file
+# Compiled class file
 *.class
 
 # Log file
@@ -20,9 +20,7 @@
 .rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid
+hs_errpid
 
 #vpp backup files
 *.vpp.bak_*
-/exams/chillo/u3/FinalExamExercise/nbproject/private/
-/exams/chillo/u3/FinalExamExercise/build/
