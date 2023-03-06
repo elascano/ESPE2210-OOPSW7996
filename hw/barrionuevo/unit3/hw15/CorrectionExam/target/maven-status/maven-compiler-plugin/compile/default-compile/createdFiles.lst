@@ -1,0 +1,5 @@
+ec\edu\espe\soccerplayer\model\SoccerPlayer.class
+ec\edu\espe\soccerplayer\view\frmAddSoccerPlayer.class
+ec\edu\espe\soccerplayer\controller\DBManager.class
+ec\edu\espe\soccerplayer\view\frmAddSoccerPlayer$1.class
+ec\edu\espe\soccerplayer\view\frmAddSoccerPlayer$2.class

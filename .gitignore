@@ -23,4 +23,11 @@
 hs_err_pid*
 
 #vpp backup files
+<<<<<<< HEAD
+>>>>>>> 3276f702f0575f25226bc64dab92e5bc431de2d8
+>>>>>>> b4bb3e1a09935be7f830f37b3fe8ba6298437223
+/hw/barrionuevo/unit3/New Folder/SingletonGUI/target/
+/hw/barrionuevo/unit3/hw22/AbstractFactoryhw22/nbproject/private/
+=======
 *.vpp.bak_*
+>>>>>>> 2f54be4f5deb559067d65803f55db71299f6f83d
