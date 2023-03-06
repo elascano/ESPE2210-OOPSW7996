@@ -1,6 +1,6 @@
 package ec.edu.espe.strategy.view;
 
-import ec.edu.espe.strategy.model.FrmSortAppController;
+import ec.edu.espe.strategy.controller.FrmSortAppController;
 import javax.swing.JTextField;
 import utils.DBManager;
 

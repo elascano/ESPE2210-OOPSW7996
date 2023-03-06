@@ -1,4 +1,4 @@
-package ec.edu.espe.strategy.model;
+package ec.edu.espe.strategy.controller;
 
 import ec.edu.espe.strategy.view.FrmSortApp;
 import utils.DBManager;
