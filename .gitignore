@@ -20,7 +20,12 @@
 *.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+<<<<<<< HEAD
 hs_err_pid*
 
 #vpp backup files
 *.vpp.bak_*
+=======
+hs_errpid
+
+>>>>>>> 55e6e4c2f70866bb86fb6547bf2819d9be5eb9ff
