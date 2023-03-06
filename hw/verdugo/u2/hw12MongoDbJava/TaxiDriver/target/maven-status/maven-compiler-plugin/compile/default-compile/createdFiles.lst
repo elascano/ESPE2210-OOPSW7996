@@ -1,0 +1,5 @@
+ec\edu\espe\TaxiDriverMaven\controller\FileManager.class
+ec\edu\espe\TaxiDriverMaven\model\TaxiDriver.class
+ec\edu\espe\TaxiDriverMaven\view\CRUDOperationsMaven.class
+ec\edu\espe\TaxiDriverMaven\controller\DataBaseManager.class
+ec\edu\espe\TaxiDriverMaven\model\Salary.class

@@ -1,0 +1,5 @@
+{
+    "addend1": 10.45,
+    "addend2": 20.05,
+    "expectedSum": 30.5
+}
