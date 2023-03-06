@@ -25,3 +25,15 @@ hs_err_pid
 #vpp backup files
 
 *.vpp.bak_*
+/ws/quiroga/unit3/ws39UnitTest/ws39UnitTest/nbproject/private/
+/ws/quiroga/unit3/ws39UnitTest/ws39UnitTest/build/
+/ws/quiroga/unit3/ws39UnitTest/ws39UnitTest/dist/
+/hw/quiroga/unit3/hw19/Composite/dist/
+/hw/quiroga/unit3/hw20Singleton/SingletonFrm/target/
+/exams/quiroga/unit3/Exam3P/target/
+/exams/quiroga/unit3/Exam_3P/nbproject/private/
+/exams/quiroga/unit3/Exam_3P/build/
+/exams/quiroga/unit3/Exam_3P/dist/
+/exams/quiroga/unit3/StrategyExam3P/Exam_3P/build/
+/exams/quiroga/unit3/StrategyExam3P/Exam_3P/dist/
+/exams/quiroga/unit3/StrategyExam3P/Exam_3P/nbproject/private/
