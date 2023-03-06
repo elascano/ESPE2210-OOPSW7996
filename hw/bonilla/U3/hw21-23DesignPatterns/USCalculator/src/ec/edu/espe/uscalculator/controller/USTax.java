@@ -7,7 +7,7 @@ public class USTax {
     private static USTax instance;
     private float taxValue;
     private USTax(){    
-        this.taxValue = 4.85F;
+        this.taxValue = 5.85F;
     }
     
     public void modifyTax(float taxValue){
