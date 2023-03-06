@@ -30,6 +30,9 @@ hs_errpid
 =======
 #vpp backup files
 <<<<<<< HEAD
+/hw/gutierrez/u3/ws39/ws39/target/
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 *.vpp.bak_*
@@ -80,3 +83,4 @@ hs_errpid
 *.vpp.bak*
 >>>>>>> 14290affd5da14daf7f3696de8d120a2ce07cdd3
 >>>>>>> 4ae2d409e001e39dc7785be0a8644458bfabe396
+>>>>>>> 8e58990cd798839eee6e80b191489fd6cba99f12
