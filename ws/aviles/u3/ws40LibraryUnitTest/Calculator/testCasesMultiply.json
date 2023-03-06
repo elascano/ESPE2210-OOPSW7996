@@ -1,0 +1,9 @@
+[
+{"multiplicand":32.123,"multioliet":0.99,"expResult":31.8,"actResult":31.8,"pass":"OK"}
+,
+{"multiplicand":213.231,"multioliet":0.66,"expResult":140.73,"actResult":140.73,"pass":"OK"}
+,
+{"multiplicand":213.22,"multioliet":0.33,"expResult":70.36,"actResult":70.36,"pass":"OK"}
+,
+{"multiplicand":0.456,"multioliet":0.32,"expResult":0.15,"actResult":0.15,"pass":"OK"}
+]
