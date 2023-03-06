@@ -6,15 +6,26 @@ package ec.espe.edu.Singleton.model;
  */
 public class USTax {
     private static USTax instance;
+    float tax;
     
-    public static USTax getInstace(){
+    private USTax(float taxValue){
+        tax = taxValue;
+    }
+    
+    public static USTax getInstace(float taxValue){
         if(instance == null)
-            instance = new USTax();
+            instance = new USTax(taxValue);
         return instance;
     }
     
-    public float salesTotal(){
-        return 3.00F;
+    public float salesTotal(float acquisitionValue){
+        float totalValue;
+        totalValue = acquisitionValue + acquisitionValue*tax;
+        return totalValue;
+    }
+    
+    public float getTax(){
+        return tax;
     }
     
 }

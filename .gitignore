@@ -31,3 +31,4 @@ hs_err_pid
 <<<<<<< HEAD
 *.vpp.bak_*
 >>>>>>> 641a632653c6b3e4fd092295627149654d0b2329
+/hw/panchi/U3/hw22AbstractFactory/AbstractFactory/nbproject/private/
