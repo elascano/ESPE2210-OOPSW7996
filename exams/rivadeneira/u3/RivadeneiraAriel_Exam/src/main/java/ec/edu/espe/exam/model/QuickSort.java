@@ -2,45 +2,38 @@ package ec.edu.espe.exam.model;
 
 /**
  *
- * @author Carlos Granda DCCO-ESPE, Syntax Error
+ * @author Ariel Rivadeneira, Search Engine Bandits, DCCO-ESPE
  */
 public class QuickSort implements SortingStrategy {
-
-    public int[] sort(int data[]) {
-
-        return sort(data, 0, data.length - 1);
-    }
-
-    public int[] sort(int data[], int left, int right) {
-        if (left >= right) {
-            return data;
-        }
-        int i = left;
-        int j = right;
-        if (left != right) {
-            int pivot;
-            int aux;
-            pivot = left;
-            while (left != right) {
-                while (data[right] >= data[pivot] && left < right) {
-                    right--;
-                }
-                while (data[left] < data[pivot] && left < right) {
-                    left++;
-                }
-            if(right!=left){
-                aux = data[right];
-                data[right]=data[left];
-                data[left]=aux;
-            }
-            if(left==right){
-                sort(data, i, left-1);
-                sort(data, left+1, j);
-            }
-            } 
-        }else
-            return data;
+     @Override
+     public int[] sort(int data[]){
+         System.out.println("Quick sort");
+         quickSort(data, 0, data.length - 1);
         return data;
     }
+    
+    private void quickSort(int[] data, int low, int high) {
+        if (low < high) {
+            int pi = partition(data, low, high);
+            quickSort(data, low, pi - 1);
+            quickSort(data, pi + 1, high);
+        }
+    }
 
+    private int partition(int[] data, int low, int high) {
+        int pivot = data[high];
+        int i = (low - 1);
+        for (int j = low; j < high; j++) {
+            if (data[j] <= pivot) {
+                i++;
+                int temp = data[i];
+                data[i] = data[j];
+                data[j] = temp;
+            }
+        }
+        int temp = data[i + 1];
+        data[i + 1] = data[high];
+        data[high] = temp;
+        return i + 1;
+    }
 }

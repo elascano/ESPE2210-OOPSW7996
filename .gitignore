@@ -1,4 +1,4 @@
-﻿# Compiled class file
+# Compiled class file
 *.class
 
 # Log file
@@ -24,33 +24,62 @@ hs_err_pid*
 
 #vpp backup files
 <<<<<<< HEAD
->>>>>>> 3276f702f0575f25226bc64dab92e5bc431de2d8
->>>>>>> b4bb3e1a09935be7f830f37b3fe8ba6298437223
-/hw/barrionuevo/unit3/New Folder/SingletonGUI/target/
-/hw/barrionuevo/unit3/hw22/AbstractFactoryhw22/nbproject/private/
-=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 *.vpp.bak_*
 <<<<<<< HEAD
->>>>>>> 894276d0fde5ea88f5b7d37772c973368fd4b57e
-/exams/enriquez/u2/Q38-51/ExamCode/nbproject/private/
+
+/ws/verdugo/u2/ws28Forms/Calculator/nbproject/private/
+/ws/verdugo/u3/ws35CalculatorUnitTest/Calculator/nbproject/private/
+/ws/verdugo/u3/ws39CalculatorUnitTest/Calculator/nbproject/private/
+/ws/verdugo/u3/ws39CalculatorUnitTest/Calculator/build/
 =======
->>>>>>> d61f932156bd9c008948e56b9ab484756c69f140
-/exams/enriquez/u2/Q71-100/Exam/target/
 =======
+<<<<<<< HEAD
 *.vpp.bak_*
 <<<<<<< HEAD
->>>>>>> 9ef336c0dc3c88469ceeb50fd5005ffb19bfc130
-/ws/gutierrez/u2/ws24Libraries/Taxes/nbproject/private/
-/ws/gutierrez/u2/ws24Libraries/TaxLibrary/nbproject/private/
-/ws/gutierrez/u2/ws24Libraries/TaxLibrary/build/
-/ws/gutierrez/u2/ws24Libraries/TaxLibrary/dist/
-/ws/gutierrez/u2/ws24Libraries/Taxes/build/
-/ws/gutierrez/u2/ws24Libraries/SRP/nbproject/private/
+>>>>>>> fd1ad6b2be9e97b279749f7ee953147bd623e1ba
+/ws/barrionuevo/unit2/ws28/MegaApanadosService/build/
+/exams/barrionuevo/unit2/Exam2Practice/CodeExcecution/Exam2Practice/target/
+/exams/barrionuevo/unit2/Exam2Practice/CodeExcecution/ExamPractice2Code/nbproject/private/
+/hw/barrionuevo/unit3/hw15/CorrectionExam/target/
+/ws/barrionuevo/unit3/ws39/Calculator/nbproject/private/
+=======
+>>>>>>> 447e9edf3474282f7b80e22499f3845de23a10ba
+/ws/barrionuevo/unit3/ws39/Calculator/build/
+=======
+*.vpp.bak_*
+>>>>>>> 92e1305298437f8bce992889644fac5412b17bc3
+>>>>>>> f2d2d0462fbddf3022d9bdb3b6c059e100c037d5
+>>>>>>> 45a29872dc7a24933fb85f91fef986baa487899e
+/ws/verdugo/u2/ws24Libraries/TaxLibrary/dist/
+/ws/verdugo/u3/ws40TaxUnitTest/TaxLibrary/nbproject/private/
+/ws/verdugo/u3/ws40TaxUnitTest/TaxLibrary/build/
+/ws/verdugo/u3/ws40TaxUnitTest/TaxLibrary/dist/
+=======
+.vpp.bak_
+>>>>>>> 5f09b905d884be000bf92d4d8c30d352b76dc066
+/ws/verdugo/u2/ws28Forms/03Singleton/nbproject/private/
+/ws/verdugo/u2/ws28Forms/03Singleton/build/
+/ws/verdugo/u3/ws41BuilderDesignPattern/BuilderPattern/nbproject/private/
+/ws/verdugo/u3/ws41BuilderDesignPattern/BuilderPattern/build/
+/hw/verdugo/u3/hw20Singleton/01Singleton/nbproject/private/
+/hw/verdugo/u3/hw20Singleton/01Singleton/build/
+/hw/verdugo/u3/hw23StrategyPattern/StrategyPattern/nbproject/private/
+/hw/verdugo/u3/hw22AbstractFactory/02AbstractFactory/nbproject/private/
+/hw/verdugo/u3/hw21SingletonGUI/SingletonGUI/target/
+/hw/verdugo/u3/hw22AbstractFactory/02AbstractFactory/build/
+/hw/verdugo/u3/hw23StrategyPattern/StrategyPattern/build/
 =======
 *.vpp.bak*
->>>>>>> c425f7192c9f66476c311ba1fccec646b60f71e2
+>>>>>>> 14290affd5da14daf7f3696de8d120a2ce07cdd3
+/hw/verdugo/u3/hw23StrategyPattern/StrategyPattern/dist/
+/exams/verdugo/u3/Strategy/nbproject/private/
+/exams/verdugo/u3/StrategyExam/target/
 =======
 *.vpp.bak_*
+<<<<<<< HEAD
 >>>>>>> 07ad8c79b4d790f2a2b1efbb1a02d739bb9d8f13
 /ws/gutierrez/u2/ws28Forms/ws28Forms/nbproject/private/
 /ws/gutierrez/u2/ws28Forms/ws28Forms/build/
@@ -72,3 +101,6 @@ hs_err_pid*
 >>>>>>> f3f14c7043ad28cca2f07b41eb0901a7a50deb13
 /ws/enriquez/unit3/ws40LibraryUnitTest/TaxLibrary/nbproject/private/
 /ws/enriquez/unit3/ws41Quizz/Memento/nbproject/private/
+=======
+>>>>>>> d842f7fb3cad88c23efd64f22613cb5d9ee0def1
+>>>>>>> 6526188728f5714f22e21bdf41b63b7ef69a8f28

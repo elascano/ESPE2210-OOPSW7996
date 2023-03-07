@@ -10,7 +10,7 @@ import com.mongodb.client.MongoClients;
 public class MongoDbAccess {
 
           static public MongoClient conection() {
-                    String uri = "mongodb+srv://lyaranga:tortilla@espe2210-oopsw7996.77wv341.mongodb.net/?retryWrites=true&w=majority";
+                    String uri = "mongodb+srv://JoshSy01:060903@cluster0.2sziitx.mongodb.net/test";
                     MongoClient mongoClient = MongoClients.create(uri);
                     return mongoClient;
           }
