@@ -80,3 +80,5 @@ hs_err_pid*
 =======
 *.vpp.bak_*
 >>>>>>> d842f7fb3cad88c23efd64f22613cb5d9ee0def1
+/exams/verdugo/u3/StrategyExam1/nbproject/private/
+/exams/verdugo/u3/StrategyExam1/build/
