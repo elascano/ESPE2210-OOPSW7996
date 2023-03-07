@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+<<<<<<< HEAD:hw/gutierrez/u3/ws39/ws39/pom.xml
+    <groupId>1</groupId>
+    <artifactId>ws39</artifactId>
+=======
+    <groupId>com.mycompany</groupId>
+<<<<<<<< HEAD:exams/bonilla/U2/Q71-100/Exam/pom.xml
+    <artifactId>Ejercicio</artifactId>
+========
+    <artifactId>HW15</artifactId>
+>>>>>>>> db3a6f7d297ed48c9854867a653f70df5a187bda:hw/gutierrez/u2/hw14/HW15/pom.xml
+>>>>>>> 8e58990cd798839eee6e80b191489fd6cba99f12:hw/gutierrez/u2/hw14/HW15/pom.xml
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>com.toedter</groupId>
+            <artifactId>jcalendar</artifactId>
+            <version>1.4</version>
+        </dependency>
+    </dependencies>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>19</maven.compiler.source>
+        <maven.compiler.target>19</maven.compiler.target>
+<<<<<<< HEAD:hw/gutierrez/u3/ws39/ws39/pom.xml
+        <exec.mainClass>ws39.Ws39</exec.mainClass>
+=======
+<<<<<<<< HEAD:exams/bonilla/U2/Q71-100/Exam/pom.xml
+        <exec.mainClass>com.mycompany.ejercicio.Ejercicio</exec.mainClass>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-sync</artifactId>
+            <version>4.2.3</version>
+        </dependency>
+        <dependency>
+	<groupId>org.mongodb</groupId>
+	<artifactId>mongo-java-driver</artifactId>
+	<version>3.8.0</version>
+</dependency>
+<!-- Thanks for using https://jar-download.com -->
+
+    </dependencies>
+========
+        <exec.mainClass>com.mycompany.hw15.HW15</exec.mainClass>
+>>>>>>> 8e58990cd798839eee6e80b191489fd6cba99f12:hw/gutierrez/u2/hw14/HW15/pom.xml
+    </properties>
+>>>>>>>> db3a6f7d297ed48c9854867a653f70df5a187bda:hw/gutierrez/u2/hw14/HW15/pom.xml
+</project>

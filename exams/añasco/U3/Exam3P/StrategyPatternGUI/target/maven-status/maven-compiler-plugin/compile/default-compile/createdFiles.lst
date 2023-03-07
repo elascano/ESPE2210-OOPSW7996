@@ -1,0 +1,12 @@
+ec\edu\espe\StrategyGUI\view\FrmSortApp$1.class
+ec\edu\espe\StrategyGUI\view\FrmSortApp.class
+ec\edu\espe\StrategyGUI\view\FrmSortApp$2.class
+ec\edu\espe\StrategyGUI\model\InsertionSort.class
+ec\edu\espe\StrategyGUI\controller\SortingStrategy.class
+ec\edu\espe\StrategyGUI\model\QuickSort.class
+ec\edu\espe\StrategyGUI\view\FrmSortApp$3.class
+utils\DataPersistance.class
+ec\edu\espe\StrategyGUI\controller\FrmSortAppController.class
+ec\edu\espe\StrategyGUI\controller\SortingContext.class
+ec\edu\espe\StrategyGUI\model\BubbleSort.class
+utils\DbManager.class

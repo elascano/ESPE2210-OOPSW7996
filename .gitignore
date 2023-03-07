@@ -1,4 +1,4 @@
-﻿# Compiled class file
+# Compiled class file
 *.class
 
 # Log file
@@ -17,12 +17,13 @@
 *.ear
 *.zip
 *.tar.gz
-.rar
+*.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_errpid
+hs_err_pid*
 
 #vpp backup files
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -76,3 +77,6 @@ hs_errpid
 /hw/verdugo/u3/hw23StrategyPattern/StrategyPattern/dist/
 /exams/verdugo/u3/Strategy/nbproject/private/
 /exams/verdugo/u3/StrategyExam/target/
+=======
+*.vpp.bak_*
+>>>>>>> d842f7fb3cad88c23efd64f22613cb5d9ee0def1
