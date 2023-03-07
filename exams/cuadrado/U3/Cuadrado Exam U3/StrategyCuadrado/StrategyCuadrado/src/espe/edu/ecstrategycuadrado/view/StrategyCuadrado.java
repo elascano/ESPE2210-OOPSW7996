@@ -42,7 +42,7 @@ public class StrategyCuadrado {
         System.out.println("1. Insert new id");
         System.out.println("2. Find a SortApp:");
         System.out.println("3. Modify SortApp:");
-        System.out.println("4. Delete SortApp:");
+        System.out.println("4. Delete SortApp:");   
         System.out.println("5. Exit");
         System.out.println("================");
     }
