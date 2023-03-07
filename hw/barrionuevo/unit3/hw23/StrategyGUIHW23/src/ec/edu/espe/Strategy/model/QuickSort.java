@@ -1,26 +1,30 @@
-package ec.edu.espe.exam.model;
+package ec.edu.espe.Strategy.model;
 
 /**
  *
- * @author Ariel Rivadeneira, Search Engine Bandits, DCCO-ESPE
+ * @author Lindsay Barrionuevo, DeltaTeam, DCCO-ESPE
  */
 public class QuickSort implements SortingStrategy {
-     @Override
-     public int[] sort(int data[]){
-         System.out.println("Quick sort");
-         quickSort(data, 0, data.length - 1);
-        return data;
+    @Override
+    public int[] sort(int data[]) {
+        
+        int sortedData[];
+
+        System.out.println("__QuickSort__");
+
+        sortedData=quickSort(data, 0, data.length - 1);
+        return sortedData;
     }
-    
-    private void quickSort(int[] data, int low, int high) {
+    private int[] quickSort(int[] data, int low, int high) {
+
         if (low < high) {
             int pi = partition(data, low, high);
             quickSort(data, low, pi - 1);
             quickSort(data, pi + 1, high);
         }
+        return data;
     }
-
-    private int partition(int[] data, int low, int high) {
+    static int partition(int[] data, int low, int high) {
         int pivot = data[high];
         int i = (low - 1);
         for (int j = low; j < high; j++) {
@@ -36,4 +40,5 @@ public class QuickSort implements SortingStrategy {
         data[high] = temp;
         return i + 1;
     }
+
 }

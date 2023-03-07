@@ -1,13 +1,17 @@
-package ec.edu.espe.exam.model;
+
+package ec.edu.espe.Strategy.model;
 
 /**
  *
- * @author Ariel Rivadeneira, Search Engine Bandits, DCCO-ESPE
+ * @author Lindsay Barrionuevo, DeltaTeam, DCCO-ESPE
  */
-public class InsertionSort implements SortingStrategy {
+
+public class InsertionSort implements SortingStrategy{
+
     @Override
-    public int[] sort(int data[]){
-        System.out.println("Insertion sort");
+    public  int[] sort(int data[]){
+        System.out.println("InsertionSort");
+        
         int n = data.length;
         for (int i = 1; i < n; ++i) {
             int key = data[i];
@@ -18,6 +22,10 @@ public class InsertionSort implements SortingStrategy {
             }
             data[j + 1] = key;
         }
+       
         return data;
-    }
+        
+    } 
 }
+
+
