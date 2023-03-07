@@ -1,0 +1,5 @@
+[ { "minuend": 1000.0, "subtrahend": 1500.0, "difference": -500.0 },
+ { "minuend": 42.5, "subtrahend": -22.4, "difference": 20.1 }, 
+ { "minuend": 0.0, "subtrahend": 0.0, "difference": 0.0 },
+  { "minuend": 112.0, "subtrahend": 66.0, "difference": 66.0 },
+   { "minuend": -20.0, "subtrahend": -50.0, "difference": 30.0 }]

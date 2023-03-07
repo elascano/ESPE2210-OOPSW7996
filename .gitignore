@@ -80,3 +80,16 @@ hs_err_pid*
 =======
 *.vpp.bak_*
 >>>>>>> d842f7fb3cad88c23efd64f22613cb5d9ee0def1
+/hw/jaguaco/U3/Hw19PatternsInGroup/DessingPatterns/AbstractFactory/build/
+/hw/jaguaco/U3/Hw19PatternsInGroup/DessingPatterns/AbstractFactory/nbproject/private/
+/hw/jaguaco/U3/Hw19PatternsInGroup/DessingPatterns/CompositePattern/nbproject/private/
+/hw/jaguaco/U3/Hw19PatternsInGroup/DessingPatterns/Observer/Observer/target/
+/hw/jaguaco/U3/Hw19PatternsInGroup/DessingPatterns/Observer/target/
+/hw/jaguaco/U3/Hw19PatternsInGroup/DessingPatterns/SingletonPattern/nbproject/private/
+/hw/jaguaco/U3/Hw19PatternsInGroup/DessingPatterns/StrategyPattern/build/
+/hw/jaguaco/U3/Hw19PatternsInGroup/DessingPatterns/StrategyPattern/nbproject/private/
+/hw/jaguaco/U3/Hw19PatternsInGroup/DessingPatterns/TemplateMethod/build/
+/hw/jaguaco/U3/Hw19PatternsInGroup/DessingPatterns/TemplateMethod/nbproject/private/
+/hw/jaguaco/U3/hw20Singleton/TaxesSingleton/build/
+/hw/jaguaco/U3/hw20Singleton/TaxesSingleton/nbproject/private/
+/hw/jaguaco/U3/hw20Singleton/UtahTaxSingleton/nbproject/private/
