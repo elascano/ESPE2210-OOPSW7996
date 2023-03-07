@@ -16,7 +16,7 @@ public class MongoConnection {
             .applyConnectionString(connectionString)
             .build();
     com.mongodb.client.MongoClient mongoClient = MongoClients.create(settings);
-    MongoDatabase database = mongoClient.getDatabase("Sort");
+    MongoDatabase database = mongoClient.getDatabase("strategyRivadeneira");
 
     public MongoDatabase data() {
         return database;

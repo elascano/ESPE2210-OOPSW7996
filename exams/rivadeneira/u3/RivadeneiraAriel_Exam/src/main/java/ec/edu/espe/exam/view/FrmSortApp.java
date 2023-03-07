@@ -15,7 +15,7 @@ import org.bson.Document;
 public class FrmSortApp extends javax.swing.JFrame {
     private int [] numbersToSort;
     private int arrayLength;
-     MongoCollection<Document> SortNumber = new MongoConnection().data().getCollection("ListNumbers");
+     MongoCollection<Document> SortNumber = new MongoConnection().data().getCollection("arrayAriel");
     /**
      * Creates new form FrmSortAppp
      */
