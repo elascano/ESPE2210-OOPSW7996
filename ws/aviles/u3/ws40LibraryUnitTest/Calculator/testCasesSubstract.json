@@ -1,0 +1,9 @@
+[
+{"minuend":123.45,"substrahend":423.0,"expResult":-299.55,"actResult":-299.55,"pass":"OK"}
+,
+{"minuend":5342.0,"substrahend":2.32,"expResult":6.1,"actResult":5339.68,"pass":"FAIL"}
+,
+{"minuend":0.423,"substrahend":0.56,"expResult":7.9,"actResult":-0.14,"pass":"FAIL"}
+,
+{"minuend":0.4,"substrahend":0.6,"expResult":1.0,"actResult":-0.2,"pass":"FAIL"}
+]

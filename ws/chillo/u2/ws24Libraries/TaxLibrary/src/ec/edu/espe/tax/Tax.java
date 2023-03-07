@@ -64,23 +64,23 @@ public class Tax {
         annualSalary = monthlySalary * 12;
         if(annualSalary < 11310){
             surplusFractionTax = (11310 - annualSalary) * 0.00F;
-        } if(annualSalary >= 11310 & annualSalary < 14410){
+        }else if(annualSalary >= 11310 & annualSalary < 14410){
             surplusFractionTax = (14410 - annualSalary) * 0.05F;
-        } if(annualSalary >= 14410 & annualSalary < 18010){
+        }else if(annualSalary >= 14410 & annualSalary < 18010){
             surplusFractionTax = (18010 - annualSalary) * 0.10F;
-        } if(annualSalary >= 18010 & annualSalary < 21630){
+        }else if(annualSalary >= 18010 & annualSalary < 21630){
             surplusFractionTax = (21630 - annualSalary) * 0.12F;
-        } if(annualSalary >= 21630 & annualSalary < 31630){
+        }else if(annualSalary >= 21630 & annualSalary < 31630){
             surplusFractionTax = (31630 - annualSalary) * 0.15F;
-        } if(annualSalary >= 31630 & annualSalary < 41630){
+        }else if(annualSalary >= 31630 & annualSalary < 41630){
             surplusFractionTax = (41630 - annualSalary) * 0.20F;
-        } if(annualSalary >= 41630 & annualSalary < 51630){
+        }else if(annualSalary >= 41630 & annualSalary < 51630){
             surplusFractionTax = (51630 - annualSalary) * 0.25F;
-        } if(annualSalary >= 51630 & annualSalary < 61630){
+        }else if(annualSalary >= 51630 & annualSalary < 61630){
             surplusFractionTax = (61630 - annualSalary) * 0.30F;
-        } if(annualSalary >= 61630 & annualSalary < 100000){
+        }else if(annualSalary >= 61630 & annualSalary < 100000){
             surplusFractionTax = (100000 - annualSalary) * 0.35F;
-        } if(annualSalary >= 100000){
+        }else if(annualSalary >= 100000){
             surplusFractionTax = annualSalary * 0.37F;
         }
         return surplusFractionTax;
@@ -92,24 +92,24 @@ public class Tax {
         rentTax = 0.00F;
         annualSalary = monthlySalary * 12;
         if(annualSalary < 11310){
-            rentTax = 0.00F;
-        } if(annualSalary >= 11310 & annualSalary < 14410){
+            rentTax = 0.00F; 
+        }else if(annualSalary >= 11310 & annualSalary < 14410){
             rentTax = 0.00F + surplusFractionTax;
-        } if(annualSalary >= 14410 & annualSalary < 18010){
+        }else if(annualSalary >= 14410 & annualSalary < 18010){
             rentTax = 155.00F + surplusFractionTax;
-        } if(annualSalary >= 18010 & annualSalary < 21630){
+        }else if(annualSalary >= 18010 & annualSalary < 21630){
             rentTax = 515.00F + surplusFractionTax;
-        } if(annualSalary >= 21630 & annualSalary < 31630){
+        }else if(annualSalary >= 21630 & annualSalary < 31630){
             rentTax = 949.40F + surplusFractionTax;
-        } if(annualSalary >= 31630 & annualSalary < 41630){
+        }else if(annualSalary >= 31630 & annualSalary < 41630){
             rentTax = 2449.39F + surplusFractionTax;
-        } if(annualSalary >= 41630 & annualSalary < 51630){
+        }else if(annualSalary >= 41630 & annualSalary < 51630){
             rentTax = 4449.39F + surplusFractionTax;
-        } if(annualSalary >= 51630 & annualSalary < 61630){
+        }else if(annualSalary >= 51630 & annualSalary < 61630){
             rentTax = 6949.39F + surplusFractionTax;
-        } if(annualSalary >= 61630 & annualSalary < 100000){
+        }else if(annualSalary >= 61630 & annualSalary < 100000){
             rentTax = 9949.39F + surplusFractionTax;
-        } if(annualSalary >= 100000){
+        }else if(annualSalary >= 100000){
             rentTax = 23378.88F;
         }
         return rentTax;

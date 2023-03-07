@@ -1,0 +1,3 @@
+serviceactivator.MyService
+serviceactivator.ServiceActivatorCode
+serviceactivator.Service
