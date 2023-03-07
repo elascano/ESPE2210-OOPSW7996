@@ -17,7 +17,7 @@ public class InsertionSort implements SortingStrategy{
         for (int i = 1; i < size; i++) {
             temp = data[i];
             j = i - 1;
-            while (j >= 0 && temp <= data[j]) /* Move the elements greater than temp to one position ahead from their current position*/ {
+            while (j >= 0 && temp <= data[j]){
                 data[j + 1] = data[j];
                 j = j - 1;
             }
