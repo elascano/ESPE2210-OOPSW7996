@@ -32,8 +32,8 @@ public class MongoDbManager {
         return mongoCollection; 
     }
     public static  boolean insertDocument(MongoCollection collection, HashMap<Object, Object> map){
-        Object documentId  = map.get("id");
-        if(!existsDocument(collection,"id", (int)documentId)){
+        Object documentId  = map.get("sorted list");
+        if(!existsDocument(collection,"sorted list", documentId)){
             Document document = createDocument(map);
             try {
                 collection.insertOne(document);

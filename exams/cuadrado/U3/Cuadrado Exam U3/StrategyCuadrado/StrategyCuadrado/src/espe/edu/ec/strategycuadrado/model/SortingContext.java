@@ -6,3 +6,4 @@ package espe.edu.ec.strategycuadrado.model;
 public class SortingContext {
     
 }
+

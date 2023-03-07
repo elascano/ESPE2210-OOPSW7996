@@ -10,7 +10,7 @@ import javax.swing.JTextArea;
  * @author Nahir Carrera, Gaman GeekLords, DCC0-ESPE
  */
 public class FrmSortApp extends javax.swing.JFrame {
-    private final int [] numbersToSort;
+    private int [] numbersToSort;
     private int arrayLength;
     /**
      * Creates new form FrmSortApp
@@ -32,7 +32,7 @@ public class FrmSortApp extends javax.swing.JFrame {
         txtANotSortedList.setEditable(false);
         
         btnDelete.setEnabled(false);
-        btnSort.setEnabled(false);
+        btnSort.setEnabled(true);
     }
 
     
@@ -474,6 +474,13 @@ public class FrmSortApp extends javax.swing.JFrame {
                 new FrmSortApp().setVisible(true);
             }
         });
+    }
+
+    public void setArrayLength(int arrayLength) {
+        this.arrayLength = arrayLength;
+    }
+    public void setNumbersToSort(int[] numbersToSort){
+        this.numbersToSort = numbersToSort;
     }
 
     public int[] getNumbersToSort() {

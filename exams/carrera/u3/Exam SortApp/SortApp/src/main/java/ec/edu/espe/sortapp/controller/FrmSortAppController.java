@@ -22,9 +22,9 @@ public class FrmSortAppController {
         int numberToAdd;
         numberToAdd = Integer.parseInt(sortFrame.getLblCurrentNumber().getText());
          
-        sortFrame.getNumbersToSort() = Arrays.copyOf(sortFrame.getNumbersToSort(), sortFrame.getArrayLength());
+        sortFrame.setNumbersToSort(Arrays.copyOf(sortFrame.getNumbersToSort(), sortFrame.getArrayLength()));
         sortFrame.getNumbersToSort()[sortFrame.getArrayLength()-1] = numberToAdd;
-        sortFrame.getArrayLength() += 1;
+        sortFrame.setArrayLength(sortFrame.getArrayLength()+1);
         
         sortFrame.getTxtAList().append("\n" + numberToAdd);
     }
@@ -37,7 +37,7 @@ public class FrmSortAppController {
             sortFrame.getTxtAList().replaceRange("", lastLinesStart, lastLineEnd); 
         }
         
-        sortFrame.getNumbersToSort() = Arrays.copyOfRange(sortFrame.getNumbersToSort(), 0, sortFrame.getArrayLength() - 1);
+        sortFrame.setNumbersToSort(Arrays.copyOfRange(sortFrame.getNumbersToSort(), 0, sortFrame.getArrayLength() - 1));
     }
     
     public static void sortList(FrmSortApp sortFrame){
@@ -50,7 +50,7 @@ public class FrmSortAppController {
     }
     
     public static void insertInMongoDb(FrmSortApp sortFrame, int[] sortedList){
-        ArrayList<String> keys = new ArrayList();
+        ArrayList<Object> keys = new ArrayList();
         ArrayList values = new ArrayList();
         
         keys.add("unsorted list");
@@ -68,16 +68,16 @@ public class FrmSortAppController {
     }
             
     public static void restartList(FrmSortApp sortFrame){
-        sortFrame.getArrayLength() = 1;
-        sortFrame.getNumbersToSort() = new int[sortFrame.getArrayLength()];
+        sortFrame.setArrayLength(1);
+        sortFrame.setNumbersToSort(new int[sortFrame.getArrayLength()]);
         sortFrame.getBtnDelete().setEnabled(false);
         sortFrame.getBtnSort().setEnabled(false);
         sortFrame.getTxtAList().setText("");
     }
     
     public static String changeTypeLabel(FrmSortApp sortFrame){
-        sortFrame.ArrayLength() -= 1;
-        
+        sortFrame.setArrayLength(sortFrame.getArrayLength()-1);
+            
         if(sortFrame.getArrayLength() >0 && sortFrame.getArrayLength()<=3){
             sortFrame.getLblSortType().setText("Bubble Sort: " + sortFrame.getArrayLength() + " elements");
             return "Bubble Sort";
@@ -92,6 +92,7 @@ public class FrmSortAppController {
             sortFrame.getLblSortType().setText("Quick Sort: "+ sortFrame.getArrayLength()+ " elements");
             return "Quick Sort";
         }
+        return "";
     }
     public static void changeButtonsStatus(FrmSortApp sortFrame){
         if(sortFrame.getArrayLength() == 1){
