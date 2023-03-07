@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: ec.edu.espe.shopinventory_v2.model.PrincipalUserTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec <<< FAILURE!
+ec.edu.espe.shopinventory_v2.model.PrincipalUserTest.testGetInstance()  Time elapsed: 0.01 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <ec.edu.espe.shopinventory_v2.model.PrincipalUser@3fb4f649>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1124)
+	at ec.edu.espe.shopinventory_v2.model.PrincipalUserTest.testGetInstance(PrincipalUserTest.java:47)
+
+ec.edu.espe.shopinventory_v2.model.PrincipalUserTest.testGetPassword()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.shopinventory_v2.model.PrincipalUser.getPassword()" because "instance" is null
+	at ec.edu.espe.shopinventory_v2.model.PrincipalUserTest.testGetPassword(PrincipalUserTest.java:59)
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/view/FrmRemoveStudent.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/view/FrmLogin.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/view/FrmGetGradeRecord.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/view/FrmAddCourse.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/view/FrmInClassMenu.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/controller/FormController.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/controller/TeacherController.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/model/Grade.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/view/FrmGetAttendanceRecord.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/controller/DataPersistence.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/model/AttendanceRecord.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/view/FrmAddGrade.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/controller/CourseController.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/view/FrmGetTutorshipRecord.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/model/Teacher.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/model/UniversityMember.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/view/FrmRemoveCourse.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/controller/IStudent.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/controller/PdfManager.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/view/FrmShowEnrolledStudents.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/view/FrmTakeAttendance.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/controller/TutorshipController.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/model/Course.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/view/FrmEnterCourse.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/view/FrmStudentMenu.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/model/GradeRecord.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/view/FrmTeacherMenu.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/model/Unit.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/model/Tutorship.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/view/FrmRequestTutorship.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/utils/DBManager.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/model/Student.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/view/FrmAddStudent.java</file>
+            <file>file:/C:/David/Universidad/Universidad/3%20Semestre/POO%207996/T04-DeveloperBears/06-Code/InClass/src/ec/edu/espe/inclass/controller/StudentController.java</file>
+        </group>
+    </open-files>
+</project-private>

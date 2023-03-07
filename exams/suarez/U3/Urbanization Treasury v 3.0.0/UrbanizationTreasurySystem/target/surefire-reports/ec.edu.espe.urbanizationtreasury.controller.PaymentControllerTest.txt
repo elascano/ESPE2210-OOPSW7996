@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: ec.edu.espe.urbanizationtreasury.controller.PaymentControllerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.647 s <<< FAILURE! - in ec.edu.espe.urbanizationtreasury.controller.PaymentControllerTest
+testSearchPaymentToDelete  Time elapsed: 0.641 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "javax.swing.JTextField.getText()" because "txtId" is null
+	at ec.edu.espe.urbanizationtreasury.controller.PaymentControllerTest.testSearchPaymentToDelete(PaymentControllerTest.java:36)
+
