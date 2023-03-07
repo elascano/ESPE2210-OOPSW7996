@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="21" failures="5" name="utils.CostsCalculatorTest" time="0.036" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="19.0.1+10-21"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-19\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Ok Pc\Desktop\CUARTO SEMESTRE\P.O.O 7996\T03-Gaman-GeekLords\06-Code\EHAManagementV3.3.0"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="ES"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="test" value="utils.CostsCalculatorTest"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\Ok Pc\Desktop\CUARTO SEMESTRE\P.O.O 7996\T03-Gaman-GeekLords\06-Code\EHAManagementV3.3.0"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="java.runtime.version" value="19.0.1+10-21"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\OKPC~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans-15\netbeans\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="classworlds.conf" value="C:\Program Files\NetBeans-15\netbeans\java\maven\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-19\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Python311\Scripts\;C:\Program Files\Python311\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\gnuplot\bin;C:\Program Files (x86)\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Users\Ok Pc\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\Ok Pc\AppData\Local\Programs\Python\Python310\;C:\Users\Ok Pc\AppData\Local\Microsoft\WindowsApps;;C:\Users\Ok Pc\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2022.3.1\bin;;."/>
+    <property name="maven.conf" value="C:\Program Files\NetBeans-15\netbeans\java\maven/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="63.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:\Program Files\NetBeans-15\netbeans\java\maven\lib\jansi-native"/>
+    <property name="user.home" value="C:\Users\Ok Pc"/>
+    <property name="user.timezone" value="America/Bogota"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="19"/>
+    <property name="user.name" value="Ok Pc"/>
+    <property name="java.class.path" value="C:\Program Files\NetBeans-15\netbeans\java\maven\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="19"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=utils.CostsCalculatorTest -Dmaven.ext.class.path=C:\Program Files\NetBeans-15\netbeans\java\maven-nblib\netbeans-eventspy.jar surefire:test"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-19"/>
+    <property name="user.language" value="es"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="19.0.1"/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\NetBeans-15\netbeans\java\maven"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2022-10-18"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="utils.CostsCalculatorTest" name="utils.CostsCalculatorTest.testComputeMaterialsCostPerProductNoneAndDecimal" time="0.024">
+    <failure message="expected: &lt;663275.75&gt; but was: &lt;663275.8&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;663275.75&gt; but was: &lt;663275.8&gt;
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:118)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:113)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:839)
+	at utils.CostsCalculatorTest.testComputeMaterialsCostPerProductNoneAndDecimal(CostsCalculatorTest.java:436)
+</failure>
+    <system-out>computeMaterialsCostPerProduct none decimal places
+</system-out>
+  </testcase>
+  <testcase classname="utils.CostsCalculatorTest" name="utils.CostsCalculatorTest.testComputeMaterialUnitCostCeroForGeneralCost" time="0"/>
+  <testcase classname="utils.CostsCalculatorTest" name="utils.CostsCalculatorTest.testComputeWorkingTimeCostProductUnitCostBigNumber" time="0.003">
+    <failure message="expected: &lt;3.591922E7&gt; but was: &lt;3.5919216E7&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;3.591922E7&gt; but was: &lt;3.5919216E7&gt;
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:118)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:113)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:839)
+	at utils.CostsCalculatorTest.testComputeWorkingTimeCostProductUnitCostBigNumber(CostsCalculatorTest.java:280)
+</failure>
+    <system-out>computeWorkingTimeCostProduct with big number
+</system-out>
+  </testcase>
+  <testcase classname="utils.CostsCalculatorTest" name="utils.CostsCalculatorTest.testComputeWorkingTimeCostProductTwoDecimal" time="0">
+    <failure message="expected: &lt;0.5&gt; but was: &lt;0.53&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;0.5&gt; but was: &lt;0.53&gt;
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:118)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:113)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:839)
+	at utils.CostsCalculatorTest.testComputeWorkingTimeCostProductTwoDecimal(CostsCalculatorTest.java:194)
+</failure>
+    <system-out>computeWorkingTimeCostProduct with two decimal
+</system-out>
+  </testcase>
+  <testcase classname="utils.CostsCalculatorTest" name="utils.CostsCalculatorTest.testComputeWorkingTimeCostProductNoneDecimal" time="0"/>
+  <testcase classname="utils.CostsCalculatorTest" name="utils.CostsCalculatorTest.testComputeMaterialsCostPerProductTwoDecimal" time="0"/>
+  <testcase classname="utils.CostsCalculatorTest" name="utils.CostsCalculatorTest.testComputeWorkingTimeCostProductCero" time="0.002"/>
+  <testcase classname="utils.CostsCalculatorTest" name="utils.CostsCalculatorTest.testComputeMaterialsCostPerProductNoneDecimal" time="0"/>
+  <testcase classname="utils.CostsCalculatorTest" name="utils.CostsCalculatorTest.testComputeMaterialUnitCostBigNumberToGeneralCost" time="0"/>
+  <testcase classname="utils.CostsCalculatorTest" name="utils.CostsCalculatorTest.testComputeMaterialUnitCostTwoDecimalPlacesForBoth" time="0.001"/>
+  <testcase classname="utils.CostsCalculatorTest" name="utils.CostsCalculatorTest.testComputeMaterialUnitCostBigNumberToGeneralQuantity" time="0.001"/>
+  <testcase classname="utils.CostsCalculatorTest" name="utils.CostsCalculatorTest.testComputeWorkingTimeCostProductSmallPurePeriodicDecimals" time="0.001"/>
+  <testcase classname="utils.CostsCalculatorTest" name="utils.CostsCalculatorTest.testComputeWorkingTimeCostProductLargeNumbersMixedNewspapers" time="0"/>
+  <testcase classname="utils.CostsCalculatorTest" name="utils.CostsCalculatorTest.testComputeMaterialUnitCostNoneDecimalPlacesForGeneralCost" time="0"/>
+  <testcase classname="utils.CostsCalculatorTest" name="utils.CostsCalculatorTest.testComputeMaterialUnitCostTwoDecimalPlacesForGeneralCost" time="0.001"/>
+  <testcase classname="utils.CostsCalculatorTest" name="utils.CostsCalculatorTest.testComputeWorkingTimeCostProductTwoEqualDecimalPlaces" time="0"/>
+  <testcase classname="utils.CostsCalculatorTest" name="utils.CostsCalculatorTest.testComputeMaterialsCostPerProductSameNumbers" time="0"/>
+  <testcase classname="utils.CostsCalculatorTest" name="utils.CostsCalculatorTest.testComputeMaterialsCostPerProductDecimals" time="0.001"/>
+  <testcase classname="utils.CostsCalculatorTest" name="utils.CostsCalculatorTest.testComputeMaterialsCostPerProductBigNumbers" time="0.001">
+    <failure message="expected: &lt;663275.75&gt; but was: &lt;663275.8&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;663275.75&gt; but was: &lt;663275.8&gt;
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:118)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:113)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:839)
+	at utils.CostsCalculatorTest.testComputeMaterialsCostPerProductBigNumbers(CostsCalculatorTest.java:544)
+</failure>
+    <system-out>computeMaterialsCostPerProduct big numbers
+</system-out>
+  </testcase>
+  <testcase classname="utils.CostsCalculatorTest" name="utils.CostsCalculatorTest.testComputeMaterialsCostPerProductThreeMaterials" time="0"/>
+  <testcase classname="utils.CostsCalculatorTest" name="utils.CostsCalculatorTest.testComputeMaterialsCostPerProductBigAndDecimal" time="0.001">
+    <failure message="expected: &lt;133358.77&gt; but was: &lt;1333358.8&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;133358.77&gt; but was: &lt;1333358.8&gt;
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:118)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:113)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:839)
+	at utils.CostsCalculatorTest.testComputeMaterialsCostPerProductBigAndDecimal(CostsCalculatorTest.java:572)
+</failure>
+    <system-out>computeMaterialsCostPerProduct big numbers and two decimal places
+</system-out>
+  </testcase>
+</testsuite>

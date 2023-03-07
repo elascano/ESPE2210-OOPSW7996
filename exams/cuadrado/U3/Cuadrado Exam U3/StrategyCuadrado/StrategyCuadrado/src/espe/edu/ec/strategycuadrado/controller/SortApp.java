@@ -1,4 +1,4 @@
-package espe.edu.ec.strategycuadrado.controller;
+    package espe.edu.ec.strategycuadrado.controller;
 import java.util.Scanner;
 /**
  *
