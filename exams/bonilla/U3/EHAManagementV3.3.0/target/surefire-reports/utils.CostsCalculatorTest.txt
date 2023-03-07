@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: utils.CostsCalculatorTest
+-------------------------------------------------------------------------------
+Tests run: 19, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.038 sec <<< FAILURE!
+utils.CostsCalculatorTest.testComputeMaterialsCostPerProductBigAndDecimal()  Time elapsed: 0.011 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <133358.77> but was: <1333358.8>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:118)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:113)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:839)
+	at utils.CostsCalculatorTest.testComputeMaterialsCostPerProductBigAndDecimal(CostsCalculatorTest.java:327)
+
+utils.CostsCalculatorTest.testComputeMaterialsCostPerProductBigNumbers()  Time elapsed: 0 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <663275.75> but was: <663275.8>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:118)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:113)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:839)
+	at utils.CostsCalculatorTest.testComputeMaterialsCostPerProductBigNumbers(CostsCalculatorTest.java:311)
+
