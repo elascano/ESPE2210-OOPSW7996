@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ChickenSimulator</id>
+    <version>1.0.0</version>
+    <authors>ChickenSimulator</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\erick\Desktop\ESPE\POO\Proyectos VisualBasic\ChickenSimulator\ChickenSimulator\bin\Debug\net6.0\ChickenSimulator.runtimeconfig.json" target="lib\net6.0\ChickenSimulator.runtimeconfig.json" />
+    <file src="C:\Users\erick\Desktop\ESPE\POO\Proyectos VisualBasic\ChickenSimulator\ChickenSimulator\bin\Debug\net6.0\ChickenSimulator.dll" target="lib\net6.0\ChickenSimulator.dll" />
+  </files>
+</package>

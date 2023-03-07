@@ -1,0 +1,9 @@
+[
+{"dividend":123.45,"divisor":423.0,"expResult":0.29,"actResult":0.29,"pass":"OK"}
+,
+{"dividend":5342.0,"divisor":2.32,"expResult":2302.69,"actResult":2302.59,"pass":"FAIL"}
+,
+{"dividend":0.423,"divisor":0.56,"expResult":0.76,"actResult":0.76,"pass":"OK"}
+,
+{"dividend":0.4,"divisor":0.1,"expResult":0.67,"actResult":4.0,"pass":"FAIL"}
+]

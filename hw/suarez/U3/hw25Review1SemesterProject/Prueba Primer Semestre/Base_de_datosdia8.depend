@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1660956231 source:c:\users\matias suarez\desktop\ejercicios programacion\code block\base_de_datosdia8\main.cpp
+	<stdio.h>
+	<iostream>
+	<string.h>
+	<fstream>
+
