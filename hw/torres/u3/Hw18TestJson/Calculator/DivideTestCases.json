@@ -1,0 +1,1 @@
+[{"value1": "5","value2": "5","expResult": "1"},{"value1": "0","value2": "24","expResult": "0"},{"value1": "24.23","value2": "24.23","expResult": "1"},{"value1": "12","value2": "3.999","expResult": "3.00075"}]
