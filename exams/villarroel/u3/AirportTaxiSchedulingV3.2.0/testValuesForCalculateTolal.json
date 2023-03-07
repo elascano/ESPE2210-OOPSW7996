@@ -1,0 +1,218 @@
+[
+    {
+        "values": [
+            45.0
+        ],
+        "totalValue": 45.0,
+        "payedValues": 45.0,
+        "outsValues": 50.0,
+        "percentageLost": 53.62
+    },
+    {
+        "values": [
+            25.0,
+            25.0
+        ],
+        "totalValue": 59.0,
+        "payedValues": 45.0,
+        "outsValues": 50.0,
+        "percentageLost": 52.63
+    },
+    {
+        "values": [
+            -25.0,
+            25.0
+        ],
+        "totalValue": 0.0,
+        "payedValues": 7564.0,
+        "outsValues": 7980.0,
+        "percentageLost": 51.34
+    },
+    {
+        "values": [
+            70.0,
+            182.0,
+            756.45,
+            -46.75
+        ],
+        "totalValue": 961.7,
+        "payedValues": -58.0,
+        "outsValues": -76.0,
+        "percentageLost": 56.71
+    },
+    {
+        "values": [
+            0.01,
+            0.02,
+            0.003,
+            0.00
+        ],
+        "totalValue": 0.033,
+        "payedValues": 0.01,
+        "outsValues": 0.05,
+        "percentageLost": 83.33
+    },
+    {
+        "values": [
+            796.0,
+            96.5,
+            -0.001,
+            0.867
+        ],
+        "totalValue": 893.37,
+        "payedValues": 893,
+        "outsValues": 893,
+        "percentageLost": 50.0
+    },
+    {
+        "values": [
+            999999999999.0,
+            8566.0,
+            75637.0,
+            89768737.445
+        ],
+        "totalValue": 1000089852939.45,
+        "payedValues": 666,
+        "outsValues": 66,
+        "percentageLost": 9.01
+    },
+    {
+        "values": [
+            999999999999.0,
+            8566.0,
+            75637.0,
+            89768737.445
+        ],
+        "totalValue": 1000089852939.45,
+        "payedValues": 666,
+        "outsValues": 66,
+        "percentageLost": 9.01
+    },
+    {
+        "values": [
+            333.0,
+            96.5,
+            56.0,
+            0.867
+        ],
+        "totalValue": 486.37,
+        "payedValues": 1,
+        "outsValues": -2,
+        "percentageLost": 200
+    },
+    {
+        "values": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "totalValue": 0,
+        "payedValues": 100,
+        "outsValues": 75.56,
+        "percentageLost": 43.04
+    },
+    {
+        "values": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "totalValue": 0,
+        "payedValues": 4645343.4534,
+        "outsValues": 0,
+        "percentageLost": 0
+    },
+    {
+        "values": [
+            1,
+            1,
+            1,
+            1,
+            1.5,
+            1.86,
+            78.66
+        ],
+        "totalValue": 86.02,
+        "payedValues": 0,
+        "outsValues": 0,
+        "percentageLost": IND
+    },
+    {
+        "values": [
+            1,
+            1,
+            1,
+            1,
+            1.5,
+            1.8k,
+            78.66,
+        ],
+        "totalValue": 276.76,
+        "payedValues": 0,
+        "outsValues": 0,
+        "percentageLost": IND
+    },
+    {
+    "values": [
+            k,
+    l
+],
+        "totalValue":215,
+        "payedValues": k,
+        "outsValues": l,
+        "percentageLost":50.23
+}
+{
+"values": [
+        70.0,
+        96.5,
+        56.0,
+        0.867
+],
+        "totalValue": 223.37,
+        "payedValues": 1,
+        "outsValues": -2,
+        "percentageLost":200
+}
+{
+"values": [
+        50.01,
+        0.02,
+        0.003,
+        0.00
+],
+        "totalValue": 50.033,
+        "payedValues": 0.01,
+        "outsValues": 0.05,
+        "percentageLost":83.33
+}
+{
+"values": [
+        0,
+        0,
+        -99,
+        0
+],
+        "totalValue":-99,
+        "payedValues": 100,
+        "outsValues": 75.56,
+        "percentageLost":43.04
+}
+{
+"values": [
+        1,
+        1,
+        1,
+        7,
+        1.5,
+        1.86,
+        78.66,
+],
+        "totalValue":92.02,
+        "payedValues": 0,
+        "outsValues": 1,
+        "percentageLost":100
+}
+]

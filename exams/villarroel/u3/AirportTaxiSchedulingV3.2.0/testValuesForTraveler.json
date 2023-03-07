@@ -1,0 +1,195 @@
+[
+    {
+        "idFinder": 2,
+        "traveler": {
+            "id": 2,
+            "name": "Justin Villarroel",
+            "phoneNumber": 996459938,
+            "mail": "justinv2023@hotmail.com",
+            "outstandingBalance": 72.4,
+            "birthdayDay": 6,
+            "birthdayMonth": 9,
+            "year": 2003
+        }
+    }, {
+        "idFinder": 6,
+        "traveler": {
+            "id": 6,
+            "name": "Leonardo Yaranga",
+            "phoneNumber": 995667373,
+            "mail": "leonardo.yaranga@hotmail.com",
+            "outstandingBalance": 50,
+            "birthdayDay": 17,
+            "birthdayMonth": 11,
+            "year": 2003
+        }
+    }, {
+        "idFinder": 8,
+        "traveler": {
+            "id": 8,
+            "name": "Joshua Barreno",
+            "phoneNumber": 930903903,
+            "mail": "joshuajvb0@gmail.com",
+            "outstandingBalance": 0,
+            "birthdayDay": 6,
+            "birthdayMonth": 9,
+            "year": 2003
+        }
+    }, {
+        "idFinder": 14,
+        "traveler": {
+            "id": 14,
+            "name": "Carlos montano",
+            "phoneNumber": 949394394,
+            "mail": "karl2003@hotmail.com",
+            "outstandingBalance": 0,
+            "birthdayDay": 6,
+            "birthdayMonth": 10,
+            "year": 2003
+        }
+    }, {
+        "idFinder": 12,
+        "traveler": {
+            "id": 12,
+            "name": "Joel Perez",
+            "phoneNumber": 934034930,
+            "mail": "joeloooperz@hotmail.com",
+            "outstandingBalance": 0,
+            "birthdayDay": 19,
+            "birthdayMonth": 2,
+            "year": 2004
+        }
+    }, {
+        "idFinder": 10,
+        "traveler": {
+            "id": 10,
+            "name": "Manuel Lopez",
+            "phoneNumber": 394039409,
+            "mail": "manu20199@gmail.com",
+            "outstandingBalance": 50,
+            "birthdayDay": 5,
+            "birthdayMonth": 3,
+            "year": 2002
+        }
+    }, {
+        "idFinder": 1,
+        "traveler": {
+            "id": 1,
+            "name": "Juan Barcos",
+            "phoneNumber": 904839048,
+            "mail": "juba293@hotmail.com",
+            "outstandingBalance": 0,
+            "birthdayDay": 3,
+            "birthdayMonth": 4,
+            "year": 2001
+        }
+    }, {
+        "idFinder": 3,
+        "traveler": {
+            "id": 3,
+            "name": "Pedro Maldonado",
+            "phoneNumber": 39093094,
+            "mail": "pemals22@hotmail.com",
+            "outstandingBalance": 0,
+            "birthdayDay": 3,
+            "birthdayMonth": 6,
+            "year": 2002
+        }
+    }, {
+        "idFinder": 5,
+        "traveler": {
+            "id": 5,
+            "name": "Noel Noa",
+            "phoneNumber": 394039409,
+            "mail": "noelnoa7@hotmail.com",
+            "outstandingBalance": 0,
+            "birthdayDay": 3,
+            "birthdayMonth": 6,
+            "year": 2004
+        }
+    }, {
+        "idFinder": 7,
+        "traveler": {
+            "id": 7,
+            "name": "Cristiano Ronaldo",
+            "phoneNumber": 930494304,
+            "mail": "cr7siuu@hotmail.com",
+            "outstandingBalance": 0,
+            "birthdayDay": 4,
+            "birthdayMonth": 1,
+            "year": 1985
+        }
+    }, {
+        "idFinder": 11,
+        "traveler": {
+            "id": 11,
+            "name": "Holger Silva",
+            "phoneNumber": 394039409,
+            "mail": "holgez@gmail.com",
+            "outstandingBalance": 0,
+            "birthdayDay": 3,
+            "birthdayMonth": 2,
+            "year": 2010
+        }
+    }, {
+        "idFinder": 9,
+        "traveler": {
+            "id": 9,
+            "name": "Jose Morales",
+            "phoneNumber": 943049039,
+            "mail": "josuman@gmail.com",
+            "outstandingBalance": 0,
+            "birthdayDay": 4,
+            "birthdayMonth": 5,
+            "year": 2004
+        }
+    }, {
+        "idFinder": 0,
+        "traveler": {
+            "id": 0,
+            "name": "Karl Montes",
+            "phoneNumber": 293902930,
+            "mail": "karil@gmail.com",
+            "outstandingBalance": 0,
+            "birthdayDay": 3,
+            "birthdayMonth": 2,
+            "year": 2000
+        }
+    }, {
+        "idFinder": 15,
+        "traveler": {
+            "id": 15,
+            "name": "Jose Rodriguez",
+            "phoneNumber": 293029302,
+            "mail": "josro@hotmail.com",
+            "outstandingBalance": 0,
+            "birthdayDay": 3,
+            "birthdayMonth": 2,
+            "year": 2011
+        }
+    }, {
+        "idFinder": 18,
+        "traveler": {
+            "id": 18,
+            "name": "93939",
+            "phoneNumber": "ksi",
+            "mail": "kakaoko@hotmail.com",
+            "outstandingBalance": 0,
+            "birthdayDay": 3,
+            "birthdayMonth": 1,
+            "year": "2022"
+        }
+    }
+    {
+        "idFinder": 100,
+        "traveler":null
+    }
+     {
+        "idFinder": k,
+        "traveler":null
+    }
+    {
+        "idFinder": #,
+        "traveler":null
+    }
+]

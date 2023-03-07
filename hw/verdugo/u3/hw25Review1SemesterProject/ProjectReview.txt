@@ -1,0 +1,8 @@
+Start of the review: 20:47
+End of the review: 21:05
+
+This code defines three data structures: "Alumno", "Materia" and "Matricula", and uses these structures to create a list of student enrollments. The main function of the program is the "ingreso" function, which allows the user to enter information about a specific license plate. The user must enter the enrollment code, the student's ID, the student's name, the student's age, and for each subject, the subject code, the subject name, the number of credits for the subject, and the student's partial grades in the subject. In addition, the function calculates the total tuition value based on the subject credits.
+
+The program also defines three auxiliary functions: "validaredad", which verifies whether a student's age is within an acceptable range; "validarcédula", which verifies whether a student's cédula is valid; and "promedionotas", which calculates the average of the partial grades of a subject and determines whether the student passed or failed.
+
+The main function "main" uses a "for" loop to enter information about several student enrollments and then prints the entered information using another function called "imprimir". In addition, the main function calls auxiliary functions to check the age and ID validity of each student.

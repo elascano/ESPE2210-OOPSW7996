@@ -1,0 +1,5 @@
+ec\edu\espe\AirporTaxiScheduling\utils\ValidationTest.class
+ec\edu\espe\AirporTaxiScheduling\controller\AccountingControllerTest.class
+ec\edu\espe\AirporTaxiScheduling\controller\TravelerdbControllerTest.class
+ec\edu\espe\AirporTaxiScheduling\utils\GeneratorTest.class
+ec\edu\espe\AirporTaxiScheduling\model\TarifSingletonTest.class

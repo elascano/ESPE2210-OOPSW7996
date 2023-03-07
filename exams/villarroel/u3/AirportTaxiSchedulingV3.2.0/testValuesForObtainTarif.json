@@ -1,0 +1,33 @@
+[
+  {
+    "kilometerNumber":15.3,
+    "kilometerValue": 6
+  },{
+    "kilometerNumber":22.4,
+    "kilometerValue": 8.96
+  },{
+    "kilometerNumber":99.34,
+    "kilometerValue": 39.736
+  },{
+    "kilometerNumber":"22",
+    "kilometerValue": 0
+  },{
+    "kilometerNumber":5,
+    "kilometerValue": 2
+  },{
+    "kilometerNumber":-10,
+    "kilometerValue": -4
+  },{
+    "kilometerNumber":7.7777,
+    "kilometerValue": 3.11108
+  },{
+    "kilometerNumber":9999,
+    "kilometerValue": 3999.6
+  },{
+    "kilometerNumber":30,
+    "kilometerValue": 12
+  },{
+    "kilometerNumber":3.5555555,
+    "kilometerValue": 1.422222
+  }
+]

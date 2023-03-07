@@ -1,0 +1,12 @@
+[
+  {
+    "value1": 1.0,
+    "value2": 4.0,
+    "expectedValue": 5.0
+  },
+  {
+    "value1": 6.0,
+    "value2": 445.0,
+    "expectedValue": 451.0
+  }
+]
