@@ -27,6 +27,7 @@ hs_err_pid*
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.vpp.bak_*
 <<<<<<< HEAD
 
@@ -82,3 +83,6 @@ hs_err_pid*
 >>>>>>> d842f7fb3cad88c23efd64f22613cb5d9ee0def1
 /exams/verdugo/u3/StrategyExam1/nbproject/private/
 /exams/verdugo/u3/StrategyExam1/build/
+=======
+*.vpp.bak_*
+>>>>>>> 90710ed242068ddf2a7ad6cafb8c23fc2860ba27
