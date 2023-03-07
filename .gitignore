@@ -73,3 +73,6 @@ hs_errpid
 =======
 *.vpp.bak*
 >>>>>>> 14290affd5da14daf7f3696de8d120a2ce07cdd3
+/hw/verdugo/u3/hw23StrategyPattern/StrategyPattern/dist/
+/exams/verdugo/u3/Strategy/nbproject/private/
+/exams/verdugo/u3/StrategyExam/target/
