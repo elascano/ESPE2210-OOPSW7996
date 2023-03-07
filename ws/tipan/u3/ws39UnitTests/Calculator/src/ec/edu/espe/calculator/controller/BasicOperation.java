@@ -1,5 +1,8 @@
 package ec.edu.espe.calculator.controller;
 
+import org.junit.Test;
+import static org.junit.Assert.*;
+
 /**
  *
  * @author Reishel Tipan, PACSTORE, DCCO-ESPE
