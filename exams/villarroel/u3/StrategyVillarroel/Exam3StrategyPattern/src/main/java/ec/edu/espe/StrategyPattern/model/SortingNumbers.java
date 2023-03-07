@@ -5,20 +5,25 @@ package ec.edu.espe.StrategyPattern.model;
  * @author Justin Villarroel, ProgressTeam, DCCO-ESPE
  */
 public class SortingNumbers {
-          private String unSorted[];
+          private String unsorted;
           private int size;
           private String sorted;
+          private String sortAlgoritm;
 
-          public SortingNumbers(String[] unSorted, int size, String sorted) {
-                    this.unSorted = unSorted;
+          public SortingNumbers(String unSorted, int size, String sorted, String sortAlgoritm) {
+                    this.unsorted = unSorted;
                     this.size = size;
                     this.sorted = sorted;
+                    this.sortAlgoritm = sortAlgoritm;
           }
+
+          
           
            public SortingNumbers() {
-                    this.unSorted = null;
+                    this.unsorted = null;
                     this.size = 0;
                     this.sorted = null;
+                    this.sortAlgoritm = "Insertion Sort";
           }
 
 
@@ -27,15 +32,15 @@ public class SortingNumbers {
           /**
            * @return the unSorted
            */
-          public String[] getUnSorted() {
-                    return unSorted;
+          public String getUnSorted() {
+                    return unsorted;
           }
 
           /**
            * @param unSorted the unSorted to set
            */
-          public void setUnSorted(String[] unSorted) {
-                    this.unSorted = unSorted;
+          public void setUnSorted(String unSorted) {
+                    this.unsorted = unSorted;
           }
 
           /**
@@ -64,6 +69,20 @@ public class SortingNumbers {
            */
           public void setSorted(String sorted) {
                     this.sorted = sorted;
+          }
+
+          /**
+           * @return the sortAlgoritm
+           */
+          public String getSortAlgoritm() {
+                    return sortAlgoritm;
+          }
+
+          /**
+           * @param sortAlgoritm the sortAlgoritm to set
+           */
+          public void setSortAlgoritm(String sortAlgoritm) {
+                    this.sortAlgoritm = sortAlgoritm;
           }
           
 }
