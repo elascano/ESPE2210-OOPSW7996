@@ -5,17 +5,18 @@ package ec.edu.espe.exam.model;
  * @author Ariel Rivadeneira, Search Engine Bandits, DCCO-ESPE
  */
 public class InsertionSort implements SortingStrategy {
-
-    public int[] sort(int data[]) {
-        int number = data.length;
-        for (int j = 1; j < number; j++) {
-            int key = data[j];
-            int i = j - 1;
-            while ((i > -1) && (data[i] > key)) {
-                data[i + 1] = data[i];
-                i--;
+    @Override
+    public int[] sort(int data[]){
+        System.out.println("Insertion sort");
+        int n = data.length;
+        for (int i = 1; i < n; ++i) {
+            int key = data[i];
+            int j = i - 1;
+            while (j >= 0 && data[j] > key) {
+                data[j + 1] = data[j];
+                j = j - 1;
             }
-            data[i + 1] = key;
+            data[j + 1] = key;
         }
         return data;
     }
