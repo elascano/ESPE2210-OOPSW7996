@@ -2,18 +2,22 @@ package ec.edu.espe.exam.model;
 
 /**
  *
- * @author Carlos Granda DCCO-ESPE, Syntax Error
+ * @author Ariel Rivadeneira, Search Engine Bandits, DCCO-ESPE
  */
 public class BubbleSort implements SortingStrategy {
-    public int[] sort(int data[]) {
-        int number = data.length;
-        int temp = 0;
-        for (int i = 0; i < number; i++) {
-            for (int j = 1; j < (number - i); j++) {
-                if (data[j - 1] > data[j]) {
-                    temp = data[j - 1];
-                    data[j - 1] = data[j];
-                    data[j] = temp;
+
+    public BubbleSort() {
+    }
+    @Override
+    public int[] sort( int data[]) {         
+        System.out.println("Bubble sort");
+        int n = data.length;
+        for (int i = 0; i < n-1; i++) {
+            for (int j = 0; j < n-i-1; j++) {
+                if (data[j] > data[j+1]) {
+                    int temp = data[j];
+                    data[j] = data[j+1];
+                    data[j+1] = temp;
                 }
             }
         }

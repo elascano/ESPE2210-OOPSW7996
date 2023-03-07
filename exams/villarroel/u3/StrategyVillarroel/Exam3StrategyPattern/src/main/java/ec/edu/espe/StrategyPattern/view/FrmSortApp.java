@@ -1,11 +1,23 @@
 package ec.edu.espe.StrategyPattern.view;
 
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import ec.edu.espe.StrategyPattern.controller.MongoDbAccess;
 import ec.edu.espe.StrategyPattern.controller.SortNumbersController;
 import ec.edu.espe.StrategyPattern.model.SortingContext;
 import ec.edu.espe.StrategyPattern.model.SortingNumbers;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import javax.swing.JOptionPane;
+import javax.swing.RowSorter;
+import javax.swing.SortOrder;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+import javax.swing.table.TableRowSorter;
+import org.bson.Document;
 
 /**
  *
@@ -17,6 +29,7 @@ public class FrmSortApp extends javax.swing.JFrame {
            * Creates new form FrmSortApp
            */
           public FrmSortApp() {
+
                     initComponents();
           }
 
@@ -41,7 +54,8 @@ public class FrmSortApp extends javax.swing.JFrame {
                     jLabel4 = new javax.swing.JLabel();
                     btmOrder = new javax.swing.JButton();
                     jScrollPane4 = new javax.swing.JScrollPane();
-                    jTable2 = new javax.swing.JTable();
+                    sortTable = new javax.swing.JTable();
+                    buttonTable = new javax.swing.JButton();
 
                     jTable1.setModel(new javax.swing.table.DefaultTableModel(
                               new Object [][] {
@@ -88,7 +102,7 @@ public class FrmSortApp extends javax.swing.JFrame {
                               }
                     });
 
-                    jTable2.setModel(new javax.swing.table.DefaultTableModel(
+                    sortTable.setModel(new javax.swing.table.DefaultTableModel(
                               new Object [][] {
                                         {null, null, null, null},
                                         {null, null, null, null},
@@ -99,7 +113,14 @@ public class FrmSortApp extends javax.swing.JFrame {
                                         "Title 1", "Title 2", "Title 3", "Title 4"
                               }
                     ));
-                    jScrollPane4.setViewportView(jTable2);
+                    jScrollPane4.setViewportView(sortTable);
+
+                    buttonTable.setText("View Table");
+                    buttonTable.addActionListener(new java.awt.event.ActionListener() {
+                              public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                        buttonTableActionPerformed(evt);
+                              }
+                    });
 
                     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
                     getContentPane().setLayout(layout);
@@ -126,12 +147,14 @@ public class FrmSortApp extends javax.swing.JFrame {
                               .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                   .addGroup(layout.createSequentialGroup()
-                                                            .addGap(139, 139, 139)
+                                                            .addGap(46, 46, 46)
+                                                            .addComponent(buttonTable)
+                                                            .addGap(18, 18, 18)
                                                             .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                   .addGroup(layout.createSequentialGroup()
                                                             .addGap(168, 168, 168)
                                                             .addComponent(jLabel1)))
-                                        .addContainerGap(64, Short.MAX_VALUE))
+                                        .addContainerGap(53, Short.MAX_VALUE))
                     );
                     layout.setVerticalGroup(
                               layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,8 +174,13 @@ public class FrmSortApp extends javax.swing.JFrame {
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                   .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                   .addComponent(jLabel4))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                  .addGroup(layout.createSequentialGroup()
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                  .addGroup(layout.createSequentialGroup()
+                                                            .addGap(28, 28, 28)
+                                                            .addComponent(buttonTable)))
                                         .addContainerGap(48, Short.MAX_VALUE))
                     );
 
@@ -175,10 +203,10 @@ public class FrmSortApp extends javax.swing.JFrame {
                               txtOrderedNumbers.setText(Arrays.toString(sortedNumbers));
                               sort.setSorted(Arrays.toString(sortedNumbers));
                               sort.setSize(numbers.length);
-                              sort.setUnSorted(numbers);
+                              sort.setUnSorted(Arrays.toString(numbers));
                               SortNumbersController.uploadDocument(sort);
                               JOptionPane.showMessageDialog(null, "Upload to repository successfully");
-                              
+
                     }
 
           }//GEN-LAST:event_btmOrderActionPerformed
@@ -189,6 +217,10 @@ public class FrmSortApp extends javax.swing.JFrame {
                               evt.consume();
                     }
           }//GEN-LAST:event_txtIngressNumbersKeyTyped
+
+          private void buttonTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonTableActionPerformed
+                    viewTable();
+          }//GEN-LAST:event_buttonTableActionPerformed
 
           /**
            * @param args the command line arguments
@@ -227,6 +259,7 @@ public class FrmSortApp extends javax.swing.JFrame {
 
           // Variables declaration - do not modify//GEN-BEGIN:variables
           private javax.swing.JButton btmOrder;
+          private javax.swing.JButton buttonTable;
           private javax.swing.JLabel jLabel1;
           private javax.swing.JLabel jLabel2;
           private javax.swing.JLabel jLabel3;
@@ -236,9 +269,36 @@ public class FrmSortApp extends javax.swing.JFrame {
           private javax.swing.JScrollPane jScrollPane3;
           private javax.swing.JScrollPane jScrollPane4;
           private javax.swing.JTable jTable1;
-          private javax.swing.JTable jTable2;
+          private javax.swing.JTable sortTable;
           private javax.swing.JTextArea txtIngressNumbers;
           private javax.swing.JTextArea txtOrderedNumbers;
           // End of variables declaration//GEN-END:variables
+
+          private void viewTable() {
+                    ArrayList<SortingNumbers> sortArray = new ArrayList<SortingNumbers>();
+                    MongoClient mongoClient = MongoDbAccess.conection();
+                    MongoDatabase database = mongoClient.getDatabase("strategyVillarroel");
+                    String[] titles = {"Unsorted", "Size", "Sort Algoritm", "Sorted"};
+                    String[] sortString = new String[4];
+                    DefaultTableModel tableOfSorted = new DefaultTableModel(null, titles);
+                    sortTable.setModel(tableOfSorted);
+                    sortArray = SortNumbersController.loadFromDatabase(sortArray, database, "arrayJustin");
+                    for (int i = 0; i < sortArray.size(); i++) {
+                              sortString[0] = "" + sortArray.get(i).getUnSorted() + "";
+                              sortString[1] = "" + sortArray.get(i).getSize() + "";
+                              sortString[2] = "" + sortArray.get(i).getSortAlgoritm() + "";
+                              sortString[3] = "" + sortArray.get(i).getSorted() + "";
+
+                              tableOfSorted.addRow(sortString);
+                    }
+
+                    sortTable.setModel(tableOfSorted);
+                    sortTable.setDefaultEditor(Object.class, null);
+
+                    TableRowSorter<TableModel> sorter = new TableRowSorter<>(sortTable.getModel());
+                    sorter.setSortKeys(Collections.singletonList(new RowSorter.SortKey(1, SortOrder.ASCENDING)));
+                    sortTable.setRowSorter(sorter);
+                    sortTable.repaint();
+          }
 
 }
