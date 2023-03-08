@@ -3,7 +3,6 @@ package ec.edu.espe.StrategyGUI.controller;
 import java.awt.Frame;
 import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
-import utils.DbManager;
 
 /*
  * @author Añasco Silvia, DeltaTeam, DCCO-ESPE
