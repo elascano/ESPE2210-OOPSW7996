@@ -1,0 +1,14 @@
+ec\edu\espe\SingletonGUI\view\FrmTaxCalculator$2.class
+ec\edu\espe\SingletonGUI\view\FrmTaxCalculator.class
+ec\edu\espe\SingletonGUI\view\FrmChangeTax.class
+ec\edu\espe\SingletonGUI\view\FrmChangeTax$1.class
+ec\edu\espe\SingletonGUI\controller\LogInController.class
+ec\edu\espe\SingletonGUI\model\Usser.class
+ec\edu\espe\SingletonGUI\view\FrmLogIn.class
+utils\DataPersistance.class
+ec\edu\espe\SingletonGUI\view\FrmTaxCalculator$3.class
+ec\edu\espe\SingletonGUI\view\FrmLogIn$2.class
+ec\edu\espe\SingletonGUI\view\FrmLogIn$1.class
+ec\edu\espe\SingletonGUI\model\USTax.class
+ec\edu\espe\SingletonGUI\view\FrmTaxCalculator$1.class
+utils\DbManager.class
